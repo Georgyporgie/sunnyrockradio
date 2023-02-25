@@ -56,182 +56,6 @@ let track_list = [
     path: "muziek/sunny ship/radio dj - just for you222.mp3",
   },
 
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
- 
- {
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-
- 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-{  
-    name: " Broken Wings",
-    artist: "Mr Mister",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
-  },
-
-
-
-
-
-
-{  
-    name: " Everywhere",
-    artist: "Fleetwood Mac  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-  },
-
-{  
-    name: " Heroes",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Heroes.mp3",
-  },
-
-
-
-{  
-    name: " Alone",
-    artist: "Heart  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Heart - Alone.mp3",
-  },
-
-
-{  
-    name: "Sirius ",
-    artist: "Alan Parsons Project ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
-  },
-
-
-{  
-    name: "Dogs ",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/02 Dogs.mp3",
-  },
-
-{  
-    name: " Boys Keep Swinging",
-    artist: "David Bowie  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
-  },
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
-  },
-
-
-{  
-    name: " Vienna ",
-    artist: "Ultravox  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ultravox - Vienna.mp3",
-  },
-
-
-{  
-    name: "  Little Lies ",
-    artist: "Fleetwood Mac",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
-
-
-
-
-
-{  
-    name: " Private Dancer (12inch)",
-    artist: "Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-  },
-
-
-
-
-{  
-    name: "Everybody Wants To Rule The World (12inch)",
-    artist: "Tears For fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/more music at the weekend.mp3",
-  },
-
- {
-    name: "Snippet",
-    artist: "Sunny Radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
     name: "Dont You (12inch)",
     artist: "Simple Minds",
@@ -246,7 +70,7 @@ let track_list = [
     name: "Just For You",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you222.mp3",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
   },
 
 
@@ -254,12 +78,7 @@ let track_list = [
 
 
   
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
+
 
 {
     name: " Black Betty",
@@ -538,6 +357,182 @@ let track_list = [
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
   },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+{
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
+  },
+ 
+ 
+ {
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+ 
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+{  
+    name: " Broken Wings",
+    artist: "Mr Mister",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
+  },
+
+
+
+
+
+
+{  
+    name: " Everywhere",
+    artist: "Fleetwood Mac  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
+  },
+
+{  
+    name: " Heroes",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Heroes.mp3",
+  },
+
+
+
+{  
+    name: " Alone",
+    artist: "Heart  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Heart - Alone.mp3",
+  },
+
+
+{  
+    name: "Sirius ",
+    artist: "Alan Parsons Project ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
+  },
+
+
+{  
+    name: "Dogs ",
+    artist: "Pink Floyd ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/02 Dogs.mp3",
+  },
+
+{  
+    name: " Boys Keep Swinging",
+    artist: "David Bowie  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
+  },
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+{  
+    name: " Vienna ",
+    artist: "Ultravox  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ultravox - Vienna.mp3",
+  },
+
+
+{  
+    name: "  Little Lies ",
+    artist: "Fleetwood Mac",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+  },
+
+
+
+
+
+{  
+    name: " Private Dancer (12inch)",
+    artist: "Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
+  },
+
+
+
+
+{  
+    name: "Everybody Wants To Rule The World (12inch)",
+    artist: "Tears For fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/more music at the weekend.mp3",
+  },
+
+ {
+    name: "Snippet",
+    artist: "Sunny Radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet3.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
