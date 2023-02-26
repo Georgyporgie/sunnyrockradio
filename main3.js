@@ -53,7 +53,7 @@ let track_list = [
     name: "First You Jump",
     artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you222.mp3",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
   },
 
 {
