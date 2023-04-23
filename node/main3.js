@@ -53,410 +53,7 @@ let track_list = [
     name: "First You Jump",
     artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you222.mp3",
-  },
-
-{
-    name: "Dont You (12inch)",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Simple Minds Dont you.mp3",
-  },
-
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-
-
-
-
-  
-
-
-{
-    name: " Black Betty",
-    artist: "Ram Jam",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
-  },
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny hotradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-  
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle33.mp3",
-  },
-
-
-
-
-
-{
-    name: " Too Shy (12inch)",
-    artist: "Kajagoogoo",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
-  },
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-{
-    name: " Bohemian Rapsodhy",
-    artist: "Queen",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
-  },
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
- 
- 
-
-
-
- 
-   {
-    name: "Welcome!",
-    artist: "Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-
-
-
-
-
-{   
-    name: "Welcome",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
-
-
-
-{
-    name: " Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
- {
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
-  
-
-
-},
-
-
-
-
-
- 
-
-
-{
-    name: "Fade To Grey",
-    artist: "Visage",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
- 
-
-
- 
- 
-{
-
-    name: "Pinball Wizard",
-    artist: "The Who ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
-  },
-
- 
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-{
-    name: "Learning To Fly",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
-  },
-
-
-
-{
-    name: " This Is Not America (12inch)",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
-  },
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-
-
-
- {
-    name: "Snippet",
-    artist: "Play Sunny RockRadio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Sunny  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
-{
-
-    name: " First You Jump",
-    artist: "Simple Minds  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Low",
-    artist: "Lenny Kravitz ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
- 
- {
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-
- 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-{  
-    name: " Broken Wings",
-    artist: "Mr Mister",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
-  },
-
-
-
-
-
-
-{  
-    name: " Everywhere",
-    artist: "Fleetwood Mac  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-  },
-
-{  
-    name: " Heroes",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Heroes.mp3",
-  },
-
-
-
-{  
-    name: " Alone",
-    artist: "Heart  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Heart - Alone.mp3",
-  },
-
-
-{  
-    name: "Sirius ",
-    artist: "Alan Parsons Project ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
-  },
-
-
-{  
-    name: "Dogs ",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/02 Dogs.mp3",
-  },
-
-{  
-    name: " Boys Keep Swinging",
-    artist: "David Bowie  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
-  },
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
   },
 
 
@@ -1248,9 +845,414 @@ let track_list = [
 
 }, 
 
+{
+    name: "Dont You (12inch)",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Simple Minds Dont you.mp3",
+  },
+
+
+
+
+{
+    name: "Just For You",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+
+
+
+
+
+  
+
+
+{
+    name: " Black Betty",
+    artist: "Ram Jam",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
+  },
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny hotradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+  
+ {
+    name: "Snippet",
+    artist: "Sunny radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet4.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle33.mp3",
+  },
+
+
+
+
+
+{
+    name: " Too Shy (12inch)",
+    artist: "Kajagoogoo",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
+  },
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+{
+    name: " Bohemian Rapsodhy",
+    artist: "Queen",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
+  },
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+ 
+ 
+
+
+
+ 
+   {
+    name: "Welcome!",
+    artist: "Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+
+
+
+
+
+{   
+    name: "Welcome",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
 
 
  {
+    name: "Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
+    path: "muziek/reklame/reklame1.mp3",
+  
+
+
+},
+
+
+
+
+
+ 
+
+
+{
+    name: "Fade To Grey",
+    artist: "Visage",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+ 
+
+
+ 
+ 
+{
+
+    name: "Pinball Wizard",
+    artist: "The Who ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
+  },
+
+ 
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+{
+    name: "Learning To Fly",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
+  },
+
+
+
+{
+    name: " This Is Not America (12inch)",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
+  },
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+
+
+
+ {
+    name: "Snippet",
+    artist: "Play Sunny RockRadio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Sunny  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+{
+
+    name: " First You Jump",
+    artist: "Simple Minds  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Low",
+    artist: "Lenny Kravitz ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+{
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
+  },
+ 
+ 
+ {
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+ 
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+{  
+    name: " Broken Wings",
+    artist: "Mr Mister",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
+  },
+
+
+
+
+
+
+{  
+    name: " Everywhere",
+    artist: "Fleetwood Mac  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
+  },
+
+{  
+    name: " Heroes",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Heroes.mp3",
+  },
+
+
+
+{  
+    name: " Alone",
+    artist: "Heart  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Heart - Alone.mp3",
+  },
+
+
+{  
+    name: "Sirius ",
+    artist: "Alan Parsons Project ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
+  },
+
+
+{  
+    name: "Dogs ",
+    artist: "Pink Floyd ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/02 Dogs.mp3",
+  },
+
+{  
+    name: " Boys Keep Swinging",
+    artist: "David Bowie  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
+  },
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+
+ 
+
+{
     name: "Todays News",
     artist: "Nos Journaal",
     image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
