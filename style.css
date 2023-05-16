@@ -467,7 +467,7 @@ animation: blinker 1s step-start infinite;
 #astro {  filter: brightness(120%) saturate(110%) contrast(115%) opacity(60%); width: 32px; height: 30px; transform: rotate(-90deg); z-index: 200; display: block; margin: auto auto 300px auto;
 }
 
-.weather {  display: block; margin: auto auto auto auto;
+.weather {  display: block; margin: auto auto auto auto; border-radius:5px;
 }
 
 #lin {    width: 30px;  height: 30px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(65%); transform: rotate(5deg); z-index: -200;  border-radius: 5px; float: left; margin-left: 0px;
@@ -588,4 +588,9 @@ animation: blinker 0.5s step-start infinite;
 #frame  {
 display:block;
 margin: auto auto auto auto;
+}
+
+
+#cata { 
+border-radius:5px;
 }
