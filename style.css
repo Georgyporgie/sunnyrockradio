@@ -392,7 +392,7 @@ font-size: 14px; border-radius: 20px;
 
 
 .list {  font-size: 15px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif;
-z-index: 200;  margin-left: 5px; background:linear-gradient(45deg,#F3F3F3,#F4F4F4,#F5F5F5);    padding: 25px 0px 0px 0px; border-radius: 20px;  border: solid 1px #FF0000;
+z-index: 200;  margin-left: 5px; background:linear-gradient(45deg,#F3F3F3,#F4F4F4,#F5F5F5);    padding: 25px 0px 0px 0px; border-radius: 20px;  border: solid 2px #FF0000;
 }
 
 
@@ -419,7 +419,7 @@ background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 filter:opacity(20%); display: block; margin: auto auto auto auto;  z-index: -200;
-width: 355px; height: 370px;
+width: 355px; height: 370px; border-radius:5px;
 }
 
 .star  {    width: 55px;  height: 45px;filter: brightness(115%) saturate(115%) contrast(115%) opacity(70%); transform: rotate(0deg); z-index: -200; float: right;
@@ -491,7 +491,7 @@ text-align: center;  z-index: -300; animation: blinker 6s step-start infinite;bo
 }
 
 #events {
-color: #FF0000; z-index: 200; text-align: center; font-family: Arial ,Helvetica,sans-serif; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 23px;  border: solid 1px #FF0000;
+color: #FF0000; z-index: 200; text-align: center; font-family: Arial ,Helvetica,sans-serif; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 23px;  border: solid 3px #FF0000;
 }
 #now  {
 color:  #FF0000; z-index: 0; text-align: center; font-family: Arial ,Helvetica,sans-serif; background-color:transparent ; padding: 10px 15px 10px 15px;font-size: 15px; font-weight: bold; 
@@ -594,3 +594,13 @@ margin: auto auto auto auto;
 #cata { 
 border-radius:5px;
 }
+
+
+#record  { position: absolute; filter: brightness(110%) saturate(120%) contrast(110%) opacity(70%);  z-index: 0;
+
+
+
+margin-top: 50px; margin-left: 10px;height: 50px; width: 65px;
+
+}
+
