@@ -354,5 +354,5 @@ height: 80px; width: 85px; filter: brightness(100%) saturate(110%) contrast(110%
 
 
 .black {  
-display: block; margin: 10px auto -5px -5px; z-index: -400;
+display: block; margin: -10px auto auto auto; z-index: -400;
 }
