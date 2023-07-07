@@ -280,8 +280,7 @@ float: right; margin-right: 20px;z-index: -210;font-size: 20px;
 .balk  {  border: solid 2px #FFCC99; background-color: chocolate; z-index: -400; border-radius: 50px;
 }
 
-
-#lijn  {  border: solid 1px #FF0000; background-color: chocolate; z-index: -400; border-radius: 50px;
+.lijn  {  border: solid 1px #FF0000; background-color: chocolate; z-index: -100; border-radius: 50px;
 }
 
 
