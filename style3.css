@@ -355,3 +355,7 @@ height: 80px; width: 85px; filter: brightness(100%) saturate(110%) contrast(110%
 .black {  
 display: block; margin: 20px auto auto auto; z-index: -400;
 }
+
+
+a { color: black;
+}
