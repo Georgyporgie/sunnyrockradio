@@ -273,7 +273,7 @@ display: block; margin: auto auto auto auto; z-index: -210;font-size: 20px;color
 float: right; margin-right: 20px;z-index: -210;font-size: 20px;color:white;
 }
 
-#studio  {  display: block; margin: auto auto auto auto; filter:brightness(110%) saturation(105%) contrast(110%) opacity(75%);width: 355px; height: 235px; margin-left: -5px; border: solid 3px #FF0000; z-index:-200; border-radius:5px;
+#studio  {  display: block; margin: auto auto auto auto; filter:brightness(110%) saturation(105%) contrast(110%) opacity(75%);width: 355px; height: 235px; margin-left: -5px; border: solid 3px black; z-index:-200; border-radius:5px;
 }
 
 
