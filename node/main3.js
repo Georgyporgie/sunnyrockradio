@@ -78,7 +78,13 @@ let track_list = [
 
 
 
+{
 
+    name: "Nothing's Gonna Stop Us Now",
+    artist: "Starship ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
+  },
 
 
 
