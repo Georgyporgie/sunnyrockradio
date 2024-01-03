@@ -89,7 +89,12 @@ let track_list = [
 
 
 
-
+{
+    name: "  Nature is beauty ",
+    artist: "Bjork  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
+  },
 
 
 
