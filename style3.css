@@ -226,12 +226,12 @@ margin-bottom: 0px; margin-top: -60px; margin-right: 10px;
 
 }
 
-#classic  {    width: 130px;  height: 130px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%); transform: rotate(4deg); z-index: -200; margin-top: -24px;margin-bottom: -36px;margin-left: 22px; border-radius: 5px; background-color: black;border: solid 1px #00CC00;
+#classic  {    width: 130px;  height: 130px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%) grayscale(50%); transform: rotate(4deg); z-index: -200; margin-top: -24px;margin-bottom: -36px;margin-left: 22px; border-radius: 5px; background-color: black;border: solid 1px #00CC00;
 
 
 }
 
-#dance  {    width: 255px;  height: 150px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%); transform: rotate(1deg); z-index: -200; float:right; border-radius: 5px; border: solid 1px #FF0000;background-color: black;
+#dance  {    width: 255px;  height: 150px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%) grayscale(50%); transform: rotate(1deg); z-index: -200; float:right; border-radius: 5px; border: solid 1px #FF0000;background-color: black;
 }
 
 #rock   {    width: 145px;  height: 145px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%); transform: rotate(-1deg); z-index: 200;   border-radius: 5px;margin: auto auto auto auto; display: block; background-color: black;
@@ -365,7 +365,7 @@ a { color: black;
 
 
 
-#pick { width: 20px; height:25px;filter: brightness(105%) saturate(105%) contrast(110%) opacity(75%); z-index: -200; transform:rotate(0deg);
+#pick { width: 20px; height:25px;filter: brightness(105%) saturate(105%) contrast(110%) opacity(75%); z-index: -200; transform:rotate(0deg);  
 }
 
 
