@@ -614,8 +614,8 @@ margin-top: -112px;   margin-right:7px; height: 50px; width: 65px; float:right;
 
 }
 
-#rad  {    width: 120px;  height: 80px;filter: brightness(110%) saturate(105%) contrast(110%) opacity(75%); transform: rotate(0deg); z-index: -800;  margin: -35px auto -10px  auto; display: block; border-radius: 5px;
-animation: blinker 3.9s step-start infinite;
+#rad  {    width: 120px;  height: 80px;filter: brightness(110%) saturate(105%) contrast(110%) opacity(75%); transform: rotate(5deg); z-index: -800;  margin: -35px auto -10px  auto; display: block; border-radius: 5px;
+animation: blinker 9.0s step-start infinite;
 
 }
 
