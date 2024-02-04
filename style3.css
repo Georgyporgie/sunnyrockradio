@@ -388,8 +388,8 @@ a { color: black;
         background: black;
         border-radius: 3px;
         cursor: pointer;
-filter:opacity(75%)  ;
-    z-index: 0;
+filter:opacity(75%);
+    z-index: -200;
 
 }
 

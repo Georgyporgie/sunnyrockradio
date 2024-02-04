@@ -624,3 +624,30 @@ animation: blinker 9.0s step-start infinite;
     opacity: 0;
   }
 }
+
+
+ .btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        height: 45px;
+        width: 45px;
+        text-align: center;
+        background: black;
+        border-radius: 3px;
+        cursor: pointer;
+filter:opacity(75%);
+    z-index: -200;
+    }
+
+    .btn span {
+        color: white;
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+    .btn.click span:before {
+        content: '\f00d';
+        /* cross icon */
+    }
+
