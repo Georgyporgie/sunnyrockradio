@@ -76,8 +76,8 @@ let track_list = [
 
 
 {  
-    name: "Everybody Wants To Rule The World (12inch)",
-    artist: "Tears For fears",
+    name: "Everybody Wants To Rule The World (1985)",
+    artist: "Tears For Fears",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
   },
@@ -109,7 +109,7 @@ let track_list = [
 
 
 {
-    name: " Lucky Number",
+    name: " Lucky Number (1979)",
     artist: "Lene Lovich  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Lene Lovich - Lucky Number.mp3",
@@ -1550,12 +1550,20 @@ $(document).ready(function(){
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function myFunction1() {
   var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
+  
+
+if (x.style.display === "block") {
     x.style.display = "none";
   } else {
     x.style.display = "block";
   }
 }
+
+ $('.btn').click(function () {
+            $(this).toggleClass("click");
+        });
+
+
 
 document.getElementById("hero-image")
  .addEventListener("touchstart",
