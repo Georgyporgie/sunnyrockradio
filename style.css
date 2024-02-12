@@ -22,15 +22,7 @@ body {
 }
  
 .track-art {
-  margin: 25px;
-  height: 250px;
-  width: 250px;
-  background-image: URL(
-     "https://source.unsplash.com/Qrspubmx6kE/640x360");
-  background-size: cover;
-  background-position: center;
-  border-radius: 15%; filter: brightness(110%) saturation(115%) contrast(110%) opacity(75%); transform: rotate(0deg);
-border: solid #663300 3px; z-index: -400; display: none;
+  display: none;
 }
  
 /* Changing the font sizes to suitable ones */
@@ -47,13 +39,13 @@ border: solid #663300 3px; z-index: -400; display: none;
 .track-name {
   font-size: 1.4rem; z-index: 0; padding: 12px 15px 12px 15px; 
 margin-bottom: 9px;background:linear-gradient(90deg,#CC3333,#FF6666,#CC3333); color: white; filter: brightness(110%) saturation(115%) contrast(110%) opacity(100%); transform: rotate(0deg);text-align: center; border-radius: 5px;
-border: solid 1px;
+border: solid 1px;font-weight:500;
  
  }
  
 .track-artist {
   font-size: 1.4rem; z-index: 0; padding: 12px 15px 12px 15px ; background:linear-gradient(90deg,#CC3333,#FF6666,#CC3333);  margin-top: -11px; color: white; filter: brightness(110%) saturation(115%) contrast(110%) opacity(100%); transform: rotate(0deg); text-align: center;
- border-radius: 5px;border: solid 1px;
+ border-radius: 5px;border: solid 1px;font-weight:500;
 
 
 }
