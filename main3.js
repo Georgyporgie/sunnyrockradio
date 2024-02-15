@@ -76,7 +76,7 @@ let track_list = [
 
 
 
-
+{
 
     name: " Revermation Bell",
     artist: "Pink Floyd",
@@ -1341,7 +1341,7 @@ let track_list = [
     path: "muziek/jockeys/40 in jingle.mp3",
   },
 
-{
+
 
 
 
