@@ -75,392 +75,6 @@ let track_list = [
 
 
 
-{  
-    name: "Everybody Wants To Rule The World (1985)",
-    artist: "Tears For Fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/more music at the weekend.mp3",
-  },
-
- {
-    name: "Snippet",
-    artist: "Sunny Radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-
-
-
-
-{
-    name: " Lucky Number (1979)",
-    artist: "Lene Lovich  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lene Lovich - Lucky Number.mp3",
-  },
-
-
-
-
-{
-    name: "New Gold dream ",
-    artist: "Simple Minds ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
-  },
-
-{
-    name: " Won't Get Fooled Again",
-    artist: "The Who",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
-  },
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-{
-    name: " Nature Is Beauty",
-    artist: "Bjork ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Bjork .mp3",
-  },
-
-
-
-
-{
-
-    name: " First You Jump",
-    artist: "Simple Minds  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/recent/Simple Minds - First you jump.mp3",
-  },
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-
-{
-    name: " A View To A Kill (12 Extended Mix)",
-    artist: "Duran Duran",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
-  },
-
- 
-
-
-
-
- 
-{
-    name: " Meddle",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
-  },
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
- 
-
-
- 
- 
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-{
-    name: " Drive",
-    artist: "The Cars",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The Cars - Drive.mp3",
-  },
-
-
-
-{
-    name: "  Duel (12inch)",
-    artist: "Propaganda",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Propaganda - Duel.mp3",
-  },
-
-
-{
-    name: "  Nature Is Beauty ",
-    artist: "Bjork  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/let's go back.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
- 
- 
-
-
-
- 
-   {
-    name: "Welcome!",
-    artist: "Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-
-
-
-
-
-{   
-    name: "Welcome",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-{
-    name: " Miami Vice Theme",
-    artist: "Jan Hammer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
-  },
-
-
-
-
-
-
-
-
- {
-    name: "Snippet",
-    artist: "Play Sunny RockRadio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
-
-
-
-{
-    name: " Candy (12inch) ",
-    artist: "Iggy Pop",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Iggy Pop - Candy.mp3",
-  },
-
-
-{
-    name: " Dollar Days",
-    artist: "David Bowie",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/06 Dollar Days.mp3",
-  },
- 
-
-
-
-
-
-
-
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
- 
- {
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
-
-
-
-
-{
-    name: " Too Shy (12inch)",
-    artist: "Kajagoogoo",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
-  },
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-{
-
-    name: "Radio Ga GA (12inch)",
-    artist: "Queen ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
-  },
-
-
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
-
-{
 
 
 
@@ -1342,6 +956,392 @@ let track_list = [
 
 
 
+{  
+    name: "Everybody Wants To Rule The World (1985)",
+    artist: "Tears For Fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/more music at the weekend.mp3",
+  },
+
+ {
+    name: "Snippet",
+    artist: "Sunny Radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet3.mp3",
+  },
+
+
+
+
+{
+    name: " Lucky Number (1979)",
+    artist: "Lene Lovich  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lene Lovich - Lucky Number.mp3",
+  },
+
+
+
+
+{
+    name: "New Gold dream ",
+    artist: "Simple Minds ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
+  },
+
+{
+    name: " Won't Get Fooled Again",
+    artist: "The Who",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
+  },
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+{
+    name: " Nature Is Beauty",
+    artist: "Bjork ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Bjork .mp3",
+  },
+
+
+
+
+{
+
+    name: " First You Jump",
+    artist: "Simple Minds  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/recent/Simple Minds - First you jump.mp3",
+  },
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+
+
+
+
+{
+    name: " A View To A Kill (12 Extended Mix)",
+    artist: "Duran Duran",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
+  },
+
+ 
+
+
+
+
+ 
+{
+    name: " Meddle",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
+  },
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+ 
+
+
+ 
+ 
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+{
+    name: " Drive",
+    artist: "The Cars",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The Cars - Drive.mp3",
+  },
+
+
+
+{
+    name: "  Duel (12inch)",
+    artist: "Propaganda",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Propaganda - Duel.mp3",
+  },
+
+
+{
+    name: "  Nature Is Beauty ",
+    artist: "Bjork  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/let's go back.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+ 
+ 
+
+
+
+ 
+   {
+    name: "Welcome!",
+    artist: "Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+
+
+
+
+
+{   
+    name: "Welcome",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+{
+    name: " Miami Vice Theme",
+    artist: "Jan Hammer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
+  },
+
+
+
+
+
+
+
+
+ {
+    name: "Snippet",
+    artist: "Play Sunny RockRadio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet5.mp3",
+  },
+
+
+
+{
+    name: " Candy (12inch) ",
+    artist: "Iggy Pop",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Iggy Pop - Candy.mp3",
+  },
+
+
+{
+    name: " Dollar Days",
+    artist: "David Bowie",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/06 Dollar Days.mp3",
+  },
+ 
+
+
+
+
+
+
+
+{
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
+  },
+ 
+ 
+ {
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
+
+
+
+
+{
+    name: " Too Shy (12inch)",
+    artist: "Kajagoogoo",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
+  },
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+{
+
+    name: "Radio Ga GA (12inch)",
+    artist: "Queen ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
+  },
+
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
+
+{
 
 
 
