@@ -218,11 +218,12 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 }
 
 
-#media  {     width: 150px;  height:150px;filter: brightness(110%) saturate(115%) contrast(110%) opacity(100%); transform: rotate(0deg); z-index: 200; display: block; margin: auto auto auto auto; border: solid 1px white;
+#media  {     width: 150px;  height:150px;filter: brightness(110%) saturate(115%) contrast(110%) opacity(100%); transform: rotate(0deg); z-index: 200; display: block; margin: auto auto auto auto; border: solid 1px white;background-color:transparent;
+
 }
 
 #med  {     width: 150px;  height:150px;filter: brightness(110%) saturate(115%) contrast(110%) opacity(100%); transform: rotate(0deg); z-index: 0; display: block; margin: auto auto auto auto; 
-animation: blinker 1s step-start infinite;
+animation: blinker 1s step-start infinite; background-color:transparent;
 
 }
 
