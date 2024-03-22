@@ -70,7 +70,12 @@ let track_list = [
 
 
 
-
+{
+    name: " Nature Is Beauty",
+    artist: "Bjork ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
+  },
 
 
 
@@ -85,6 +90,20 @@ let track_list = [
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/New track.mp3",
   },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
 
 
 
@@ -122,12 +141,7 @@ let track_list = [
   },
 
 
-{
-    name: " Nature Is Beauty",
-    artist: "Bjork ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Bjork .mp3",
-  },
+
 
 
 
