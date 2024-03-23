@@ -15,3 +15,13 @@ function myFunction1() {
  $('.btn').click(function () {
             $(this).toggleClass("click");
         });
+
+
+
+
+function update() {
+ var el = document.querySelector(
+  ".content, .more");
+ el.innerHTML =
+  "A beautiful mix of new Dance songs<br> and older Dance & Disco classics!";
+};
