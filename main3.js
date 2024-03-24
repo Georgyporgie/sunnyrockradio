@@ -70,12 +70,7 @@ let track_list = [
 
 
 
-{
-    name: " Nature Is Beauty",
-    artist: "Bjork ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
-  },
+
 
 
 
@@ -85,7 +80,7 @@ let track_list = [
 
 {
 
-    name: " New track",
+    name: " New Track",
     artist: "Sunny ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/New track.mp3",
@@ -109,7 +104,7 @@ let track_list = [
 
 {
 
-    name: "Nothing's Gonna Stop Us Now",
+    name: "Nothing's Gonna Stop Us Now (1986)",
     artist: "Starship ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
@@ -126,7 +121,7 @@ let track_list = [
 
 
 {
-    name: " Black Velvet",
+    name: " Black Velvet (1989)",
     artist: "Alannah Miles ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet3.mp3",
