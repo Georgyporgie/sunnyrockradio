@@ -407,7 +407,7 @@ filter:opacity(75%);
     }
 
 
-#info {
+.info {
  font-family: Candara;background : linear-gradient(90deg,#00CCFF,#66CCFF); color: white; 
 border-radius: 5px; z-index: -200; width: 51px; height: 34px; font-size: 17px; display:block; margin: auto auto auto auto; z-index:-300;
 
