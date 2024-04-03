@@ -12,8 +12,8 @@ color:Silver;     margin: -19px -19px -20px -19px;  font-family: Arial ,Helvetic
 
 
 @font-face{ 
-font-family: myFont;
-src:url(par.ttf);
+font-family: myFontt;
+src:url(musi.ttf);
 }
 
 
@@ -136,7 +136,7 @@ h2  {  font-size: 25px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif
 }
 
 p {  
-font-family: myFont; font-size: 40px; font-weight:600; z-index: 200;
+font-family: myFontt; font-size: 30px; font-weight:600; z-index: 200;
 }
 
 
