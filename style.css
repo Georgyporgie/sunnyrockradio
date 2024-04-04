@@ -33,7 +33,10 @@ font-family: myMuss;
 src:url(musicc.ttf);
 }
 
-
+@font-face{ 
+font-family: myEvent;
+src:url(BROADW.ttf);
+}
 
 .now-playing {
   font-size: 1rem;font-optical-sizing: auto;
@@ -488,7 +491,7 @@ text-align: center;  z-index: -300; animation: blinker 6s step-start infinite;bo
 }
 
 #events {
-color: #FF0000; z-index: 200; text-align: center; font-family: Arial ,Helvetica,sans-serif; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 25px;  
+color: #FF0000; z-index: 200; text-align: center; font-family: myEvent; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 25px;  
 }
 
 
