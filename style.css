@@ -38,8 +38,8 @@ font-family: myEvent;
 src:url(BROADW.ttf);
 }
 
-.now-playing {
-  font-size: 1rem;font-optical-sizing: auto;
+.now-playing   {
+display: none;
 }
  
 .track-name {
@@ -296,9 +296,7 @@ color: #FF0000; z-index: 0;font-family: Arial ,Helvetica,sans-serif; background-
 
 
 
-.now-playing   {
-display: none;
-}
+
 
 .moon  {    width: 75px;  height: 75px;filter: brightness(110%) saturate(110%) contrast(110%) opacity(40%); transform: rotate(-15deg); z-index: -200; display: block; margin: auto auto auto auto;
 }
@@ -491,12 +489,12 @@ text-align: center;  z-index: -300; animation: blinker 6s step-start infinite;bo
 }
 
 #events {
-color: #FF0000; z-index: 200; text-align: center; font-family: myEvent; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 25px;  
+color: #FF0000; z-index: 200; text-align: center; font-family: myEvent; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 25px;  border-radius:5px; 
 }
 
 
 #now  {
-color:  black; z-index: -800; text-align: center; font-family: myMuss; background-color:transparent ; padding: 10px 15px 10px 15px;font-size: 20px; font-weight: bold; 
+color:  black; z-index: -800; text-align: center; font-family: myMuss; background-color:transparent ; padding: 10px 15px 10px 15px;font-size: 20px; 
 
 }
       
