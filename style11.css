@@ -6,7 +6,8 @@ background: linear-gradient(90deg,whitesmoke,#dddddd,#c4c4c4);
 button {
 padding: 6px 6px 6px 6px;
  background: linear-gradient(45deg,crimson,#ed365b,#FF0000); color : #CCCCCC; 
-  font-size: 15px; display:block;
+  font-size: 15px; display:block;border-radius: 5px;
+
 font-weight: italic; 
 }
 
