@@ -500,7 +500,7 @@ text-align: center;  z-index: -300; animation: blinker 6s step-start infinite;bo
 }
 
 #events {
-color: #FF0000; z-index: 200; text-align: center; font-family: myEvent; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 25px;  border-radius:5px; 
+color: #FF0000; z-index: 200; text-align: center; font-family: myEvent; background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF);padding: 25px 15px 25px 15px;font-size: 30px;  border-radius:5px; 
 }
 
 
