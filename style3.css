@@ -373,7 +373,7 @@ display: block; margin: 20px auto auto auto; z-index: -300; border-radius:5px;
 a { color: black;
 }
 
-#first { width: 20px; height: 25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(60%); z-index: -200; transform:rotate(0deg);
+#first { width: 20px; height: 25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(60%); z-index: 200; transform:rotate(0deg);
 }
 
 
@@ -419,7 +419,7 @@ filter:opacity(75%);
 
 .info {
  font-family: Candara;background : linear-gradient(90deg,#00CCFF,#66CCFF); color: white; 
-border-radius: 5px; z-index: -200; width: 51px; height: 34px; font-size: 17px; display:block; margin: auto auto auto auto; z-index:-300;
+border-radius: 5px; z-index: -200; width: 51px; height: 34px; font-size: 17px; display:block; margin: auto auto auto auto; z-index:-400;
 
 
 
