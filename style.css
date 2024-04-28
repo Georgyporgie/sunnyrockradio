@@ -152,6 +152,8 @@ border-radius: 5px;
  
 i.fa-volume-down,
 i.fa-volume-up {
+filter: brightness(110%)saturation(105%) contrast(105%); 
+
   padding: 10px;
 }
  
