@@ -57,6 +57,12 @@ let track_list = [
 
 
 
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
 
  
  
@@ -70,12 +76,6 @@ let track_list = [
 
  
 
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
 
 
 
@@ -94,8 +94,6 @@ let track_list = [
 
 
 
-
- 
 {
     name: " Meddle (1971)",
     artist: "Pink Floyd",
@@ -1093,6 +1091,8 @@ let track_list = [
     path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
   },
 
+
+ 
 
 
  
