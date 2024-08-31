@@ -127,7 +127,8 @@ border-radius: 5px;
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #FF6600;
+  background-color:#FCE570;
+
   cursor: pointer;
   border-radius: 50%;
 }
