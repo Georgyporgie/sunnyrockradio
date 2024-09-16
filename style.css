@@ -148,7 +148,7 @@ border-radius: 5px;
 }
  
 .current-time,
-.total-duration { color: #FF0000;font-family: myLed; z-index:200;background-color: transparent;
+.total-duration { color: #FF0000;font-family: myLed; z-index:0;background-color: transparent;
 
 
   padding: 10px;
