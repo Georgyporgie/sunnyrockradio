@@ -125,8 +125,8 @@ border-radius: 5px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background-color:#FCE570;
 
   cursor: pointer;
@@ -148,7 +148,7 @@ border-radius: 5px;
 }
  
 .current-time,
-.total-duration { color: #FF0000;font-family: myLed; z-index:0;background-color: #999999; border-radius: 50px;border: solid 1px black;
+.total-duration { color: black;font-family: myLed; z-index:0;background-color: #CCCCCC; border-radius: 50px;border: solid 3px black; font-style:bold;
 
 
   padding: 10px;
@@ -514,7 +514,7 @@ color: #FF0000; z-index: 200; text-align: center; font-family: myEvent; backgrou
 
 
 #now  {
-color:  black; z-index: -800; text-align: center; font-family: myMuss;  padding: 10px 15px 10px 15px;font-size: 20px; background-color: transparent;
+color:  black; z-index: -800; text-align: center; font-family: myMuss;  padding: 10px 15px 10px 15px;font-size: 20px; 
 
 }
       
