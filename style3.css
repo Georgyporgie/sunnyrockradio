@@ -275,7 +275,7 @@ animation: blinker 1s step-start infinite;border: solid 1px #0099FF;
 
 
 .one {  
-float: left; margin-left: 20px; z-index: -210; font-size: 20px; color:#FF0000;
+float: left; margin-left: 20px; z-index: -210; font-size: 20px; color:#FF0000; background-color: black; border-radius: 3px; padding: 5px 5px 0px 5px;
 }
 
 .two  {  
