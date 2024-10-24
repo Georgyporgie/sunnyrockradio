@@ -385,11 +385,11 @@ a { color: black;
 
 
 
-#pick { width: 20px; height:25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(60%); z-index: -200; transform:rotate(0deg);  
+#pick { width: 20px; height:25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(78%) ; z-index: -200; transform:rotate(0deg);  
 }
 
 
-#third { width: 20px; height: 25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(60%); z-index: -200; transform:rotate(0deg);
+#third { width: 20px; height: 25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(78%); z-index: -200; transform:rotate(0deg);
 }
 
 
