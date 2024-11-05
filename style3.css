@@ -330,7 +330,7 @@ height: 40px;
 
 }
 #marquee span {
-  display: inline-block; font-style: italic;
+  display: inline-block; 
   font-size: 15px;
   position: relative;
   left: 100%; z-index: -200;
