@@ -437,6 +437,7 @@ border-radius: 5px; z-index: -200; width: 51px; height: 34px; font-size: 17px; d
 
 
 
-#line {  color: black;
+#line {  color: black; font-weight: bold;
+
 
 }
