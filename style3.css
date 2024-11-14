@@ -299,10 +299,11 @@ float: right; margin-right: 20px;z-index: -210;font-size: 20px;color:crimson;bor
 .balk  {  border: solid 4px #FFCC99;  z-index: -400; border-radius: 50px;
 }
 
-.lijn  {  border: solid 10px #00CCFF; background-color: chocolate; z-index: -500; 
+.lijn  {  border: solid 10px #00CCFF;  z-index: -500; 
 }
 
-
+#linera  {  border: solid 9px #00CCFF;  z-index: -500; 
+}
 
 
 #mid  {    width: 25px;  height: 25px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(75%); transform: rotate(14deg); z-index: -200; margin: -35px auto 10px  auto; display: block; border-radius: 5px;
