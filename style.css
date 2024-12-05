@@ -245,13 +245,12 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 }
 
 
-#media  {     width: 130px;  height:130px;filter: brightness(110%) saturate(115%) contrast(110%) opacity(100%); transform: rotate(0deg); z-index: 200; display: block; margin: auto auto auto auto; border: solid 1px white;background-color:transparent;
+#med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; 
+animation: blinker 1.0s step-start infinite; 
 
 }
 
-#med  {     width: 130px;  height:130px;filter: brightness(110%) saturate(115%) contrast(110%) opacity(100%); transform: rotate(0deg); z-index: 0; display: block; margin: auto auto auto auto; 
-animation: blinker 1s step-start infinite; background-color:transparent;
-
+#media  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto;  border: solid 1px white; 
 }
 
 
