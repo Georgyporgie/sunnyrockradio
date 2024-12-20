@@ -146,7 +146,7 @@ color: #030101;
 }
  
 .current-time,
-.total-duration { color: black;font-family: myLed; z-index:0;background-color: #CCCCCC; border-radius: 50px;border: solid 3px black; font-style:bold;
+.total-duration { color: black;font-family: myLed; z-index:0;background:linear-gradient(90deg,#CCCCCC,#d6d6d6,#e0e0e0); border-radius: 50px;border: solid 3px black; font-style:bold;
 
 
   padding: 10px;
