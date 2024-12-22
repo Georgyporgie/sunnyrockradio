@@ -42,5 +42,5 @@ function update3() {
  var el = document.querySelector(
   ".jazzex, .minder");
  el.innerHTML =
-  "A beautiful mix of Classicjazz & Lounge music<br> to help you through the day!";
+  "A beautiful mix of Soul & Classicjazz songs<br> to help you through the day!";
 };
