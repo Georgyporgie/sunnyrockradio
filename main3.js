@@ -43,7 +43,12 @@ let track_list = [
 
 
 
-
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
 
 
 
@@ -327,25 +332,7 @@ let track_list = [
 
  
 
- {
-
-    name: " New Track",
-    artist: "Sunny ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
+ 
 {  
     name: " Alone",
     artist: "Heart  ",
@@ -1371,6 +1358,24 @@ let track_list = [
   },
 
 
+{
+
+    name: " New Track",
+    artist: "Sunny ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
 
 
 
