@@ -136,7 +136,7 @@ h2  {  font-size: 25px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif
 }
 
 p {  
-font-family: myFontt; font-size: 30px; font-weight:600; z-index: 200;background-color: transparent;text-align: center; border-radius:20px;
+font-family: myFontt; font-size: 30px; font-weight:600; z-index: 200;background-color: transparent;text-align: center; border-radius:5px;
 
 }
 
@@ -394,9 +394,8 @@ a { color: black;
 }
 
 
-#freq  {    width: 120px;  height: 80px;filter: brightness(105%) saturate(110%) contrast(105%) opacity(55%) grayscale(60%); transform: rotate(0deg); z-index: -800;  margin: -65px auto -10px  auto; display: block; border-radius: 5px;
+#freq  {     width: 35px;  height: 30px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(75%); transform: rotate(-5deg); z-index: -200; margin: -35px auto 10px  auto; display: block; 
 }
-
 
  .btn {
         position: absolute;
