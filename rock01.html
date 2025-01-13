@@ -460,6 +460,71 @@ function checkTime(i) {
 
 
 
+
+<audio id="hourlySound" src="muziek/effects/hour sound.mp3"></audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function playSound() {
+        var audio = document.getElementById("hourlySound");
+        audio.play();
+    }
+
+    function scheduleHourlySound() {
+        var now = new Date();
+        var delay = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000;
+        setTimeout(function() {
+            playSound();
+            setInterval(playSound, 3600000); // Play sound every hour
+        }, delay);
+    }
+
+    window.onload = scheduleHourlySound;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script>
 //Get our img element by using document.getElementById
 var img = document.getElementById("hero-image");
