@@ -330,6 +330,37 @@ body {
 
 
 
+<script>
+    function getSound() {
+        var audio = document.getElementById("saphiresound");
+        audio.play();
+    }
+
+    function scheduleQarterlySound() {
+        var now = new Date();
+        var delay = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000;
+        setTimeout(function() {
+            getSound();
+            setInterval(getSound, 900000); // Play sound every quarter
+        }, delay);
+    }
+
+    window.onload = scheduleQarterlySound;
+
+</script>
+
+
+
+
+<audio id="saphiresound" src="muziek/effects/DJ Saphire finale.mp3"></audio>
+
+
+
+
+
+
+
+
 <script src="main3.js"></script>
 
 
