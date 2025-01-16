@@ -334,96 +334,6 @@ let track_list = [
 
  
 
-{
-
-    name: "Radio Ga GA (12inch)",
-    artist: "Queen ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
-  },
-
-
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
-
-
-{
-
-    name: " New Track",
-    artist: "Sunny ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
-
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-{
-    name: " Black Velvet (1989)",
-    artist: "Alannah Miles ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-  
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-{
-
-    name: "Pinball Wizard",
-    artist: "The Who ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
-  },
-
- 
-
-
-
-
-
-
-
-
-{
-    name: " A View To A Kill (12 Extended Mix)",
-    artist: "Duran Duran",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
-  },
-
- 
 
 
 
@@ -1422,6 +1332,96 @@ let track_list = [
 },
 
 
+{
+
+    name: "Radio Ga GA (12inch)",
+    artist: "Queen ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
+  },
+
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
+
+
+{
+
+    name: " New Track",
+    artist: "Sunny ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+{
+    name: " Black Velvet (1989)",
+    artist: "Alannah Miles ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet3.mp3",
+  },
+  
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+{
+
+    name: "Pinball Wizard",
+    artist: "The Who ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
+  },
+
+ 
+
+
+
+
+
+
+
+
+{
+    name: " A View To A Kill (12 Extended Mix)",
+    artist: "Duran Duran",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
+  },
+
+ 
 
 
 
@@ -1836,6 +1836,41 @@ function displayMessage() {
 window.setInterval(function()  {
 startTime();
 }, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function getSound() {
+        var audio = document.getElementById("quarterHourSound");
+        audio.play();
+    }
+
+    function scheduleQuarterHourlySound() {
+        var now = new Date();
+        var minutes = now.getMinutes();
+        var delay = (15 - (minutes % 15)) * 60 * 1000 - now.getSeconds() * 1000;
+        setTimeout(function() {
+            playSound();
+            setInterval(playSound, 900000); // Play sound every 15 minutes (900000 milliseconds)
+        }, delay);
+    }
+
+    window.onload = scheduleQuarterHourlySound;
+
+
+
+
+
 
 
 
