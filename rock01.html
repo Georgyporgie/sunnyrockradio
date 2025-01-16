@@ -330,30 +330,31 @@ body {
 
 
 
+<audio id="quarterHourSound" src="muziek/effects/DJ Saphire finale.mp3"></audio>
+
+
+
+
+
+
 <script>
-    function getSound() {
-        var audio = document.getElementById("saphiresound");
-        audio.get();
+    function playSound() {
+        var audio = document.getElementById("quarterHourSound");
+        audio.play();
     }
 
-    function scheduleQarterlySound() {
+    function scheduleQuarterHourlySound() {
         var now = new Date();
-        var delay = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000;
+        var minutes = now.getMinutes();
+        var delay = (15 - (minutes % 15)) * 60 * 1000 - now.getSeconds() * 1000;
         setTimeout(function() {
-            getSound();
-            setInterval(getSound, 900000); // Play sound every quarter
+            playSound();
+            setInterval(playSound, 900000); // Play sound every 15 minutes (900000 milliseconds)
         }, delay);
     }
 
-    window.onload = scheduleQarterlySound;
-
+    window.onload = scheduleQuarterHourlySound;
 </script>
-
-
-
-
-<audio id="saphiresound" src="muziek/effects/DJ Saphire finale.mp3"></audio>
-
 
 
 
