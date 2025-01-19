@@ -308,38 +308,7 @@ let track_list = [
 
 
 
-{
-    name: "Dont You (12inch)",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Simple Minds Dont you.mp3",
-  },
 
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-{
-    name: "Learning To Fly",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
-  },
-
-
-
-{
-    name: " This Is Not America (12inch)",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
-  },
 
 {
     name: " Black Betty",
@@ -378,6 +347,12 @@ let track_list = [
     artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle33.mp3",
+  },
+{
+    name: " This Is Not America (12inch)",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
   },
 
 
@@ -1287,7 +1262,79 @@ let track_list = [
  
 
 
+ {
+    name: " Dollar Days",
+    artist: "David Bowie",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/06 Dollar Days.mp3",
+  },
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+
  
+
+
+
+
+
+
+
+
+
+{
+    name: " School",
+    artist: "Supertramp",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Supertramp - School.mp3",
+  },
+
+
+
+{
+    name: "Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+{
+    name: "Dont You (12inch)",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Simple Minds Dont you.mp3",
+  },
+
+
+
+
+{
+    name: "Just For You",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+
+{
+    name: "Learning To Fly",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
+  },
+
+
 
 
 
