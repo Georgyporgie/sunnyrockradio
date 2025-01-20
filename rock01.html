@@ -101,10 +101,34 @@ body {
 
 
 
+<script>
+function startTime() {
+    let hour = new Date().getHours(); // Example of declaring and initializing the variable
+    // Rest of your code
+}
+
+
+
+let hour; // Declare the variable in the global scope
+function startTime() {
+    hour = new Date().getHours(); // Initialize the variable
+    // Rest of your code
+}
+
+
+
+
+
+
+
+
+
+
+
 
 <audio id="hourlySound" src=""></audio>
 <audio id="quarterHourSound" src=""></audio>
-<audio id="fortyFiveMinuteSound" src=""></audio>
+<audio id="fortyFiveMinuteSound" src=""></audio>	
 
 <script>
 document.getElementById("hourlySound").setAttribute('src', 'muziek/effects/hourlysoundsaffire.mp3');
