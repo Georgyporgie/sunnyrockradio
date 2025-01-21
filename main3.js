@@ -47,7 +47,7 @@ let track_list = [
     name: "Welcome!",
     artist: "Play Sunny Rockradio  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
 
 
@@ -177,86 +177,6 @@ let track_list = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- {
-    name: "Snippet",
-    artist: "Play Sunny RockRadio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
-
-
-
-{  
-    name: " Boys Keep Swinging",
-    artist: "David Bowie  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
-  },
-
-
-
-
-
-{
-    name: " Right Between The Eyes (12inch)",
-    artist: "Wax ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Wax - Right between the eyes.mp3",
-  },
-
-
-
-{
-    name: " Unconfortably Numb",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Unconfortably numb.mp3",
-  },
-
-{
-    name: " Melting Pot",
-    artist: "Booker T. And The Mg's ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
-  },
-
-
-
-
- {
-    name: " Duel",
-    artist: "Propaganda  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
- 
  
 
 
