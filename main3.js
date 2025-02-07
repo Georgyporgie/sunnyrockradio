@@ -54,84 +54,6 @@ let track_list = [
 
 
 
-{
-    name: " Black Betty",
-    artist: "Ram Jam",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
-  },
-
-
-
-
-
-
-{  
-    name: "  Little Lies ",
-    artist: "Fleetwood Mac",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
-
-
-
-
-
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny hotradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-  
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle33.mp3",
-  },
-
-
-{
-    name: "Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " This Is Not America (12inch)",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
-  },
 
 
 {
@@ -1048,6 +970,84 @@ let track_list = [
 
 
 
+{
+    name: " Black Betty",
+    artist: "Ram Jam",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
+  },
+
+
+
+
+
+
+{  
+    name: "  Little Lies ",
+    artist: "Fleetwood Mac",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+  },
+
+
+
+
+
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny hotradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+  
+ {
+    name: "Snippet",
+    artist: "Sunny radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet4.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle33.mp3",
+  },
+
+
+{
+    name: "Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " This Is Not America (12inch)",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
+  },
 
 
 
