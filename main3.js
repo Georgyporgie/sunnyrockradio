@@ -52,64 +52,6 @@ let track_list = [
 
 
 
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-{
-    name: "Learning To Fly",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
-  },
-
-
-
-
-
-
-{
-
-    name: " Revermation Bell",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Revermation Bell.mp3",
-  },
-
-
-
-
-{
-
-
-
-    name: " Stairway To Heaven",
-    artist: "Led Zeppelin",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Led Zeppelin - Stairway to heaven.mp3",
-  },
-
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
-
 
 
 {
@@ -489,6 +431,63 @@ let track_list = [
 
 
 
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+
+
+
+{
+    name: "Just For You",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+
+{
+    name: "Learning To Fly",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
+  },
+
+
+
+
+
+
+{
+
+    name: " Revermation Bell",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Pink Floyd - Revermation Bell.mp3",
+  },
+
+
+
+
+{
+
+
+
+    name: " Stairway To Heaven",
+    artist: "Led Zeppelin",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Led Zeppelin - Stairway to heaven.mp3",
+  },
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
 
 
 
