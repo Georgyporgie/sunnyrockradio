@@ -111,6 +111,19 @@ let track_list = [
   },
 
 
+
+{
+    name: " Black Betty",
+    artist: "Ram Jam",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
+  },
+
+
+
+
+
+
 {  
     name: "  Little Lies ",
     artist: "Fleetwood Mac",
@@ -125,12 +138,6 @@ let track_list = [
 
 
 
-{
-    name: " Black Betty",
-    artist: "Ram Jam",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
-  },
 
 {
     name: "Welcome!",
@@ -163,6 +170,20 @@ let track_list = [
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle33.mp3",
   },
+
+
+{
+    name: "Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+
+
+
 {
     name: " This Is Not America (12inch)",
     artist: "David Bowie ",
@@ -181,12 +202,6 @@ let track_list = [
 
 
 
-{
-    name: "Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
 
  
 
@@ -194,7 +209,12 @@ let track_list = [
 
 
 
-
+{  
+    name: " Private Dancer (12inch)",
+    artist: "Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
+  },
 
 
 
@@ -211,12 +231,7 @@ let track_list = [
 
 
 
-{  
-    name: " Private Dancer (12inch)",
-    artist: "Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-  },
+
 
 
 
