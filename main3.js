@@ -44,7 +44,9 @@ function nextTrack() {
 
 
 
-
+// Create the ordered list and append it to the body
+let ol = document.createElement('ol');
+document.body.appendChild(ol);
 
 
 
@@ -76,12 +78,17 @@ let track_list = [
 
 
 
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -94,6 +101,28 @@ let track_list = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Rockradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
 
 
 
@@ -101,197 +130,11 @@ let track_list = [
 
 
 {  
-    name: "  Little Lies ",
-    artist: "Fleetwood Mac",
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
   },
-
-
-
-
-
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny hotradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-  
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle33.mp3",
-  },
-
-
-{
-    name: "Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " This Is Not America (12inch)",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
 
 
 
@@ -952,328 +795,6 @@ let track_list = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-{
-    name: " School",
-    artist: "Supertramp",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Supertramp - School.mp3",
-  },
-
-
-
-{
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-{
-    name: "Dont You (12inch)",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Simple Minds Dont you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Black Betty",
-    artist: "Ram Jam",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " A View To A Kill (12 Extended Mix)",
-    artist: "Duran Duran",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
-  },
-
- 
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
- 
-
-
-
-
-
-
-
-
-  
-
-
-
-
- 
- 
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-{
-    name: " Drive",
-    artist: "The Cars",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The Cars - Drive.mp3",
-  },
-
-
-
-{
-    name: "  Duel (12inch)",
-    artist: "Propaganda",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Propaganda - Duel.mp3",
-  },
-
-
-{
-    name: "  Nature Is Beauty ",
-    artist: "Bjork  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Sunny  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/more music at the weekend.mp3",
-  },
-
- {
-    name: "Snippet",
-    artist: "Sunny Radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  },
-
-
-
-
-
-
- {
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
-  
-
-
-},
-
 {  
     name: "Sirius ",
     artist: "Alan Parsons Project ",
@@ -1388,12 +909,6 @@ let track_list = [
     path: "muziek/muziek01/Deep Purple - Child in time.mp3",
   },
  
- {
-    name: "  Child In Time",
-    artist: "Deep Purple   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
 
 
 
@@ -1642,6 +1157,460 @@ let track_list = [
     path: "muziek/muziek01/The who - Pinball Wizard.mp3",
   },
 
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+{  
+    name: "  Little Lies ",
+    artist: "Fleetwood Mac",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+  },
+
+
+
+
+
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny hotradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+  
+ {
+    name: "Snippet",
+    artist: "Sunny radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet4.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle33.mp3",
+  },
+
+
+{
+    name: "Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " This Is Not America (12inch)",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " School",
+    artist: "Supertramp",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Supertramp - School.mp3",
+  },
+
+
+
+{
+    name: "Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+{
+    name: "Dont You (12inch)",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Simple Minds Dont you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Black Betty",
+    artist: "Ram Jam",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " A View To A Kill (12 Extended Mix)",
+    artist: "Duran Duran",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
+  },
+
+ 
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+ 
+
+
+
+
+
+
+
+
+  
+
+
+
+
+ 
+ 
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+{
+    name: " Drive",
+    artist: "The Cars",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The Cars - Drive.mp3",
+  },
+
+
+
+{
+    name: "  Duel (12inch)",
+    artist: "Propaganda",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Propaganda - Duel.mp3",
+  },
+
+
+{
+    name: "  Nature Is Beauty ",
+    artist: "Bjork  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
+  },
+
+
+
+
+
+
  
 
 
@@ -1658,6 +1627,36 @@ let track_list = [
 
 ];
 
+
+
+// Function to create a list item for each track
+function createListItem(track) {
+  let li = document.createElement('li');
+
+  let trackInfo = document.createElement('div');
+  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
+  li.appendChild(trackInfo);
+
+
+
+  let audio = document.createElement('audio');
+  audio.controls = false;
+  let source = document.createElement('source');
+  source.src = track.path;
+  source.type = "audio/mpeg";
+  audio.appendChild(source);
+  li.appendChild(audio);
+
+  return li;
+}
+
+// Add each track to the ordered list, but limit to 10 tracks
+track_list.slice(0, 20).forEach(track => {
+  ol.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the placeholder div
+document.getElementById('track-list-container').appendChild(ol);
 
 
 
