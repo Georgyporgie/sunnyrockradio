@@ -1629,6 +1629,17 @@ let track_list = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 // Function to create a list item for each track
 function createListItem(track) {
   let li = document.createElement('li');
@@ -1879,6 +1890,34 @@ startTime();
 
 
 
+// Function to create a list item for each track
+function createListItem(track) {
+  let li = document.createElement('li');
+
+  let trackInfo = document.createElement('div');
+  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
+  li.appendChild(trackInfo);
+
+
+
+  let audio = document.createElement('audio');
+  audio.controls = false;
+  let source = document.createElement('source');
+  source.src = track.path;
+  source.type = "audio/mpeg";
+  audio.appendChild(source);
+  li.appendChild(audio);
+
+  return li;
+}
+
+// Add each track to the ordered list, but limit to 10 tracks
+track_list.slice(0, 5).forEach(track => {
+  ol.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the placeholder div
+document.getElementById('track-list-container').appendChild(ol);
 
 
 
