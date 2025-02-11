@@ -1923,3 +1923,5 @@ document.getElementById('track-list-container').appendChild(ol);
 
 
 
+// Filter the track list to exclude tracks with 'Sunny' in the artist's name
+let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
