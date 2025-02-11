@@ -277,10 +277,9 @@ let track_list = [
 
 
 
-
 {
-    name: " Todays News",
-    artist: "Nos Journaal",
+    name: "Just For You",
+    artist: "Sunny Ship",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -352,9 +351,11 @@ let track_list = [
 
 
 
+
+
 {
-    name: " Todays News",
-    artist: "Nos Journaal",
+    name: "Just For You",
+    artist: "Sunny Ship",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -406,15 +407,16 @@ let track_list = [
 
 
 
- {
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
   
 
 
-},
+}, 
 {  
     name: " Broken Wings",
     artist: "Mr Mister",
@@ -1866,18 +1868,23 @@ document.body.appendChild(ol);
 function createListItem(track) {
   let li = document.createElement('li');
 
-  // Function to emphasize the words "classic", "maxi", and "12inch" in a given text
+  // Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
   function emphasizeKeywords(text) {
-    return text.replace(/(classic|maxi|12inch|new)/gi, '<em>$1</em>');
+    return text.replace(/(classic|maxi|12inch|new)/gi, function(match) {
+      if (match.toLowerCase() === 'new') {
+        return '<em class="blinking-new">' + match + '</em>';
+      }
+      return '<em>' + match + '</em>';
+    });
   }
 
   let trackInfo = document.createElement('div');
   let emphasizedTrackName = emphasizeKeywords(track.name);
   let emphasizedArtist = emphasizeKeywords(track.artist);
-  
+
   // Style the word "by" with light blue color
   let coloredBy = ' <span style="color: lightblue;">by</span> ';
-  
+
   trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
 
@@ -1901,6 +1908,7 @@ function createListItem(track) {
 
   return li;
 }
+
 
 // Filter the track list to exclude tracks with 'Sunny' in the artist's name
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
