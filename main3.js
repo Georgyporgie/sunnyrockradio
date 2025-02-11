@@ -44,9 +44,6 @@ function nextTrack() {
 
 
 
-// Create the ordered list and append it to the body
-let ol = document.createElement('ol');
-document.body.appendChild(ol);
 
 
 
@@ -1640,37 +1637,6 @@ let track_list = [
 
 
 
-// Function to create a list item for each track
-function createListItem(track) {
-  let li = document.createElement('li');
-
-  let trackInfo = document.createElement('div');
-  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
-  li.appendChild(trackInfo);
-
-
-
-  let audio = document.createElement('audio');
-  audio.controls = false;
-  let source = document.createElement('source');
-  source.src = track.path;
-  source.type = "audio/mpeg";
-  audio.appendChild(source);
-  li.appendChild(audio);
-
-  return li;
-}
-
-// Add each track to the ordered list, but limit to 10 tracks
-track_list.slice(0, 20).forEach(track => {
-  ol.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the placeholder div
-document.getElementById('track-list-container').appendChild(ol);
-
-
-
 
 
 
@@ -1890,38 +1856,68 @@ startTime();
 
 
 
+
+
+// Create the ordered list and append it to the body
+let ol = document.createElement('ol');
+document.body.appendChild(ol);
+
 // Function to create a list item for each track
 function createListItem(track) {
   let li = document.createElement('li');
 
+  // Function to emphasize the words "classic", "maxi", and "12inch" in a given text
+  function emphasizeKeywords(text) {
+    return text.replace(/(classic|maxi|12inch)/gi, '<em>$1</em>');
+  }
+
   let trackInfo = document.createElement('div');
-  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
+  let emphasizedTrackName = emphasizeKeywords(track.name);
+  let emphasizedArtist = emphasizeKeywords(track.artist);
+  
+  // Style the word "by" with light blue color
+  let coloredBy = ' <span style="color: lightblue;">by</span> ';
+  
+  trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
 
-
-
   let audio = document.createElement('audio');
-  audio.controls = false;
   let source = document.createElement('source');
   source.src = track.path;
   source.type = "audio/mpeg";
   audio.appendChild(source);
   li.appendChild(audio);
 
+  // Event listener to make the track blink when playing
+  audio.addEventListener('play', function() {
+    li.classList.add('blinking');
+  });
+  audio.addEventListener('pause', function() {
+    li.classList.remove('blinking');
+  });
+  audio.addEventListener('ended', function() {
+    li.classList.remove('blinking');
+  });
+
   return li;
 }
 
-// Add each track to the ordered list, but limit to 10 tracks
-track_list.slice(0, 5).forEach(track => {
+// Filter the track list to exclude tracks with 'Sunny' in the artist's name
+let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
+
+// Limit the filtered track list to 20 tracks
+let limitedTrackList = filteredTrackList.slice(0, 20);
+
+// Log the limited track list to the console
+console.log("Limited track list:", limitedTrackList);
+
+// Add each track to the ordered list
+limitedTrackList.forEach(track => {
   ol.appendChild(createListItem(track));
 });
 
 // Append the ordered list to the placeholder div
 document.getElementById('track-list-container').appendChild(ol);
 
-
-
-
-
-// Filter the track list to exclude tracks with 'Sunny' in the artist's name
-let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
+// Log a message indicating the script has finished running
+console.log("Script has finished running.");
