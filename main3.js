@@ -145,7 +145,7 @@ let track_list = [
 
 
 {
-    name: " Melting Pot",
+    name: "(new) Melting Pot",
     artist: "Booker T. And The Mg's ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
@@ -1868,7 +1868,7 @@ function createListItem(track) {
 
   // Function to emphasize the words "classic", "maxi", and "12inch" in a given text
   function emphasizeKeywords(text) {
-    return text.replace(/(classic|maxi|12inch)/gi, '<em>$1</em>');
+    return text.replace(/(classic|maxi|12inch|new)/gi, '<em>$1</em>');
   }
 
   let trackInfo = document.createElement('div');
