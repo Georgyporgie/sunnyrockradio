@@ -146,7 +146,7 @@ let track_list = [
 
 {
     name: "(new) Melting Pot",
-    artist: "Booker T. And Mg's ",
+    artist: "Booker T. And  Mg's ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
   },
@@ -1870,7 +1870,7 @@ function createListItem(track) {
 
   // Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
   function emphasizeKeywords(text) {
-    return text.replace(/(classic|maxi|12inch|new)/gi, function(match) {
+   return text.replace(/(classic|maxi|12inch|new|\b\d{4}\b)/gi, function(match) {
       if (match.toLowerCase() === 'new') {
         return '<em class="blinking-new">' + match + '</em>';
       }
