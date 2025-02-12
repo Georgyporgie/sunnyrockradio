@@ -146,7 +146,7 @@ let track_list = [
 
 {
     name: "(new) Melting Pot",
-    artist: "Booker T. And The Mg's ",
+    artist: "Booker T. And Mg's ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
   },
