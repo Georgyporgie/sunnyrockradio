@@ -400,9 +400,9 @@ let track_list = [
 
 
 
- {
-    name: "Todays News",
-    artist: "Nos Journaal",
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
     image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
     path: "muziek/reklame/reklame1.mp3",
   
