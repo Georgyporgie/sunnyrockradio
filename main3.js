@@ -440,12 +440,7 @@ let track_list = [
   },
  
  
- {
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
+
 
 
 
