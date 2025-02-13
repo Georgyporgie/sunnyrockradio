@@ -1,10 +1,52 @@
 {
   "2025-02-13": [
+    {"time": "00.00 - 14.00", "event": "Morning Blues"},
+    {"time": "14.00 - 18.00", "event": "Afternoon Blues"}
+  ],
+
+
+
+
+
+
+
+
+  "2025-02-14": [
     {"time": "12.00 - 18.00", "event": "Rock Around The Clock"},
     {"time": "18.00 - 00.00", "event": "Rollerdisco Rock"}
   ],
-  "2025-02-14": [
+
+
+
+  "2025-02-15": [
+    {"time": "00.00 - 14.00", "event": "The Hillbillies"},
+    {"time": "14.00 - 18.00", "event": "Afternoon Rock"}
+  ],
+
+
+
+  "2025-02-16": [
+    {"time": "12.00 - 18.00", "event": "Rock Around The Clock"},
+    {"time": "18.00 - 00.00", "event": "Rollerdisco Rock"}
+
+  ],
+
+
+  "2025-02-17": [
+     {"time": "00.00 - 14.00", "event": "The Hillbillies"},
+    {"time": "14.00 - 18.00", "event": "Afternoon Rock"}
+  ],
+
+
+  "2025-02-18": [
     {"time": "00.00 - 14.00", "event": "Morning Blues"},
     {"time": "14.00 - 18.00", "event": "Afternoon Blues"}
+  ],
+
+  "2025-02-19": [
+    {"time": "00.00 - 14.00", "event": "Hardrock Café,
+    {"time": "14.00 - 18.00", "event": "Afternoon Rock
   ]
+
+
 }
