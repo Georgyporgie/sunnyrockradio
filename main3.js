@@ -106,12 +106,9 @@ let track_list = [
 
 
 
-
-
 {
-   
-    name: "Duel",
-    artist: "Propaganda  ",
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet5.mp3",
   },
@@ -134,18 +131,17 @@ let track_list = [
 
 
 
-
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
 
 
 {
-    name: "First You Jump",
-    artist: "Simple Minds",
+     name: "Welcome",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle.mp3",
   },
@@ -160,11 +156,9 @@ let track_list = [
     path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
   },
 
-
-
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -207,7 +201,7 @@ let track_list = [
 
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -215,8 +209,8 @@ let track_list = [
 
 
 {
-    name: "First You Jump",
-    artist: "Simple Minds",
+     name: "Welcome",
+    artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle12.mp3",
   },
@@ -232,8 +226,8 @@ let track_list = [
 
 
 {
-    name: "First You Jump",
-    artist: "Simple Minds",
+     name: "Welcome",
+    artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle12.mp3",
   },
@@ -247,9 +241,10 @@ let track_list = [
   },
   
 
+
 {
-    name: "First You Jump",
-    artist: "Simple Minds",
+     name: "Welcome",
+    artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle12.mp3",
   },
@@ -1389,7 +1384,7 @@ let track_list = [
 
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -1539,9 +1534,10 @@ let track_list = [
 
 
 
+ 
 {
-    name: " Todays News",
-    artist: "Nos Journaal",
+     name: "Welcome",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -1567,7 +1563,7 @@ let track_list = [
  
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
