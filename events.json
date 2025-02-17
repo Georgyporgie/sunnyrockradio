@@ -17,11 +17,29 @@
     {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
   ],
 
-  "2025-02-18": [
+  "2025-02-19": [
      {"time": "12.00 - 18.00", "event": "Dancin'!"},
     {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
   ],
-  "2025-02-19": [
+ 
+  "2025-02-20": [
+     {"time": "12.00 - 18.00", "event": "Dancin'!"},
+    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
+  ],
+ 
+
+  "2025-02-21": [
+     {"time": "12.00 - 18.00", "event": "Dancin'!"},
+    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
+  ],
+ 
+
+
+
+
+
+
+ "2025-02-22": [
     {"time": "00.00 - 14.00", "event": "The Hillbillies"},
     {"time": "14.00 - 18.00", "event": "Rock Party Is On!'"}
   ]
