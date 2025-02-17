@@ -1,46 +1,37 @@
 {
-   "2025-02-13": [
-    {"time": "12.00 - 18.00", "event": "Rockin'!"},
-    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
+  
+
+    "2025-02-13": [
+    {"time": "00.00 - 14.00", "event": "Thursday Dancin"},
+    {"time": "14.00 - 18.00", "event": "Georgy's Rockhow"}
+  
   ],
+
+
+
+
+
+ 
     "2025-02-14": [
-    {"time": "00.00 - 14.00", "event": "Rockful With Chang"},
-    {"time": "14.00 - 18.00", "event": "RockParty Is On!'"}
+    {"time": "00.00 - 14.00", "event": "Rockful With Monique"},
+    {"time": "14.00 - 18.00", "event": "Friday Rockparty"}
   
   ],
   "2025-02-15": [
-    {"time": "00.00 - 14.00", "event": "Saturday Fun!"},
-    {"time": "14.00 - 18.00", "event": "Afternoon Blues"}
+    {"time": "00.00 - 14.00", "event": "Saturday Live"},
+    {"time": "14.00 - 18.00", "event": "Afternoon Rockin'"}
   ],
   "2025-02-16": [
-    {"time": "12.00 - 18.00", "event": "Dancin'!"},
-    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
+    {"time": "12.00 - 18.00", "event": " Sunday Blues"},
+    {"time": "18.00 - 00.00", "event": "Joris Rockworld"}
   ],
 
   "2025-02-19": [
-     {"time": "12.00 - 18.00", "event": "Dancin'!"},
-    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
+     {"time": "12.00 - 18.00", "event": "George's Dancin'!"},
+    {"time": "18.00 - 00.00", "event": "Joris For President"}
   ],
- 
   "2025-02-20": [
-     {"time": "12.00 - 18.00", "event": "Dancin'!"},
-    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
-  ],
- 
-
-  "2025-02-21": [
-     {"time": "12.00 - 18.00", "event": "Dancin'!"},
-    {"time": "18.00 - 00.00", "event": "Joris Rockshow"}
-  ],
- 
-
-
-
-
-
-
- "2025-02-22": [
-    {"time": "00.00 - 14.00", "event": "The Hillbillies"},
-    {"time": "14.00 - 18.00", "event": "Rock Party Is On!'"}
+    {"time": "00.00 - 14.00", "event": "Soulful With Monique"},
+    {"time": "14.00 - 18.00", "event": "Love this Rock Party "}
   ]
 }
