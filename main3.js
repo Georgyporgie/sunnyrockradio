@@ -97,20 +97,13 @@ let track_list = [
 
 
  
+ 
 {
      name: "Welcome",
     artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
-
-{  
-    name: " Broken Wings",
-    artist: "Mr Mister",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
-  },
-
 
 
 {
