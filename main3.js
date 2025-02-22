@@ -97,13 +97,20 @@ let track_list = [
 
 
  
- 
 {
      name: "Welcome",
     artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
+
+{  
+    name: " Broken Wings",
+    artist: "Mr Mister",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
+  },
+
 
 
 {
@@ -1835,15 +1842,18 @@ function createListItem(track) {
   audio.appendChild(source);
   li.appendChild(audio);
 
-  // Event listener to make the track blink when playing
-  audio.addEventListener('play', function() {
-    li.classList.add('blinking');
+
+
+
+
+  audio.addEventListener('play',function() {
+    li.classList.add('blinking-new ');
   });
   audio.addEventListener('pause', function() {
-    li.classList.remove('blinking');
+    li.classList.remove('blinking-new ');
   });
   audio.addEventListener('ended', function() {
-    li.classList.remove('blinking');
+    li.classList.remove('blinking-new ');
   });
 
   return li;
@@ -1935,4 +1945,72 @@ document.getElementById('track-list-container').appendChild(detailsElement2);
 
 // Log a message indicating the summaries for additional tracks have been added
 console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
