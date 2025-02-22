@@ -15,48 +15,40 @@ let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
  
 
-function nextTrack() {
-  // Go back to the first track if the
-  // current one is the last in the track list
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else track_index = 0;
- 
-  // Load and play the new track
-  loadTrack(track_index);
-  playTrack();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("hero-image")
+ .addEventListener("touchstart",
+  displayMessage);
+
+function displayMessage() {
+ document.getElementById("message")
+  .innerHTML = "Hi I am Iggy Pop, what's your name?";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -64,6 +56,13 @@ function nextTrack() {
 let track_index = 0;
 let isPlaying = false;
 let updateTimer;
+
+
+
+
+
+
+
  
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
@@ -1660,7 +1659,17 @@ function playTrack() {
   playpause_btn.innerHTML = '<img id="media"  src="images/pause button6.png">';
 }
  
-
+function nextTrack() {
+  // Go back to the first track if the
+  // current one is the last in the track list
+  if (track_index < track_list.length - 1)
+    track_index += 1;
+  else track_index = 0;
+ 
+  // Load and play the new track
+  loadTrack(track_index);
+  playTrack();
+}
  
 
  
@@ -1835,7 +1844,12 @@ function createListItem(track) {
   trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
 
-  let audio = document.createElement('audio');
+  
+
+
+
+
+let audio = document.createElement('audio');
   let source = document.createElement('source');
   source.src = track.path;
   source.type = "audio/mpeg";
@@ -1858,6 +1872,26 @@ function createListItem(track) {
 
   return li;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Filter the track list to exclude tracks with 'Sunny' in the artist's name
@@ -1945,14 +1979,6 @@ document.getElementById('track-list-container').appendChild(detailsElement2);
 
 // Log a message indicating the summaries for additional tracks have been added
 console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
-
-
-
-
-
-
-
-
 
 
 
