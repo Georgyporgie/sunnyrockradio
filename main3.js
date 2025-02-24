@@ -2022,6 +2022,12 @@ console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
+window.onload = function() {
+  if (scheduledMp3Files.length > 0) {
+    loadTrack(0);  // Load the first track
+    playTrack();   // Start playing
+  }
+};
 
 
 
