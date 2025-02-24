@@ -7,7 +7,6 @@ let track_artist = document.querySelector(".track-artist");
  
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
-let prev_btn = document.querySelector(".prev-track");
  
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
@@ -1622,7 +1621,30 @@ function loadTrack(track_index) {
   // using the 'ended' event
   curr_track.addEventListener("ended", nextTrack);
  
-  // Apply a random background color
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Apply a random background color
   random_bg_color();
 }
  
@@ -1679,17 +1701,7 @@ function nextTrack() {
  
 
  
-function prevTrack() {
-  // Go back to the last track if the
-  // current one is the first in the track list
-  if (track_index > 0)
-    track_index -= 1;
-  else track_index = track_list.length;
-   
-  // Load and play the new track
-  loadTrack(track_index);
-  playTrack();
-}
+
 
 
 function seekTo() {
@@ -2016,17 +2028,6 @@ console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
-
-window.onload = function() {
-  console.log("Page loaded!");
-  console.log("Scheduled MP3 files:", scheduledMp3Files);
-  if (scheduledMp3Files.length > 0) {
-    loadTrack(0);  // Load the first track
-    playTrack();   // Start playing
-  } else {
-    console.log("No MP3 files found to play.");
-  }
-};
 
 
 
