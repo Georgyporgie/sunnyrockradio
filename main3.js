@@ -2017,15 +2017,14 @@ console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
-
-
-
-
-
 window.onload = function() {
+  console.log("Page loaded!");
+  console.log("Scheduled MP3 files:", scheduledMp3Files);
   if (scheduledMp3Files.length > 0) {
     loadTrack(0);  // Load the first track
     playTrack();   // Start playing
+  } else {
+    console.log("No MP3 files found to play.");
   }
 };
 
