@@ -7,6 +7,7 @@ let track_artist = document.querySelector(".track-artist");
  
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
+let prev_btn = document.querySelector(".prev-track");
  
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
@@ -14,40 +15,51 @@ let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("hero-image")
- .addEventListener("touchstart",
-  displayMessage);
-
-function displayMessage() {
- document.getElementById("message")
-  .innerHTML = "Hi I am Iggy Pop, what's your name?";
+function nextTrack() {
+  // Go back to the first track if the
+  // current one is the last in the track list
+  if (track_index < track_list.length - 1)
+    track_index += 1;
+  else track_index = 0;
+ 
+  // Load and play the new track
+  loadTrack(track_index);
+  playTrack();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Create the ordered list and append it to the body
+let ol = document.createElement('ol');
+document.body.appendChild(ol);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,13 +67,6 @@ function displayMessage() {
 let track_index = 0;
 let isPlaying = false;
 let updateTimer;
-
-
-
-
-
-
-
  
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
@@ -94,12 +99,83 @@ let track_list = [
  
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
      name: "Welcome",
     artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Melting Pot",
+    artist: "Booker T. And The Mg's ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
+  },
+
+
+
+
+ {
+    name: " Duel",
+    artist: "Propaganda  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+ 
+ 
+
+
+
+
+
+{  
+    name: " Everywhere",
+    artist: "Fleetwood Mac  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
   },
 
 {  
@@ -136,9 +212,10 @@ let track_list = [
     path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
   },
 
+
 {
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    name: "First You Jump",
+    artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle12.mp3",
   },
@@ -151,7 +228,12 @@ let track_list = [
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Santana - She 's not there.mp3",
   },
-
+{
+    name: " Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
 
  {
     name: " Black Velvet",
@@ -191,12 +273,8 @@ let track_list = [
 
 
 
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
+
+
 
 
 
@@ -204,8 +282,8 @@ let track_list = [
 
 
 {
-    name: "Just For You",
-    artist: "Sunny Ship",
+    name: " Todays News",
+    artist: "Nos Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -220,6 +298,298 @@ let track_list = [
     path: "muziek/muziek02/Heart - Alone.mp3",
   },
 
+
+
+
+
+{
+   
+    name: "Duel",
+    artist: "Propaganda  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet5.mp3",
+  },
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
+
+
+
+
+{
+    name: " Won't Get Fooled Again",
+    artist: "The Who",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
+  },
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
+
+
+
+
+{
+    name: " Too Shy (12inch)",
+    artist: "Kajagoogoo",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
+  },
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+{
+     name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+
+ {
+    name: "Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
+    path: "muziek/reklame/reklame1.mp3",
+  
+
+
+},
+{  
+    name: " Broken Wings",
+    artist: "Mr Mister",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
+  },
+
+
+
+{
+    name: " Lucky Number (1979)",
+    artist: "Lene Lovich  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lene Lovich - Lucky Number.mp3",
+  },
+
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+
+
+
+ {
+    name: "Snippet",
+    artist: "Play Sunny RockRadio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+
+ {
+
+    name: " The Fifth 1969",
+    artist: "Ekseption  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ekseption - the fifth 1969.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+
+
+    name: " Big Log",
+    artist: "Robert Plant",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Robert Plant - Big Log.mp3",
+  },
+
+
+{
+    name: " Lust For Life (live)",
+    artist: "Iggy Pop",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Iggy Pop - Lust for live (live).mp3",
+  },
+
+ {
+    name: "Snippet",
+    artist: "Play Sunny RockRadio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet5.mp3",
+  },
+
+
+
+{  
+    name: " Boys Keep Swinging",
+    artist: "David Bowie  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
+  },
+
+
+
+
+
+{
+    name: " Right Between The Eyes (12inch)",
+    artist: "Wax ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Wax - Right between the eyes.mp3",
+  },
+
+
+
+{
+    name: " Unconfortably Numb",
+    artist: "Pink Floyd ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Pink Floyd - Unconfortably numb.mp3",
+  },
+
+
+
+ {
+    name: "Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
+    path: "muziek/reklame/reklame1.mp3",
+  
+
+
+},
+
+
+
+
+{
+    name: " Whole lotta Rosie",
+    artist: "ACDC",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
+  },
+ 
+
+
+{
+    name: "Fade To Grey",
+    artist: "Visage",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+
+
+
+
+{
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
+  },
+ 
+ 
+ {
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+
+
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
 
 
 
@@ -266,8 +636,8 @@ let track_list = [
 
 
 {
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    name: "First You Jump",
+    artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle.mp3",
   },
@@ -286,221 +656,6 @@ let track_list = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Vienna ",
-    artist: "Ultravox  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ultravox - Vienna.mp3",
-  },
-
-{
-
-
-
-
-    name: " Happiness",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
-  },
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
- 
-
-
-
-{  
-    name: "Everybody Wants To Rule  (1985)",
-    artist: "Tears For Fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-{
-    name: " Low",
-    artist: "Lenny Kravitz ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
- 
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
-  },
-
-
- 
-
-
- 
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
-  
-
-
-},
-
-
-{
-
-    name: "Radio Ga GA (12inch)",
-    artist: "Queen ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
-
-
-{
-
-    name: " New Track",
-    artist: "Sunny ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
-
-
-
-{
-    name: "(new) Melting Pot",
-    artist: "Booker T. And  Mg's ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
-  },
 
 
 
@@ -525,9 +680,10 @@ let track_list = [
 
 
 
-{
+ 
+   {
     name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    artist: "Sunny Rockradio  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
@@ -580,23 +736,26 @@ let track_list = [
 
 
 
+
 {
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    name: " Welcome!",
+    artist: "Propaganda  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
 
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+ {
+    name: " Duel",
+    artist: "Propaganda  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
 
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+ 
+ {
+   
+    name: " Duel",
+    artist: "Propaganda  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet5.mp3",
   },
@@ -625,9 +784,10 @@ let track_list = [
   },
 
 
+
 {
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -644,14 +804,95 @@ let track_list = [
 
 
 
-
-
 {
-    name: " Too Shy (12inch)",
-    artist: "Kajagoogoo",
+    name: " Candy (12inch) ",
+    artist: "Iggy Pop",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
+    path: "muziek/muziek01/Iggy Pop - Candy.mp3",
   },
+
+
+{
+    name: " Dollar Days",
+    artist: "David Bowie",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/06 Dollar Days.mp3",
+  },
+ 
+
+
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+{
+    name: " Meddle (1971)",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
+  },
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
 
 
 {
@@ -661,45 +902,248 @@ let track_list = [
     path: "muziek/jingles/Let op.mp3",
   },
 
+ {
+    name: " Child In Time",
+    artist: "Deep Purple ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Deep Purple - Child in time.mp3",
+  },
+ 
 
 
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
+
+
+
+
+
+{  
+    name: " Private Dancer (12inch)",
+    artist: "Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
   },
 
 
 
-{
-     name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
+
 
 
 {
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
+    name: " Bohemian Rapsodhy",
+    artist: "Queen",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
   },
+
+
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+{
+
+    name: "Nothing's Gonna Stop Us Now (1986)",
+    artist: "Starship ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{  
+    name: " Vienna ",
+    artist: "Ultravox  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ultravox - Vienna.mp3",
+  },
+
+{
+
+
+
+
+    name: " Happiness",
+    artist: "Jonathan Jeremiah   ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
+  },
+
+
 
 
 {
     name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    artist: "Play Sunny rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+ 
+
+
+
+{  
+    name: "Everybody Wants To Rule The World (1985)",
+    artist: "Tears For Fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+{
+    name: " Low",
+    artist: "Lenny Kravitz ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+{
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
+  },
+ 
+ 
+ {
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+
+ 
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+ 
+
+
+ 
+
+{
+    name: "Todays News",
+    artist: "Nos Journaal",
+    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
+    path: "muziek/reklame/reklame1.mp3",
+  
+
+
+},
+
+
+{
+
+    name: "Radio Ga GA (12inch)",
+    artist: "Queen ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
+  },
+
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
+
+
+{
+
+    name: " New Track",
+    artist: "Sunny ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
+
+{
+    name: "First You Jump",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+{
+    name: " Black Velvet (1989)",
+    artist: "Alannah Miles ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet3.mp3",
   },
   
 
-
 {
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
+    name: "First You Jump",
+    artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle12.mp3",
   },
@@ -778,15 +1222,21 @@ let track_list = [
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
 
+
 {
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    name: "First You Jump",
+    artist: "Simple Minds",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jockeys/40 in jingle33.mp3",
   },
 
 
-
+{
+    name: "Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
 
 
 
@@ -953,8 +1403,8 @@ let track_list = [
 
 
 {
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
+    name: "Todays News",
+    artist: "Nos Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -1116,123 +1566,15 @@ let track_list = [
 
 
   
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
- {
-    name: " Meddle (1971)",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
-
-
-
- {
-    name: " Child In Time",
-    artist: "Deep Purple ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Deep Purple - Child in time.mp3",
-  },
- 
-
-
-
-
-
-
-
-{  
-    name: " Private Dancer (12inch)",
-    artist: "Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " Bohemian Rapsodhy",
-    artist: "Queen",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
-  },
-
-
-
-
-
-
-
-
-
- {
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-{
-
-    name: "Nothing's Gonna Stop Us Now (1986)",
-    artist: "Starship ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
-  },
-
-
-
 
 
 
 
  
+ 
 {
      name: "Welcome",
-    artist: "Play Sunny Rockradio",
+    artist: "Play Sunny Danceradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -1268,304 +1610,12 @@ let track_list = [
 
 
 
-{  
-    name: " Everywhere",
-    artist: "Fleetwood Mac  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-  },
 
-
-
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-{
-    name: " Won't Get Fooled Again",
-    artist: "The Who",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
-  },
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Broken Wings",
-    artist: "Mr Mister",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Mr Mister - Broken Wings.mp3",
-  },
-
-
-
-{
-    name: " Lucky Number (1979)",
-    artist: "Lene Lovich  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lene Lovich - Lucky Number.mp3",
-  },
-
-
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-
-
-
- {
-    name: "Snippet",
-    artist: "Play Sunny RockRadio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-
-
- {
-
-    name: " The Fifth 1969",
-    artist: "Ekseption  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ekseption - the fifth 1969.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-{
-
-
-
-    name: " Big Log",
-    artist: "Robert Plant",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Robert Plant - Big Log.mp3",
-  },
-
-
-{
-    name: " Lust For Life (live)",
-    artist: "Iggy Pop",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Iggy Pop - Lust for live (live).mp3",
-  },
-
- {
-    name: "Snippet",
-    artist: "Play Sunny RockRadio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
-
-
-
-{  
-    name: " Boys Keep Swinging",
-    artist: "David Bowie  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Boys Keep Swinging.mp3",
-  },
-
-
-
-
-
-{
-    name: " Right Between The Eyes (12inch)",
-    artist: "Wax ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Wax - Right between the eyes.mp3",
-  },
-
-
-
-{
-    name: " Unconfortably Numb",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Unconfortably numb.mp3",
-  },
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
-  
-
-
-},
-
-
-
-
-{
-    name: " Whole lotta Rosie",
-    artist: "ACDC",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
-  },
- 
-
-
-{
-    name: "Fade To Grey",
-    artist: "Visage",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-
-
-
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
  
 
 
 
 
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-{
-    name: " Candy (12inch) ",
-    artist: "Iggy Pop",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Iggy Pop - Candy.mp3",
-  },
-
-
-{
-    name: " Dollar Days",
-    artist: "David Bowie",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/06 Dollar Days.mp3",
-  },
- 
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
- 
 
 
 
@@ -1587,6 +1637,37 @@ let track_list = [
 
 
 
+
+
+
+// Function to create a list item for each track
+function createListItem(track) {
+  let li = document.createElement('li');
+
+  let trackInfo = document.createElement('div');
+  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
+  li.appendChild(trackInfo);
+
+
+
+  let audio = document.createElement('audio');
+  audio.controls = false;
+  let source = document.createElement('source');
+  source.src = track.path;
+  source.type = "audio/mpeg";
+  audio.appendChild(source);
+  li.appendChild(audio);
+
+  return li;
+}
+
+// Add each track to the ordered list, but limit to 10 tracks
+track_list.slice(0, 20).forEach(track => {
+  ol.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the placeholder div
+document.getElementById('track-list-container').appendChild(ol);
 
 
 
@@ -1621,30 +1702,7 @@ function loadTrack(track_index) {
   // using the 'ended' event
   curr_track.addEventListener("ended", nextTrack);
  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Apply a random background color
+  // Apply a random background color
   random_bg_color();
 }
  
@@ -1671,6 +1729,12 @@ function resetValues() {
 
 
 
+function playpauseTrack() {
+  // Switch between playing and pausing
+  // depending on the current state
+  if (!isPlaying) playTrack();
+  else pauseTrack() ;
+}
  
 function playTrack() {
   // Play the loaded track
@@ -1681,21 +1745,21 @@ function playTrack() {
   playpause_btn.innerHTML = '<img id="media"  src="images/pause button6.png">';
 }
  
-function nextTrack() {
-  // Go back to the first track if the
-  // current one is the last in the track list
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else track_index = 0;
+
  
+
+ 
+function prevTrack() {
+  // Go back to the last track if the
+  // current one is the first in the track list
+  if (track_index > 0)
+    track_index -= 1;
+  else track_index = track_list.length;
+   
   // Load and play the new track
   loadTrack(track_index);
   playTrack();
 }
- 
-
- 
-
 
 
 function seekTo() {
@@ -1826,81 +1890,34 @@ startTime();
 
 
 
-
-
-// Create the ordered list and append it to the body
-let ol = document.createElement('ol');
-document.body.appendChild(ol);
-
 // Function to create a list item for each track
 function createListItem(track) {
   let li = document.createElement('li');
 
-  // Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
-  function emphasizeKeywords(text) {
-   return text.replace(/(classic|maxi|12inch|new|\b\d{4}\b)/gi, function(match) {
-      if (match.toLowerCase() === 'new') {
-        return '<em class="blinking-new">' + match + '</em>';
-      }
-      return '<em>' + match + '</em>';
-    });
-  }
-
   let trackInfo = document.createElement('div');
-  let emphasizedTrackName = emphasizeKeywords(track.name);
-  let emphasizedArtist = emphasizeKeywords(track.artist);
-
-  // Style the word "by" with light blue color
-  let coloredBy = ' <span style="color: lightblue;">by</span> ';
-
-  trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
+  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
   li.appendChild(trackInfo);
 
-  
 
 
-
-
-let audio = document.createElement('audio');
+  let audio = document.createElement('audio');
+  audio.controls = false;
   let source = document.createElement('source');
   source.src = track.path;
   source.type = "audio/mpeg";
   audio.appendChild(source);
   li.appendChild(audio);
 
-
-
-
-
-  audio.addEventListener('play',function() {
-    li.classList.add('blinking-new ');
-  });
-  audio.addEventListener('pause', function() {
-    li.classList.remove('blinking-new ');
-  });
-  audio.addEventListener('ended', function() {
-    li.classList.remove('blinking-new ');
-  });
-
   return li;
 }
 
+// Add each track to the ordered list, but limit to 10 tracks
+track_list.slice(0, 5).forEach(track => {
+  ol.appendChild(createListItem(track));
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Append the ordered list to the placeholder div
+document.getElementById('track-list-container').appendChild(ol);
 
 
 
@@ -1908,100 +1925,6 @@ let audio = document.createElement('audio');
 
 // Filter the track list to exclude tracks with 'Sunny' in the artist's name
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
-
-// Limit the filtered track list to 20 tracks
-let limitedTrackList = filteredTrackList.slice(0, 20);
-
-// Log the limited track list to the console
-console.log("Limited track list:", limitedTrackList);
-
-// Add each track to the ordered list
-limitedTrackList.forEach(track => {
-  ol.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the placeholder div
-document.getElementById('track-list-container').appendChild(ol);
-
-// Log a message indicating the script has finished running
-console.log("Script has finished running.");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//summary 21 - 40
-
-
-// Create the summary element for tracks 21 to 40
-let summaryElement1 = document.createElement('summary');
-summaryElement1.textContent = 'tracks 21 to 40';
-
-// Create a details element and append the summary to it
-let detailsElement1 = document.createElement('details');
-detailsElement1.appendChild(summaryElement1);
-
-// Create the ordered list, set start attribute to 21, and add tracks 21 to 40
-let additionalTrackList1 = filteredTrackList.slice(20, 40);
-let additionalOl1 = document.createElement('ol');
-additionalOl1.setAttribute('start', 21);
-
-additionalTrackList1.forEach(track => {
-  additionalOl1.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the details element
-detailsElement1.appendChild(additionalOl1);
-
-// Append the details element to the placeholder div
-document.getElementById('track-list-container').appendChild(detailsElement1);
-
-// Create the summary element for tracks 41 to 60
-let summaryElement2 = document.createElement('summary');
-summaryElement2.textContent = 'tracks 41 to 60';
-
-// Create a details element and append the summary to it
-let detailsElement2 = document.createElement('details');
-detailsElement2.appendChild(summaryElement2);
-
-// Create the ordered list, set start attribute to 41, and add tracks 41 to 60
-let additionalTrackList2 = filteredTrackList.slice(40, 60);
-let additionalOl2 = document.createElement('ol');
-additionalOl2.setAttribute('start', 41);
-
-additionalTrackList2.forEach(track => {
-  additionalOl2.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the details element
-detailsElement2.appendChild(additionalOl2);
-
-// Append the details element to the placeholder div
-document.getElementById('track-list-container').appendChild(detailsElement2);
-
-// Log a message indicating the summaries for additional tracks have been added
-console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2063,23 +1986,3 @@ const audioElement = document.querySelector('audio');
 normalizeVolume(audioContext, audioElement);
 
 audioElement.play();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
