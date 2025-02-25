@@ -2031,7 +2031,44 @@ console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
+// Function to analyze and normalize volume werkt misschien!!!!!
 
+function normalizeVolume(audioContext, audioElement) {
+  const source = audioContext.createMediaElementSource(audioElement);
+  const gainNode = audioContext.createGain();
+
+  source.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+
+  // Analyze volume levels (simplified example)
+  const analyser = audioContext.createAnalyser();
+  gainNode.connect(analyser);
+
+  const dataArray = new Uint8Array(analyser.fftSize);
+  analyser.getByteTimeDomainData(dataArray);
+
+  // Calculate average volume
+  let sum = 0;
+  for (let i = 0; i < dataArray.length; i++) {
+    sum += dataArray[i];
+  }
+  const averageVolume = sum / dataArray.length;
+
+  // Calculate gain adjustment
+  const targetVolume = 128; // Target volume level
+  const gainAdjustment = targetVolume / averageVolume;
+
+  // Apply gain adjustment
+  gainNode.gain.value = gainAdjustment;
+}
+
+// Usage
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const audioElement = document.querySelector('audio');
+
+normalizeVolume(audioContext, audioElement);
+
+audioElement.play();
 
 
 
