@@ -102,6 +102,548 @@ let track_list = [
     path: "muziek/jingles/Let op.mp3",
   },
 
+{  
+    name: " Heroes",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Heroes.mp3",
+  },
+
+
+{  
+    name: "Dogs ",
+    artist: "Pink Floyd ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/02 Dogs.mp3",
+  },
+
+{
+
+
+
+
+    name: "Lost",
+    artist: "Jonathan Jeremiah   ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
+  },
+
+
+{
+    name: " Two Tribes",
+    artist: "Frankie Goes To Hollywood",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
+  },
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+{
+    name: " She 's Not There",
+    artist: "Santana",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Santana - She 's not there.mp3",
+  },
+
+
+ {
+    name: " Black Velvet",
+    artist: "Alannah Miles ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet3.mp3",
+  },
+
+ 
+ {
+    name: "  Sunny radio jingle",
+    artist: "Sunny Time ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  },
+
+
+{
+
+
+
+
+    name: " Gimme All Your Lovin (12inch)",
+    artist: "ZZ Top ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
+  }, 
+
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+{  
+    name: " Alone",
+    artist: "Heart  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Heart - Alone.mp3",
+  },
+
+
+
+
+{
+    name: "Just For You",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you.mp3",
+  },
+
+{
+    name: "Learning To Fly",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
+  },
+
+
+
+
+
+
+{
+
+    name: " Revermation Bell",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Pink Floyd - Revermation Bell.mp3",
+  },
+
+
+
+
+{
+
+
+
+    name: " Stairway To Heaven",
+    artist: "Led Zeppelin",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Led Zeppelin - Stairway to heaven.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
+
+
+
+{
+    name: " Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/let's go back.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Rockradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+
+
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Rockradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{  
+    name: " Vienna ",
+    artist: "Ultravox  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ultravox - Vienna.mp3",
+  },
+
+{
+
+
+
+
+    name: " Happiness",
+    artist: "Jonathan Jeremiah   ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
+  },
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+ 
+
+
+
+{  
+    name: "Everybody Wants To Rule  (1985)",
+    artist: "Tears For Fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+{
+    name: " Low",
+    artist: "Lenny Kravitz ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+{
+    name: " Peter Gunn",
+    artist: "Emmerson Lake & Palmer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
+  },
+ 
+ 
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet.mp3",
+  },
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle12.mp3",
+  },
+
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+ 
+
+
+ 
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
+    path: "muziek/reklame/reklame1.mp3",
+  
+
+
+},
+
+
+{
+
+    name: "Radio Ga GA (12inch)",
+    artist: "Queen ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jockeys/40 in jingle.mp3",
+  },
+
+
+{
+
+    name: " New Track",
+    artist: "Sunny ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
+
+{
+    name: "(new) Melting Pot",
+    artist: "Booker T. And  Mg's ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
+  },
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+ 
+ 
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+
+
+
+
+
+{   
+    name: "Welcome",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+{
+    name: " Miami Vice Theme",
+    artist: "Jan Hammer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
+  },
+
+
+
+
+
+
+
+
+ {
+    name: "Snippet",
+    artist: "Play Sunny RockRadio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet5.mp3",
+  },
+
+
+
+{
+    name: "New Gold dream ",
+    artist: "Simple Minds ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
+  },
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet5.mp3",
+  },
+
+
+{
+    name: "Fade To Grey",
+    artist: "Visage",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you333.mp3",
+  },
+
+
+
+
+
+
+
+
+{
+
+    name: " First You Jump",
+    artist: "Simple Minds  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/recent/Simple Minds - First you jump.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny RockRadio  ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+{  
+    name: "Sirius ",
+    artist: "Alan Parsons Project ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
+  },
+
+
+
 
 
 {
@@ -973,548 +1515,6 @@ let track_list = [
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you.mp3",
   },
-
-{  
-    name: " Heroes",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Heroes.mp3",
-  },
-
-
-{  
-    name: "Dogs ",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/02 Dogs.mp3",
-  },
-
-{
-
-
-
-
-    name: "Lost",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
-  },
-
-
-{
-    name: " Two Tribes",
-    artist: "Frankie Goes To Hollywood",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
-  },
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-
-{
-    name: " She 's Not There",
-    artist: "Santana",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Santana - She 's not there.mp3",
-  },
-
-
- {
-    name: " Black Velvet",
-    artist: "Alannah Miles ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-
- 
- {
-    name: "  Sunny radio jingle",
-    artist: "Sunny Time ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  },
-
-
-{
-
-
-
-
-    name: " Gimme All Your Lovin (12inch)",
-    artist: "ZZ Top ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
-  }, 
-
-
-
-
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-
-
-
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-{  
-    name: " Alone",
-    artist: "Heart  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Heart - Alone.mp3",
-  },
-
-
-
-
-{
-    name: "Just For You",
-    artist: "Sunny",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you.mp3",
-  },
-
-{
-    name: "Learning To Fly",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
-  },
-
-
-
-
-
-
-{
-
-    name: " Revermation Bell",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Revermation Bell.mp3",
-  },
-
-
-
-
-{
-
-
-
-    name: " Stairway To Heaven",
-    artist: "Led Zeppelin",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Led Zeppelin - Stairway to heaven.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
-
-
-
-{
-    name: " Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/let's go back.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Rockradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Vienna ",
-    artist: "Ultravox  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ultravox - Vienna.mp3",
-  },
-
-{
-
-
-
-
-    name: " Happiness",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
-  },
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
- 
-
-
-
-{  
-    name: "Everybody Wants To Rule  (1985)",
-    artist: "Tears For Fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-{
-    name: " Low",
-    artist: "Lenny Kravitz ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
- 
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
-
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
-  },
-
-
- 
-
-
- 
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
-  
-
-
-},
-
-
-{
-
-    name: "Radio Ga GA (12inch)",
-    artist: "Queen ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
-
-
-{
-
-    name: " New Track",
-    artist: "Sunny ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
-
-
-
-{
-    name: "(new) Melting Pot",
-    artist: "Booker T. And  Mg's ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
-  },
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
- 
- 
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-
-
-
-
-
-{   
-    name: "Welcome",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-{
-    name: " Miami Vice Theme",
-    artist: "Jan Hammer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
-  },
-
-
-
-
-
-
-
-
- {
-    name: "Snippet",
-    artist: "Play Sunny RockRadio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
-
-
-
-{
-    name: "New Gold dream ",
-    artist: "Simple Minds ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
-  },
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
-
-
-{
-    name: "Fade To Grey",
-    artist: "Visage",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/sunny ship/radio dj - just for you333.mp3",
-  },
-
-
-
-
-
-
-
-
-{
-
-    name: " First You Jump",
-    artist: "Simple Minds  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/recent/Simple Minds - First you jump.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
-
-
-
-
-{  
-    name: "Sirius ",
-    artist: "Alan Parsons Project ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
-  },
-
-
 
 {
     name: " Candy (12inch) ",
