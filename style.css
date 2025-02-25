@@ -365,7 +365,7 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 
 #med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; 
 
-  animation: blinker 1.0s step-start infinite; 
+
 }
 
 
@@ -542,9 +542,9 @@ margin-top: -70px; margin-right: 7px;
 font-size: 15px; border-radius: 20px; padding-bottom: 30px;padding-top:35px; padding-right: 35px;
  
 }
-.sum {
+.summary {
 font-size: 14px; border-radius: 20px;
- padding-top:35px;padding-bottom: 30px;padding-top:35px; padding-right: 35px;
+ padding: 35px 30px 35px 35px;
 }
 
 
