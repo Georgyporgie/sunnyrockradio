@@ -1962,6 +1962,28 @@ console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
+// Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
+  function emphasizeKeywords(text) {
+ return text.replace(/(classic|maxi|12inch|new|\b\d{4}\b)/gi, function(match) {
+      if (match.toLowerCase() === 'new') {
+        return '<em class="blinking-new">' + match + '</em>';
+      }
+      return '<em>' + match + '</em>';
+    });
+  }
+
+  let trackInfo = document.createElement('div');
+  let emphasizedTrackName = emphasizeKeywords(track.name);
+  let emphasizedArtist = emphasizeKeywords(track.artist);
+
+  // Style the word "by" with light blue color
+  let coloredBy = ' <span style="color: lightblue;">by</span> ';
+
+  trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
+  li.appendChild(trackInfo);
+
+  
+
 
 
 
