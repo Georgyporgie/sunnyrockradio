@@ -157,13 +157,6 @@ let track_list = [
 
 
 
- {
-    name: " Duel",
-    artist: "Propaganda  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
  
  
 
@@ -213,12 +206,6 @@ let track_list = [
   },
 
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
 
 
 
@@ -235,12 +222,7 @@ let track_list = [
     path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
   },
 
- {
-    name: " Black Velvet",
-    artist: "Alannah Miles ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
+
 
  
  {
@@ -281,16 +263,6 @@ let track_list = [
 
 
 
-{
-    name: " Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
 {  
     name: " Alone",
     artist: "Heart  ",
@@ -302,13 +274,7 @@ let track_list = [
 
 
 
-{
-   
-    name: "Duel",
-    artist: "Propaganda  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
+
 
 
 
@@ -319,13 +285,6 @@ let track_list = [
     path: "muziek/jingles/Let op.mp3",
   },
 
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
 
 
 
@@ -355,15 +314,6 @@ let track_list = [
 
 
 
-{
-    name: " Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
 
 
 
@@ -379,13 +329,6 @@ let track_list = [
     path: "muziek/muziek01/Kajagoogoo - Too Shy.mp3",
   },
 
-
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
 
 
 
@@ -409,15 +352,7 @@ let track_list = [
 
 
 
- {
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
-  
 
-
-},
 {  
     name: " Broken Wings",
     artist: "Mr Mister",
@@ -744,21 +679,10 @@ let track_list = [
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
 
- {
-    name: " Duel",
-    artist: "Propaganda  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
+
 
  
- {
-   
-    name: " Duel",
-    artist: "Propaganda  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet5.mp3",
-  },
+
 
 
 {
@@ -1571,13 +1495,7 @@ let track_list = [
 
 
  
- 
-{
-     name: "Welcome",
-    artist: "Play Sunny Danceradio",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/Let op.mp3",
-  },
+
 
 
 
@@ -1666,8 +1584,7 @@ track_list.slice(0, 20).forEach(track => {
   ol.appendChild(createListItem(track));
 });
 
-// Append the ordered list to the placeholder div
-document.getElementById('track-list-container').appendChild(ol);
+
 
 
 
@@ -1917,8 +1834,6 @@ track_list.slice(0, 5).forEach(track => {
 });
 
 // Append the ordered list to the placeholder div
-document.getElementById('track-list-container').appendChild(ol);
-
 
 
 
@@ -1926,6 +1841,22 @@ document.getElementById('track-list-container').appendChild(ol);
 // Filter the track list to exclude tracks with 'Sunny' in the artist's name
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
 
+// Limit the filtered track list to 20 tracks
+let limitedTrackList = filteredTrackList.slice(0, 3);
+
+// Log the limited track list to the console
+console.log("Limited track list:", limitedTrackList);
+
+// Add each track to the ordered list
+limitedTrackList.forEach(track => {
+  ol.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the placeholder div
+document.getElementById('track-list-container').appendChild(ol);
+
+// Log a message indicating the script has finished running
+console.log("Script has finished running.");
 
 
 
@@ -1936,6 +1867,96 @@ let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().i
 
 
 
+
+
+
+//summary 21 - 40
+
+
+// Create the summary element for tracks 21 to 40
+let summaryElement1 = document.createElement('summary');
+summaryElement1.textContent = 'tracks 29 to 40';
+
+// Create a details element and append the summary to it
+let detailsElement1 = document.createElement('details');
+detailsElement1.appendChild(summaryElement1);
+
+// Create the ordered list, set start attribute to 21, and add tracks 21 to 40
+let additionalTrackList1 = filteredTrackList.slice(29, 41);
+let additionalOl1 = document.createElement('ol');
+additionalOl1.setAttribute('start', 29);
+
+additionalTrackList1.forEach(track => {
+  additionalOl1.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the details element
+detailsElement1.appendChild(additionalOl1);
+
+// Append the details element to the placeholder div
+document.getElementById('track-list-container').appendChild(detailsElement1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Create the summary element for tracks 41 to 60
+let summaryElement2 = document.createElement('summary');
+summaryElement2.textContent = 'tracks 41 to 60';
+
+// Create a details element and append the summary to it
+let detailsElement2 = document.createElement('details');
+detailsElement2.appendChild(summaryElement2);
+
+// Create the ordered list, set start attribute to 41, and add tracks 41 to 60
+let additionalTrackList2 = filteredTrackList.slice(40, 60);
+let additionalOl2 = document.createElement('ol');
+additionalOl2.setAttribute('start', 41);
+
+additionalTrackList2.forEach(track => {
+  additionalOl2.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the details element
+detailsElement2.appendChild(additionalOl2);
+
+// Append the details element to the placeholder div
+document.getElementById('track-list-container').appendChild(detailsElement2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Log a message indicating the summaries for additional tracks have been added
+console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
