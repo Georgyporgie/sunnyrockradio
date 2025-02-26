@@ -1829,7 +1829,7 @@ function createListItem(track) {
 }
 
 // Add each track to the ordered list, but limit to 10 tracks
-track_list.slice(0, 5).forEach(track => {
+track_list.slice(0, 0.9).forEach(track => {
   ol.appendChild(createListItem(track));
 });
 
@@ -1842,7 +1842,7 @@ track_list.slice(0, 5).forEach(track => {
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
 
 // Limit the filtered track list to 20 tracks
-let limitedTrackList = filteredTrackList.slice(0, 3);
+let limitedTrackList = filteredTrackList.slice(0, 0.9);
 
 // Log the limited track list to the console
 console.log("Limited track list:", limitedTrackList);
@@ -1875,16 +1875,16 @@ console.log("Script has finished running.");
 
 // Create the summary element for tracks 21 to 40
 let summaryElement1 = document.createElement('summary');
-summaryElement1.textContent = 'tracks 29 to 40';
+summaryElement1.textContent = 'tracks 20 to 40';
 
 // Create a details element and append the summary to it
 let detailsElement1 = document.createElement('details');
 detailsElement1.appendChild(summaryElement1);
 
 // Create the ordered list, set start attribute to 21, and add tracks 21 to 40
-let additionalTrackList1 = filteredTrackList.slice(29, 41);
+let additionalTrackList1 = filteredTrackList.slice(20, 40);
 let additionalOl1 = document.createElement('ol');
-additionalOl1.setAttribute('start', 29);
+additionalOl1.setAttribute('start', 20);
 
 additionalTrackList1.forEach(track => {
   additionalOl1.appendChild(createListItem(track));
