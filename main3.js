@@ -44,6 +44,7 @@ function nextTrack() {
 
 
 
+
 // Create the ordered list and append it to the body
 let ol = document.createElement('ol');
 document.body.appendChild(ol);
@@ -332,12 +333,7 @@ let track_list = [
 
 
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
+
 
 
 
@@ -508,12 +504,7 @@ let track_list = [
   },
  
  
- {
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
+
 
 
 
@@ -568,14 +559,6 @@ let track_list = [
     path: "muziek/muziek01/Led Zeppelin - Stairway to heaven.mp3",
   },
 
-
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
 
 
 
@@ -748,12 +731,6 @@ let track_list = [
 
 
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
 
 
 
@@ -791,13 +768,6 @@ let track_list = [
     path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
   },
 
-
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
 
 
 
@@ -958,29 +928,8 @@ let track_list = [
   },
 
 
-{
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
- 
- 
- {
-    name: " Peter Gunn",
-    artist: "Emmerson Lake & Palmer",
-   image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet.mp3",
-  },
 
 
- 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
 
 
 
@@ -1019,12 +968,7 @@ let track_list = [
 
 
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle.mp3",
-  },
+
 
 
 {
@@ -1049,12 +993,6 @@ let track_list = [
 
 
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
 
 
 {
@@ -1065,12 +1003,6 @@ let track_list = [
   },
   
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle12.mp3",
-  },
 
 
 {
@@ -1147,12 +1079,6 @@ let track_list = [
   },
 
 
-{
-    name: "First You Jump",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jockeys/40 in jingle33.mp3",
-  },
 
 
 {
