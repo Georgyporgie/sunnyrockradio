@@ -24,7 +24,7 @@ function nextTrack() {
  
   // Load and play the new track
   loadTrack(track_index);
-
+  playTrack();
 }
 
 
