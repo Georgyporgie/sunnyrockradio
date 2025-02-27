@@ -45,9 +45,6 @@ function nextTrack() {
 
 
 
-// Create the ordered list and append it to the body
-let ol = document.createElement('ol');
-document.body.appendChild(ol);
 
 
 
@@ -1484,33 +1481,6 @@ let track_list = [
 
 
 
-// Function to create a list item for each track
-function createListItem(track) {
-  let li = document.createElement('li');
-
-  let trackInfo = document.createElement('div');
-  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
-  li.appendChild(trackInfo);
-
-
-
-  let audio = document.createElement('audio');
-  audio.controls = false;
-  let source = document.createElement('source');
-  source.src = track.path;
-  source.type = "audio/mpeg";
-  audio.appendChild(source);
-  li.appendChild(audio);
-
-  return li;
-}
-
-// Add each track to the ordered list, but limit to 10 tracks
-track_list.slice(0, 20).forEach(track => {
-  ol.appendChild(createListItem(track));
-});
-
-
 
 
 
@@ -1733,15 +1703,36 @@ startTime();
 
 
 
+
+
+
+// Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
+function emphasizeKeywords(text) {
+  return text.replace(/(classic|maxi|12inch|new|\b\d{4}\b)/gi, function(match) {
+    if (match.toLowerCase() === 'new') {
+      return '<em class="blinking-new">' + match + '</em>';
+    }
+    return '<em>' + match + '</em>';
+  });
+}
+
+// Create the ordered list and append it to the body
+let ol = document.createElement('ol');
+document.body.appendChild(ol);
+
 // Function to create a list item for each track
 function createListItem(track) {
   let li = document.createElement('li');
 
+  let emphasizedTrackName = emphasizeKeywords(track.name);
+  let emphasizedArtist = emphasizeKeywords(track.artist);
+
+  // Style the word "by" with light blue color
+  let coloredBy = ' <span style="color: lightblue;">by</span> ';
+
   let trackInfo = document.createElement('div');
-  trackInfo.innerHTML = `<strong>${track.name}</strong> by ${track.artist}`;
+  trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
-
-
 
   let audio = document.createElement('audio');
   audio.controls = false;
@@ -1754,24 +1745,11 @@ function createListItem(track) {
   return li;
 }
 
-// Add each track to the ordered list, but limit to 10 tracks
-track_list.slice(0, 0.9).forEach(track => {
-  ol.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the placeholder div
-
-
-
-
 // Filter the track list to exclude tracks with 'Sunny' in the artist's name
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('sunny'));
 
 // Limit the filtered track list to 20 tracks
-let limitedTrackList = filteredTrackList.slice(0, 0.9);
-
-// Log the limited track list to the console
-console.log("Limited track list:", limitedTrackList);
+let limitedTrackList = filteredTrackList.slice(0, 20);
 
 // Add each track to the ordered list
 limitedTrackList.forEach(track => {
@@ -1780,17 +1758,6 @@ limitedTrackList.forEach(track => {
 
 // Append the ordered list to the placeholder div
 document.getElementById('track-list-container').appendChild(ol);
-
-// Log a message indicating the script has finished running
-console.log("Script has finished running.");
-
-
-
-
-
-
-
-
 
 
 
@@ -1836,13 +1803,9 @@ document.getElementById('track-list-container').appendChild(detailsElement1);
 
 
 
-
-
-
-
 // Create the summary element for tracks 41 to 60
 let summaryElement2 = document.createElement('summary');
-summaryElement2.textContent = 'tracks 41 to 60';
+summaryElement2.textContent = 'tracks 40 to 60';
 
 // Create a details element and append the summary to it
 let detailsElement2 = document.createElement('details');
@@ -1851,7 +1814,7 @@ detailsElement2.appendChild(summaryElement2);
 // Create the ordered list, set start attribute to 41, and add tracks 41 to 60
 let additionalTrackList2 = filteredTrackList.slice(40, 60);
 let additionalOl2 = document.createElement('ol');
-additionalOl2.setAttribute('start', 41);
+additionalOl2.setAttribute('start', 40);
 
 additionalTrackList2.forEach(track => {
   additionalOl2.appendChild(createListItem(track));
@@ -1881,34 +1844,12 @@ document.getElementById('track-list-container').appendChild(detailsElement2);
 
 
 
-// Log a message indicating the summaries for additional tracks have been added
-console.log("Summaries for tracks 21 to 40 and 41 to 60 have been added.");
 
 
 
 
 
-// Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
-  function emphasizeKeywords(text) {
- return text.replace(/(classic|maxi|12inch|new|\b\d{4}\b)/gi, function(match) {
-      if (match.toLowerCase() === 'new') {
-        return '<em class="blinking-new">' + match + '</em>';
-      }
-      return '<em>' + match + '</em>';
-    });
-  }
 
-  let trackInfo = document.createElement('div');
-  let emphasizedTrackName = emphasizeKeywords(track.name);
-  let emphasizedArtist = emphasizeKeywords(track.artist);
-
-  // Style the word "by" with light blue color
-  let coloredBy = ' <span style="color: lightblue;">by</span> ';
-
-  trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
-  li.appendChild(trackInfo);
-
-  
 
 
 
@@ -1955,3 +1896,29 @@ const audioElement = document.querySelector('audio');
 normalizeVolume(audioContext, audioElement);
 
 audioElement.play();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
