@@ -127,33 +127,6 @@ let track_list = [
 
 
 
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Melting Pot",
-    artist: "Booker T. And The Mg's ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
-  },
-
-
-
 
  
  
@@ -253,6 +226,33 @@ let track_list = [
 
 
 
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Melting Pot",
+    artist: "Booker T. And The Mg's ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
+  },
 
 
 
@@ -1571,7 +1571,7 @@ function prevTrack() {
    
   // Load and play the new track
   loadTrack(track_index);
-  playTrack();
+ 
 }
 
 
