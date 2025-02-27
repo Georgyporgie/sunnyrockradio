@@ -1561,18 +1561,6 @@ function playTrack() {
 
  
 
- 
-function prevTrack() {
-  // Go back to the last track if the
-  // current one is the first in the track list
-  if (track_index > 0)
-    track_index -= 1;
-  else track_index = track_list.length;
-   
-  // Load and play the new track
-  loadTrack(track_index);
- 
-}
 
 
 function seekTo() {
