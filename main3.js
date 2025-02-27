@@ -1848,60 +1848,45 @@ document.getElementById('track-list-container').appendChild(detailsElement2);
 
 // Function to analyze and normalize volume werkt misschien!!!!!
 
-function normalizeVolume(audioContext, audioElement) {
-  const source = audioContext.createMediaElementSource(audioElement);
-  const gainNode = audioContext.createGain();
 
-  source.connect(gainNode);
-  gainNode.connect(audioContext.destination);
+const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const track = audioContext.createMediaElementSource(audioElement);
 
-  // Analyze volume levels (simplified example)
-  const analyser = audioContext.createAnalyser();
-  gainNode.connect(analyser);
+// Create an analyser node
+const analyser = audioContext.createAnalyser();
+track.connect(analyser);
+analyser.connect(audioContext.destination);
 
-  const dataArray = new Uint8Array(analyser.fftSize);
-  analyser.getByteTimeDomainData(dataArray);
+// Create a gain node to normalize volume
+const gainNode = audioContext.createGain();
+track.connect(gainNode);
+gainNode.connect(audioContext.destination);
 
-  // Calculate average volume
-  let sum = 0;
-  for (let i = 0; i < dataArray.length; i++) {
-    sum += dataArray[i];
+// Set up the analyser
+analyser.fftSize = 256;
+const bufferLength = analyser.frequencyBinCount;
+const dataArray = new Uint8Array(bufferLength);
+
+// Function to get the average volume
+function getAverageVolume(array) {
+  let values = 0;
+  for (let i = 0; i < array.length; i++) {
+    values += array[i];
   }
-  const averageVolume = sum / dataArray.length;
-
-  // Calculate gain adjustment
-  const targetVolume = 128; // Target volume level
-  const gainAdjustment = targetVolume / averageVolume;
-
-  // Apply gain adjustment
-  gainNode.gain.value = gainAdjustment;
+  return values / array.length;
 }
 
-// Usage
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-const audioElement = document.querySelector('audio');
+// Function to normalize volume
+function normalizeVolume() {
+  analyser.getByteFrequencyData(dataArray);
+  const volume = getAverageVolume(dataArray);
 
-normalizeVolume(audioContext, audioElement);
+  // Adjust the gain to normalize volume
+  gainNode.gain.value = 1 / (volume || 1); // Avoid division by zero
+}
 
-audioElement.play();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Call the normalizeVolume function periodically
+setInterval(normalizeVolume, 1000);
 
 
 
