@@ -15,44 +15,6 @@ let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
  
 
-function nextTrack() {
-  // Go back to the first track if the
-  // current one is the last in the track list
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else track_index = 0;
- 
-  // Load and play the new track
-  loadTrack(track_index);
-  playTrack();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -130,123 +92,6 @@ let track_list = [
 
  
  
-
-
-
-
-
-{  
-    name: " Everywhere",
-    artist: "Fleetwood Mac  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-  },
-
-{  
-    name: " Heroes",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Heroes.mp3",
-  },
-
-
-{  
-    name: "Dogs ",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/02 Dogs.mp3",
-  },
-
-{
-
-
-
-
-    name: "Lost",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
-  },
-
-
-{
-    name: " Two Tribes",
-    artist: "Frankie Goes To Hollywood",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
-  },
-
-
-
-
-
-{
-    name: " She 's Not There",
-    artist: "Santana",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Santana - She 's not there.mp3",
-  },
-{
-    name: " Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
- 
- {
-    name: "  Sunny radio jingle",
-    artist: "Sunny Time ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  },
-
-
-{
-
-
-
-
-    name: " Gimme All Your Lovin (12inch)",
-    artist: "ZZ Top ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
-  }, 
-
-
-
-
-
-
-
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
 {
     name: " Melting Pot",
     artist: "Booker T. And The Mg's ",
@@ -284,6 +129,458 @@ let track_list = [
   },
 
 
+
+
+
+
+
+
+
+{
+
+    name: " New Track",
+    artist: "Sunny ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " Black Velvet (1989)",
+    artist: "Alannah Miles ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet3.mp3",
+  },
+  
+
+
+
+{
+
+    name: "Pinball Wizard",
+    artist: "The Who ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+{  
+    name: "  Little Lies ",
+    artist: "Fleetwood Mac",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+  },
+
+
+
+
+
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny hotradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+  
+ {
+    name: "Snippet",
+    artist: "Sunny radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet4.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+{
+    name: "Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " This Is Not America (12inch)",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " School",
+    artist: "Supertramp",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Supertramp - School.mp3",
+  },
+
+
+
+{
+    name: "Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+{
+    name: "Dont You (12inch)",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Simple Minds Dont you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Black Betty",
+    artist: "Ram Jam",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " A View To A Kill (12 Extended Mix)",
+    artist: "Duran Duran",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
+  },
+
+ 
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+ 
+
+
+
+
+
+
+
+
+  
 
 
 
@@ -463,7 +760,7 @@ let track_list = [
 
  {
     name: "Todays News",
-    artist: "Nos Journaal",
+    artist: "Sunny Journaal",
     image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
     path: "muziek/reklame/reklame1.mp3",
   
@@ -773,7 +1070,7 @@ let track_list = [
 
 {
     name: " Todays News",
-    artist: "Nos Journaal",
+    artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -836,7 +1133,7 @@ let track_list = [
 
 {
     name: " Todays News",
-    artist: "Nos Journaal",
+    artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -893,6 +1190,123 @@ let track_list = [
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
+
+
+
+
+
+{  
+    name: " Everywhere",
+    artist: "Fleetwood Mac  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
+  },
+
+{  
+    name: " Heroes",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Heroes.mp3",
+  },
+
+
+{  
+    name: "Dogs ",
+    artist: "Pink Floyd ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/02 Dogs.mp3",
+  },
+
+{
+
+
+
+
+    name: "Lost",
+    artist: "Jonathan Jeremiah   ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
+  },
+
+
+{
+    name: " Two Tribes",
+    artist: "Frankie Goes To Hollywood",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
+  },
+
+
+
+
+
+{
+    name: " She 's Not There",
+    artist: "Santana",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Santana - She 's not there.mp3",
+  },
+{
+    name: " Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+ 
+ {
+    name: "  Sunny radio jingle",
+    artist: "Sunny Time ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  },
+
+
+{
+
+
+
+
+    name: " Gimme All Your Lovin (12inch)",
+    artist: "ZZ Top ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
+  }, 
+
+
+
+
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
@@ -943,15 +1357,17 @@ let track_list = [
 
  
 
+
+
 {
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
-    path: "muziek/reklame/reklame1.mp3",
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
   
 
 
-},
+}, 
 
 
 {
@@ -961,458 +1377,6 @@ let track_list = [
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
   },
-
-
-
-
-
-
-
-{
-
-    name: " New Track",
-    artist: "Sunny ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " Black Velvet (1989)",
-    artist: "Alannah Miles ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-  
-
-
-
-{
-
-    name: "Pinball Wizard",
-    artist: "The Who ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-{  
-    name: "  Little Lies ",
-    artist: "Fleetwood Mac",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
-
-
-
-
-
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny hotradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle4.mp3",
-  },
-
-
-  
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-{
-    name: "Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " This Is Not America (12inch)",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " School",
-    artist: "Supertramp",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Supertramp - School.mp3",
-  },
-
-
-
-{
-    name: "Todays News",
-    artist: "Nos Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-{
-    name: "Dont You (12inch)",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Simple Minds Dont you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Black Betty",
-    artist: "Ram Jam",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " A View To A Kill (12 Extended Mix)",
-    artist: "Duran Duran",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
-  },
-
- 
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
- 
-
-
-
-
-
-
-
-
-  
 
 
 
@@ -1491,34 +1455,176 @@ let track_list = [
 
 
 function loadTrack(track_index) {
+  // Increment play count for the current track
+  track_list[track_index].playCount += 1;
+
+  // Sort the track list by play count
+  sortTracksByPlayCount();
+
   // Clear the previous seek timer
   clearInterval(updateTimer);
   resetValues();
- 
+
   // Load a new track
   curr_track.src = track_list[track_index].path;
   curr_track.load();
- 
+
   // Update details of the track
-  track_art.style.backgroundImage =
-     "url(" + track_list[track_index].image + ")";
+  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
-  now_playing.textContent =
-     "PLAYING " + (track_index + 1) + " OF " + track_list.length;
- 
-  // Set an interval of 1000 milliseconds
-  // for updating the seek slider
+  now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+
+  // Set an interval of 1000 milliseconds for updating the seek slider
   updateTimer = setInterval(seekUpdate, 1000);
- 
-  // Move to the next track if the current finishes playing
-  // using the 'ended' event
+
+  // Move to the next track if the current finishes playing using the 'ended' event
   curr_track.addEventListener("ended", nextTrack);
- 
+
   // Apply a random background color
   random_bg_color();
 }
- 
+
+
+
+
+function nextTrack() {
+  // Go back to the first track if the current one is the last in the track list
+  if (track_index < track_list.length - 1)
+    track_index += 1;
+  else
+    track_index = 0; 
+
+  // Sort the track list by play count
+  sortTracksByPlayCount();
+
+  // Load and play the new track
+  loadTrack(track_index);
+  playTrack();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function sortTracksByPlayCount() {
+  track_list.sort((a, b) => b.playCount - a.playCount);
+}
+
+function displayPlayCounts() {
+  sortTracksByPlayCount();
+  track_list.forEach((track, index) => {
+    console.log(`Track ${index + 1}: ${track.name} - ${track.playCount} plays`);
+  });
+}
+
+// Call displayPlayCounts() to see play counts in the console
+displayPlayCounts();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function initializePlayCount(tracks) {
+  tracks.forEach(track => {
+    if (track.playCount === undefined) {
+      track.playCount = 0;
+    }
+  });
+}
+	
+// Call the function to initialize play counts
+initializePlayCount(track_list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function random_bg_color() {
   // Get a random number between 64 to 256
   // (for getting lighter colors)
@@ -1568,7 +1674,7 @@ function seekTo() {
   // percentage of the seek slider
   // and get the relative duration to the track
   seekto = curr_track.duration * (seek_slider.value / 100);
- 
+ 	
   // Set the current track position to the calculated seek position
   curr_track.currentTime = seekto;
 }
@@ -1889,4 +1995,76 @@ function normalizeVolume() {
 // Call the normalizeVolume function periodically
 setInterval(normalizeVolume, 1000);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function crossfadeTracks(tracklist, overlapTime) {
+  if (currentIndex >= tracklist.length - 1) {
+    console.error('End of playlist.');
+    return;
+  }
+
+  let currentTrack = document.getElementById('currentTrack');
+  let nextTrack = document.getElementById('nextTrack');
+
+  currentTrack.src = tracklist[currentIndex];
+  nextTrack.src = tracklist[currentIndex + 1];
+
+  currentTrack.play();
+  nextTrack.currentTime = 0;
+  nextTrack.play();
+
+  let fadeDuration = overlapTime * 1000; // Convert to milliseconds
+  let currentTrackVolume = currentTrack.volume;
+  let nextTrackVolume = 0;
+
+  let fadeInterval = setInterval(() => {
+    currentTrackVolume = Math.max(0, currentTrackVolume - 0.01);
+    nextTrackVolume = Math.min(1, nextTrackVolume + 0.01);
+
+    currentTrack.volume = currentTrackVolume;
+    nextTrack.volume = nextTrackVolume;
+    
+    console.log(`Current Track Volume: ${currentTrackVolume}, Next Track Volume: ${nextTrackVolume}`);
+
+    if (currentTrackVolume <= 0 || nextTrackVolume >= 1) {
+      clearInterval(fadeInterval);
+      currentTrack.pause();
+      currentTrack.volume = 0; // Ensure it's completely silent
+      nextTrack.volume = 1; // Ensure it's at full volume
+
+      currentIndex++;
+      currentTrack.src = nextTrack.src;
+      nextTrack.src = tracklist[currentIndex + 1] || '';
+    }
+  }, fadeDuration / 100);
+}
+
+
+let currentIndex = 0;
+
+crossfadeTracks(tracklist, 5); // Overlap for 5 seconds
 
