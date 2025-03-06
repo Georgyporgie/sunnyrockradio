@@ -31,24 +31,24 @@
     {"time": "05:00 - 12:00", "event": "Please Support Hamburger!"},
     {"time": "12:00 - 17:00", "event": "Björn For President"}
   ],
-  "2025-02-27": [
+  "2025-03-06": [
     {"time": "05:00 - 12:00", "event": "Morning Rock"},
     {"time": "12:00 - 00:00", "event": "Bjorns Rock Event"},
     {"time": "00:00 - 05:00", "event": "Bjorns RockParty"}
   ],
-  "2025-02-28": [
+  "2025-03-07": [
     {"time": "05:00 - 12:00", "event": "Morning Disco"},
-    {"time": "12:00 - 00:00", "event": "Bjorns Rock Event"},
+    {"time": "12:00 - 00:00", "event": "Bjorns Smashing Rock"},
     {"time": "00:00 - 05:00", "event": "Bjorns Rock Party"}
   ],
-  "2025-03-01": [
+  "2025-03-08": [
     {"time": "05:00 - 12:00", "event": "Morning Rock"},
     {"time": "12:00 - 00:00", "event": "Bjorns Rock Event"},
     {"time": "00:00 - 05:00", "event": "Bjorns Rock Party"}
   ],
-  "2025-03-02": [
+  "2025-03-09": [
     {"time": "05:00 - 12:00", "event": "Sunday Rockin'!"},
-    {"time": "12:00 - 05:00", "event": "Bjorns Rock Event"},
+    {"time": "12:00 - 05:00", "event": "Bjorns Smashing Rock"},
     {"time": "00:00 - 05:00", "event": "Bjorns Rock Party"}
   ]
 }
