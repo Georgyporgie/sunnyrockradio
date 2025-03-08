@@ -77,8 +77,15 @@ let track_list = [
 
 
 
+
+
+
+
+
+
+
 {
-     name: "Welcome",
+     name: "Welcome!",
     artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
@@ -90,28 +97,9 @@ let track_list = [
 
 
 
- 
- 
-{
-    name: " Melting Pot",
-    artist: "Booker T. And The Mg's ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Booker T. and the mg's - Melting pot.mp3",
-  },
 
 
 
-
-
-
-
-
-{  
-    name: " Alone",
-    artist: "Heart  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Heart - Alone.mp3",
-  },
 
 
 
@@ -123,7 +111,7 @@ let track_list = [
 
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Sunny Rockradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -131,61 +119,7 @@ let track_list = [
 
 
 
-
-
-
-
-
-{
-
-    name: " New Track",
-    artist: "Sunny ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/New track.mp3",
-  },
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " Black Velvet (1989)",
-    artist: "Alannah Miles ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet3.mp3",
-  },
-  
-
-
-
-{
-
-    name: "Pinball Wizard",
-    artist: "The Who ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
+,
 
 
 
@@ -270,7 +204,58 @@ let track_list = [
 
 
 
+{
 
+    name: " New Track",
+    artist: "Sunny ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/New track.mp3",
+  },
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
+
+
+
+{
+
+    name: "Pinball Wizard",
+    artist: "The Who ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
+  },
+
+
+
+
+
+{  
+    name: " Alone",
+    artist: "Heart  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Heart - Alone.mp3",
+  },
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
 
 
 
@@ -1656,14 +1641,60 @@ function playpauseTrack() {
 }
  
 function playTrack() {
+
+
   // Play the loaded track
+  curr_track.src = filteredTrackList[track_index].path; // Set the track source
   curr_track.play();
   isPlaying = true;
- 
-  // Replace icon with the pause icon
-  playpause_btn.innerHTML = '<img id="media"  src="images/pause button6.png">';
+
+  // Replace the play icon with the pause icon
+  playpause_btn.innerHTML = '<img id="media" src="images/pause button6.png">';
+
+  // Highlight the current track in the playlist
+  let allTracks = document.querySelectorAll('ol li'); // Get all <li> elements
+  allTracks.forEach(track => track.classList.remove('blinking')); // Remove "blinking" from all
+
+  // Add "blinking" class to the current track
+  if (allTracks[track_index]) { // Ensure the current track exists in the filtered list
+    allTracks[track_index].classList.add('blinking');
+  } else {
+    console.error("Filtered track not found in the DOM!");
+  }
 }
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
