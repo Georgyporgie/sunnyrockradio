@@ -781,7 +781,7 @@ filter:opacity(75%);
 
 
 
-.blinking-new {
+.blinking {
   animation: blink 1s infinite;
 }
 
