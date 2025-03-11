@@ -129,145 +129,6 @@ let track_list = [
 
 
 
-{
-    name: " Two Tribes",
-    artist: "Frankie Goes To Hollywood",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
-  },
-
-
-
-
-
-{
-    name: " She 's Not There",
-    artist: "Santana",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Santana - She 's not there.mp3",
-  },
-{
-    name: " Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
- 
- {
-    name: "  Sunny radio jingle",
-    artist: "Sunny Time ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  },
-
-
-{
-
-
-
-
-    name: " Gimme All Your Lovin (12inch)",
-    artist: "ZZ Top ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
-  }, 
-
-
-
-
-
-
-
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-{  
-    name: "Everybody Wants To Rule The World (1985)",
-    artist: "Tears For Fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-{
-    name: " Low",
-    artist: "Lenny Kravitz ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-
-
-
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
-  },
-
-
- 
-
-
- 
-
-
-
-{
-    name: " Todays News",
-    artist: "Sunny Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
 
 
 {
@@ -921,6 +782,145 @@ let track_list = [
 
 
 
+{
+    name: " Two Tribes",
+    artist: "Frankie Goes To Hollywood",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
+  },
+
+
+
+
+
+{
+    name: " She 's Not There",
+    artist: "Santana",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Santana - She 's not there.mp3",
+  },
+{
+    name: " Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+ 
+ {
+    name: "  Sunny radio jingle",
+    artist: "Sunny Time ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  },
+
+
+{
+
+
+
+
+    name: " Gimme All Your Lovin (12inch)",
+    artist: "ZZ Top ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
+  }, 
+
+
+
+
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+{  
+    name: "Everybody Wants To Rule The World (1985)",
+    artist: "Tears For Fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+{
+    name: " Low",
+    artist: "Lenny Kravitz ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+
+
+
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+ 
+
+
+ 
+
+
+
+{
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
 
 
 
