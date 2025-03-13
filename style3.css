@@ -79,6 +79,8 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 
 
 .media  {    width: 120px;  height:120px;filter: brightness(110%) saturate(115%) contrast(110%) opacity(100%); transform: rotate(0deg); z-index: -200; display: block; margin: auto auto auto auto;
+
+box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
 }
 
 
@@ -394,7 +396,7 @@ a { color: black;
 }
 
 
-#freq  {     width: 35px;  height: 30px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(75%); transform: rotate(-5deg); z-index: -200; margin: -35px auto 10px  auto; display: block; 
+#freq  {     width: 35px;  height: 30px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(70%); transform: rotate(-5deg); z-index: -200; margin: -35px auto 10px  auto; display: block; 
 }
 
  .btn {
