@@ -363,7 +363,7 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 
 #med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; 
 
-  animation: blinker 1.0s step-start infinite; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
+  animation: blinker 1.0s step-start infinite; 
 }
 
 
