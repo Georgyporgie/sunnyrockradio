@@ -1774,23 +1774,6 @@ startTime();
 
 
 
-    function getSound() {
-        var audio = document.getElementById("quarterHourSound");
-        audio.play();
-    }
-
-    function scheduleQuarterHourlySound() {
-        var now = new Date();
-        var minutes = now.getMinutes();
-        var delay = (15 - (minutes % 15)) * 60 * 1000 - now.getSeconds() * 1000;
-        setTimeout(function() {
-            playSound();
-            setInterval(playSound, 900000); // Play sound every 15 minutes (900000 milliseconds)
-        }, delay);
-    }
-
-    window.onload = scheduleQuarterHourlySound;
-
 
 
 

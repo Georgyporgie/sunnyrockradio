@@ -779,14 +779,14 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
     </script>
 
 
-<audio id="hourlyAnnouncement"></audio>
+<audio id="hourlyAnnounce"></audio>
 
     <script>
         var sources = ["audio/0.mp3", "audio/1.mp3", "audio/2.mp3", "audio/3.mp3", "audio/4.mp3", "audio/5.mp3", "audio/6.mp3", "audio/7.mp3", "audio/8.mp3", "audio/9.mp3", "audio/10.mp3", "audio/11.mp3", "audio/12.mp3", "audio/13.mp3", "audio/14.mp3", "audio/15.mp3", "audio/16.mp3", "audio/17.mp3", "audio/18.mp3", "audio/19.mp3", "audio/20.mp3", "audio/21.mp3", "audio/22.mp3", "audio/23.mp3"]; // Array of audio sources
         var currentIndex = new Date().getHours(); // Set current index based on the current hour
 
-        function playHourlyAnnouncement() {
-            var audioElement = document.getElementById('hourlyAnnouncement');
+        function playHourlyAnnounce() {
+            var audioElement = document.getElementById('hourlyAnnounce');
             var currentTime = new Date();
             var minutes = currentTime.getMinutes();
             var seconds = currentTime.getSeconds();
@@ -805,7 +805,7 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
             }, millisecondsToNextHour);
         }
 
-        playHourlyAnnouncement();
+        playHourlyAnnounce();
     </script>
 
 
