@@ -1605,6 +1605,8 @@ function playpauseTrack() {
   // depending on the current state
   if (!isPlaying) playTrack();
   else pauseTrack() ;
+playpause_btn.innerHTML = '<img id= "med"  src="images/pause button6.png">';
+
 }
  
 function playTrack() {
@@ -1616,7 +1618,7 @@ function playTrack() {
   isPlaying = true;
 
   // Replace the play icon with the pause icon
-  playpause_btn.innerHTML = '<img id="media" src="images/pause button6.png">';
+  playpause_btn.innerHTML = '<img id="media" src="images/pause66.gif">';
 
   // Highlight the current track in the playlist
   let allTracks = document.querySelectorAll('ol li'); // Get all <li> elements
