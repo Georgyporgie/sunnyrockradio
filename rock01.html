@@ -12,6 +12,7 @@
 </script>
 <title> Sunny Rockradio</title>
    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+ <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Load FontAwesome icons -->
   <link rel="stylesheet"
@@ -90,6 +91,39 @@ body {
     </div>
   </a>
 </div>
+
+
+
+
+
+
+
+
+
+<style>
+    /* Smooth fade-in effect for the "blinking" class */
+    .blinking {
+      animation: fadeInBlink 1s ease-in-out;
+    }
+
+    @keyframes fadeInBlink {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+
+
+
+
+
+
+
+
 
 </head>
 
@@ -198,7 +232,7 @@ body {
 
 
 
-<div><ul id="track-list-container"></ul>
+<div><ul aria-live="polite" id="track-list-container"></ul>
 </div>
 
 <br>
