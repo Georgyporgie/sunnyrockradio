@@ -812,7 +812,7 @@ filter:opacity(75%);
 
 .blinking {
   animation: blink 2s infinite ease-in-out, pulse 1.5s infinite ease-in-out;
-  background: linear-gradient(90deg, #0033FF, #006666, #003399, #006666, #0033FF);
+  background: linear-gradient(45deg, #0033FF, #006666, #003399);
   background-size: 500% 500%;
   color: #FF0000;
   text-align: center;
