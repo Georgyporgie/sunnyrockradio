@@ -118,6 +118,204 @@ let track_list = [
 
 
 
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+
+
+ 
+
+
+
+{
+    name: " Miami Vice Theme",
+    artist: "Jan Hammer",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
+  },
+
+
+
+
+
+
+
+
+ {
+    name: "Snippet",
+    artist: "Play Sunny RockRadio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet5.mp3",
+  },
+
+
+
+{
+    name: "New Gold Dream ",
+    artist: "Simple Minds ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
+  },
+
+
+
+
+
+{
+    name: " Welcome!",
+    artist: "Propaganda  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle4.mp3",
+  },
+
+
+
+ 
+
+
+
+{
+    name: "Fade To Grey",
+    artist: "Visage",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/sunny ship/radio dj - just for you333.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Drive",
+    artist: "The Cars",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The Cars - Drive.mp3",
+  },
+
+
+
+{
+    name: "  Duel (12inch)",
+    artist: "Propaganda",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Propaganda - Duel.mp3",
+  },
+
+
+{
+    name: "  Nature Is Beauty ",
+    artist: "Bjork  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
+  },
+
+
+
+
+{
+    name: "Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
+{
+
+    name: " First You Jump",
+    artist: "Simple Minds  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/recent/Simple Minds - First you jump.mp3",
+  },
+
+
+
+{
+     name: "Welcome",
+    artist: "Play Sunny Danceradio",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/Let op.mp3",
+  },
+
+
+
+
+{  
+    name: "Sirius ",
+    artist: "Alan Parsons Project ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
+  },
+
+ {
+    name: " Child In Time",
+    artist: "Deep Purple ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Deep Purple - Child in time.mp3",
+  },
+ 
+
+
+
+
+
+
+
+{  
+    name: " Private Dancer (12inch)",
+    artist: "Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " Bohemian Rapsodhy",
+    artist: "Queen",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
+  },
+
+
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
 
 {
 
@@ -1805,51 +2003,4 @@ setInterval(normalizeVolume, 1000);
 
 
 
-
-function crossfadeTracks(tracklist, overlapTime) {
-  if (currentIndex >= tracklist.length - 1) {
-    console.error('End of playlist.');
-    return;
-  }
-
-  let currentTrack = document.getElementById('currentTrack');
-  let nextTrack = document.getElementById('nextTrack');
-
-  currentTrack.src = tracklist[currentIndex];
-  nextTrack.src = tracklist[currentIndex + 1];
-
-  currentTrack.play();
-  nextTrack.currentTime = 0;
-  nextTrack.play();
-
-  let fadeDuration = overlapTime * 1000; // Convert to milliseconds
-  let currentTrackVolume = currentTrack.volume;
-  let nextTrackVolume = 0;
-
-  let fadeInterval = setInterval(() => {
-    currentTrackVolume = Math.max(0, currentTrackVolume - 0.01);
-    nextTrackVolume = Math.min(1, nextTrackVolume + 0.01);
-
-    currentTrack.volume = currentTrackVolume;
-    nextTrack.volume = nextTrackVolume;
-    
-    console.log(`Current Track Volume: ${currentTrackVolume}, Next Track Volume: ${nextTrackVolume}`);
-
-    if (currentTrackVolume <= 0 || nextTrackVolume >= 1) {
-      clearInterval(fadeInterval);
-      currentTrack.pause();
-      currentTrack.volume = 0; // Ensure it's completely silent
-      nextTrack.volume = 1; // Ensure it's at full volume
-
-      currentIndex++;
-      currentTrack.src = nextTrack.src;
-      nextTrack.src = tracklist[currentIndex + 1] || '';
-    }
-  }, fadeDuration / 100);
-}
-
-
-let currentIndex = 0;
-
-crossfadeTracks(tracklist, 5); // Overlap for 5 seconds
 
