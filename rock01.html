@@ -243,15 +243,13 @@ body {
 
 
 <img id= "astro">
- <IFRAME id="frame" SRC="https://shiphorn.netlify.app/roll" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0 WIDTH=345 HEIGHT=352></IFRAME>
-</div>
 
 
 
 </div>
 
 
-
+<IFRAME  SRC="https://shiphorn.netlify.app/roll.html" id="roll" NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0  WIDTH=346 HEIGHT=350></IFRAME>
 
 
 
@@ -380,8 +378,7 @@ body {
 
 
 
-<audio  id="public"  autoplay loop> <source src="" type="audio/mpeg" />   <source src="" type="audio/wav" />
-</audio>
+
 
 <br>
 <br>
@@ -418,10 +415,33 @@ body {
 
 
 
+<audio id="myAudio" autoplay loop>
+  <source src="muziek/pirate background/Sunny weekly rockpirate2.mp3" type="audio/mpeg" />
+  <source src="muziek/pirate background/Sunny weekend piratejinglepublic.mp3" type="audio/wav" />
+</audio>
 
 
 
+<script>
+  function updateAudio() {
+    const audio = document.getElementById("myAudio");
+    const now = new Date();
+    const hour = now.getHours(); // Get the current hour (0-23)
+    if (hour >= 6 && hour < 12) {
+      audio.src = 'muziek/pirate background/Sunny weekend piratejinglepublic.mp3'; // Morning MP3
+    } else if (hour >= 12 && hour < 18) {
+      audio.src = 'muziek/pirate background/Sunny weekly rockpirate2.mp3'; // Afternoon MP3
+    } else if (hour >= 18 && hour < 21) {
+      audio.src = 'muziek/pirate background/Sunny weekend piratejinglepublic.mp3'; // Evening MP3
+    } else {
+      audio.src = 'muziek/pirate background/Sunny weekly rockpirate2.mp3'; // Night MP3
+    }
+    audio.load(); // Ensures the audio element refreshes with the new source
+  }
 
+  // Call the function to initialize the audio based on the current time
+  updateAudio();
+</script>
 
 
 
@@ -447,10 +467,6 @@ var img = document.getElementById("logo");
 img.src = 'images/Rock1.png';
 </script>
 
-
-<script>
-document.getElementById("public").setAttribute('src', 'muziek/pirate background/Sunny weekly rockpirate2.mp3');
-</script>
 
 
 
