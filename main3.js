@@ -294,7 +294,12 @@ let track_list = [
 
 
 
-
+{  
+    name: " Nutbush City Limits",
+   artist: "Ike & Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Ike & Tina Turner - Nutbush City.mp3",
+  },
 
 
 
