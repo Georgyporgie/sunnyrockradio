@@ -285,16 +285,6 @@ let track_list = [
 
 
 
-{
-
-
-
-
-    name: "Lost",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
-  },
 
 
 
@@ -309,7 +299,7 @@ let track_list = [
     name: " Happiness",
     artist: "Jonathan Jeremiah   ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "https://sunnyrockradio.com/rock01/muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
   },
 
 
