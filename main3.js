@@ -257,132 +257,6 @@ let track_list = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Nutbush City Limits",
-   artist: "Ike & Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Ike & Tina Turner - Nutbush City.mp3",
-  },
-
-
-
-
-{  
-    name: " Private Dancer (12inch)",
-    artist: "Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " Bohemian Rapsodhy",
-    artist: "Queen",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
-  },
-
-
-
-
-
-
-
-
-
-{
-    name: " Todays News",
-    artist: "Sunny Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-{
-
-    name: "Nothing's Gonna Stop Us Now (1986)",
-    artist: "Starship ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Vienna ",
-    artist: "Ultravox  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ultravox - Vienna.mp3",
-  },
-
-{
-
-
-
-
-    name: " Happiness",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "https://sunnyrockradio.com/rock01/muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
-  },
-
-
-
-
 {
     name: "Welcome!",
     artist: "Play Sunny rockradio ",
@@ -416,16 +290,7 @@ let track_list = [
     path: "muziek/muziek02/02 Dogs.mp3",
   },
 
-{
 
-
-
-
-    name: "Lost",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
-  },
 
 
 
