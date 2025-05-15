@@ -329,325 +329,6 @@ let track_list = [
 
 
 
-{  
-    name: " Private Dancer (12inch)",
-    artist: "Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " Bohemian Rapsodhy",
-    artist: "Queen",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
-  },
-
-
-
-
-
-
-
-
-
-{
-    name: " Todays News",
-    artist: "Sunny Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-{
-
-    name: "Nothing's Gonna Stop Us Now (1986)",
-    artist: "Starship ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Vienna ",
-    artist: "Ultravox  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ultravox - Vienna.mp3",
-  },
-
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
-{  
-    name: " Everywhere",
-    artist: "Fleetwood Mac  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-  },
-
-{  
-    name: " Heroes",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/David Bowie - Heroes.mp3",
-  },
-
-
-{  
-    name: "Dogs ",
-    artist: "Pink Floyd ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/02 Dogs.mp3",
-  },
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-{
-
-    name: "Radio Ga GA (12inch)",
-    artist: "Queen ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
-  },
-
-{
-    name: " Candy (12inch) ",
-    artist: "Iggy Pop",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Iggy Pop - Candy.mp3",
-  },
-
-
-{
-    name: " Dollar Days",
-    artist: "David Bowie",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/06 Dollar Days.mp3",
-  },
- 
-
-
-
-
-{
-    name: " Two Tribes",
-    artist: "Frankie Goes To Hollywood",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
-  },
-
-
-
-
-
-{
-    name: " She 's Not There",
-    artist: "Santana",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Santana - She 's not there.mp3",
-  },
-{
-    name: " Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
- 
- {
-    name: "  Sunny radio jingle",
-    artist: "Sunny Time ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-{
-    name: "Just For You",
-    artist: "Sunny Ship",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  },
-
-
-{
-
-
-
-
-    name: " Gimme All Your Lovin (12inch)",
-    artist: "ZZ Top ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
-  }, 
-
-
-
-
-
-
-
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-{  
-    name: "Everybody Wants To Rule The World (1985)",
-    artist: "Tears For Fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-{
-    name: " Low",
-    artist: "Lenny Kravitz ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-
-
-
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
-  },
-
-
- 
-
-
- 
-
-
-
-{
-    name: " Todays News",
-    artist: "Sunny Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
-
-{  
-    name: "  Little Lies ",
-    artist: "Fleetwood Mac",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
-
-
-
-
-
-
-
-
-  
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
 
 
 {
@@ -1495,6 +1176,325 @@ let track_list = [
   },
  
 
+
+
+{  
+    name: " Private Dancer (12inch)",
+    artist: "Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " Bohemian Rapsodhy",
+    artist: "Queen",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
+  },
+
+
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+{
+
+    name: "Nothing's Gonna Stop Us Now (1986)",
+    artist: "Starship ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{  
+    name: " Vienna ",
+    artist: "Ultravox  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ultravox - Vienna.mp3",
+  },
+
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+{  
+    name: " Everywhere",
+    artist: "Fleetwood Mac  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
+  },
+
+{  
+    name: " Heroes",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/David Bowie - Heroes.mp3",
+  },
+
+
+{  
+    name: "Dogs ",
+    artist: "Pink Floyd ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/02 Dogs.mp3",
+  },
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+{
+
+    name: "Radio Ga GA (12inch)",
+    artist: "Queen ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
+  },
+
+{
+    name: " Candy (12inch) ",
+    artist: "Iggy Pop",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Iggy Pop - Candy.mp3",
+  },
+
+
+{
+    name: " Dollar Days",
+    artist: "David Bowie",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/06 Dollar Days.mp3",
+  },
+ 
+
+
+
+
+{
+    name: " Two Tribes",
+    artist: "Frankie Goes To Hollywood",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
+  },
+
+
+
+
+
+{
+    name: " She 's Not There",
+    artist: "Santana",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Santana - She 's not there.mp3",
+  },
+{
+    name: " Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+ 
+ {
+    name: "  Sunny radio jingle",
+    artist: "Sunny Time ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+{
+    name: "Just For You",
+    artist: "Sunny Ship",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  },
+
+
+{
+
+
+
+
+    name: " Gimme All Your Lovin (12inch)",
+    artist: "ZZ Top ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
+  }, 
+
+
+
+
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+{  
+    name: "Everybody Wants To Rule The World (1985)",
+    artist: "Tears For Fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+{
+    name: " Low",
+    artist: "Lenny Kravitz ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+
+
+
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+ 
+
+
+ 
+
+
+
+{
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
+
+{  
+    name: "  Little Lies ",
+    artist: "Fleetwood Mac",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+  },
+
+
+
+
+
+
+
+
+  
+ {
+    name: "Snippet",
+    artist: "Sunny radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet4.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
 
 
 
