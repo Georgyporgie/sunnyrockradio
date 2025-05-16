@@ -400,23 +400,86 @@ body {
 
 
 
-<audio  id="public"  autoplay loop>
- <source src="" type="audio/mpeg" />
-   <source src="" type="audio/wav" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<audio id="musicPlayer" autoplay loop>
+    <source id="musicSource" src="" type="audio/mpeg">
 </audio>
 
-
-
-
-
-
-
-
-
-
 <script>
-document.getElementById("public").setAttribute('src', 'muziek/pirate background/Sunny weekly rockpirate2.mp3');
+    const tracks = {
+        0: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekendpiratejinglepublic.mp3",
+        
+        1: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
+
+        2: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
+
+
+        3: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
+
+        4: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
+
+        5: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3",
+
+        6: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3"
+
+
+
+    };
+
+    const today = new Date().getDay();
+    document.getElementById("musicSource").setAttribute('src', tracks[today]);
+    document.getElementById("musicPlayer").load(); // Reload to apply new src
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
