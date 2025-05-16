@@ -265,14 +265,6 @@ let track_list = [
 
 
 
-
-
-{
-    name: " Whole lotta Rosie",
-    artist: "ACDC",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
-  },
  
 
 
@@ -364,6 +356,14 @@ let track_list = [
 
 
 
+
+
+{
+    name: " Whole lotta Rosie",
+    artist: "ACDC",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
+  },
 
 
 
