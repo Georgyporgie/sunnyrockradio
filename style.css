@@ -876,5 +876,11 @@ filter:opacity(75%);
             border-radius: 5px;
         background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF)
 }
-   
+  
+
+
+
+#play {  text-decoration: underline; color: black; z-index: -400;
+
+} 
 
