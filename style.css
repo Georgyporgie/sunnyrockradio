@@ -611,11 +611,11 @@ animation: blinker 1s step-start infinite;
   }
 }
 
-.arrow {   background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF); z-index: -300; margin-left: -10px; margin-right: -10px; border: solid 1px #FF0000;
+.arrow {   background:linear-gradient(45deg,#99CCFF,#80BFFF,#B3D9FF,#80BFFF); z-index: -300; margin-left: -10px; margin-right: -10px; border: solid 1px #FF0000; z-index:-20; 
 }
 
 
-#astro {  filter: brightness(120%) saturate(110%) contrast(115%) opacity(60%); width: 32px; height: 30px; transform: rotate(-90deg); z-index: 200; display: block; margin: auto auto 300px auto; 
+#astro {  filter: brightness(120%) saturate(110%) contrast(115%) opacity(60%); width: 32px; height: 30px; transform: rotate(-90deg); z-index: 0; display: block; margin: auto auto 300px auto; 
 }
 
 .weather {  display: block; margin: auto auto auto auto; border-radius:5px;
