@@ -719,6 +719,7 @@ width: 60px;
 border-radius: 50px;
 color: white;
 margin: auto auto auto auto; display: block;
+z-index: -600;
 }
 
 #legend  {
