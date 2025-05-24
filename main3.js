@@ -122,7 +122,7 @@ let track_list = [
     name: "Welcome!",
     artist: "Play Sunny Rockradio  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
+    path: "muziek/jingles/Sunny radio jingle.mp3",
   },
 
 
@@ -266,573 +266,6 @@ let track_list = [
 
 
  
-
-
-
-{
-
-
-
-
-    name: " Gimme All Your Lovin (12inch)",
-    artist: "ZZ Top ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
-  }, 
-
-
-
-
-
-
-
-{  
-    name: " Miss You (12inch)",
-    artist: "Rolling Stones",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-{  
-    name: "Everybody Wants To Rule The World (1985)",
-    artist: "Tears For Fears",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
-  },
-
-
-
-
-
-{
-    name: " Low",
-    artist: "Lenny Kravitz ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
-  },
-
-
-
-{
-    name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle3.mp3",
-  },
-
-
-
-
-
-
-
-{  
-    name: " Lucifer ",
-    artist: "Alan Parsons Project  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
-  },
-
-
- 
-
-
- 
-
-
-
-{
-    name: " Todays News",
-    artist: "Sunny Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
-
-{  
-    name: "  Little Lies ",
-    artist: "Fleetwood Mac",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
-
-
-
-
-
-
-
-
-  
- {
-    name: "Snippet",
-    artist: "Sunny radio",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio snippet4.mp3",
-  },
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-
-
-
-
-    name: " Happiness",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
-  },
-
-
-
-
-
-
-
-{
-
-
-
-
-    name: "Lost",
-    artist: "Jonathan Jeremiah   ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{  
-    name: " Nutbush City Limits",
-   artist: "Ike & Tina Turner ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Ike & Tina Turner - Nutbush City.mp3",
-  },
-
-
-
-
-
-
-{
-    name: "Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
-
-
-
-
-
-{
-    name: " This Is Not America (12inch)",
-    artist: "David Bowie ",
-    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-{
-
-    name: " Riptide",
-    artist: "Vance Joy ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
-  },
-
-
-
-
-
-
-{
-
-    name: "Pinball Wizard",
-    artist: "The Who ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
-  },
-
-
-
-
-
-{  
-    name: " Alone",
-    artist: "Heart  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Heart - Alone.mp3",
-  },
-
-
-
-
-{
-    name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " School",
-    artist: "Supertramp",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Supertramp - School.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
- 
-
-
-
-
-{
-    name: " Meddle (1971)",
-    artist: "Pink Floyd",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
-  },
-
-
-
-
-
-
-
-{
-    name: " Todays News",
-    artist: "Sunny Journaal",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/jingles/nos journaal 11.mp3",
-  
-
-
-}, 
-
-
-
-
-
-{
-    name: "Dont You (12inch)",
-    artist: "Simple Minds",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Simple Minds Dont you.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-    name: " Black Betty",
-    artist: "Ram Jam",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1524,6 +957,573 @@ let track_list = [
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   },
+
+
+
+
+
+
+
+{
+
+
+
+
+    name: " Gimme All Your Lovin (12inch)",
+    artist: "ZZ Top ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/ZZ top - Gimme all your lovin'.mp3",
+  }, 
+
+
+
+
+
+
+
+{  
+    name: " Miss You (12inch)",
+    artist: "Rolling Stones",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Rolling Stones - Miss you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+{  
+    name: "Everybody Wants To Rule The World (1985)",
+    artist: "Tears For Fears",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Tears for fears - Everybody wants to rule the world.mp3",
+  },
+
+
+
+
+
+{
+    name: " Low",
+    artist: "Lenny Kravitz ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Lenny Kravitz - Low.mp3",
+  },
+
+
+
+{
+    name: "Welcome!",
+    artist: "Listen Live Sunny Rockradio ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle3.mp3",
+  },
+
+
+
+
+
+
+
+{  
+    name: " Lucifer ",
+    artist: "Alan Parsons Project  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Alan Parsons Project - Lucifer.mp3",
+  },
+
+
+ 
+
+
+ 
+
+
+
+{
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
+
+{  
+    name: "  Little Lies ",
+    artist: "Fleetwood Mac",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
+  },
+
+
+
+
+
+
+
+
+  
+ {
+    name: "Snippet",
+    artist: "Sunny radio",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio snippet4.mp3",
+  },
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+
+
+
+
+    name: " Happiness",
+    artist: "Jonathan Jeremiah   ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Happiness.mp3",
+  },
+
+
+
+
+
+
+
+{
+
+
+
+
+    name: "Lost",
+    artist: "Jonathan Jeremiah   ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Jonathan Jeremiah -  Lost.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{  
+    name: " Nutbush City Limits",
+   artist: "Ike & Tina Turner ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Ike & Tina Turner - Nutbush City.mp3",
+  },
+
+
+
+
+
+
+{
+    name: "Black Velvet",
+    artist: "Alannah Miles",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
+  },
+
+
+
+
+
+
+{
+    name: " This Is Not America (12inch)",
+    artist: "David Bowie ",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/muziek01/David Bowie - This Is Not America.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+{
+
+    name: " Riptide",
+    artist: "Vance Joy ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Vance Joy - Riptide.mp3",
+  },
+
+
+
+
+
+
+{
+
+    name: "Pinball Wizard",
+    artist: "The Who ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/The who - Pinball Wizard.mp3",
+  },
+
+
+
+
+
+{  
+    name: " Alone",
+    artist: "Heart  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Heart - Alone.mp3",
+  },
+
+
+
+
+{
+    name: "Welcome!",
+    artist: "Play Sunny Rockradio  ",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/Sunny radio jingle1.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " School",
+    artist: "Supertramp",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Supertramp - School.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+{
+    name: " Meddle (1971)",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Pink Floyd - Meddle.mp3",
+  },
+
+
+
+
+
+
+
+{
+    name: " Todays News",
+    artist: "Sunny Journaal",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/jingles/nos journaal 11.mp3",
+  
+
+
+}, 
+
+
+
+
+
+{
+    name: "Dont You (12inch)",
+    artist: "Simple Minds",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Simple Minds Dont you.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+    name: " Black Betty",
+    artist: "Ram Jam",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek01/Ram Jam - Black Betty.mp3",
+  },
+
+
+
+
+
+
+
+
+
+
+
 
 
 
