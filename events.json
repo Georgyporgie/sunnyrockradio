@@ -2,23 +2,24 @@
   "2025-05-10": [
     {"time": "05:00 - 12:00", "event": "Morning Rock"},
     {"time": "12:00 - 00:00", "event": "Hillbillies Rock Event"},
-    {"time": "00:00 - 05:00", "event": "Hillbillies Forever"}
+    {"time": "00:00 - 03:00", "event": "Hillbillies Forever"}
   ],
   "2025-05-23": [
     {"time": "05:00 - 12:00", "event": "Morning Disco"},
     {"time": "12:00 - 17:00", "event": "Hillbillies Rock Event"},
-    {"time": "17:00 - 05:00", "event": "Hillbillies Forever"}
+    {"time": "17:00 - 03:00", "event": "Hillbillies Forever"}
 
   ],
   "2025-05-24": [
     {"time": "05:00 - 12:00", "event": "Morning Rock"},
     {"time": "12:00 - 17:00", "event": "Hillbillies Rock Event"},
-    {"time": "17:00 - 05:00", "event": "Hillbillies Forever"}
+    {"time": "17:00 - 03:00", "event": "Hillbillies Forever"}
 
   ],
   "2025-05-25": [
     {"time": "05:00 - 12:00", "event": "Sunday Rockin'!"},
     {"time": "12:00 - 17:00", "event": "Hillbillies Rock Event"},
-    {"time": "17:00 - 05:00", "event": "Hillbillies Forever"}
+    {"time": "17:00 - 03:00", "event": "Hillbillies Forever"}
   ]
+
 }
