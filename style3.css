@@ -110,16 +110,16 @@ text-align: center;
 
 
 #luister {   width:100px; height: 30px; border-radius: 5px;
-   z-index: -300; float: right; margin-left: 30px; transform:rotate(1deg);
- filter:brightness(102%) saturation(105%) contrast(120%) opacity(55%); 
+   z-index: -500; float: right; margin-left: 30px; transform:rotate(1deg);
+ filter:brightness(100%) saturation(100%) contrast(100%) opacity(55%); 
 }
 
 
 #bull { 
 height: 30px; width: 40px;
-filter:brightness(110%)contrast(115%)saturate(110%) opacity(70%);
+filter:brightness(100%)contrast(100%)saturate(100%) opacity(55%);
 border-radius: 5px;
-z-index: -100;
+z-index: -500;
 }
 
 .inch  {
@@ -163,8 +163,8 @@ display: none;
 
 
 #mimo {   width:100px; height: 40px; border-radius: 5px; transform:rotate(-1deg);
-   z-index: -300; float: right; margin-top: 50px; 
- filter:brightness(102%) saturation(105%) contrast(120%) opacity(55%); margin-left: -80px;
+   z-index: -500; float: right; margin-top: 50px; 
+ filter:brightness(100%) saturation(100%) contrast(100%) opacity(55%); margin-left: -80px;
 }
 
 
@@ -208,8 +208,8 @@ display: none;
 
 
 #kvms {   width:140px; height: 25px; border-radius: 5px; transform:rotate(4deg);
-   z-index: -300; float: right; margin-top: 100px; 
- filter:brightness(102%) saturation(105%) contrast(120%) opacity(55%); margin-left: -250px;
+   z-index: -500; float: right; margin-top: 100px; 
+ filter:brightness(100%) saturation(100%) contrast(100%) opacity(55%); margin-left: -250px;
 }
 
 
@@ -451,8 +451,8 @@ border-radius: 5px; z-index: -500; width: 51px; height: 34px; font-size: 17px; d
 
 
 #geeks {   width:60px; height: 60px; 
-   z-index: -300;  margin-left: 40px; transform:rotate(-10deg);
- filter:brightness(105%) saturation(105%) contrast(110%) opacity(75%); 
+   z-index: -500;  margin-left: 40px; transform:rotate(-10deg);
+ filter:brightness(100%) saturation(100%) contrast(100%) opacity(55%); 
 }
 
 
