@@ -452,7 +452,7 @@ border-radius: 5px; z-index: -500; width: 51px; height: 34px; font-size: 17px; d
 
 #geeks {   width:60px; height: 60px; 
    z-index: -500;  margin-left: 40px; transform:rotate(-10deg);
- filter:brightness(100%) saturation(100%) contrast(100%) opacity(55%); 
+ filter:brightness(100%) saturation(100%) contrast(100%) opacity(75%); 
 }
 
 
