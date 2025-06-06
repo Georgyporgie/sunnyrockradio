@@ -456,31 +456,49 @@ fetch('event.json')
     <source id="musicSource" src="" type="audio/mpeg">
 </audio>
 
+<audio id="musicPlayer" autoplay loop>
+    <source id="musicSource" src="" type="audio/mpeg">
+</audio>
+
 <script>
     const tracks = {
         0: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3",
-        
         1: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
-
         2: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
-
-
         3: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
-
         4: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
-
-        5: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3",
-
+        5: { 
+            early: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3", 
+            after17: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3" 
+        },
         6: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3"
-
-
-
     };
 
     const today = new Date().getDay();
-    document.getElementById("musicSource").setAttribute('src', tracks[today]);
+    const currentHour = new Date().getHours();
+
+    let selectedTrack;
+
+    // Special condition for Friday (5) to switch track after 17:00
+    if (today === 5) {
+        selectedTrack = currentHour >= 17 ? tracks[5].after17 : tracks[5].early;
+    } else {
+        selectedTrack = tracks[today];
+    }
+
+    document.getElementById("musicSource").setAttribute('src', selectedTrack);
     document.getElementById("musicPlayer").load(); // Reload to apply new src
+
+    // Optional: Auto-check every minute so track updates at 17:00 without reload
+    setInterval(() => {
+        const newHour = new Date().getHours();
+        if (today === 5 && newHour >= 17) {
+            document.getElementById("musicSource").setAttribute('src', tracks[5].after17);
+            document.getElementById("musicPlayer").load();
+        }
+    }, 60000); // Checks every minute
 </script>
+
 
 
 
