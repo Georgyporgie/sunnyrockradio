@@ -1,16 +1,20 @@
 {
   "Friday": [
-    {"time": "00:00 - 14:00", "event": "Thursday Dancin"},
-    {"time": "14:00 - 18:00", "event": "Björn's Rockshow"}
+    { "time": "03:00 - 12:00", "event": "MorningRock" },
+    { "time": "12:00 - 17:00", "event": "Hillbillies Live" },
+    { "time": "17:00 - 21:00", "event": "Hillbillies Live" },
+    { "time": "21:00 - 03:00", "event": "Hillbillies Live" }
   ],
-  "Saturday": [
-    {"time": "00:00 - 14:00", "event": "Rockful With Björn"},
-    {"time": "14:00 - 18:00", "event": "Friday Rockparty"}
+    "Saturday": [
+    { "time": "03:00 - 12:00", "event": "MorningRock" },
+    { "time": "12:00 - 17:00", "event": "Hillbillies Live" },
+    { "time": "17:00 - 21:00", "event": "Hillbillies Live" },
+    { "time": "21:00 - 03:00", "event": "Hillbillies Live" }
   ],
-  "Sunday": [
-    {"time": "00:00 - 14:00", "event": "Saturday Live"},
-    {"time": "14:00 - 18:00", "event": "Afternoon Rockin'"}
-  ],
-
-
+   "Sunday": [
+    { "time": "03:00 - 12:00", "event": "MorningRock" },
+    { "time": "12:00 - 17:00", "event": "Hillbillies Live" },
+    { "time": "17:00 - 21:00", "event": "Hillbillies Forever" },
+    { "time": "21:00 - 03:00", "event": "Hillbillies Today" }
+  ]
 }
