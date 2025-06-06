@@ -469,7 +469,7 @@ fetch('event.json')
         4: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
         5: { 
             early: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3", 
-            after17: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3", 
+            after17: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekdays%20public.mp3" 
         },
         6: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3"
     };
@@ -489,14 +489,7 @@ fetch('event.json')
     document.getElementById("musicSource").setAttribute('src', selectedTrack);
     document.getElementById("musicPlayer").load(); // Reload to apply new src
 
-    // Optional: Auto-check every minute so track updates at 17:00 without reload
-    setInterval(() => {
-        const newHour = new Date().getHours();
-        if (today === 5 && newHour >= 17) {
-            document.getElementById("musicSource").setAttribute('src', tracks[5].after17);
-            document.getElementById("musicPlayer").load();
-        }
-    }, 60000); // Checks every minute
+   
 </script>
 
 
