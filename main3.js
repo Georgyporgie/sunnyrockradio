@@ -1916,9 +1916,7 @@ function displayMessage() {
 
 
 
-window.setInterval(function()  {
-startTime();
-}, 1);
+
 
 
 
@@ -2089,51 +2087,6 @@ document.getElementById('track-list-container').appendChild(detailsElement2);
 
 
 
-
-
-
-// Function to analyze and normalize volume werkt misschien!!!!!
-
-
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-const track = audioContext.createMediaElementSource(audioElement);
-
-// Create an analyser node
-const analyser = audioContext.createAnalyser();
-
-// Create a gain node to normalize volume
-const gainNode = audioContext.createGain();
-
-// Connect the nodes in the correct order
-track.connect(gainNode);
-gainNode.connect(analyser);
-analyser.connect(audioContext.destination);
-
-// Set up the analyser
-analyser.fftSize = 256;
-const bufferLength = analyser.frequencyBinCount;
-const dataArray = new Uint8Array(bufferLength);
-
-// Function to get the average volume
-function getAverageVolume(array) {
-  let values = 0;
-  for (let i = 0; i < array.length; i++) {
-    values += array[i];
-  }
-  return values / array.length;
-}
-
-// Function to normalize volume
-function normalizeVolume() {
-  analyser.getByteFrequencyData(dataArray);
-  const volume = getAverageVolume(dataArray);
-
-  // Adjust the gain to normalize volume
-  gainNode.gain.value = 1 / (volume || 1); // Avoid division by zero
-}
-
-// Call the normalizeVolume function periodically
-setInterval(normalizeVolume, 1000);
 
 
 

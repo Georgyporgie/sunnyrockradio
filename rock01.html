@@ -532,9 +532,6 @@ fetch('./event.json')
 
 
 
-<script> 
-document.getElementById("live").innerHTML="Non Stop Rock Hits 24/7 </em>";
-</script>
 
 
 
@@ -549,29 +546,14 @@ img.src = 'images/Rock1.png';
 
 
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("virtualize");
-
-//Set the src property of our element to the new image URL
-img.src = 'images/AudioVisualizer.gif';
-</script>
 
 
 
 
 
 
-<script>
 
 
-
-//Get our img element by using document.getElementById
-var img = document.getElementById("myImage");
-
-//Set the src property of our element to the new image URL
-img.src = 'images/Sunny Rock.png';
-</script>
 
 
 
@@ -612,9 +594,6 @@ function myFunction() {
 </script>
 
 
-<script> 
-document.getElementById("now").innerHTML="<em><bold>current track</em></bold>"; 
-</script>
 
 
 
@@ -623,21 +602,26 @@ document.getElementById("now").innerHTML="<em><bold>current track</em></bold>";
 
 <script>
 function startTime() {
-  const today = new Date();
-  let h = today.getHours();
-  let m = today.getMinutes();
-  let s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('time').innerHTML = "Sunny Time:" + " "  + h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000); { document.getElementById("time").innerHTML =    + hour + ":0" + minute;
-}
+    const today = new Date();
+    let h = today.getHours();
+    let m = today.getMinutes();
+    let s = today.getSeconds();
+    
+    m = checkTime(m);
+    s = checkTime(s);
+    
+    document.getElementById('time').innerHTML = "Sunny Time: " + h + ":" + m + ":" + s;
+    
+    setTimeout(startTime, 1000);
 }
 
 function checkTime(i) {
-  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-  return i;
+    return i < 10 ? "0" + i : i; // Add zero in front of numbers < 10
 }
+
+// Call the function to start the clock
+startTime();
+
 </script>
 
 
@@ -717,22 +701,10 @@ img.src = 'images/Iggy Pop2.png';
 
 
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("bright");
-
-//Set the src property of our element to the new image URL
-img.src = 'images/star2.png';
-</script>
 
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("rock");
 
-//Set the src property of our element to the new image URL
-img.src = 'images/rock.png';
-</script>
+
 
 
 
@@ -794,29 +766,11 @@ var img = document.getElementById("linger");
 img.src = 'images/Sunny7.png';
 </script>
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("kings");
 
-//Set the src property of our element to the new image URL
-img.src = 'images/Find the treasure1.png';
-</script>
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("record");
 
-//Set the src property of our element to the new image URL
-img.src = 'images/record9.png';
-</script>
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("rec");
 
-//Set the src property of our element to the new image URL
-img.src = 'images/record9.png';
-</script>
 
 
 
