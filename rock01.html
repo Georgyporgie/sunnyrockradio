@@ -273,7 +273,8 @@ body {
 <div><h5 id="events">
 
 <script>
-fetch('event.json')
+fetch('./event.json')
+
     .then(response => {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         return response.json();
@@ -828,6 +829,53 @@ img.src = 'images/record9.png';
 document.getElementById("events").innerHTML="<em><br><u></em></u><br><br>  <br><br><br><em></em> <br> <br> <br><em></em><br><br>"; 
 </script>
 
+
+<script>
+function generateSchedule() {
+    const today = new Date();
+    const schedule = {};
+    const weekendDays = [5, 6, 0]; // Friday (5), Saturday (6), Sunday (0)
+    
+    const events = {
+        5: [ // Friday
+            { time: "03:00 - 12:00", event: "Morning Rock" },
+            { time: "12:00 - 17:00", event: "Hillbillies Event" },
+            { time: "17:00 - 21:00", event: "Hillbillies Party" },
+            { time: "21:00 - 03:00", event: "Evening Rock" }
+        ],
+        6: [ // Saturday
+             { time: "03:00 - 12:00", event: "Morning Rock" },
+            { time: "12:00 - 17:00", event: "Hillbillies Event" },
+            { time: "17:00 - 21:00", event: "Hillbillies Party" },
+            { time: "21:00 - 03:00", event: "Evening Rock" }
+
+        ],
+        0: [ // Sunday
+             { time: "03:00 - 12:00", event: "Morning Rock" },
+            { time: "12:00 - 17:00", event: "Hillbillies Event" },
+            { time: "17:00 - 21:00", event: "Hillbillies Party" },
+            { time: "21:00 - 03:00", event: "Evening Rock" }
+
+        ]
+    };
+
+    for (let i = 1; i <= 7; i++) {
+        let date = new Date();
+        date.setDate(today.getDate() + i);
+        let dayOfWeek = date.getDay();
+
+        if (weekendDays.includes(dayOfWeek)) {
+            schedule[date.toISOString().split("T")[0]] = events[dayOfWeek];
+        }
+    }
+
+    return schedule;
+}
+
+// Example execution to generate upcoming events
+console.log("Generated Schedule:", JSON.stringify(generateSchedule(), null, 2));
+
+</script>
 
 
 
