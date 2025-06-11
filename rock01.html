@@ -273,7 +273,7 @@ body {
 <div><h5 id="events">
 
 <script>
-fetch('./event.json')
+fetch('event.json')
 
     .then(response => {
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
@@ -301,7 +301,7 @@ fetch('./event.json')
             }
         } else {
             // Hide events on weekdays
-            document.getElementById('events').innerHTML = '<em>No Events Today.</em>';
+            document.getElementById('events').innerHTML = '<em>Weekend events only! Come back Friday.</em>';
         }
     })
     .catch(error => console.error('Error fetching weekend events:', error));
