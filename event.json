@@ -1,20 +1,23 @@
 {
   "Friday": [
-    { "time": "03:00 - 12:00", "event": "MorningRock" },
-    { "time": "12:00 - 17:00", "event": "Hillbillies Live" },
-    { "time": "17:00 - 21:00", "event": "Hillbillies Live" },
-    { "time": "21:00 - 03:00", "event": "Hillbillies Live" }
+    { time: "03:00 - 12:00", event: "Morning Rock" },
+            { time: "12:00 - 17:00", event: "Hillbillies Event" },
+            { time: "17:00 - 23:00", event: "Hillbillies Party" },
+            { time: "23:00 - 03:00", event: "Evening Rock" }
+
   ],
     "Saturday": [
-    { "time": "03:00 - 12:00", "event": "MorningRock" },
-    { "time": "12:00 - 17:00", "event": "Hillbillies Live" },
-    { "time": "17:00 - 21:00", "event": "Hillbillies Live" },
-    { "time": "21:00 - 03:00", "event": "Hillbillies Live" }
+     { time: "03:00 - 12:00", event: "Morning Rock" },
+            { time: "12:00 - 17:00", event: "Hillbillies Event" },
+            { time: "17:00 - 23:00", event: "Hillbillies Party" },
+            { time: "23:00 - 03:00", event: "Evening Rock" }
+
   ],
    "Sunday": [
-    { "time": "03:00 - 12:00", "event": "MorningRock" },
-    { "time": "12:00 - 17:00", "event": "Hillbillies Live" },
-    { "time": "17:00 - 21:00", "event": "Hillbillies Forever" },
-    { "time": "21:00 - 03:00", "event": "Hillbillies Today" }
+    { time: "03:00 - 12:00", event: "Morning Rock" },
+            { time: "12:00 - 17:00", event: "Hillbillies Event" },
+            { time: "17:00 - 23:00", event: "Hillbillies Party" },
+            { time: "23:00 - 03:00", event: "Evening Rock" }
+
   ]
 }
