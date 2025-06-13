@@ -585,7 +585,7 @@ margin-bottom: 0px; margin-top: -60px; margin-right: 10px;
 }
 
 .frame  {  
-height: 200px; width: 300px; display: block; margin: auto -30px auto auto; z-index: -200; border: solid #663300 3px;
+height: 200px; width: 300px; display: block; margin: auto auto auto auto; z-index: -200; border: solid #663300 3px;
 }
 
 
@@ -599,7 +599,7 @@ height: 200px; width: 300px; display: block; margin: auto -30px auto auto; z-ind
 .ster {  filter: brightness(110%) saturate(105%) contrast(115%) opacity(50%); width: 25px; height: 26px; transform: rotate(40deg); z-index: -200;
 }
 
-#licht  {    width: 25px;  height: 25px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(75%); transform: rotate(14deg); z-index: -200; margin: -25px auto 35px  auto; display: block; border-radius: 5px;
+#licht  {    width: 25px;  height: 25px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(75%); transform: rotate(14deg); z-index: -200; margin: -5px auto 10px  auto; display: block; border-radius: 5px;
 animation: blinker 1s step-start infinite;
 
 }
@@ -817,7 +817,7 @@ filter:opacity(75%);
   background-size: 500% 500%;
   color: #FF0000;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   text-shadow: 0 0 5px #FFFFFF, 0 0 10px #006666;
   padding: 15px 25px;
