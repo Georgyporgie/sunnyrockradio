@@ -1592,6 +1592,10 @@ function loadTrack(track_index) {
 
   // Apply a random background color
   random_bg_color();
+  curr_track.play().catch(err => {
+    console.warn("Autoplay prevented by browser:", err);
+  });
+
 }
 
 
@@ -1619,6 +1623,77 @@ function nextTrack() {
 
 
 
+
+
+function normalizeVolume(targetVolume = 0.8) {
+    if (curr_track) {
+        curr_track.volume = Math.min(1, Math.max(0, targetVolume));
+    }
+}
+
+
+
+
+curr_track.addEventListener("play", () => normalizeVolume());
+
+
+
+function fadeOutTrack(audioElement, duration = 2000) {
+    if (!audioElement) {
+        console.error("Error: `audioElement` is undefined!");
+        return;
+    }
+
+    let fadeInterval = 50; // Adjust the speed of fade steps
+    let fadeStep = audioElement.volume / (duration / fadeInterval); // Volume decrement per step
+
+    let fadeEffect = setInterval(() => {
+        if (audioElement.volume > 0) {
+            audioElement.volume = Math.max(0, audioElement.volume - fadeStep);
+        } else {
+            clearInterval(fadeEffect);
+            audioElement.pause(); // Stop playback after fade-out completes
+        }
+    }, fadeInterval);
+}
+
+// ✅ Apply fade-out when the track is about to end (e.g., last 5 seconds)
+curr_track.addEventListener("timeupdate", () => {
+    if (curr_track.duration - curr_track.currentTime <= 1) {
+        fadeOutTrack(curr_track);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function adjustVolumeDynamically() {
+    if (!curr_track) {
+        console.error("Error: `curr_track` is undefined!");
+        return; // Prevent function from running further
+    }
+
+    let targetVolume = 0.8;
+    let maxThreshold = 1;
+
+    curr_track.addEventListener("timeupdate", () => {
+        if (curr_track.volume < targetVolume) {
+            curr_track.volume = Math.min(maxThreshold, curr_track.volume + 0.01);
+        } else if (curr_track.volume > targetVolume) {
+            curr_track.volume = Math.max(0, curr_track.volume - 0.01);
+        }
+    });
+}
 
 
 
