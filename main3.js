@@ -1562,42 +1562,37 @@ let track_list = [
 
 
 
-
 function loadTrack(track_index) {
-  // Increment play count for the current track
   track_list[track_index].playCount += 1;
-
-  // Sort the track list by play count
   sortTracksByPlayCount();
-
-  // Clear the previous seek timer
   clearInterval(updateTimer);
   resetValues();
 
-  // Load a new track
   curr_track.src = track_list[track_index].path;
   curr_track.load();
 
-  // Update details of the track
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Set an interval of 1000 milliseconds for updating the seek slider
   updateTimer = setInterval(seekUpdate, 1000);
 
-  // Move to the next track if the current finishes playing using the 'ended' event
   curr_track.addEventListener("ended", nextTrack);
+  curr_track.addEventListener("canplay", handleAutoplay); // Autoplay when track is ready
 
-  // Apply a random background color
   random_bg_color();
-  curr_track.play().catch(err => {
-    console.warn("Autoplay prevented by browser:", err);
-  });
-
 }
 
+// ✅ Define this outside loadTrack
+function handleAutoplay() {
+  normalizeVolume();
+  curr_track.play().catch(err => {
+    console.warn("Autoplay prevented:", err);
+  });
+
+  curr_track.removeEventListener("canplay", handleAutoplay);
+}
 
 
 
@@ -1638,31 +1633,6 @@ curr_track.addEventListener("play", () => normalizeVolume());
 
 
 
-function fadeOutTrack(audioElement, duration = 2000) {
-    if (!audioElement) {
-        console.error("Error: `audioElement` is undefined!");
-        return;
-    }
-
-    let fadeInterval = 50; // Adjust the speed of fade steps
-    let fadeStep = audioElement.volume / (duration / fadeInterval); // Volume decrement per step
-
-    let fadeEffect = setInterval(() => {
-        if (audioElement.volume > 0) {
-            audioElement.volume = Math.max(0, audioElement.volume - fadeStep);
-        } else {
-            clearInterval(fadeEffect);
-            audioElement.pause(); // Stop playback after fade-out completes
-        }
-    }, fadeInterval);
-}
-
-// ✅ Apply fade-out when the track is about to end (e.g., last 5 seconds)
-curr_track.addEventListener("timeupdate", () => {
-    if (curr_track.duration - curr_track.currentTime <= 1) {
-        fadeOutTrack(curr_track);
-    }
-});
 
 
 
@@ -1841,16 +1811,20 @@ playpause_btn.innerHTML = '<img id= "med"  src="images/pause.png">';
 
 }
  
+
+
 function playTrack() {
+    if (!curr_track) {
+        console.error("Error: `curr_track` is undefined!");
+        return;
+    }
 
-
-  // Play the loaded track
-  curr_track.src = filteredTrackList[track_index].path; // Set the track source
-  curr_track.play();
-  isPlaying = true;
+    curr_track.play();
+    isPlaying = true;
 
   // Replace the play icon with the pause icon
   playpause_btn.innerHTML = '<img id="media" src="images/pause66.gif">';
+
 
   // Highlight the current track in the playlist
   let allTracks = document.querySelectorAll('ol li'); // Get all <li> elements
@@ -1861,7 +1835,10 @@ function playTrack() {
     allTracks[track_index].classList.add('blinking');
   } else {
     console.error("Filtered track not found in the DOM!");
-  }
+  
+
+
+}
 }
 
 
