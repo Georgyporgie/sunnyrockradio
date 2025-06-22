@@ -457,13 +457,10 @@ fetch('event.json')
     <source id="musicSource" src="" type="audio/mpeg">
 </audio>
 
-<audio id="musicPlayer" autoplay loop>
-    <source id="musicSource" src="" type="audio/mpeg">
-</audio>
-
 <script>
+    // 🎶 Define the tracks for each day
     const tracks = {
-        0: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3",
+       0: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3",
         1: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
         2: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
         3: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekly%20rockpirate.mp3",
@@ -475,6 +472,7 @@ fetch('event.json')
         6: "https://www.sunnyrockradio.com/muziek/pirate%20background/Sunny%20weekend%20piratejinglepublic.mp3"
     };
 
+    // 🕰 Get the current day and hour
     const today = new Date().getDay();
     const currentHour = new Date().getHours();
 
@@ -487,10 +485,77 @@ fetch('event.json')
         selectedTrack = tracks[today];
     }
 
+    // 🎧 Set the source and load the track
     document.getElementById("musicSource").setAttribute('src', selectedTrack);
-    document.getElementById("musicPlayer").load(); // Reload to apply new src
+    const player = document.getElementById("musicPlayer");
+    player.load(); 
 
-   
+  
+
+
+
+
+
+
+
+        // 🌟 Ensure DOM is ready before executing script
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("DOM loaded—setting up audio sources.");
+
+            // 🎵 Assign sources to scheduled sounds
+            const audioFiles = {
+                hourlySound: "muziek/effects/hour soundfinale.mp3",
+                quarterHourSound: "muziek/effects/blast.mp3",
+                fortyFiveMinuteSound: "muziek/effects/DJ Saphire finale.mp3"
+            };
+
+            Object.entries(audioFiles).forEach(([id, src]) => {
+                const audioElement = document.getElementById(id);
+                if (audioElement) {
+                    audioElement.setAttribute("src", src);
+                    console.log(`✅ Source set for ${id}: ${src}`);
+                } else {
+                    console.error(`❌ Error: Element '${id}' not found!`);
+                }
+            });
+
+            // 🎛 Apply volume normalization when a track is ready to play
+            document.querySelectorAll("audio").forEach(audio => {
+                audio.addEventListener("canplay", () => adjustVolumeDynamically(audio));
+            });
+        });
+
+        // 🎚️ Volume Balancer Function
+        function adjustVolumeDynamically(audioElement) {
+            if (!audioElement) {
+                console.error("Error: `audioElement` is undefined!");
+                return;
+            }
+
+            let targetVolume = 0.8;  // Default volume level
+            let maxThreshold = 1; // Prevent distortion
+
+            console.log(`🎛 Volume adjustment enabled for: ${audioElement.id}`);
+
+            audioElement.addEventListener("timeupdate", () => {
+                let currentVolume = audioElement.volume;
+
+                if (currentVolume < targetVolume) {
+                    audioElement.volume = Math.min(maxThreshold, currentVolume + 0.01);  // Smooth increase
+                } else if (currentVolume > targetVolume) {
+                    audioElement.volume = Math.max(0, currentVolume - 0.01);  // Smooth decrease
+                }
+            });
+        }
+    
+window.addEventListener("load", () => {
+  loadTrack(0);        // Load your first track
+  playTrack();         // Start playing it
+  audio.muted = false; // Unmute right after (sometimes needs a short delay)
+});
+
+
+
 </script>
 
 
@@ -503,12 +568,9 @@ fetch('event.json')
 
 
 
-
-
-
-
-
-
+    <audio id="hourlySound" src=""></audio>
+    <audio id="quarterHourSound" src=""></audio>
+    <audio id="fortyFiveMinuteSound" src=""></audio>
 
 
 
@@ -716,7 +778,7 @@ img.src = 'images/Iggy Pop2.png';
 var img = document.getElementById("med");
 
 //Set the src property of our element to the new image URL
-img.src = 'images/play7.png';
+img.src = 'images/pause66.gif';
 </script>
 
 
@@ -828,6 +890,7 @@ function generateSchedule() {
 
 // Example execution to generate upcoming events
 console.log("Generated Schedule:", JSON.stringify(generateSchedule(), null, 2));
+console.log("Track list available:", trackList);
 
 </script>
 
@@ -848,7 +911,7 @@ console.log("Generated Schedule:", JSON.stringify(generateSchedule(), null, 2));
 <script>
 document.getElementById("hourlySound").setAttribute('src', 'clock/its now.mp3');
 document.getElementById("quarterHourSound").setAttribute('src', 'muziek/effects/rotating sound.mp3');
-document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'audio/Sunny los.mp3');
+document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effects/rotating sound.mp3');
 </script>
 
 

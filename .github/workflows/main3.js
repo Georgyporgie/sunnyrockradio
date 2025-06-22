@@ -1562,36 +1562,60 @@ let track_list = [
 
 
 
-
 function loadTrack(track_index) {
   // Increment play count for the current track
   track_list[track_index].playCount += 1;
-
-  // Sort the track list by play count
   sortTracksByPlayCount();
 
-  // Clear the previous seek timer
+  // Reset timers and UI
   clearInterval(updateTimer);
   resetValues();
 
-  // Load a new track
+  // Load and prepare the new track
   curr_track.src = track_list[track_index].path;
   curr_track.load();
 
-  // Update details of the track
+  // Update UI details
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Set an interval of 1000 milliseconds for updating the seek slider
+  // Start updating the seek bar
   updateTimer = setInterval(seekUpdate, 1000);
 
-  // Move to the next track if the current finishes playing using the 'ended' event
+  // Autoplay when the track is ready
+  curr_track.addEventListener("canplay", handleAutoplay);
+
+  // Trigger next track when finished
   curr_track.addEventListener("ended", nextTrack);
 
-  // Apply a random background color
+  // Highlight the active track visually
+  let allTracks = document.querySelectorAll('ol li');
+  allTracks.forEach(track => track.classList.remove('blinking'));
+  if (allTracks[track_index]) {
+    allTracks[track_index].classList.add('blinking');
+  } else {
+    console.error("Filtered track not found in the DOM!");
+  }
+let blinkingLi = document.querySelector(`li[data-track-index="${track_index}"]`);
+if (blinkingLi) {
+  blinkingLi.classList.add('blinking');
+} else {
+  console.warn("No matching track element found to blink.");
+}
+
+  // Add a bit of flair
   random_bg_color();
+}
+
+
+function handleAutoplay() {
+  normalizeVolume();
+  curr_track.play().catch(err => {
+    console.warn("Autoplay prevented:", err);
+  });
+  curr_track.removeEventListener("canplay", handleAutoplay);
 }
 
 
@@ -1611,6 +1635,26 @@ function nextTrack() {
   loadTrack(track_index);
   playTrack();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1766,27 +1810,22 @@ playpause_btn.innerHTML = '<img id= "med"  src="images/pause.png">';
 
 }
  
+
+
 function playTrack() {
+    if (!curr_track) {
+        console.error("Error: `curr_track` is undefined!");
+        return;
+    }
 
-
-  // Play the loaded track
-  curr_track.src = filteredTrackList[track_index].path; // Set the track source
-  curr_track.play();
-  isPlaying = true;
+    curr_track.play();
+    isPlaying = true;
 
   // Replace the play icon with the pause icon
   playpause_btn.innerHTML = '<img id="media" src="images/pause66.gif">';
 
-  // Highlight the current track in the playlist
-  let allTracks = document.querySelectorAll('ol li'); // Get all <li> elements
-  allTracks.forEach(track => track.classList.remove('blinking')); // Remove "blinking" from all
 
-  // Add "blinking" class to the current track
-  if (allTracks[track_index]) { // Ensure the current track exists in the filtered list
-    allTracks[track_index].classList.add('blinking');
-  } else {
-    console.error("Filtered track not found in the DOM!");
-  }
+
 }
 
 
