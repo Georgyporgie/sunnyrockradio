@@ -547,7 +547,16 @@ fetch('event.json')
                 }
             });
         }
-    </script>
+    
+window.addEventListener("load", () => {
+  loadTrack(0);        // Load your first track
+  playTrack();         // Start playing it
+  audio.muted = false; // Unmute right after (sometimes needs a short delay)
+});
+
+
+
+</script>
 
 
 
