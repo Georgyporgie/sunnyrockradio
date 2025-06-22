@@ -1645,16 +1645,6 @@ function nextTrack() {
 
 
 
-function normalizeVolume(targetVolume = 0.8) {
-    if (curr_track) {
-        curr_track.volume = Math.min(1, Math.max(0, targetVolume));
-    }
-}
-
-
-
-
-curr_track.addEventListener("play", () => normalizeVolume());
 
 
 
@@ -1672,23 +1662,7 @@ curr_track.addEventListener("play", () => normalizeVolume());
 
 
 
-function adjustVolumeDynamically() {
-    if (!curr_track) {
-        console.error("Error: `curr_track` is undefined!");
-        return; // Prevent function from running further
-    }
 
-    let targetVolume = 0.8;
-    let maxThreshold = 1;
-
-    curr_track.addEventListener("timeupdate", () => {
-        if (curr_track.volume < targetVolume) {
-            curr_track.volume = Math.min(maxThreshold, curr_track.volume + 0.01);
-        } else if (curr_track.volume > targetVolume) {
-            curr_track.volume = Math.max(0, curr_track.volume - 0.01);
-        }
-    });
-}
 
 
 
