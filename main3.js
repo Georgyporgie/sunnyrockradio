@@ -1562,37 +1562,39 @@ let track_list = [
 
 
 
-
 function loadTrack(track_index) {
-  // Increment play count for the current track
-  track_list[track_index].playCount += 1;
+  if (!track_list[track_index]) return;
 
-  // Sort the track list by play count
+  // Increment and sort by play count
+  track_list[track_index].playCount += 1;
   sortTracksByPlayCount();
 
-  // Clear the previous seek timer
+  // Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
 
-  // Load a new track
-  curr_track.src = track_list[track_index].path;
+  curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
   curr_track.load();
 
-  // Update details of the track
+  // Apply volume logic
+  adjustVolumeDynamically(curr_track);
+
+  // Update UI
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Set an interval of 1000 milliseconds for updating the seek slider
+  // Update seek logic
   updateTimer = setInterval(seekUpdate, 1000);
 
-  // Move to the next track if the current finishes playing using the 'ended' event
+  // Handle end of track
   curr_track.addEventListener("ended", nextTrack);
 
-  // Apply a random background color
+  // Set vibe
   random_bg_color();
 }
+
 
 
 
