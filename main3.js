@@ -1654,15 +1654,19 @@ function nextTrack() {
 
 
 
+function initializePlayCounts(tracks) {
+  tracks.forEach(track => {
+    if (typeof track.playCount !== "number") {
+      track.playCount = 0;
+    }
+  });
+}
 
 
 
 
 
-
-
-
-
+initializePlayCounts(track_list);
 
 
 
@@ -1676,15 +1680,30 @@ function sortTracksByPlayCount() {
   track_list.sort((a, b) => b.playCount - a.playCount);
 }
 
-function displayPlayCounts() {
-  sortTracksByPlayCount();
-  track_list.forEach((track, index) => {
-    console.log(`Track ${index + 1}: ${track.name} - ${track.playCount} plays`);
-  });
+
+
+
+function getRarelyPlayedTracks(maxPlays = 3) {
+  return track_list.filter(track => track.playCount <= maxPlays);
 }
 
-// Call displayPlayCounts() to see play counts in the console
-displayPlayCounts();
+
+
+
+let safePool = getRarelyPlayedTracks();
+let choice = safePool[Math.floor(Math.random() * safePool.length)];
+loadTrack(track_list.indexOf(choice));
+
+
+
+
+
+
+
+
+
+
+console.log("Checking Track List:", track_list);
 
 
 
@@ -1696,21 +1715,6 @@ displayPlayCounts();
 
 
 
-
-
-
-
-
-function initializePlayCount(tracks) {
-  tracks.forEach(track => {
-    if (track.playCount === undefined) {
-      track.playCount = 0;
-    }
-  });
-}
-	
-// Call the function to initialize play counts
-initializePlayCount(track_list);
 
 
 
