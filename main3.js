@@ -1656,7 +1656,8 @@ function nextTrack() {
         track_index = nextIndex;
         loadTrack(track_index);
         playTrack();
-    } else {
+    sortTracksByPlayCount();
+} else {
         console.warn("🚧 No next track available—playlist end reached.");
         // Optionally loop back to first track or stay put:
         // track_index = 0;
