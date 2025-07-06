@@ -1618,8 +1618,7 @@ function loadTrack(track_index) {
   // Handle end of track
   curr_track.addEventListener("ended", nextTrack);
 
-  // Set vibe
-  random_bg_color();
+
 }
 
 
@@ -1782,21 +1781,6 @@ console.log("Checking Track List:", track_list);
 
 
 
-
-
-function random_bg_color() {
-  // Get a random number between 64 to 256
-  // (for getting lighter colors)
-  let red = Math.floor(Math.random() * 256) + 64;
-  let green = Math.floor(Math.random() * 256) + 64;
-  let blue = Math.floor(Math.random() * 256) + 64;
- 
-  // Construct a color withe the given values
-  let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
- 
-  // Set the background to the new color
-  
-}
  
 // Function to reset all values to their default
 function resetValues() {
