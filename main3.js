@@ -1569,17 +1569,44 @@ function loadTrack(track_index) {
   track_list[track_index].playCount += 1;
   sortTracksByPlayCount();
 
-  // Reset old track and create new one
+  
+
+
+
+
+
+
+
+// Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
 
   curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
   curr_track.load();
 
-  // Apply volume logic
+  
+
+
+
+
+
+
+
+// Apply volume logic
   adjustVolumeDynamically(curr_track);
 
-  // Update UI
+ 
+
+
+
+
+
+
+
+
+
+
+ // Update UI
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
@@ -1599,28 +1626,44 @@ function loadTrack(track_index) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function nextTrack() {
-  // Go back to the first track if the current one is the last in the track list
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else
-    track_index = 0; 
+    let nextIndex = track_index + 1;
 
-  // Sort the track list by play count
-  sortTracksByPlayCount();
-
-  // Load and play the new track
-  loadTrack(track_index);
-  playTrack();
+    if (typeof nextIndex === "number" && nextIndex >= 0 && nextIndex < track_list.length) {
+        track_index = nextIndex;
+        loadTrack(track_index);
+        playTrack();
+    } else {
+        console.warn("🚧 No next track available—playlist end reached.");
+        // Optionally loop back to first track or stay put:
+        // track_index = 0;
+        // loadTrack(track_index);
+        // playTrack();
+    }
 }
-
-
-
-
-
-
-
-
 
 
 
