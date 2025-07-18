@@ -120,7 +120,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
+    artist: "Play Sunny Rockradio  ☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -283,7 +283,7 @@ let track_list = [
 
 {
     name: " Welcome!",
-    artist: "Play Sunny Rockradio  ",
+    artist: "Play Sunny Rockradio ☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/let's go back.mp3",
   },
@@ -307,7 +307,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    artist: "Play Sunny RockRadio☀️  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -316,7 +316,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    artist: "Play Sunny RockRadio ☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
@@ -328,7 +328,7 @@ let track_list = [
  
    {
     name: "Welcome!",
-    artist: "Sunny Rockradio  ",
+    artist: "Sunny Rockradio☀️  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
@@ -341,7 +341,7 @@ let track_list = [
 
 {   
     name: "Welcome",
-    artist: "Play Sunny Rockradio  ",
+    artist: "Play Sunny Rockradio ☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -365,7 +365,7 @@ let track_list = [
 
  {
     name: "Snippet",
-    artist: "Play Sunny RockRadio ",
+    artist: "Play Sunny RockRadio☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet5.mp3",
   },
@@ -385,7 +385,7 @@ let track_list = [
 
 {
     name: " Welcome!",
-    artist: "Propaganda  ",
+    artist: "Propaganda ☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
@@ -398,7 +398,7 @@ let track_list = [
 
 {
     name: "Fade To Grey",
-    artist: "Visage",
+    artist: "Visage☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you333.mp3",
   },
@@ -442,7 +442,7 @@ let track_list = [
 
 {
     name: "Todays News",
-    artist: "Sunny Journaal",
+    artist: "Sunny Journaal☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -465,7 +465,7 @@ let track_list = [
 
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Sunny Danceradio☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -519,7 +519,7 @@ let track_list = [
 
 {
     name: " Todays News",
-    artist: "Sunny Journaal",
+    artist: "Sunny Journaal☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -561,7 +561,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny rockradio ",
+    artist: "Play Sunny rockradio☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -663,7 +663,7 @@ let track_list = [
  
  {
     name: "  Sunny radio jingle",
-    artist: "Sunny Time ",
+    artist: "Sunny Time☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -671,7 +671,7 @@ let track_list = [
 
 {
     name: "Just For You",
-    artist: "Sunny Ship",
+    artist: "Sunny Ship☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   },
@@ -743,7 +743,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio ",
+    artist: "Listen Live Sunny Rockradio☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle3.mp3",
   },
@@ -771,7 +771,7 @@ let track_list = [
 
 {
     name: " Todays News",
-    artist: "Sunny Journaal",
+    artist: "Sunny Journaal☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -800,7 +800,7 @@ let track_list = [
   
  {
     name: "Snippet",
-    artist: "Sunny radio",
+    artist: "Sunny radio☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet4.mp3",
   },
@@ -808,7 +808,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
+    artist: "Play Sunny Rockradio☀️  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -972,7 +972,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny Rockradio  ",
+    artist: "Play Sunny Rockradio ☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -1162,7 +1162,7 @@ let track_list = [
 
 {
     name: " Todays News",
-    artist: "Sunny Journaal",
+    artist: "Sunny Journaal☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
   
@@ -1230,7 +1230,7 @@ let track_list = [
 
 {
     name: "Welcome!",
-    artist: "Play Sunny rockradio ",
+    artist: "Play Sunny rockradio☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
   },
@@ -1258,7 +1258,7 @@ let track_list = [
 
 {
      name: "Welcome",
-    artist: "Play Sunny Danceradio",
+    artist: "Play Sunny Danceradio☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -1285,7 +1285,7 @@ let track_list = [
 
 {
      name: "Welcome!",
-    artist: "Listen Live Sunny Rockradio",
+    artist: "Listen Live Sunny Rockradio☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
   },
@@ -1317,7 +1317,7 @@ let track_list = [
 
 {
     name: " Welcome!",
-    artist: "Play Sunny RockRadio  ",
+    artist: "Play Sunny RockRadio ☀️ ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle4.mp3",
   },
@@ -1328,7 +1328,7 @@ let track_list = [
 
  {
     name: "Snippet",
-    artist: "Play Sunny RockRadio ",
+    artist: "Play Sunny RockRadio ☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet.mp3",
   },
@@ -1376,7 +1376,7 @@ let track_list = [
 
  {
     name: "Snippet",
-    artist: "Play Sunny RockRadio ",
+    artist: "Play Sunny RockRadio ☀️",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio snippet5.mp3",
   },
@@ -1414,7 +1414,7 @@ let track_list = [
 
  {
     name: "Todays News",
-    artist: "Sunny Journaal",
+    artist: "Sunny Journaal☀️",
     image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
     path: "muziek/reklame/reklame1.mp3",
   
@@ -1451,7 +1451,7 @@ let track_list = [
 
 {
     name: "Just For You",
-    artist: "Sunny Ship",
+    artist: "Sunny Ship☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you.mp3",
   },
@@ -1460,7 +1460,7 @@ let track_list = [
 
 {
     name: "Just For You",
-    artist: "Sunny",
+    artist: "Sunny☀️",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you.mp3",
   },
