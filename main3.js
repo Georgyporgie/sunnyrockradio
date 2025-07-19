@@ -26,11 +26,11 @@ let total_duration = document.querySelector(".total-duration");
 
 // Specify globally used values
 let track_index = 0;
-let currTrack = null;
+let currentTrack = null;  
 let updateTimer;
- 
+
 // Create the audio element for the player
-let curr_track = document.createElement('audio');
+let audioPlayer = document.createElement('audio');
  
 // Define the list of tracks that have to be played
 let track_list = [
