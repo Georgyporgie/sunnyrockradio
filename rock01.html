@@ -454,19 +454,20 @@ fetch('event.json')
 
 
 
-
-
-<audio id="musicman" autoplay loop>
-    <source id="musicSource" src="" type="audio/mpeg">
+<audio id="musicPlayer" autoplay loop>
+  <source id="musicSource" src="" type="audio/mpeg">
 </audio>
 
-
 <script>
-  const musicman = document.getElementById("musicman");
+  const musicPlayer = document.getElementById("musicPlayer");
 
   // Set initial volume to 50% (no visible control)
-  musicman.volume = 0.4;
+  musicPlayer.volume = 0.4;
 </script>
+
+
+
+
 
 
 

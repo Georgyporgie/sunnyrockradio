@@ -24,6 +24,10 @@ let total_duration = document.querySelector(".total-duration");
 
 
 
+
+
+
+
 // Specify globally used values
 let track_index = 0;
 let currentTrack = null;  
@@ -1620,7 +1624,7 @@ function loadTrack(track_index) {
   curr_track.addEventListener("ended", nextTrack);
 
   // Set vibe
-  random_bg_color();
+
 }
 
 
@@ -1936,13 +1940,6 @@ loadTrack(track_index);
 
 
 
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").fadeIn();
-    $("#div2").fadeIn("fast");
-    $("#div3").fadeIn(0);
-  });
-});
 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
