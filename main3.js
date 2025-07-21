@@ -1562,7 +1562,28 @@ let track_list = [
 
 
 
+      // 🎚️ Volume Balancer Function
+        function adjustVolumeDynamically(audioElement) {
+            if (!audioElement) {
+                console.error("Error: `audioElement` is undefined!");
+                return;
+            }
 
+            let targetVolume = 0.8;  // Default volume level
+            let maxThreshold = 1; // Prevent distortion
+
+            console.log(`🎛 Volume adjustment enabled for: ${audioElement.id}`);
+
+            audioElement.addEventListener("timeupdate", () => {
+                let currentVolume = audioElement.volume;
+
+                if (currentVolume < targetVolume) {
+                    audioElement.volume = Math.min(maxThreshold, currentVolume + 0.01);  // Smooth increase
+                } else if (currentVolume > targetVolume) {
+                    audioElement.volume = Math.max(0, currentVolume - 0.01);  // Smooth decrease
+                }
+            });
+        }
 
 
 
@@ -1573,7 +1594,7 @@ function loadTrack(track_index) {
   // Increment and sort by play count
   track_list[track_index].playCount += 1;
   sortTracksByPlayCount();
-
+   
   
 
 
@@ -1587,7 +1608,8 @@ function loadTrack(track_index) {
   resetValues();
 
   curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
-  curr_track.load();
+  curr_track.volume = 0.9;
+curr_track.load();
 
   
 
@@ -1786,22 +1808,6 @@ console.log("Checking Track List:", track_list);
 
 
 
-
-
-
-function random_bg_color() {
-  // Get a random number between 64 to 256
-  // (for getting lighter colors)
-  let red = Math.floor(Math.random() * 256) + 64;
-  let green = Math.floor(Math.random() * 256) + 64;
-  let blue = Math.floor(Math.random() * 256) + 64;
- 
-  // Construct a color withe the given values
-  let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
- 
-  // Set the background to the new color
-  
-}
  
 // Function to reset all values to their default
 function resetValues() {
