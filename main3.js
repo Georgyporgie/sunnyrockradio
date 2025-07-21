@@ -1587,7 +1587,7 @@ function loadTrack(track_index) {
   resetValues();
 
   curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
-  curr_track.volume = 0.9;
+  curr_track.volume = 0.8;
 curr_track.load();
 
   
