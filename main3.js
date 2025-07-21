@@ -1908,19 +1908,21 @@ function seekUpdate() {
   }
 }
 
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
 
-function shufflePlaylist(array) {
-    return array.sort(() => Math.random() - 0.5); // Randomizes order
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // Swap elements
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]
+    ];
+  }
+
+  return array;
 }
-
-// Shuffle the playlist once before playback starts
-track_list = shufflePlaylist(track_list);
-
-loadTrack(track_index); // Load the first (randomized) track
-
-
-// Load the first track in the tracklist
-loadTrack(track_index);
 
 
 
