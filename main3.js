@@ -1550,19 +1550,6 @@ let track_list = [
 
 
 
-function getTimeBasedVolume() {
-  const hour = new Date().getHours();  // 0–23
-
-  if (hour >= 6 && hour < 12) {
-    return 0.6;  // Morning — softer wake-up vibes
-  } else if (hour >= 12 && hour < 18) {
-    return 0.7;  // Afternoon — balanced and bright
-  } else if (hour >= 18 && hour < 24) {
-    return 0.8;  // Evening — party mode or immersive listening
-  } else {
-    return 0.4;  // Night — low volume, chill zone
-  }
-}
 
 
 
@@ -1571,28 +1558,6 @@ function getTimeBasedVolume() {
 
 
 
-
-
-
-function shuffle(array) {
-  let currentIndex = array.length, randomIndex;
-
-  while (currentIndex > 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // Swap elements
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]
-    ];
-  }
-
-  return array;
-}
-
-
-
-     
 
 
 
@@ -1603,7 +1568,7 @@ function loadTrack(track_index) {
   // Increment and sort by play count
   track_list[track_index].playCount += 1;
   sortTracksByPlayCount();
-   
+
   
 
 
@@ -1617,41 +1582,10 @@ function loadTrack(track_index) {
   resetValues();
 
   curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
-curr_track.volume = getTimeBasedVolume();
-curr_track.load();
+  curr_track.load();
 
   
 
-curr_track.addEventListener("loadedmetadata", () => {
-  const duration = curr_track.duration;
-  console.log("📀 Metadata loaded for:", track.name);
-  console.log("🕰️ Track duration:", duration, "seconds");
-
-  // Determine fade timing
-  let fadeTime, fadeStart;
-
-  if (track.quickFade) {
-    // 💨 Quick fade logic
-    fadeTime = 2000;                  // Duration of fade
-    fadeStart = (duration * 1000) - 5000;  // Start 5 sec before end
-    console.log("⚡ Quick fade mode active");
-  } else if (duration > 180) {
-    // 🕯️ Default fade for long tracks
-    fadeTime = 3000;
-    fadeStart = (duration * 1000) - 3000;
-    console.log("⏱️ Standard fade for track >3min");
-  } else {
-    // 🚫 No fade needed
-    console.log("🚫 No fade scheduled — short track or no flag");
-    return;
-  }
-
-  // Schedule fade
-  if (fadeStart > 0) {
-    console.log(`⏳ Scheduled ${fadeTime / 1000}s fade in ${fadeStart}ms for:`, track.name);
-    setTimeout(() => fadeOut(curr_track, fadeTime), fadeStart);
-  }
-});
 
 
 
@@ -1669,48 +1603,42 @@ curr_track.addEventListener("loadedmetadata", () => {
 
 
 
-  // Update UI details
+
+
+
+ // Update UI
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Start updating the seek bar
+  // Update seek logic
   updateTimer = setInterval(seekUpdate, 1000);
 
-  // Autoplay when the track is ready
-  curr_track.addEventListener("canplay", handleAutoplay);
-
-  // Trigger next track when finished
+  // Handle end of track
   curr_track.addEventListener("ended", nextTrack);
 
-  // Highlight the active track visually
-  let allTracks = document.querySelectorAll('ol li');
-  allTracks.forEach(track => track.classList.remove('blinking'));
-  if (allTracks[track_index]) {
-    allTracks[track_index].classList.add('blinking');
-  } else {
-    console.error("Filtered track not found in the DOM!");
-  }
-let blinkingLi = document.querySelector(`li[data-track-index="${track_index}"]`);
-if (blinkingLi) {
-  blinkingLi.classList.add('blinking');
-} else {
-  console.warn("No matching track element found to blink.");
-}
-
-  // Add a bit of flair
+  // Set vibe
   random_bg_color();
 }
 
 
-function handleAutoplay() {
-  normalizeVolume();
-  curr_track.play().catch(err => {
-    console.warn("Autoplay prevented:", err);
-  });
-  curr_track.removeEventListener("canplay", handleAutoplay);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1770,35 +1698,19 @@ function nextTrack() {
 
 
 
+function initializePlayCounts(tracks) {
+  tracks.forEach(track => {
+    if (typeof track.playCount !== "number") {
+      track.playCount = 0;
+    }
+  });
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+initializePlayCounts(track_list);
 
 
 
@@ -1812,15 +1724,30 @@ function sortTracksByPlayCount() {
   track_list.sort((a, b) => b.playCount - a.playCount);
 }
 
-function displayPlayCounts() {
-  sortTracksByPlayCount();
-  track_list.forEach((track, index) => {
-    console.log(`Track ${index + 1}: ${track.name} - ${track.playCount} plays`);
-  });
+
+
+
+function getRarelyPlayedTracks(maxPlays = 3) {
+  return track_list.filter(track => track.playCount <= maxPlays);
 }
 
-// Call displayPlayCounts() to see play counts in the console
-displayPlayCounts();
+
+
+
+let safePool = getRarelyPlayedTracks();
+let choice = safePool[Math.floor(Math.random() * safePool.length)];
+loadTrack(track_list.indexOf(choice));
+
+
+
+
+
+
+
+
+
+
+console.log("Checking Track List:", track_list);
 
 
 
@@ -1832,21 +1759,6 @@ displayPlayCounts();
 
 
 
-
-
-
-
-
-function initializePlayCount(tracks) {
-  tracks.forEach(track => {
-    if (track.playCount === undefined) {
-      track.playCount = 0;
-    }
-  });
-}
-	
-// Call the function to initialize play counts
-initializePlayCount(track_list);
 
 
 
@@ -1904,22 +1816,27 @@ playpause_btn.innerHTML = '<img id= "med"  src="images/pause.png">';
 
 }
  
-
-
 function playTrack() {
-    if (!curr_track) {
-        console.error("Error: `curr_track` is undefined!");
-        return;
-    }
 
-    curr_track.play();
-    isPlaying = true;
+
+  // Play the loaded track
+  curr_track.src = filteredTrackList[track_index].path; // Set the track source
+  curr_track.play();
+  isPlaying = true;
 
   // Replace the play icon with the pause icon
   playpause_btn.innerHTML = '<img id="media" src="images/pause66.gif">';
 
+  // Highlight the current track in the playlist
+  let allTracks = document.querySelectorAll('ol li'); // Get all <li> elements
+  allTracks.forEach(track => track.classList.remove('blinking')); // Remove "blinking" from all
 
-
+  // Add "blinking" class to the current track
+  if (allTracks[track_index]) { // Ensure the current track exists in the filtered list
+    allTracks[track_index].classList.add('blinking');
+  } else {
+    console.error("Filtered track not found in the DOM!");
+  }
 }
 
 
