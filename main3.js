@@ -23,18 +23,13 @@ let total_duration = document.querySelector(".total-duration");
 
 
 
-
-
-
-
-
 // Specify globally used values
 let track_index = 0;
-let currentTrack = null;  
+let isPlaying = false;
 let updateTimer;
-
+ 
 // Create the audio element for the player
-let audioPlayer = document.createElement('audio');
+let curr_track = document.createElement('audio');
  
 // Define the list of tracks that have to be played
 let track_list = [
@@ -1574,6 +1569,29 @@ function getTimeBasedVolume() {
 
 
 
+
+
+
+
+
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // Swap elements
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]
+    ];
+  }
+
+  return array;
+}
+
+
+
      
 
 
@@ -1604,6 +1622,36 @@ curr_track.load();
 
   
 
+curr_track.addEventListener("loadedmetadata", () => {
+  const duration = curr_track.duration;
+  console.log("📀 Metadata loaded for:", track.name);
+  console.log("🕰️ Track duration:", duration, "seconds");
+
+  // Determine fade timing
+  let fadeTime, fadeStart;
+
+  if (track.quickFade) {
+    // 💨 Quick fade logic
+    fadeTime = 2000;                  // Duration of fade
+    fadeStart = (duration * 1000) - 5000;  // Start 5 sec before end
+    console.log("⚡ Quick fade mode active");
+  } else if (duration > 180) {
+    // 🕯️ Default fade for long tracks
+    fadeTime = 3000;
+    fadeStart = (duration * 1000) - 3000;
+    console.log("⏱️ Standard fade for track >3min");
+  } else {
+    // 🚫 No fade needed
+    console.log("🚫 No fade scheduled — short track or no flag");
+    return;
+  }
+
+  // Schedule fade
+  if (fadeStart > 0) {
+    console.log(`⏳ Scheduled ${fadeTime / 1000}s fade in ${fadeStart}ms for:`, track.name);
+    setTimeout(() => fadeOut(curr_track, fadeTime), fadeStart);
+  }
+});
 
 
 
@@ -1621,42 +1669,48 @@ curr_track.load();
 
 
 
-
-
-
- // Update UI
+  // Update UI details
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Update seek logic
+  // Start updating the seek bar
   updateTimer = setInterval(seekUpdate, 1000);
 
-  // Handle end of track
+  // Autoplay when the track is ready
+  curr_track.addEventListener("canplay", handleAutoplay);
+
+  // Trigger next track when finished
   curr_track.addEventListener("ended", nextTrack);
 
-  // Set vibe
+  // Highlight the active track visually
+  let allTracks = document.querySelectorAll('ol li');
+  allTracks.forEach(track => track.classList.remove('blinking'));
+  if (allTracks[track_index]) {
+    allTracks[track_index].classList.add('blinking');
+  } else {
+    console.error("Filtered track not found in the DOM!");
+  }
+let blinkingLi = document.querySelector(`li[data-track-index="${track_index}"]`);
+if (blinkingLi) {
+  blinkingLi.classList.add('blinking');
+} else {
+  console.warn("No matching track element found to blink.");
+}
 
+  // Add a bit of flair
+  random_bg_color();
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function handleAutoplay() {
+  normalizeVolume();
+  curr_track.play().catch(err => {
+    console.warn("Autoplay prevented:", err);
+  });
+  curr_track.removeEventListener("canplay", handleAutoplay);
+}
 
 
 
@@ -1716,19 +1770,35 @@ function nextTrack() {
 
 
 
-function initializePlayCounts(tracks) {
-  tracks.forEach(track => {
-    if (typeof track.playCount !== "number") {
-      track.playCount = 0;
-    }
-  });
-}
 
 
 
 
 
-initializePlayCounts(track_list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1742,30 +1812,15 @@ function sortTracksByPlayCount() {
   track_list.sort((a, b) => b.playCount - a.playCount);
 }
 
-
-
-
-function getRarelyPlayedTracks(maxPlays = 3) {
-  return track_list.filter(track => track.playCount <= maxPlays);
+function displayPlayCounts() {
+  sortTracksByPlayCount();
+  track_list.forEach((track, index) => {
+    console.log(`Track ${index + 1}: ${track.name} - ${track.playCount} plays`);
+  });
 }
 
-
-
-
-let safePool = getRarelyPlayedTracks();
-let choice = safePool[Math.floor(Math.random() * safePool.length)];
-loadTrack(track_list.indexOf(choice));
-
-
-
-
-
-
-
-
-
-
-console.log("Checking Track List:", track_list);
+// Call displayPlayCounts() to see play counts in the console
+displayPlayCounts();
 
 
 
@@ -1781,6 +1836,17 @@ console.log("Checking Track List:", track_list);
 
 
 
+
+function initializePlayCount(tracks) {
+  tracks.forEach(track => {
+    if (track.playCount === undefined) {
+      track.playCount = 0;
+    }
+  });
+}
+	
+// Call the function to initialize play counts
+initializePlayCount(track_list);
 
 
 
@@ -1799,6 +1865,26 @@ console.log("Checking Track List:", track_list);
 
 
 
+
+
+
+
+
+
+
+function random_bg_color() {
+  // Get a random number between 64 to 256
+  // (for getting lighter colors)
+  let red = Math.floor(Math.random() * 256) + 64;
+  let green = Math.floor(Math.random() * 256) + 64;
+  let blue = Math.floor(Math.random() * 256) + 64;
+ 
+  // Construct a color withe the given values
+  let bgColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+ 
+  // Set the background to the new color
+  
+}
  
 // Function to reset all values to their default
 function resetValues() {
@@ -1818,27 +1904,22 @@ playpause_btn.innerHTML = '<img id= "med"  src="images/pause.png">';
 
 }
  
+
+
 function playTrack() {
+    if (!curr_track) {
+        console.error("Error: `curr_track` is undefined!");
+        return;
+    }
 
-
-  // Play the loaded track
-  curr_track.src = filteredTrackList[track_index].path; // Set the track source
-  curr_track.play();
-  isPlaying = true;
+    curr_track.play();
+    isPlaying = true;
 
   // Replace the play icon with the pause icon
   playpause_btn.innerHTML = '<img id="media" src="images/pause66.gif">';
 
-  // Highlight the current track in the playlist
-  let allTracks = document.querySelectorAll('ol li'); // Get all <li> elements
-  allTracks.forEach(track => track.classList.remove('blinking')); // Remove "blinking" from all
 
-  // Add "blinking" class to the current track
-  if (allTracks[track_index]) { // Ensure the current track exists in the filtered list
-    allTracks[track_index].classList.add('blinking');
-  } else {
-    console.error("Filtered track not found in the DOM!");
-  }
+
 }
 
 
@@ -1920,25 +2001,30 @@ function seekUpdate() {
   }
 }
 
-function shuffle(array) {
-  let currentIndex = array.length, randomIndex;
 
-  while (currentIndex > 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // Swap elements
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]
-    ];
-  }
-
-  return array;
+function shufflePlaylist(array) {
+    return array.sort(() => Math.random() - 0.5); // Randomizes order
 }
 
+// Shuffle the playlist once before playback starts
+track_list = shufflePlaylist(track_list);
+
+loadTrack(track_index); // Load the first (randomized) track
+
+
+// Load the first track in the tracklist
+loadTrack(track_index);
 
 
 
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("fast");
+    $("#div3").fadeIn(0);
+  });
+});
 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
