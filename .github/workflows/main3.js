@@ -1559,21 +1559,100 @@ let track_list = [
 
 
 
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // Swap elements
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]
+    ];
+  }
+
+  return array;
+}
+
+
+
+     
+
 
 
 
 function loadTrack(track_index) {
-  // Increment play count for the current track
+  if (!track_list[track_index]) return;
+
+  // Increment and sort by play count
   track_list[track_index].playCount += 1;
   sortTracksByPlayCount();
+   
+  
 
-  // Reset timers and UI
+
+
+
+
+
+
+// Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
 
-  // Load and prepare the new track
-  curr_track.src = track_list[track_index].path;
-  curr_track.load();
+  curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
+curr_track.volume = getTimeBasedVolume();
+curr_track.load();
+
+  
+
+curr_track.addEventListener("loadedmetadata", () => {
+  const duration = curr_track.duration;
+  console.log("📀 Metadata loaded for:", track.name);
+  console.log("🕰️ Track duration:", duration, "seconds");
+
+  // Determine fade timing
+  let fadeTime, fadeStart;
+
+  if (track.quickFade) {
+    // 💨 Quick fade logic
+    fadeTime = 2000;                  // Duration of fade
+    fadeStart = (duration * 1000) - 5000;  // Start 5 sec before end
+    console.log("⚡ Quick fade mode active");
+  } else if (duration > 180) {
+    // 🕯️ Default fade for long tracks
+    fadeTime = 3000;
+    fadeStart = (duration * 1000) - 3000;
+    console.log("⏱️ Standard fade for track >3min");
+  } else {
+    // 🚫 No fade needed
+    console.log("🚫 No fade scheduled — short track or no flag");
+    return;
+  }
+
+  // Schedule fade
+  if (fadeStart > 0) {
+    console.log(`⏳ Scheduled ${fadeTime / 1000}s fade in ${fadeStart}ms for:`, track.name);
+    setTimeout(() => fadeOut(curr_track, fadeTime), fadeStart);
+  }
+});
+
+
+
+
+
+
+// Apply volume logic
+  adjustVolumeDynamically(curr_track);
+
+ 
+
+
+
+
+
+
 
   // Update UI details
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
