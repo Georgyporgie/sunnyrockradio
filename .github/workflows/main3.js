@@ -1987,14 +1987,8 @@ function seekUpdate() {
 }
 
 
-function shufflePlaylist(array) {
-    return array.sort(() => Math.random() - 0.5); // Randomizes order
-}
 
-// Shuffle the playlist once before playback starts
-track_list = shufflePlaylist(track_list);
 
-loadTrack(track_index); // Load the first (randomized) track
 
 
 // Load the first track in the tracklist
@@ -2002,14 +1996,6 @@ loadTrack(track_index);
 
 
 
-
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").fadeIn();
-    $("#div2").fadeIn("fast");
-    $("#div3").fadeIn(0);
-  });
-});
 
 
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
