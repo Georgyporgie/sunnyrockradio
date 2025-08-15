@@ -300,7 +300,7 @@ fetch('event.json')
         const today = daysOfWeek[todayIndex]; // Convert to day name
 
         // Only show events if today is Friday (5), Saturday (6), or Sunday (0)
-        if ([6, 0].includes(todayIndex)) {
+        if ([5, 6, 0].includes(todayIndex)) {
             const events = data[today]; // Retrieve weekend events
 
             console.log("Weekend Event Data:", events); // Debugging log

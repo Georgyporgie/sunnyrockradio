@@ -1,22 +1,22 @@
 {
-  
+  "schedule": {
     "Friday": [
       { "time": "03:00 - 12:00", "event": "Morning Rock" },
       { "time": "12:00 - 17:00", "event": "Hillbillies! " },
-      { "time": "17:00 - 21:00", "event": "Hillbillies!" },
+      { "time": "17:00 - 21:00", "event": "Björn Hamburger!" },
       { "time": "21:00 - 23:00", "event": "Hillbillies!" }
     ],
     "Saturday": [
-      { "time": "03:00 - 12:00", "event": "Morning Disco" },
+      { "time": "03:00 - 12:00", "event": "Morning Rock" },
       { "time": "12:00 - 17:00", "event": "Hillbillies!" },
-      { "time": "17:00 - 21:00", "event": "Hillbillies!" },
+      { "time": "17:00 - 21:00", "event": "Björn Hamburger!" },
       { "time": "21:00 - 23:00", "event": "Hillbillies!" }
     ],
     "Sunday": [
       { "time": "03:00 - 12:00", "event": "Morning Rock" },
       { "time": "12:00 - 17:00", "event": "Hillbillies! Event" },
-      { "time": "17:00 - 21:00", "event": "Lovely Hillbillies" },
-      { "time": "21:00 - 23:00", "event": "Hillbillies Live!" }
+      { "time": "17:00 - 21:00", "event": "Björn Hamburger!" },
+      { "time": "21:00 - 23:00", "event": "Hillbillies! Live!" }
     ]
   }
 
