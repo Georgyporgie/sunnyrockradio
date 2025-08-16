@@ -559,17 +559,7 @@ z-index: -200;  margin: -100px 0px 0px -5px; background:linear-gradient(45deg,#0
 }
 
 #hero-image {
-  background-image: url("Iggy Pop2.png"); /* The image used */
-  background-color: #cccccc; /* Used if the image is unavailable */
-/* You must set a specified height */
- 
 
-
-background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-filter:opacity(20%); display: block; margin: auto auto auto auto;  z-index: -200;
-width: 355px; height: 370px; border-radius:5px;
 }
 
 .star  {    width: 55px;  height: 45px;filter: brightness(115%) saturate(115%) contrast(115%) opacity(70%); transform: rotate(0deg); z-index: -200; float: right;
