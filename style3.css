@@ -383,16 +383,16 @@ display: block; margin: 20px auto auto auto; z-index: -300; border-radius:5px;
 a { color: black;
 }
 
-#first {width: 37px; height: 39px;filter: brightness(90%) saturate(110%) contrast(100%) opacity(78%); z-index: -200; transform:rotate(0deg); border-radius:3px;
+#first {width: 37px; height: 39px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%); z-index: -1000; transform:rotate(0deg); border-radius:3px;
 }
 
 
 
-#pick { width: 20px; height:25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(78%) ; z-index: -200; transform:rotate(0deg);  
+#pick { width: 20px; height:25px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%) ; z-index: -1000; transform:rotate(0deg);  
 }
 
 
-#third { width: 20px; height: 25px;filter: brightness(105%) saturate(105%) contrast(100%) opacity(78%); z-index: -200; transform:rotate(0deg);
+#third { width: 20px; height: 25px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%); z-index: -1000; transform:rotate(0deg);
 }
 
 
@@ -459,3 +459,9 @@ border-radius: 5px; z-index: -500; width: 51px; height: 34px; font-size: 17px; d
 color: black; z-index: -600;
 }
 
+
+
+#playlist  {    width: 125px;  height: 120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(55%); transform: rotate(0deg); z-index: -800; margin: -10px auto -15px auto; display: block; 
+
+
+}
