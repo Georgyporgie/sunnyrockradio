@@ -2041,10 +2041,21 @@ let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().i
 // Limit the filtered track list to 20 tracks
 let limitedTrackList = filteredTrackList.slice(0, 20);
 
-// Add each track to the ordered list
 limitedTrackList.forEach(track => {
-  ol.appendChild(createListItem(track));
+  const li = createListItem(track); // ✅ store the returned <li>
+  
+  // 🔹 Hover effect
+  li.addEventListener('mouseenter', () => {
+    li.classList.add('hover-highlight');
+  });
+
+  li.addEventListener('mouseleave', () => {
+    li.classList.remove('hover-highlight');
+  });
+
+  ol.appendChild(li); // ✅ append after adding listeners
 });
+
 
 // Append the ordered list to the placeholder div
 document.getElementById('track-list-container').appendChild(ol);
