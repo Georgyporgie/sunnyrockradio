@@ -247,7 +247,7 @@ border: solid 1px #00CC00;
 
 }
 
-#dance  {    width: 255px;  height: 150px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%) grayscale(50%); transform: rotate(1deg); z-index: -200; float:right; border-radius:15px; border: solid 1px #FF0000;background : linear-gradient(90deg,black,#050202,#060000);
+#dance  {    width: 245px;  height: 150px;filter: brightness(130%) saturate(115%) contrast(125%) opacity(80%) grayscale(50%); transform: rotate(1deg); z-index: -200; float:right; border-radius:15px; border: solid 1px #FF0000;background : linear-gradient(90deg,black,#050202,#060000);
 
 }
 
@@ -465,3 +465,4 @@ color: black; z-index: -600;
 
 
 }
+
