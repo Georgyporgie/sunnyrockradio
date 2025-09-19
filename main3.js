@@ -358,7 +358,12 @@ let track_list = [
 
 
 
-
+{
+    name: " Wild Horses",
+    artist: "Gino Vanelli",
+    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
+    path: "muziek/muziek02/Gino Vanelli - Wild Horses.mp3",
+  },
 
 
 
