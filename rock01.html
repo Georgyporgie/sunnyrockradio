@@ -669,7 +669,9 @@ window.addEventListener("load", () => {
 
 
 
-
+<audio id="twentyFiveMinuteSou">
+  <source src="">
+</audio>
 
 
 
@@ -1001,6 +1003,7 @@ function generateSchedule() {
 <script>
 document.getElementById("hourlySound").setAttribute('src', 'clock/its now.mp3');
 document.getElementById("quarterHourSound").setAttribute('src', 'muziek/effects/rotating sound.mp3');
+document.getElementById("twentyFiveMinuteSou").setAttribute('src','muziek/voiceover/AI voice - From The Heart Of Amsterdam3.mp3'); 
 document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effects/rotating sound.mp3');
 </script>
 
@@ -1049,7 +1052,19 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
                 }, 900000); // Every 15 minutes (900000 milliseconds)
             }, quarterHourDelay);
 
-            // Calculate delay for forty-five-minute sound
+            
+
+ // Every 25 minutes
+var twentyFiveMinuteDelay = (25 - (now.getMinutes() % 25)) * 60 * 1000 - now.getSeconds() * 1000;
+
+setTimeout(function() {
+  playSound(["twentyFiveMinuteSou"]); // or rename to "twentyFiveMinuteSou" for clarity
+  setInterval(() => playSound(["twentyMinuteSou"]), 1500000); // 25 * 60 * 1000 = 1,500,000 ms
+}, twentyFiveMinuteDelay);
+
+
+
+// Calculate delay for forty-five-minute sound
             var fortyFiveMinuteDelay = (45 - (now.getMinutes() % 45)) * 60 * 1000 - now.getSeconds() * 1000;
             setTimeout(function() {
                 playSound(["fortyFiveMinuteSound"]);
