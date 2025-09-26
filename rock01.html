@@ -476,54 +476,23 @@ body {
 </audio>
 
 <script>
-window.addEventListener('load', () => {
+
+function setVolume(level) {
   const musicPlayer = document.getElementById("musicPlayer");
+  musicPlayer.volume = level; // Level from 0.0 to 1.0
+}
 
-  // Start muted
-  musicPlayer.volume = 0.4;
+// Example: adjust based on time
+const hour = new Date().getHours();
+if (hour < 9) {
+  setVolume(0.2); // morning
+} else if (hour >= 21) {
+  setVolume(0.3); // night
+} else {
+  setVolume(0.4); // default daytime
+}
 
-  // After 10 seconds, set volume based on time of day
-  setTimeout(() => {
-    const hour = new Date().getHours();
-    let targetVolume;
-
-    if (hour < 9) {
-      targetVolume = 0.2; // softer in the morning
-    } else if (hour >= 21) {
-      targetVolume = 0.15; // very soft at night
-    } else {
-      targetVolume = 0.5; // louder during the day
-    }
-
-    // Configurable fade duration (ms)
-    const fadeDuration = 5000; // 5 seconds
-    const interval = 50;       // update every 50ms
-    const steps = fadeDuration / interval;
-    let currentStep = 0;
-
-    let fade = setInterval(() => {
-      currentStep++;
-
-      // Progress from 0 → 1
-      let progress = currentStep / steps;
-
-      // Apply ease-in-out curve (smooth acceleration & deceleration)
-      let eased = progress < 0.5
-        ? 2 * progress * progress           // accelerate
-        : -1 + (4 - 2 * progress) * progress; // decelerate
-
-      musicPlayer.volume = Math.min(targetVolume * eased, targetVolume);
-
-      if (currentStep >= steps) {
-        clearInterval(fade);
-        musicPlayer.volume = targetVolume; // ensure exact final valueDJ
-      }
-    }, interval);
-
-  }, 10000); // 10 seconds
-});
 </script>
-
 
 
 
@@ -669,9 +638,7 @@ window.addEventListener("load", () => {
 
 
 
-<audio id="twentyFiveMinuteSou">
-  <source src="">
-</audio>
+
 
 
 
@@ -1003,8 +970,7 @@ function generateSchedule() {
 <script>
 document.getElementById("hourlySound").setAttribute('src', 'clock/its now.mp3');
 document.getElementById("quarterHourSound").setAttribute('src', 'muziek/effects/rotating sound.mp3');
-document.getElementById("twentyFiveMinuteSou").setAttribute('src','muziek/voiceover/AI voice - From The Heart Of Amsterdam3.mp3'); 
-document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effects/sunny los.mp3');
+document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effects/rotating sound.mp3');
 </script>
 
 
@@ -1052,19 +1018,7 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
                 }, 900000); // Every 15 minutes (900000 milliseconds)
             }, quarterHourDelay);
 
-            
-
- // Every 25 minutes
-var twentyFiveMinuteDelay = (25 - (now.getMinutes() % 25)) * 60 * 1000 - now.getSeconds() * 1000;
-
-setTimeout(function() {
-  playSound(["twentyFiveMinuteSou"]); // or rename to "twentyFiveMinuteSou" for clarity
-  setInterval(() => playSound(["twentyMinuteSou"]), 1500000); // 25 * 60 * 1000 = 1,500,000 ms
-}, twentyFiveMinuteDelay);
-
-
-
-// Calculate delay for forty-five-minute sound
+            // Calculate delay for forty-five-minute sound
             var fortyFiveMinuteDelay = (45 - (now.getMinutes() % 45)) * 60 * 1000 - now.getSeconds() * 1000;
             setTimeout(function() {
                 playSound(["fortyFiveMinuteSound"]);
@@ -1078,49 +1032,34 @@ setTimeout(function() {
     </script>
 
 
+<audio id="hourlyAnnounce"></audio>
 
-  <audio id="hourlyAnnounce"></audio>
+    <script>
+        var sources = ["audio/0.mp3", "audio/1.mp3", "audio/2.mp3", "audio/3.mp3", "audio/4.mp3", "audio/5.mp3", "audio/6.mp3", "audio/7.mp3", "audio/8.mp3", "audio/9.mp3", "audio/10.mp3", "audio/11.mp3", "audio/12.mp3", "audio/13.mp3", "audio/14.mp3", "audio/15.mp3", "audio/16.mp3", "audio/17.mp3", "audio/18.mp3", "audio/19.mp3", "audio/20.mp3", "audio/21.mp3", "audio/22.mp3", "audio/23.mp3"]; // Array of audio sources
+        var currentIndex = new Date().getHours(); // Set current index based on the current hour
 
-  <script>
-    const audioElement = document.getElementById('hourlyAnnounce');
-    const sources = [
-      "audio/0.mp3", "audio/1.mp3", "audio/2.mp3", "audio/3.mp3", "audio/4.mp3",
-      "audio/5.mp3", "audio/6.mp3", "audio/7.mp3", "audio/8.mp3", "audio/9.mp3",
-      "audio/10.mp3", "audio/11.mp3", "audio/12.mp3", "audio/13.mp3", "audio/14.mp3",
-      "audio/15.mp3", "audio/16.mp3", "audio/17.mp3", "audio/18.mp3", "audio/19.mp3",
-      "audio/20.mp3", "audio/21.mp3", "audio/22.mp3", "audio/23.mp3"
-    ];
+        function playHourlyAnnounce() {
+            var audioElement = document.getElementById('hourlyAnnounce');
+            var currentTime = new Date();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            var millisecondsToNextHour = ((59 - minutes) * 60 + (60 - seconds)) * 1000;
 
-    function playHourlyAnnounce() {
-      const now = new Date();
-      const minutes = now.getMinutes();
-      const seconds = now.getSeconds();
-      const millisecondsToNextHour = ((59 - minutes) * 60 + (60 - seconds)) * 1000;
+            setTimeout(function() {
+                audioElement.src = sources[currentIndex];
+                audioElement.play();
+                currentIndex = (currentIndex + 1) % sources.length;
 
-      // Play immediately if it's exactly the top of the hour
-      if (minutes === 0 && seconds === 0) {
-        const hour = now.getHours();
-        audioElement.src = sources[hour];
-        audioElement.play();
-      }
+                setInterval(function() {
+                    audioElement.src = sources[currentIndex];
+                    audioElement.play();
+                    currentIndex = (currentIndex + 1) % sources.length;
+                }, 3600000); // Play every hour
+            }, millisecondsToNextHour);
+        }
 
-      // Schedule first playback at the next full hour
-      setTimeout(() => {
-        const hour = new Date().getHours();
-        audioElement.src = sources[hour];
-        audioElement.play();
-
-        // Then repeat every hour
-        setInterval(() => {
-          const currentHour = new Date().getHours();
-          audioElement.src = sources[currentHour];
-          audioElement.play();
-        }, 3600000); // 1 hour in milliseconds
-      }, millisecondsToNextHour);
-    }
-
-    playHourlyAnnounce();
-  </script>
+        playHourlyAnnounce();
+    </script>
 
 
 <audio id="djIntro"></audio>
@@ -1137,9 +1076,9 @@ window.addEventListener('load', () => {
     ];
 
     const weekendSlots = [
-        { start: 0, end: 14, file: "muziek/jockeys/starten met Sunny.mp3" },
-        { start: 14, end: 20, file: "muziek/jockeys/Rock Music Seventies.mp3" },
-        { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
+        { start: 0, end: 14, file: "muziek/jockeys/40 in jingle.mp3" },
+        { start: 14, end: 20, file: "muziek/jockeys/starten met Sunny.mp3" },
+        { start: 20, end: 24, file: "muziek/jockeys/40 in jingle33.mp3" }
     ];
 
     // Current time
@@ -1157,7 +1096,7 @@ window.addEventListener('load', () => {
     // Play intro if there is one
     if (currentSlot) {
         djIntro.src = currentSlot.file;
-        djIntro.volume = 0.9;
+        djIntro.volume = 0.8;
         djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
     }
 });
