@@ -1048,7 +1048,7 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
     var currentIndex = new Date().getHours(); // Set index based on the current hour
 
  function playHourlyAnnounce() {
-    var audioElement = document.getElementById('hourlyAnnouncement');
+    var audioElement = document.getElementById('hourlyAnnounce');
     
     if (!audioElement) {
         console.error("Audio element not found!");
@@ -1081,14 +1081,9 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
 
     // 🕒 Activate hourly announcements
     playHourlyAnnounce();
-</script>
 
 
-// 🕒 Kick it off (after a user gesture if autoplay is blocked)
-document.addEventListener("click", function init() {
-  scheduleHourlyAnnounce();
-  document.removeEventListener("click", init);
-});
+
 </script>
 
 <audio id="djIntro"></audio>
