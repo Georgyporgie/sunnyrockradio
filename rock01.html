@@ -1035,37 +1035,43 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
 <audio id="hourlyAnnounce"></audio>
 
 <script>
-    const sources = [
-        "audio/0.mp3","audio/1.mp3","audio/2.mp3","audio/3.mp3","audio/4.mp3","audio/5.mp3",
-        "audio/6.mp3","audio/7.mp3","audio/8.mp3","audio/9.mp3","audio/10.mp3","audio/11.mp3",
-        "audio/12.mp3","audio/13.mp3","audio/14.mp3","audio/15.mp3","audio/16.mp3","audio/17.mp3",
-        "audio/18.mp3","audio/19.mp3","audio/20.mp3","audio/21.mp3","audio/22.mp3","audio/23.mp3"
-    ];
+const sources = [
+  "audio/0.mp3","audio/1.mp3","audio/2.mp3","audio/3.mp3","audio/4.mp3","audio/5.mp3",
+  "audio/6.mp3","audio/7.mp3","audio/8.mp3","audio/9.mp3","audio/10.mp3","audio/11.mp3",
+  "audio/12.mp3","audio/13.mp3","audio/14.mp3","audio/15.mp3","audio/16.mp3","audio/17.mp3",
+  "audio/18.mp3","audio/19.mp3","audio/20.mp3","audio/21.mp3","audio/22.mp3","audio/23.mp3"
+];
 
-    function scheduleHourlyAnnounce() {
-        const audioElement = document.getElementById('hourlyAnnounce');
-        const now = new Date();
-        const nextHour = new Date(now);
-        nextHour.setHours(now.getHours() + 1, 0, 0, 0); // top of next hour
-        const delay = nextHour - now;
+function scheduleHourlyAnnounce() {
+  const audioElement = document.getElementById('hourlyAnnounce');
+  if (!audioElement) {
+    console.error("Audio element not found!");
+    return;
+  }
 
-        setTimeout(function playAndReschedule() {
-            const hour = new Date().getHours();
-            audioElement.src = sources[hour];
-            audioElement.play();
+  const now = new Date();
+  const nextHour = new Date(now);
+  nextHour.setHours(now.getHours() + 1, 0, 0, 0); // top of next hour
+  const delay = nextHour - now;
 
-            // schedule again for the next hour
-            scheduleHourlyAnnounce();
-        }, delay);
-    }
+  setTimeout(function playAndReschedule() {
+    const hour = new Date().getHours();
+    audioElement.src = sources[hour];
+    audioElement.load();
+    audioElement.play();
 
-    // Start after a user gesture if needed
-    document.addEventListener("click", function init() {
-        scheduleHourlyAnnounce();
-        document.removeEventListener("click", init);
-    });
+    // 🔊 optional: fadeIn(audioElement) or adjustVolumeDynamically(audioElement);
+
+    scheduleHourlyAnnounce(); // reschedule for the next hour
+  }, delay);
+}
+
+// 🕒 Kick it off (after a user gesture if autoplay is blocked)
+document.addEventListener("click", function init() {
+  scheduleHourlyAnnounce();
+  document.removeEventListener("click", init);
+});
 </script>
-
 
 <audio id="djIntro"></audio>
 
