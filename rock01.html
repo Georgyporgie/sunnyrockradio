@@ -1089,42 +1089,85 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
 <audio id="djIntro"></audio>
 
 <script>
+
+function mulberry32(seed) {
+  return function() {
+    let t = seed += 0x6D2B79F5;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+
+
+
+
+// Utility: shuffle an array
+function shuffle(array) {
+  let currentIndex = array.length, randomIndex;
+
+  while (currentIndex > 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]
+    ];
+  }
+
+  return array;
+}
+
+
+
+const voiceovers = {
+  morning: "muziek/jockeys/starten met Sunny.mp3",
+  afternoon: "muziek/jockeys/Rock Music Seventies.mp3",
+  evening: "muziek/jockeys/Rock Music Seventies.mp3",
+  "evening-late": "muziek/jockeys/Rock Music Seventies.mp3",
+  "special-show": "muziek/jockeys/Rock Music Seventies.mp3",
+  "jingle-time": "muziek/jockeys/starten met Sunny.mp3",
+  late: "muziek/voiceover/Latest Hits Of Dance Area22222.mp3",
+  night: "muziek/jockeys/starten met Sunny.mp3",
+  unknown: "muziek/jockeys/starten met Sunny.mp3"
+};
+
 window.addEventListener('load', () => {
-    const djIntro = document.getElementById('djIntro');
+  const djIntro = document.getElementById('djIntro');
 
-    // Intro schedules
-    const weekdaySlots = [
-        { start: 0, end: 12, file: "muziek/jockeys/starten met Sunny.mp3" },
-        { start: 12, end: 18, file: "muziek/jockeys/starten met Sunny.mp3" },
-        { start: 18, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
-    ];
+  // Initial category
+  let currentCategory = getCurrentTimeCategory();
+  console.log("Initial category:", currentCategory);
 
-    const weekendSlots = [
-        { start: 0, end: 12, file: "muziek/jockeys/40 in jingle.mp3" },
-        { start: 12, end: 20, file: "muziek/jockeys/starten met Sunny.mp3" },
-        { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
-    ];
+  // Play intro for initial category
+  const initialFile = voiceovers[currentCategory] || voiceovers.unknown;
+  if (initialFile) {
+    djIntro.src = initialFile;
+    djIntro.volume = 0.8;
+    djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
+  }
 
-    // Current time
-    const now = new Date();
-    const currentHour = now.getHours();
-    const currentDay = now.getDay(); // 0 = Sunday, 6 = Saturday
+  // Check every 15 minutes for transitions
+  setInterval(() => {
+    const updatedCategory = getCurrentTimeCategory();
+    if (updatedCategory !== currentCategory) {
+      console.log(`⏰ Transition: ${currentCategory} → ${updatedCategory}`);
 
-    // Pick schedule
-    const isWeekend = currentDay === 0 || currentDay === 6;
-    const schedule = isWeekend ? weekendSlots : weekdaySlots;
-
-    // Find matching slot
-    const currentSlot = schedule.find(slot => currentHour >= slot.start && currentHour < slot.end);
-
-    // Play intro if there is one
-    if (currentSlot) {
-        djIntro.src = currentSlot.file;
-        djIntro.volume = 0.8;
+      const file = voiceovers[updatedCategory] || voiceovers.unknown;
+      if (file) {
+        djIntro.src = file;
         djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
+      }
+
+      currentCategory = updatedCategory;
     }
+  }, 15 * 60 * 1000);
 });
 </script>
+
+
+
 
 <script src="main3.js"></script>
 
