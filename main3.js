@@ -20,6 +20,9 @@ let total_duration = document.querySelector(".total-duration");
 
 
 
+
+
+
 // Specify globally used values
 let track_index = 0;
 let isPlaying = false;
@@ -293,7 +296,7 @@ let track_list = [
 
 
 {
-    name: " Whole Lotta Rosie",
+    name: " Whole lotta Rosie",
     artist: "ACDC",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
@@ -355,12 +358,7 @@ let track_list = [
 
 
 
-{
-    name: " Wild Horses",
-    artist: "Gino Vanelli",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Gino Vanelli - Wild Horses.mp3",
-  },
+
 
 
 
@@ -443,7 +441,7 @@ let track_list = [
 
 
 {
-    name: "Todays Journaal",
+    name: "Todays News",
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
@@ -520,7 +518,7 @@ let track_list = [
 
 
 {
-    name: " Todays Journal",
+    name: " Todays News",
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
@@ -772,7 +770,7 @@ let track_list = [
 
 
 {
-     name: " Todays Journal",
+    name: " Todays News",
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
@@ -1163,7 +1161,7 @@ let track_list = [
 
 
 {
-     name: " Todays Journal",
+    name: " Todays News",
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
@@ -1406,7 +1404,7 @@ let track_list = [
 
 
 {
-    name: " Uncomfortably Numb",
+    name: " Unconfortably Numb",
     artist: "Pink Floyd ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Pink Floyd - Unconfortably numb.mp3",
@@ -1415,7 +1413,7 @@ let track_list = [
 
 
  {
-   name: " Todays Journal",
+    name: "Todays News",
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/nMW5jgc/jazzdivas.png",
     path: "muziek/reklame/reklame1.mp3",
@@ -1487,13 +1485,6 @@ let track_list = [
     path: "muziek/muziek01/Pink Floyd - Revermation Bell.mp3",
   },
 
-{
-
-    name: "  Memories",
-    artist: "Earth & Fire",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek02/Earth & Fire - Memories.mp3",
-  },
 
 
 
@@ -2050,21 +2041,10 @@ let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().i
 // Limit the filtered track list to 20 tracks
 let limitedTrackList = filteredTrackList.slice(0, 20);
 
+// Add each track to the ordered list
 limitedTrackList.forEach(track => {
-  const li = createListItem(track); // ✅ store the returned <li>
-  
-  // 🔹 Hover effect
-  li.addEventListener('mouseenter', () => {
-    li.classList.add('hover-highlight');
-  });
-
-  li.addEventListener('mouseleave', () => {
-    li.classList.remove('hover-highlight');
-  });
-
-  ol.appendChild(li); // ✅ append after adding listeners
+  ol.appendChild(createListItem(track));
 });
-
 
 // Append the ordered list to the placeholder div
 document.getElementById('track-list-container').appendChild(ol);
