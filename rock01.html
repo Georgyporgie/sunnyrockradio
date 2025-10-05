@@ -1074,45 +1074,63 @@ document.addEventListener("click", function init() {
 </script>
 
 <audio id="djIntro"></audio>
+<audio id="musicplayer" preload="auto" loop></audio>
 
 <script>
 window.addEventListener('load', () => {
-    const djIntro = document.getElementById('djIntro');
+  const djIntro = document.getElementById('djIntro');
+  const musicplayer = document.getElementById('musicplayer');
 
-    // Intro schedules
-    const weekdaySlots = [
-        { start: 0, end: 12, file: "muziek/jockeys/starten met Sunny.mp3" },
-        { start: 12, end: 18, file: "muziek/jockeys/Rock Music Seventies.mp3" },
-        { start: 18, end: 24, file: "muziek/effects/DJ Saphire finale.mp3" }
-    ];
+  if (!djIntro || !musicplayer) {
+    console.error("Missing audio elements.");
+    return;
+  }
 
-    const weekendSlots = [
-        { start: 0, end: 14, file: "muziek/jockeys/40 in jingle.mp3" },
-        { start: 14, end: 20, file: "muziek/effects/DJ Saphire finale.mp3" },
-        { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
-    ];
+  // Define schedules
+  const weekdaySlots = [
+    { start: 0,  end: 12, file: "muziek/jockeys/starten met Sunny.mp3" },
+    { start: 12, end: 18, file: "muziek/jockeys/Rock Music Seventies.mp3" },
+    { start: 18, end: 24, file: "muziek/effects/DJ Saphire finale.mp3" }
+  ];
 
-    // Current time
+  const weekendSlots = [
+    { start: 0,  end: 14, file: "muziek/jockeys/40 in jingle.mp3" },
+    { start: 14, end: 20, file: "muziek/effects/DJ Saphire finale.mp3" },
+    { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
+  ];
+
+  function getCurrentSlot() {
     const now = new Date();
-    const currentHour = now.getHours();
-    const currentDay = now.getDay(); // 0 = Sunday, 6 = Saturday
-
-    // Pick schedule
-    const isWeekend = currentDay === 0 || currentDay === 6;
+    const hour = now.getHours();
+    const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+    const isWeekend = (day === 0 || day === 6);
     const schedule = isWeekend ? weekendSlots : weekdaySlots;
+    return schedule.find(slot => hour >= slot.start && hour < slot.end);
+  }
 
-    // Find matching slot
-    const currentSlot = schedule.find(slot => currentHour >= slot.start && currentHour < slot.end);
+  let currentSlot = getCurrentSlot();
 
-    // Play intro if there is one
-    if (currentSlot) {
-        djIntro.src = currentSlot.file;
-        djIntro.volume = 0.8;
-        djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
+  function playIntro(slot) {
+    if (!slot) return;
+    djIntro.src = slot.file;
+    djIntro.volume = 0.8;
+    djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
+  }
+
+  // Play initial intro
+  playIntro(currentSlot);
+
+  // Re-check every 15 minutes
+  setInterval(() => {
+    const newSlot = getCurrentSlot();
+    if (newSlot && newSlot.file !== currentSlot?.file) {
+      console.log(`⏰ Transition: ${currentSlot?.file} → ${newSlot.file}`);
+      playIntro(newSlot);
+      currentSlot = newSlot;
     }
+  }, 15 * 60 * 1000);
 });
 </script>
-
 <script src="main3.js"></script>
 
 
