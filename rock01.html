@@ -478,22 +478,52 @@ body {
 <script>
 
 function setVolume(level) {
-  const musicPlayer = document.getElementById("musicPlayer");
-  musicPlayer.volume = level; // Level from 0.0 to 1.0
-}
+  const musicPlayer = document.getElementById("MusicSource");
+ 
+    // Start muted
+  musicPlayer.volume = 0.4;
 
-// Example: adjust based on time
-const hour = new Date().getHours();
-if (hour < 9) {
-  setVolume(0.5); // morning
-} else if (hour >= 21) {
-  setVolume(0.6); // night
-} else {
-  setVolume(0.7); // default daytime
-}
+  // After 10 seconds, set volume based on time of day
+  setTimeout(() => {
+    const hour = new Date().getHours();
+    let targetVolume;
 
+    if (hour < 9) {
+      targetVolume = 0.3; // softer in the morning
+    } else if (hour >= 21) {
+      targetVolume = 0.4; // very soft at night
+    } else {
+      targetVolume = 0.5; // louder during the day
+    }
+
+    // Configurable fade duration (ms)
+    const fadeDuration = 5000; // 5 seconds
+    const interval = 50;       // update every 50ms
+    const steps = fadeDuration / interval;
+    let currentStep = 0;
+
+    let fade = setInterval(() => {
+      currentStep++;
+
+      // Progress from 0 → 1
+      let progress = currentStep / steps;
+
+      // Apply ease-in-out curve (smooth acceleration & deceleration)
+      let eased = progress < 0.5
+        ? 2 * progress * progress           // accelerate
+        : -1 + (4 - 2 * progress) * progress; // decelerate
+
+      musicPlayer.volume = Math.min(targetVolume * eased, targetVolume);
+
+      if (currentStep >= steps) {
+        clearInterval(fade);
+        musicPlayer.volume = targetVolume; // ensure exact final valueDJ
+      }
+    }, interval);
+
+  }, 10000); // 10 seconds
+});
 </script>
-
 
 
 
@@ -1086,7 +1116,7 @@ window.addEventListener('load', () => {
     return;
   }
 
-  // Define schedules
+  // --- Define schedules ---
   const weekdaySlots = [
     { start: 0,  end: 12, file: "muziek/jockeys/starten met Sunny.mp3" },
     { start: 12, end: 18, file: "muziek/jockeys/Rock Music Seventies.mp3" },
@@ -1099,6 +1129,7 @@ window.addEventListener('load', () => {
     { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
   ];
 
+  // --- Helpers ---
   function getCurrentSlot() {
     const now = new Date();
     const hour = now.getHours();
@@ -1108,19 +1139,41 @@ window.addEventListener('load', () => {
     return schedule.find(slot => hour >= slot.start && hour < slot.end);
   }
 
-  let currentSlot = getCurrentSlot();
+  function fadeVolume(audioEl, from, to, duration) {
+    const steps = 20;
+    const stepTime = duration / steps;
+    let currentStep = 0;
+    audioEl.volume = from;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      audioEl.volume = from + (to - from) * (currentStep / steps);
+      if (currentStep >= steps) clearInterval(interval);
+    }, stepTime);
+  }
 
   function playIntro(slot) {
     if (!slot) return;
+
+    // Fade down the music
+    fadeVolume(musicplayer, musicplayer.volume || 1.0, 0.2, 1000);
+
     djIntro.src = slot.file;
-    djIntro.volume = 0.8;
+    djIntro.volume = 1.0;
+
     djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
+
+    // When intro ends, fade music back up
+    djIntro.onended = () => {
+      fadeVolume(musicplayer, 0.2, 1.0, 1000);
+    };
   }
 
-  // Play initial intro
+  // --- Initial setup ---
+  let currentSlot = getCurrentSlot();
   playIntro(currentSlot);
 
-  // Re-check every 15 minutes
+  // --- Re-check every 15 minutes ---
   setInterval(() => {
     const newSlot = getCurrentSlot();
     if (newSlot && newSlot.file !== currentSlot?.file) {
