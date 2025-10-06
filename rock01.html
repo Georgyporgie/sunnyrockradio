@@ -1025,84 +1025,77 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
         }
     </script>
 
-    <script>
-        function scheduleSounds() {
-            console.log("Scheduling sounds...");
-            var now = new Date();
-            
-            // Calculate delay for hourly sound
-            var hourlyDelay = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000;
-            setTimeout(function() {
-                playSound(["hourlySound"]);
-                setInterval(function() {
-                    playSound(["hourlySound"]);
-                }, 3600000); // Every hour (3600000 milliseconds)
-            }, hourlyDelay);
+    
+  <!-- Audio element for hourly announce -->
+  <audio id="hourlyAnnounce"></audio>
 
-            // Calculate delay for quarter-hour sound
-            var quarterHourDelay = (15 - (now.getMinutes() % 15)) * 60 * 1000 - now.getSeconds() * 1000;
-            setTimeout(function() {
-                playSound(["quarterHourSound"]);
-                setInterval(function() {
-                    playSound(["quarterHourSound"]);
-                }, 900000); // Every 15 minutes (900000 milliseconds)
-            }, quarterHourDelay);
+  <script>
+  // 🎵 Your hourly announce sources
+  const sources = [
+    "audio/0.mp3","audio/1.mp3","audio/2.mp3","audio/3.mp3","audio/4.mp3","audio/5.mp3",
+    "audio/6.mp3","audio/7.mp3","audio/8.mp3","audio/9.mp3","audio/10.mp3","audio/11.mp3",
+    "audio/12.mp3","audio/13.mp3","audio/14.mp3","audio/15.mp3","audio/16.mp3","audio/17.mp3",
+    "audio/18.mp3","audio/19.mp3","audio/20.mp3","audio/21.mp3","audio/22.mp3","audio/23.mp3"
+  ];
 
-            // Calculate delay for forty-five-minute sound
-            var fortyFiveMinuteDelay = (45 - (now.getMinutes() % 45)) * 60 * 1000 - now.getSeconds() * 1000;
-            setTimeout(function() {
-                playSound(["fortyFiveMinuteSound"]);
-                setInterval(function() {
-                    playSound(["fortyFiveMinuteSound"]);
-                }, 2700000); // Every 45 minutes (2700000 milliseconds)
-            }, fortyFiveMinuteDelay);
-        }
-
-        window.onload = scheduleSounds;
-    </script>
-
-
-<audio id="hourlyAnnounce"></audio>
-
-<script>
-const sources = [
-  "audio/0.mp3","audio/1.mp3","audio/2.mp3","audio/3.mp3","audio/4.mp3","audio/5.mp3",
-  "audio/6.mp3","audio/7.mp3","audio/8.mp3","audio/9.mp3","audio/10.mp3","audio/11.mp3",
-  "audio/12.mp3","audio/13.mp3","audio/14.mp3","audio/15.mp3","audio/16.mp3","audio/17.mp3",
-  "audio/18.mp3","audio/19.mp3","audio/20.mp3","audio/21.mp3","audio/22.mp3","audio/23.mp3"
-];
-
-function scheduleHourlyAnnounce() {
-  const audioElement = document.getElementById('hourlyAnnounce');
-  if (!audioElement) {
-    console.error("Audio element not found!");
-    return;
+  // Utility: milliseconds until next multiple of minuteStep
+  function msUntilNext(minuteStep) {
+    const now = new Date();
+    const next = new Date(now);
+    next.setSeconds(0, 0);
+    next.setMinutes(Math.ceil(now.getMinutes() / minuteStep) * minuteStep);
+    if (next <= now) next.setMinutes(next.getMinutes() + minuteStep);
+    return next - now;
   }
 
-  const now = new Date();
-  const nextHour = new Date(now);
-  nextHour.setHours(now.getHours() + 1, 0, 0, 0); // top of next hour
-  const delay = nextHour - now;
+  // Generic scheduler
+  function scheduleRepeatingEvent(minuteStep, callback) {
+    function scheduleNext() {
+      const delay = msUntilNext(minuteStep);
+      setTimeout(() => {
+        callback();
+        scheduleNext();
+      }, delay);
+    }
+    scheduleNext();
+  }
 
-  setTimeout(function playAndReschedule() {
+  // Example playSound stub (replace with your own)
+  function playSound(ids) {
+    console.log("Playing sound:", ids);
+    // You could grab an <audio> element by ID and call .play()
+  }
+
+  // Hourly announce logic
+  function playHourlyAnnounce() {
+    const audioElement = document.getElementById('hourlyAnnounce');
+    if (!audioElement) return;
     const hour = new Date().getHours();
     audioElement.src = sources[hour];
     audioElement.load();
-    audioElement.play();
+    audioElement.play().catch(err => {
+      console.warn("Playback blocked until user gesture:", err);
+    });
+  }
 
-    // 🔊 optional: fadeIn(audioElement) or adjustVolumeDynamically(audioElement);
+  // Kick everything off after a user gesture (for autoplay policies)
+  document.addEventListener("click", function init() {
+    // Hourly chime
+    scheduleRepeatingEvent(60, () => playSound(["hourlySound"]));
 
-    scheduleHourlyAnnounce(); // reschedule for the next hour
-  }, delay);
-}
+    // Quarter-hour chime
+    scheduleRepeatingEvent(15, () => playSound(["quarterHourSound"]));
 
-// 🕒 Kick it off (after a user gesture if autoplay is blocked)
-document.addEventListener("click", function init() {
-  scheduleHourlyAnnounce();
-  document.removeEventListener("click", init);
-});
-</script>
+    // Forty-five-minute chime
+    scheduleRepeatingEvent(45, () => playSound(["fortyFiveMinuteSound"]));
 
+    // Hourly announce
+    scheduleRepeatingEvent(60, playHourlyAnnounce);
+
+    console.log("Schedulers started!");
+    document.removeEventListener("click", init);
+  });
+  </script>
 <style>
   .badge {
     position: fixed;
