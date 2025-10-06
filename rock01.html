@@ -481,7 +481,7 @@ function setVolume(level) {
   const musicPlayer = document.getElementById("MusicSource");
  
     // Start muted
-  musicPlayer.volume = 0.4;
+  musicPlayer.volume = 0.3;
 
   // After 10 seconds, set volume based on time of day
   setTimeout(() => {
@@ -1103,40 +1103,92 @@ document.addEventListener("click", function init() {
 });
 </script>
 
+<style>
+  .badge {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 12px;
+    color: #eaf0ff;
+    background-color: transparent;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    font: 600 14px/1.2 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
+    width: 220px;
+    z-index: 9999;
+  }
+  .badge-icon { margin-right: 0.4rem; }
+  .badge-label { white-space: nowrap; }
+  .progress {
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #6ea8ff;
+    transition: width 10s linear;
+  }
+</style>
+
 <audio id="djIntro"></audio>
 <audio id="musicplayer" preload="auto" loop></audio>
+
+<div id="timeBadge" class="badge" aria-live="polite" aria-atomic="true">
+  <span class="badge-icon">🕒</span>
+  <span class="badge-label">Loading…</span>
+  <div class="progress"><div class="progress-bar"></div></div>
+</div>
 
 <script>
 window.addEventListener('load', () => {
   const djIntro = document.getElementById('djIntro');
   const musicplayer = document.getElementById('musicplayer');
+  const badge = document.getElementById('timeBadge');
 
-  if (!djIntro || !musicplayer) {
-    console.error("Missing audio elements.");
+  if (!djIntro || !musicplayer || !badge) {
+    console.error("Missing elements.");
     return;
   }
 
   // --- Define schedules ---
   const weekdaySlots = [
-    { start: 0,  end: 12, file: "muziek/jockeys/starten met Sunny.mp3" },
-    { start: 12, end: 18, file: "muziek/jockeys/Rock Music Seventies.mp3" },
-    { start: 18, end: 24, file: "muziek/effects/DJ Saphire finale.mp3" }
+    { start: 0,  end: 12, file: "muziek/jockeys/starten met Sunny.mp3", icon:"🌅", label:"Morning Flow" },
+    { start: 12, end: 18, file: "muziek/jockeys/Rock Music Seventies.mp3", icon:"☀️", label:"Afternoon Rock" },
+    { start: 18, end: 24, file: "muziek/effects/DJ Saphire finale.mp3", icon:"🌇", label:"Evening Energy" }
   ];
 
   const weekendSlots = [
-    { start: 0,  end: 14, file: "muziek/jockeys/40 in jingle.mp3" },
-    { start: 14, end: 20, file: "muziek/effects/DJ Saphire finale.mp3" },
-    { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
+    { start: 0,  end: 14, file: "muziek/jockeys/40 in jingle.mp3", icon:"🎉", label:"Weekend Warmup" },
+    { start: 14, end: 20, file: "muziek/effects/DJ Saphire finale.mp3", icon:"🎛️", label:"Weekend Beats" },
+    { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3", icon:"🌃", label:"Night Grooves" }
   ];
 
   // --- Helpers ---
-  function getCurrentSlot() {
+  function getCurrentSlotAndEnd() {
     const now = new Date();
     const hour = now.getHours();
     const day = now.getDay(); // 0 = Sunday, 6 = Saturday
     const isWeekend = (day === 0 || day === 6);
     const schedule = isWeekend ? weekendSlots : weekdaySlots;
-    return schedule.find(slot => hour >= slot.start && hour < slot.end);
+    const slot = schedule.find(s => hour >= s.start && hour < s.end);
+    if (!slot) return null;
+
+    const end = new Date(now);
+    if (slot.end === 24) {
+      end.setHours(0,0,0,0);
+      end.setDate(end.getDate() + 1);
+    } else {
+      end.setHours(slot.end,0,0,0);
+    }
+    return { slot, end };
   }
 
   function fadeVolume(audioEl, from, to, duration) {
@@ -1144,7 +1196,6 @@ window.addEventListener('load', () => {
     const stepTime = duration / steps;
     let currentStep = 0;
     audioEl.volume = from;
-
     const interval = setInterval(() => {
       currentStep++;
       audioEl.volume = from + (to - from) * (currentStep / steps);
@@ -1154,36 +1205,56 @@ window.addEventListener('load', () => {
 
   function playIntro(slot) {
     if (!slot) return;
-
-    // Fade down the music
     fadeVolume(musicplayer, musicplayer.volume || 1.0, 0.2, 1000);
-
     djIntro.src = slot.file;
     djIntro.volume = 0.8;
-
     djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
+    djIntro.onended = () => fadeVolume(musicplayer, 0.2, 1.0, 1000);
+  }
 
-    // When intro ends, fade music back up
-    djIntro.onended = () => {
-      fadeVolume(musicplayer, 0.2, 1.0, 1000);
-    };
+  function updateBadge(slot, end) {
+    const now = new Date();
+    const total = end - (new Date(end).setHours(slot.start,0,0,0), new Date(now).setHours(slot.start,0,0,0));
+    const elapsed = now - new Date(now).setHours(slot.start,0,0,0);
+    const remaining = end - now;
+    const hours = Math.floor(remaining / 3600000);
+    const mins = Math.floor((remaining % 3600000) / 60000);
+
+    badge.querySelector(".badge-icon").textContent = slot.icon;
+    badge.querySelector(".badge-label").textContent =
+      `${slot.label} · ${hours>0?hours+"h ":""}${mins}m left`;
+    const percent = Math.max(0, Math.min(100, (elapsed / (end - new Date(now).setHours(slot.start,0,0,0))) * 100));
+    badge.querySelector(".progress-bar").style.width = percent + "%";
+  }
+
+  function scheduleNextTransition() {
+    const info = getCurrentSlotAndEnd();
+    if (!info) return;
+    const { slot, end } = info;
+    playIntro(slot);
+    updateBadge(slot, end);
+
+    // update badge every minute
+    const badgeInterval = setInterval(() => {
+      updateBadge(slot, end);
+    }, 60*1000);
+
+    const msUntilEnd = end - new Date();
+    console.log(`Next transition scheduled in ${Math.round(msUntilEnd/60000)} minutes`);
+
+    setTimeout(() => {
+      clearInterval(badgeInterval);
+      scheduleNextTransition(); // reschedule at the next boundary
+    }, msUntilEnd + 1000);
   }
 
   // --- Initial setup ---
-  let currentSlot = getCurrentSlot();
-  playIntro(currentSlot);
-
-  // --- Re-check every 15 minutes ---
-  setInterval(() => {
-    const newSlot = getCurrentSlot();
-    if (newSlot && newSlot.file !== currentSlot?.file) {
-      console.log(`⏰ Transition: ${currentSlot?.file} → ${newSlot.file}`);
-      playIntro(newSlot);
-      currentSlot = newSlot;
-    }
-  }, 15 * 60 * 1000);
+  scheduleNextTransition();
 });
 </script>
+
+
+
 <script src="main3.js"></script>
 
 
