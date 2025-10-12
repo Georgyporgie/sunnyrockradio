@@ -1048,14 +1048,7 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
                 }, 900000); // Every 15 minutes (900000 milliseconds)
             }, quarterHourDelay);
 
-            // Calculate delay for forty-five-minute sound
-            var fortyFiveMinuteDelay = (45 - (now.getMinutes() % 45)) * 60 * 1000 - now.getSeconds() * 1000;
-            setTimeout(function() {
-                playSound(["fortyFiveMinuteSound"]);
-                setInterval(function() {
-                    playSound(["fortyFiveMinuteSound"]);
-                }, 2700000); // Every 45 minutes (2700000 milliseconds)
-            }, fortyFiveMinuteDelay);
+        
         }
 
         window.onload = scheduleSounds;
