@@ -481,7 +481,7 @@ function setVolume(level) {
   const musicPlayer = document.getElementById("MusicSource");
  
     // Start muted
-  musicPlayer.volume = 0.3;
+  musicPlayer.volume = 0.4;
 
   // After 10 seconds, set volume based on time of day
   setTimeout(() => {
@@ -522,7 +522,7 @@ function setVolume(level) {
     }, interval);
 
   }, 10000); // 10 seconds
-};
+});
 </script>
 
 
@@ -599,7 +599,7 @@ function setVolume(level) {
             const audioFiles = {
                 hourlySound: "muziek/effects/hour soundfinale.mp3",
                 quarterHourSound: "muziek/effects/blast.mp3",
-           
+                fortyFiveMinuteSound: "muziek/effects/sunny los.mp3"
             };
 
             Object.entries(audioFiles).forEach(([id, src]) => {
@@ -1048,7 +1048,14 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
                 }, 900000); // Every 15 minutes (900000 milliseconds)
             }, quarterHourDelay);
 
-        
+            // Calculate delay for forty-five-minute sound
+            var fortyFiveMinuteDelay = (45 - (now.getMinutes() % 45)) * 60 * 1000 - now.getSeconds() * 1000;
+            setTimeout(function() {
+                playSound(["fortyFiveMinuteSound"]);
+                setInterval(function() {
+                    playSound(["fortyFiveMinuteSound"]);
+                }, 2700000); // Every 45 minutes (2700000 milliseconds)
+            }, fortyFiveMinuteDelay);
         }
 
         window.onload = scheduleSounds;
@@ -1098,21 +1105,13 @@ document.addEventListener("click", function init() {
 
 <audio id="djIntro"></audio>
 <audio id="musicplayer" preload="auto" loop></audio>
-<audio id="djPlayer" preload="auto" loop></audio>
-
-
-
-
 
 <script>
-// ——— Main scheduling logic ———
 window.addEventListener('load', () => {
   const djIntro = document.getElementById('djIntro');
-  const djPlayer = document.getElementById('djPlayer');
-const musicplayer = document.getElementById('musicplayer'); // for looping background music
+  const musicplayer = document.getElementById('musicplayer');
 
-  
-if (!djIntro || !musicplayer) {
+  if (!djIntro || !musicplayer) {
     console.error("Missing audio elements.");
     return;
   }
@@ -1130,61 +1129,60 @@ if (!djIntro || !musicplayer) {
     { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
   ];
 
-  const now = new Date();
-  const currentHour = now.getHours();
-  const currentDay = now.getDay(); // 0 = Sunday, 6 = Saturday
+  // --- Helpers ---
+  function getCurrentSlot() {
+    const now = new Date();
+    const hour = now.getHours();
+    const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+    const isWeekend = (day === 0 || day === 6);
+    const schedule = isWeekend ? weekendSlots : weekdaySlots;
+    return schedule.find(slot => hour >= slot.start && hour < slot.end);
+  }
 
-  const isWeekend = currentDay === 0 || currentDay === 6;
-  const schedule = isWeekend ? weekendSlots : weekdaySlots;
+  function fadeVolume(audioEl, from, to, duration) {
+    const steps = 20;
+    const stepTime = duration / steps;
+    let currentStep = 0;
+    audioEl.volume = from;
 
-  // Use the isInRange helper for overnight slots
-  const currentSlot = schedule.find(slot => {
-    return (slot.start < slot.end)
-      ? currentHour >= slot.start && currentHour < slot.end
-      : currentHour >= slot.start || currentHour < slot.end;
-  });
+    const interval = setInterval(() => {
+      currentStep++;
+      audioEl.volume = from + (to - from) * (currentStep / steps);
+      if (currentStep >= steps) clearInterval(interval);
+    }, stepTime);
+  }
 
-  if (currentSlot) {
-    djIntro.src = currentSlot.file;
+  function playIntro(slot) {
+    if (!slot) return;
+
+    // Fade down the music
+    fadeVolume(musicplayer, musicplayer.volume || 1.0, 0.2, 1000);
+
+    djIntro.src = slot.file;
     djIntro.volume = 1.0;
+
     djIntro.play().catch(err => console.log("Intro can't autoplay:", err));
 
-    djIntro.addEventListener('ended', () => {
-      djPlayer.volume = 0;
-      djPlayer.play().catch(err => console.log("Main player can't autoplay:", err));
-      fadeIn(djPlayer, 0.7, 0.05, 200);
-    });
-  } else {
-    djPlayer.volume = 1.0;
-    djPlayer.play().catch(err => console.log("Main player can't autoplay:", err));
+    // When intro ends, fade music back up
+    djIntro.onended = () => {
+      fadeVolume(musicplayer, 0.2, 1.0, 1000);
+    };
   }
-});
-</script>
 
-<script>
-function playIntroWithOverlap(file) {
-  const djIntro = document.getElementById('djIntro');
-  const djPlayer = document.getElementById('djPlayer');
+  // --- Initial setup ---
+  let currentSlot = getCurrentSlot();
+  playIntro(currentSlot);
 
-  djIntro.src = file;
-  djIntro.currentTime = 0;
-  djIntro.volume = 1.0;
-
-  djPlayer.volume = 0;
-
-  djIntro.play().catch(err => console.warn("Intro failed:", err));
-
-  // Start music fade-in 3s before intro ends
-  djIntro.addEventListener('timeupdate', function overlapHandler() {
-    if (djIntro.duration && djIntro.currentTime >= djIntro.duration - 3) {
-      djIntro.removeEventListener('timeupdate', overlapHandler);
-      djPlayer.play()
-        .then(() => fadeIn(djPlayer, 0.7, 0.05, 200))
-        .catch(err => console.warn("Music failed:", err));
+  // --- Re-check every 15 minutes ---
+  setInterval(() => {
+    const newSlot = getCurrentSlot();
+    if (newSlot && newSlot.file !== currentSlot?.file) {
+      console.log(`⏰ Transition: ${currentSlot?.file} → ${newSlot.file}`);
+      playIntro(newSlot);
+      currentSlot = newSlot;
     }
-  });
-}
-
+  }, 15 * 60 * 1000);
+});
 </script>
 <script src="main3.js"></script>
 
