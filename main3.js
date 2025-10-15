@@ -1962,46 +1962,54 @@ if (x.style.display === "block") {
 
 
 
-document.getElementById("hero-image")
- .addEventListener("touchstart",
-  displayMessage);
 
-function displayMessage() {
- document.getElementById("message")
-  .innerHTML = "Hi I am Iggy Pop, what's your name?";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function emphasizeKeywords(text) {
+  return text.replace(/(classic|maxi|12inch|\(new\)|\b\d{4}\b)/gi, function(match) {
+    const lower = match.toLowerCase();
+
+ if (lower === '(new)') {
+  return `
+    <span class="new-tag">
+      ( <span class="blinking-star">🌟</span> 
+        <span class="new-text">NEW</span> 
+      <span class="blinking-star">🌟</span> )
+    </span>
+  `;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Function to emphasize the words "classic", "maxi", "12inch", and "new" in a given text
-function emphasizeKeywords(text) {
-  return text.replace(/(classic|maxi|12inch|new|\b\d{4}\b)/gi, function(match) {
-    if (match.toLowerCase() === 'new') {
-      return '<em class="blinking-new">' + match + '</em>';
+    if (lower === '12inch') {
+      return '<span class="vinyl-icon">💿 12"</span>';
     }
+    if (lower === 'maxi') {
+      return '<span class="maxi-icon">📀 Maxi</span>';
+    }
+
     return '<em>' + match + '</em>';
   });
 }
