@@ -1218,7 +1218,7 @@ let track_list = [
 
 
 {
-    name: " A View To A Kill (12 Extended Mix)",
+    name: " A View To A Kill (12inch)",
     artist: "Duran Duran",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Duran Duran - A View To A Kill (12 Extended Mix).mp3",
