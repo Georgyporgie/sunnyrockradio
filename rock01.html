@@ -1081,22 +1081,30 @@ function scheduleHourlyAnnounce() {
 
   const now = new Date();
   const nextHour = new Date(now);
-  nextHour.setHours(now.getHours() + 1, 0, 0, 0); // top of next hour
+  nextHour.setHours(now.getHours() + 1, 0, 0, 0);
   const delay = nextHour - now;
 
-  setTimeout(function playAndReschedule() {
-    const hour = new Date().getHours();
-    audioElement.src = sources[hour];
-    audioElement.load();
-    audioElement.play();
+  // First timeout: wait until the top of the next hour
+  setTimeout(() => {
+    playHourly(audioElement);
 
-    // 🔊 optional: fadeIn(audioElement) or adjustVolumeDynamically(audioElement);
-
-    scheduleHourlyAnnounce(); // reschedule for the next hour
+    // Then lock into a fixed hourly interval
+    setInterval(() => {
+      playHourly(audioElement);
+    }, 3600000); // every hour
   }, delay);
 }
 
-// 🕒 Kick it off (after a user gesture if autoplay is blocked)
+function playHourly(audioElement) {
+  const hour = new Date().getHours();
+  audioElement.src = sources[hour];
+  audioElement.load();
+  audioElement.play().catch(err => {
+    console.error("Playback failed:", err);
+  });
+}
+
+// Kick it off after a user gesture
 document.addEventListener("click", function init() {
   scheduleHourlyAnnounce();
   document.removeEventListener("click", init);
