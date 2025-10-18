@@ -549,7 +549,7 @@ font-size: 14px; border-radius: 20px;
 
 #track-list-container {  font-size: 15px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif;
   margin: -100px 0px 0px 5px; background:linear-gradient(45deg,#0033FF,#006666,#003399);    padding: 25px 0px 25px 0px; border-radius: 12px;  border: solid 3px #FF0000; font-weight:800;line-height: 1.5;letter-spacing: 0.5px;box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-transition: all 0.3s ease;
+transition: all 0.3s ease;z-index: 0;
 
 
 }
@@ -1002,5 +1002,30 @@ filter:opacity(75%);
 .maxi-icon {
   color: #00FFFF;
   text-shadow: 0 0 8px #00FFFF, 0 0 12px #0033FF;
+}
+
+
+
+
+
+#clock-flash {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;   /* 👈 ensures it's above all other elements */
+}
+
+#clock-flash.show {
+  opacity: 1;
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
 }
 
