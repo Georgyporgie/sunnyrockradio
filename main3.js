@@ -1404,7 +1404,7 @@ let track_list = [
 
 
 {
-    name: " Unconfortably Numb",
+    name: " Uncomfortably Numb",
     artist: "Pink Floyd ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Pink Floyd - Unconfortably numb.mp3",
