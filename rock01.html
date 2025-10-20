@@ -1240,7 +1240,35 @@ window.addEventListener('load', () => {
   }, 15 * 60 * 1000);
 });
 </script>
+<script>
+function playIntroWithOverlap(file) {
+  const djIntro = document.getElementById('djIntro');
+  const djPlayer = document.getElementById('djPlayer');
 
+  djIntro.src = file;
+  djIntro.currentTime = 0;
+  djIntro.volume = 1.0;
+
+  djPlayer.volume = 0;
+
+  // Delay intro playback by 4 seconds
+  setTimeout(() => {
+    djIntro.play()
+      .then(() => {
+        // Attach overlap handler only once playback has started
+        djIntro.addEventListener('timeupdate', function overlapHandler() {
+          if (djIntro.duration && djIntro.currentTime >= djIntro.duration - 3) {
+            djIntro.removeEventListener('timeupdate', overlapHandler);
+            djPlayer.play()
+              .then(() => fadeIn(djPlayer, 0.7, 0.05, 200))
+              .catch(err => console.warn("Music failed:", err));
+          }
+        });
+      })
+      .catch(err => console.warn("Intro failed:", err));
+  }, 4000);
+}
+</script>
 
 <style>
   .badge {
