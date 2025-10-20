@@ -1422,7 +1422,15 @@ document.addEventListener("DOMContentLoaded", startBadgeLoop);
 
 
 
-
+<script>
+  const leastPlayed = [...scheduledMp3Files].sort(
+      (a, b) => a.playcount - b.playcount
+    );
+    console.log(
+      "Least‐Played Order:",
+      leastPlayed.map(t => `${t.name}: ${t.playcount}`)
+    );
+</script>
 
 
 
