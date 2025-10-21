@@ -112,11 +112,11 @@ color: #030101;
 }
  
 .seek_slider {
-  width: 60%;color: #060000;
+  width: 60%;color: #060000; 
 }
  
 .volume_slider {
-  width: 30%;color: #060000;
+  width: 30%;color:  background: #e0e0e0;
 }
  
 .current-time,
@@ -336,7 +336,7 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 }
 
 
-#med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; border: solid 1px white; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
+#med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; border: solid 1px #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
 
 
   
@@ -370,7 +370,7 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 
 
 
-#media  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto;  border: solid 1px white; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
+#media  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto;  border: solid 1px #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
 
 }
 
