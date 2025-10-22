@@ -1457,7 +1457,7 @@ function updateTimeBadge(categoryKey) {
 }
 
 function getCurrentCategory() {
-  const nowHour = new Date().getHours();
+  const nowHour = new Date().getHours(); // LOCAL hour
   return timeRanges.find(r =>
     (r.start <= r.end && nowHour >= r.start && nowHour < r.end) ||
     (r.start > r.end && (nowHour >= r.start || nowHour < r.end))
