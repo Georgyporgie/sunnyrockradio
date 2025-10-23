@@ -644,7 +644,7 @@ window.addEventListener('load', () => {
 
             // 🎵 Assign sources to scheduled sounds
             const audioFiles = {
-                hourlySound: "muziek/effects/hour soundfinale.mp3",
+                
                 quarterHourSound: "muziek/effects/blast.mp3",
                 
             };
@@ -709,9 +709,9 @@ window.addEventListener("load", () => {
 
 
 
-    <audio id="hourlySound" src=""></audio>
+    
     <audio id="quarterHourSound" src=""></audio>
-    <audio id="fortyFiveMinuteSound" src=""></audio>
+    
 
 
 
@@ -1123,7 +1123,7 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
   let currentIndex = new Date().getHours(); // Set index based on current hour
 
   function playHourlyAnnouncement() {
-    const audioElement = document.getElementById('hourlyAnnouncement');
+    const audioElement = document.getElementById('hourlyAnnounce');
     if (!audioElement) {
       console.error("Audio element not found!");
       return;
