@@ -1108,77 +1108,67 @@ document.getElementById("fortyFiveMinuteSound").setAttribute('src', 'muziek/effe
         window.onload = scheduleSounds;
     </script>
 
-
 <audio id="hourlyAnnounce"></audio>
-
 <script>
-// List of hourly audio files, 0–23
-const sources = [
-  "audio/0.mp3","audio/1.mp3","audio/2.mp3","audio/3.mp3","audio/4.mp3","audio/5.mp3",
-  "audio/6.mp3","audio/7.mp3","audio/8.mp3","audio/9.mp3","audio/10.mp3","audio/11.mp3",
-  "audio/12.mp3","audio/13.mp3","audio/14.mp3","audio/15.mp3","audio/16.mp3","audio/17.mp3",
-  "audio/18.mp3","audio/19.mp3","audio/20.mp3","audio/21.mp3","audio/22.mp3","audio/23.mp3"
-];
+  // 🎧 Define the sources for hourly announcements
+  const sources = [
+    "audio/0.mp3", "audio/1.mp3", "audio/2.mp3", "audio/3.mp3",
+    "audio/4.mp3", "audio/5.mp3", "audio/6.mp3", "audio/7.mp3",
+    "audio/8.mp3", "audio/9.mp3", "audio/10.mp3", "audio/11.mp3",
+    "audio/12.mp3", "audio/13.mp3", "audio/14.mp3", "audio/15.mp3",
+    "audio/16.mp3", "audio/17.mp3", "audio/18.mp3", "audio/19.mp3",
+    "audio/20.mp3", "audio/21.mp3", "audio/22.mp3", "audio/23.mp3"
+  ];
 
-let hourlyTimer; // keep reference so we don’t double‑schedule
+  let currentIndex = new Date().getHours(); // Set index based on current hour
 
-// Helper: get the current hour in Amsterdam time
-function getAmsterdamHour() {
-  return parseInt(new Date().toLocaleString("en-GB", {
-    timeZone: "Europe/Amsterdam",
-    hour: "numeric",
-    hour12: false
-  }), 10);
-}
+  function playHourlyAnnouncement() {
+    const audioElement = document.getElementById('hourlyAnnouncement');
+    if (!audioElement) {
+      console.error("Audio element not found!");
+      return;
+    }
 
-// Play the correct hourly file
-function playHourly(audioElement) {
-  const hour = getAmsterdamHour();
-  audioElement.src = sources[hour];
-  audioElement.load();
-  audioElement.play().catch(err => {
-    console.error("Playback failed:", err);
-  });
-}
+    // ⏳ Calculate time until next hour
+    const now = new Date();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    const millisecondsToNextHour = ((59 - minutes) * 60 + (60 - seconds)) * 1000;
 
-// Schedule the hourly announcement
-function scheduleHourlyAnnounce() {
-  const audioElement = document.getElementById('hourlyAnnounce');
-  if (!audioElement) {
-    console.error("Audio element not found!");
-    return;
+    // 🔔 Schedule first announcement at top of next hour
+    setTimeout(() => {
+      playAnnouncement(audioElement, currentIndex);
+
+      // 🔁 Schedule hourly announcements
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % sources.length;
+        playAnnouncement(audioElement, currentIndex);
+      }, 3600000); // every hour
+    }, millisecondsToNextHour);
   }
 
-  // Clear any existing timer to avoid duplicates
-  if (hourlyTimer) {
-    clearInterval(hourlyTimer);
-    hourlyTimer = null;
+  function playAnnouncement(audioElement, index) {
+    const source = sources[index];
+    audioElement.src = source;
+    audioElement.load();
+
+    // 🔊 Boost volume to max
+    audioElement.volume = 1.0;
+
+    // ✅ Optional: log for debugging
+    console.log(`📢 Playing hourly announcement for hour ${index}: ${source}`);
+
+    audioElement.play().catch(err => {
+      console.warn("Playback failed:", err);
+    });
   }
 
-  const now = new Date();
-  // Compute next top of the hour in Amsterdam time
-  const amsNow = new Date(now.toLocaleString("en-US", { timeZone: "Europe/Amsterdam" }));
-  const nextHour = new Date(amsNow);
-  nextHour.setHours(amsNow.getHours() + 1, 0, 0, 0);
-  const delay = nextHour - amsNow;
-
-  // Wait until the top of the next hour
-  setTimeout(() => {
-    playHourly(audioElement);
-
-    // Then repeat every hour
-    hourlyTimer = setInterval(() => {
-      playHourly(audioElement);
-    }, 3600000);
-  }, delay);
-}
-
-// Kick it off after first user gesture
-document.addEventListener("click", function init() {
-  scheduleHourlyAnnounce();
-  document.removeEventListener("click", init);
-});
+  // 🕒 Activate hourly announcements
+  playHourlyAnnouncement();
 </script>
+
+
+
 
 <script>
 function getCurrentCategory() {
