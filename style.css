@@ -1006,6 +1006,6 @@ filter:opacity(75%);
 
 
 
-#rocky  {   display: block; margin: auto;
+#rocky  {   display: block; margin: auto; z-index: -400;
 
 }
