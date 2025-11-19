@@ -564,7 +564,8 @@ let track_list = [
     artist: "Play Sunny rockradio ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
-  },
+  
+},
 
 
 
@@ -582,7 +583,9 @@ let track_list = [
     artist: "David Bowie ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/David Bowie - Heroes.mp3",
-  },
+ volumeBoost: 0.40
+},
+
 
 
 {  
@@ -1543,70 +1546,60 @@ let track_list = [
 
 
 
+// ── Helpers ──
+function initializePlayCounts(tracks) {
+  tracks.forEach(track => {
+    if (typeof track.playCount !== "number") {
+      track.playCount = 0;
+    }
+    if (typeof track.volumeBoost !== "number") {
+      track.volumeBoost = 0; // default boost
+    }
+  });
+}
 
+function sortTracksByPlayCount() {
+  track_list.sort((a, b) => b.playCount - a.playCount);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function getTimeBasedVolume() {
+  const hour = new Date().getHours();
+  if (hour >= 6 && hour < 12) return 0.7; // morning
+  if (hour >= 12 && hour < 18) return 0.8; // afternoon
+  if (hour >= 18 && hour < 22) return 0.6; // evening
+  return 0.5; // night
+}
 
 
 function loadTrack(track_index) {
   if (!track_list[track_index]) return;
 
-  // Increment and sort by play count
-  track_list[track_index].playCount += 1;
+  // 🎧 Increment play count
+  track_list[track_index].playCount = (track_list[track_index].playCount || 0) + 1;
+  console.log("🎧 Playcount updated:", track_list[track_index].name, "| Total plays:", track_list[track_index].playCount);
+
+  // Sort by play count
   sortTracksByPlayCount();
 
-  
-
-
-
-
-
-
-
-// Reset old track and create new one
+  // Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
 
-  curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
+  curr_track = new Audio(track_list[track_index].path);
   curr_track.load();
 
-  
+  // 🔊 Volume logic with boost
+  const base = Number(getTimeBasedVolume());
+  const boost = Number(track_list[track_index].volumeBoost);
+  const boostSafe = Number.isFinite(boost) ? boost : 0;
 
+  let finalVolume = base + boostSafe; // or base * (1 + boostSafe)
+  finalVolume = Math.max(0, Math.min(1, finalVolume));
 
+  curr_track.volume = finalVolume;
+  console.log(`🔊 Volume set: base=${base}, boost=${boostSafe}, final=${finalVolume}`);
 
-
-
-
-
-// Apply volume logic
-  adjustVolumeDynamically(curr_track);
-
- 
-
-
-
-
-
-
-
-
-
-
- // Update UI
+  // ✅ Update UI
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
@@ -1625,38 +1618,19 @@ function loadTrack(track_index) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ── Next Track ──
 function nextTrack() {
-  // Go back to the first track if the current one is the last in the track list
-  if (track_index < track_list.length - 1)
-    track_index += 1;
-  else
-    track_index = 0; 
+  if (track_index < track_list.length - 1) track_index += 1;
+  else track_index = 0;
 
-  // Sort the track list by play count
   sortTracksByPlayCount();
-
-  // Load and play the new track
   loadTrack(track_index);
   playTrack();
 }
+
+// ── Startup ──
+initializePlayCounts(track_list);
+
 
 
 
