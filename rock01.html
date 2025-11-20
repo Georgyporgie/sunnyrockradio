@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
 
 
 
-<IFRAME id= "rocky" SRC="https://rockgasts.netlify.app/gastt"  NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0  WIDTH=346 HEIGHT=390></IFRAME>
+<IFRAME id= "rocky" SRC="https://rockgasts.netlify.app/gastt"  NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=1 MARGINHEIGHT=0 MARGINWIDTH=0  WIDTH=346 HEIGHT=390></IFRAME>
 
 
 </div>
@@ -589,7 +589,7 @@ function scheduleRangeSwap() {
   // Noon
   checkpoints.push(new Date(now.getFullYear(), now.getMonth(), now.getDate(), 12, 0, 1));
   // 6pm
-  
+   checkpoints.push(new Date(now.getFullYear(), now.getMonth(), now.getDate(), 15, 0, 1));
  checkpoints.push(new Date(now.getFullYear(), now.getMonth(), now.getDate(), 18, 0, 1));
 checkpoints.push(new Date(now.getFullYear(), now.getMonth(), now.getDate(), 21, 0, 1));
 
@@ -608,6 +608,11 @@ checkpoints.push(new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 
 
 
 scheduleRangeSwap();
+
+
+
+
+
 
 </script>
 
