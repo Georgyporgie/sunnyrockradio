@@ -354,7 +354,9 @@ let track_list = [
     artist: "Jan Hammer",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
-  },
+volumeBoost:0.50,
+   playcount: 0
+},
 
 
 
@@ -481,12 +483,13 @@ let track_list = [
   },
 
  {
-    name: " Child In Time",
+    name: " Child In Time (1970)",
     artist: "Deep Purple ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Deep Purple - Child in time.mp3",
-  },
- 
+  volumeBoost:0.70,
+   playcount: 0
+},
 
 
 
@@ -533,7 +536,9 @@ let track_list = [
     artist: "Starship ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
-  },
+ volumeBoost:0.30,
+   playcount: 0
+},
 
 
 
@@ -583,7 +588,8 @@ let track_list = [
     artist: "David Bowie ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/David Bowie - Heroes.mp3",
- volumeBoost: 0.40
+ volumeBoost:0.45,
+   playcount: 0
 },
 
 
@@ -612,7 +618,7 @@ let track_list = [
 
 {
 
-    name: "Radio Ga GA (12inch)",
+    name: "Radio Ga Ga (12inch)",
     artist: "Queen ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
@@ -653,7 +659,9 @@ let track_list = [
     artist: "Santana",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Santana - She 's not there.mp3",
-  },
+volumeBoost:0.40,
+   playcount: 0
+},
 {
     name: " Black Velvet",
     artist: "Alannah Miles",
@@ -902,7 +910,10 @@ let track_list = [
    artist: "Ike & Tina Turner ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Ike & Tina Turner - Nutbush City.mp3",
-  },
+volumeBoost:0.40,
+   playcount: 0
+},
+
 
 
 
@@ -1121,7 +1132,9 @@ let track_list = [
     artist: "Supertramp",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Supertramp - School.mp3",
-  },
+  volumeBoost:0.50,
+   playcount: 0
+},
 
 
 
@@ -1255,7 +1268,9 @@ let track_list = [
     artist: "The Who",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
-  },
+    volumeBoost: 0.35,
+    playcount: 0
+},
 
 
 
@@ -1473,7 +1488,9 @@ let track_list = [
     artist: "Pink Floyd",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
-  },
+ volumeBoost:0.40,
+   playcount: 0
+},
 
 
 
