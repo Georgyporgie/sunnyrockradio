@@ -300,7 +300,8 @@ let track_list = [
     artist: "ACDC",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
-  },
+   quickFade: true
+},
 
 
 
@@ -355,7 +356,9 @@ let track_list = [
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
 volumeBoost:0.50,
-   playcount: 0
+   quickFade: true, 
+playcount: 0
+
 },
 
 
@@ -379,7 +382,10 @@ volumeBoost:0.50,
     artist: "Simple Minds ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
-  },
+    quickFade: true,
+    volumeBoost: 0.35,
+    playcount: 0
+},
 
 
 
@@ -403,7 +409,8 @@ volumeBoost:0.50,
     artist: "Visage",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you333.mp3",
-  },
+    quickFade: true
+},
 
 
 
@@ -420,7 +427,8 @@ volumeBoost:0.50,
     artist: "The Cars",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/The Cars - Drive.mp3",
-  },
+    quickFade: true
+},
 
 
 
@@ -429,7 +437,8 @@ volumeBoost:0.50,
     artist: "Propaganda",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Propaganda - Duel.mp3",
-  },
+    quickFade: true
+},
 
 
 {
@@ -437,7 +446,8 @@ volumeBoost:0.50,
     artist: "Bjork  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
-  },
+   quickFade: true
+},
 
 
 
@@ -447,7 +457,7 @@ volumeBoost:0.50,
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
-  
+   quickFade: true
 
 
 }, 
@@ -461,7 +471,8 @@ volumeBoost:0.50,
     artist: "Simple Minds  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/recent/Simple Minds - First you jump.mp3",
-  },
+   quickFade: true
+},
 
 
 
@@ -470,7 +481,8 @@ volumeBoost:0.50,
     artist: "Play Sunny Danceradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
-  },
+   quickFade: true
+},
 
 
 
@@ -480,7 +492,8 @@ volumeBoost:0.50,
     artist: "Alan Parsons Project ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
-  },
+   quickFade: true
+},
 
  {
     name: " Child In Time (1970)",
@@ -488,7 +501,8 @@ volumeBoost:0.50,
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Deep Purple - Child in time.mp3",
   volumeBoost:0.70,
-   playcount: 0
+   quickFade: true,
+ playcount: 0
 },
 
 
@@ -648,7 +662,9 @@ volumeBoost:0.50,
     artist: "Frankie Goes To Hollywood",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
-  },
+     volumeBoost: 0.55,
+    playcount: 0
+},
 
 
 
@@ -799,7 +815,10 @@ volumeBoost:0.40,
     artist: "Fleetwood Mac",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
+      quickFade: true,
+    volumeBoost: 0.45,
+    playcount: 0
+},
 
 
 
@@ -1588,50 +1607,111 @@ function getTimeBasedVolume() {
 }
 
 
+// 🌊 Fade OUT old track (but don't pause until done)
+function fadeOut(audio, duration = 2000, callback) {
+  if (!audio) return;
+  const steps = 30;
+  const stepTime = duration / steps;
+  const initialVolume = audio.volume;
+  let currentStep = 0;
+
+  const fadeInterval = setInterval(() => {
+    currentStep++;
+    audio.volume = Math.max(0, initialVolume * (1 - currentStep / steps));
+
+    if (currentStep >= steps) {
+      clearInterval(fadeInterval);
+      audio.pause();
+      audio.volume = initialVolume; // reset for next use
+      if (callback) callback();
+    }
+  }, stepTime);
+}
+
+// 🌅 Fade IN new track
+function fadeIn(audio, targetVolume = 1, duration = 2000) {
+  const steps = 30;
+  const stepTime = duration / steps;
+  let currentStep = 0;
+
+  audio.volume = 0; // start silent
+
+  const fadeInterval = setInterval(() => {
+    currentStep++;
+    audio.volume = Math.min(targetVolume * (currentStep / steps), targetVolume);
+
+    if (currentStep >= steps) {
+      clearInterval(fadeInterval);
+    }
+  }, stepTime);
+}
+
+
 function loadTrack(track_index) {
   if (!track_list[track_index]) return;
 
-  // 🎧 Increment play count
-  track_list[track_index].playCount = (track_list[track_index].playCount || 0) + 1;
-  console.log("🎧 Playcount updated:", track_list[track_index].name, "| Total plays:", track_list[track_index].playCount);
+  const track = track_list[track_index];
+  const shouldFade = track.quickFade === true;
 
-  // Sort by play count
+  // 🌊 If something is playing, crossfade it
+  if (curr_track && !curr_track.paused && shouldFade) {
+    const oldTrack = curr_track;
+
+    // Start new track immediately (overlap)
+    startNewTrack(track_index);
+
+    // Fade out old track while new one fades in
+    fadeOut(oldTrack, 2000);
+
+  } else {
+    // No crossfade → normal behavior
+    if (curr_track) curr_track.pause();
+    startNewTrack(track_index);
+  }
+}
+
+
+
+function startNewTrack(track_index) {
+  const track = track_list[track_index];
+
+  // 🎧 Playcount ritual
+  track.playCount = (track.playCount || 0) + 1;
+  console.log("🎧 Playcount updated:", track.name, "| Total plays:", track.playCount);
+
   sortTracksByPlayCount();
 
-  // Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
 
-  curr_track = new Audio(track_list[track_index].path);
+  curr_track = new Audio(track.path);
   curr_track.load();
 
-  // 🔊 Volume logic with boost
+  // 🔊 Volume logic
   const base = Number(getTimeBasedVolume());
-  const boost = Number(track_list[track_index].volumeBoost);
+  const boost = Number(track.volumeBoost);
   const boostSafe = Number.isFinite(boost) ? boost : 0;
 
-  let finalVolume = base + boostSafe; // or base * (1 + boostSafe)
+  let finalVolume = base + boostSafe;
   finalVolume = Math.max(0, Math.min(1, finalVolume));
 
-  curr_track.volume = finalVolume;
-  console.log(`🔊 Volume set: base=${base}, boost=${boostSafe}, final=${finalVolume}`);
+  // 🌅 Fade-in when playback starts
+  curr_track.addEventListener("play", () => {
+    fadeIn(curr_track, finalVolume, 2000);
+  });
 
-  // ✅ Update UI
-  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
-  track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
+  // ✅ UI updates
+  track_art.style.backgroundImage = "url(" + track.image + ")";
+  track_name.textContent = track.name;
+  track_artist.textContent = track.artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
-  // Update seek logic
   updateTimer = setInterval(seekUpdate, 1000);
 
-  // Handle end of track
   curr_track.addEventListener("ended", nextTrack);
 
-  // Set vibe
   random_bg_color();
 }
-
 
 
 
