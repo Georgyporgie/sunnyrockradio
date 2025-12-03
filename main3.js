@@ -383,7 +383,7 @@ playcount: 0
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
     quickFade: true,
-    volumeBoost: 0.35,
+    volumeBoost: 0.30,
     playcount: 0
 },
 
@@ -512,7 +512,8 @@ playcount: 0
     artist: "Tina Turner ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-  },
+      quickFade: true
+},
 
 
 
@@ -524,7 +525,8 @@ playcount: 0
     artist: "Queen",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
-  },
+      quickFade: true
+},
 
 
 
@@ -539,7 +541,7 @@ playcount: 0
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
-  
+   quickFade: true
 
 
 }, 
@@ -551,7 +553,8 @@ playcount: 0
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
  volumeBoost:0.30,
-   playcount: 0
+   playcount: 0,
+ quickFade: true
 },
 
 
@@ -572,7 +575,8 @@ playcount: 0
     artist: "Ultravox  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Ultravox - Vienna.mp3",
-  },
+   quickFade: true
+},
 
 
 
@@ -595,7 +599,8 @@ playcount: 0
     artist: "Fleetwood Mac  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-  },
+   quickFade: true
+},
 
 {  
     name: " Heroes",
@@ -603,7 +608,8 @@ playcount: 0
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/David Bowie - Heroes.mp3",
  volumeBoost:0.45,
-   playcount: 0
+   playcount: 0,
+ quickFade: true
 },
 
 
@@ -1477,7 +1483,10 @@ volumeBoost:0.40,
     artist: "Emmerson Lake & Palmer",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-  },
+    quickFade: true,
+    volumeBoost: 0.45,
+    playcount: 0
+},
  
  
 
