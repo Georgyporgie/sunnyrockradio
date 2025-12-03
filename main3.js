@@ -300,8 +300,7 @@ let track_list = [
     artist: "ACDC",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/ACDC - Whole lotta Rosie.mp3",
-   quickFade: true
-},
+  },
 
 
 
@@ -355,11 +354,7 @@ let track_list = [
     artist: "Jan Hammer",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
-volumeBoost:0.50,
-   quickFade: true, 
-playcount: 0
-
-},
+  },
 
 
 
@@ -382,10 +377,7 @@ playcount: 0
     artist: "Simple Minds ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/New Gold dream - Simple Minds.mp3",
-    quickFade: true,
-    volumeBoost: 0.30,
-    playcount: 0
-},
+  },
 
 
 
@@ -409,8 +401,7 @@ playcount: 0
     artist: "Visage",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/sunny ship/radio dj - just for you333.mp3",
-    quickFade: true
-},
+  },
 
 
 
@@ -427,8 +418,7 @@ playcount: 0
     artist: "The Cars",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/The Cars - Drive.mp3",
-    quickFade: true
-},
+  },
 
 
 
@@ -437,8 +427,7 @@ playcount: 0
     artist: "Propaganda",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Propaganda - Duel.mp3",
-    quickFade: true
-},
+  },
 
 
 {
@@ -446,8 +435,7 @@ playcount: 0
     artist: "Bjork  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Bjork - Nature is beauty.mp3",
-   quickFade: true
-},
+  },
 
 
 
@@ -457,7 +445,7 @@ playcount: 0
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
-   quickFade: true
+  
 
 
 }, 
@@ -471,8 +459,7 @@ playcount: 0
     artist: "Simple Minds  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/recent/Simple Minds - First you jump.mp3",
-   quickFade: true
-},
+  },
 
 
 
@@ -481,8 +468,7 @@ playcount: 0
     artist: "Play Sunny Danceradio",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "muziek/jingles/Let op.mp3",
-   quickFade: true
-},
+  },
 
 
 
@@ -492,18 +478,15 @@ playcount: 0
     artist: "Alan Parsons Project ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Alan Parsons Project -Sirius.mp3",
-   quickFade: true
-},
+  },
 
  {
-    name: " Child In Time (1970)",
+    name: " Child In Time",
     artist: "Deep Purple ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Deep Purple - Child in time.mp3",
-  volumeBoost:0.70,
-   quickFade: true,
- playcount: 0
-},
+  },
+ 
 
 
 
@@ -512,8 +495,7 @@ playcount: 0
     artist: "Tina Turner ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Tina Turner - Private Dancer.mp3",
-      quickFade: true
-},
+  },
 
 
 
@@ -525,8 +507,7 @@ playcount: 0
     artist: "Queen",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: " muziek/muziek01/Queen - Bohemian Rapsodhy.mp3",
-      quickFade: true
-},
+  },
 
 
 
@@ -541,7 +522,7 @@ playcount: 0
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
-   quickFade: true
+  
 
 
 }, 
@@ -552,10 +533,7 @@ playcount: 0
     artist: "Starship ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Starship - Nothing's Gonna Stop Us Now.mp3",
- volumeBoost:0.30,
-   playcount: 0,
- quickFade: true
-},
+  },
 
 
 
@@ -575,8 +553,7 @@ playcount: 0
     artist: "Ultravox  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Ultravox - Vienna.mp3",
-   quickFade: true
-},
+  },
 
 
 
@@ -587,8 +564,7 @@ playcount: 0
     artist: "Play Sunny rockradio ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/Sunny radio jingle1.mp3",
-  
-},
+  },
 
 
 
@@ -599,19 +575,14 @@ playcount: 0
     artist: "Fleetwood Mac  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Fleetwood Mac - Everywhere.mp3",
-   quickFade: true
-},
+  },
 
 {  
     name: " Heroes",
     artist: "David Bowie ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/David Bowie - Heroes.mp3",
- volumeBoost:0.45,
-   playcount: 0,
- quickFade: true
-},
-
+  },
 
 
 {  
@@ -638,7 +609,7 @@ playcount: 0
 
 {
 
-    name: "Radio Ga Ga (12inch)",
+    name: "Radio Ga GA (12inch)",
     artist: "Queen ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Radio Ga Ga (12'' Extended Version).mp3",
@@ -668,9 +639,7 @@ playcount: 0
     artist: "Frankie Goes To Hollywood",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Frankie goes to hollywood - Two tribes.mp3",
-     volumeBoost: 0.55,
-    playcount: 0
-},
+  },
 
 
 
@@ -681,9 +650,7 @@ playcount: 0
     artist: "Santana",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Santana - She 's not there.mp3",
-volumeBoost:0.40,
-   playcount: 0
-},
+  },
 {
     name: " Black Velvet",
     artist: "Alannah Miles",
@@ -821,10 +788,7 @@ volumeBoost:0.40,
     artist: "Fleetwood Mac",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-      quickFade: true,
-    volumeBoost: 0.45,
-    playcount: 0
-},
+  },
 
 
 
@@ -935,10 +899,7 @@ volumeBoost:0.40,
    artist: "Ike & Tina Turner ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Ike & Tina Turner - Nutbush City.mp3",
-volumeBoost:0.40,
-   playcount: 0
-},
-
+  },
 
 
 
@@ -1157,9 +1118,7 @@ volumeBoost:0.40,
     artist: "Supertramp",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Supertramp - School.mp3",
-  volumeBoost:0.50,
-   playcount: 0
-},
+  },
 
 
 
@@ -1293,9 +1252,7 @@ volumeBoost:0.40,
     artist: "The Who",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
-    volumeBoost: 0.35,
-    playcount: 0
-},
+  },
 
 
 
@@ -1483,10 +1440,7 @@ volumeBoost:0.40,
     artist: "Emmerson Lake & Palmer",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Emmerson Lake & Palmer - Peter Gunn.mp3",
-    quickFade: true,
-    volumeBoost: 0.45,
-    playcount: 0
-},
+  },
  
  
 
@@ -1516,9 +1470,7 @@ volumeBoost:0.40,
     artist: "Pink Floyd",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
- volumeBoost:0.40,
-   playcount: 0
-},
+  },
 
 
 
@@ -1591,152 +1543,120 @@ volumeBoost:0.40,
 
 
 
-// ── Helpers ──
-function initializePlayCounts(tracks) {
-  tracks.forEach(track => {
-    if (typeof track.playCount !== "number") {
-      track.playCount = 0;
-    }
-    if (typeof track.volumeBoost !== "number") {
-      track.volumeBoost = 0; // default boost
-    }
-  });
-}
-
-function sortTracksByPlayCount() {
-  track_list.sort((a, b) => b.playCount - a.playCount);
-}
-
-function getTimeBasedVolume() {
-  const hour = new Date().getHours();
-  if (hour >= 6 && hour < 12) return 0.7; // morning
-  if (hour >= 12 && hour < 18) return 0.8; // afternoon
-  if (hour >= 18 && hour < 22) return 0.6; // evening
-  return 0.5; // night
-}
 
 
-// 🌊 Fade OUT old track (but don't pause until done)
-function fadeOut(audio, duration = 2000, callback) {
-  if (!audio) return;
-  const steps = 30;
-  const stepTime = duration / steps;
-  const initialVolume = audio.volume;
-  let currentStep = 0;
 
-  const fadeInterval = setInterval(() => {
-    currentStep++;
-    audio.volume = Math.max(0, initialVolume * (1 - currentStep / steps));
 
-    if (currentStep >= steps) {
-      clearInterval(fadeInterval);
-      audio.pause();
-      audio.volume = initialVolume; // reset for next use
-      if (callback) callback();
-    }
-  }, stepTime);
-}
 
-// 🌅 Fade IN new track
-function fadeIn(audio, targetVolume = 1, duration = 2000) {
-  const steps = 30;
-  const stepTime = duration / steps;
-  let currentStep = 0;
 
-  audio.volume = 0; // start silent
 
-  const fadeInterval = setInterval(() => {
-    currentStep++;
-    audio.volume = Math.min(targetVolume * (currentStep / steps), targetVolume);
 
-    if (currentStep >= steps) {
-      clearInterval(fadeInterval);
-    }
-  }, stepTime);
-}
+
+
+
+
+
+
+
+
+
 
 
 function loadTrack(track_index) {
   if (!track_list[track_index]) return;
 
-  const track = track_list[track_index];
-  const shouldFade = track.quickFade === true;
-
-  // 🌊 If something is playing, crossfade it
-  if (curr_track && !curr_track.paused && shouldFade) {
-    const oldTrack = curr_track;
-
-    // Start new track immediately (overlap)
-    startNewTrack(track_index);
-
-    // Fade out old track while new one fades in
-    fadeOut(oldTrack, 2000);
-
-  } else {
-    // No crossfade → normal behavior
-    if (curr_track) curr_track.pause();
-    startNewTrack(track_index);
-  }
-}
-
-
-
-function startNewTrack(track_index) {
-  const track = track_list[track_index];
-
-  // 🎧 Playcount ritual
-  track.playCount = (track.playCount || 0) + 1;
-  console.log("🎧 Playcount updated:", track.name, "| Total plays:", track.playCount);
-
+  // Increment and sort by play count
+  track_list[track_index].playCount += 1;
   sortTracksByPlayCount();
 
+  
+
+
+
+
+
+
+
+// Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
 
-  curr_track = new Audio(track.path);
+  curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
   curr_track.load();
 
-  // 🔊 Volume logic
-  const base = Number(getTimeBasedVolume());
-  const boost = Number(track.volumeBoost);
-  const boostSafe = Number.isFinite(boost) ? boost : 0;
+  
 
-  let finalVolume = base + boostSafe;
-  finalVolume = Math.max(0, Math.min(1, finalVolume));
 
-  // 🌅 Fade-in when playback starts
-  curr_track.addEventListener("play", () => {
-    fadeIn(curr_track, finalVolume, 2000);
-  });
 
-  // ✅ UI updates
-  track_art.style.backgroundImage = "url(" + track.image + ")";
-  track_name.textContent = track.name;
-  track_artist.textContent = track.artist;
+
+
+
+
+// Apply volume logic
+  adjustVolumeDynamically(curr_track);
+
+ 
+
+
+
+
+
+
+
+
+
+
+ // Update UI
+  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+  track_name.textContent = track_list[track_index].name;
+  track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
+  // Update seek logic
   updateTimer = setInterval(seekUpdate, 1000);
 
+  // Handle end of track
   curr_track.addEventListener("ended", nextTrack);
 
+  // Set vibe
   random_bg_color();
 }
 
 
 
-// ── Next Track ──
-function nextTrack() {
-  if (track_index < track_list.length - 1) track_index += 1;
-  else track_index = 0;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function nextTrack() {
+  // Go back to the first track if the current one is the last in the track list
+  if (track_index < track_list.length - 1)
+    track_index += 1;
+  else
+    track_index = 0; 
+
+  // Sort the track list by play count
   sortTracksByPlayCount();
+
+  // Load and play the new track
   loadTrack(track_index);
   playTrack();
 }
-
-// ── Startup ──
-initializePlayCounts(track_list);
-
 
 
 
@@ -2094,9 +2014,9 @@ function emphasizeKeywords(text) {
   });
 }
 
-// Create the ordered list and append it to the container
+// Create the ordered list and append it to the body
 let ol = document.createElement('ol');
-document.getElementById('track-list-container').appendChild(ol);
+document.body.appendChild(ol);
 
 // Function to create a list item for each track
 function createListItem(track) {
@@ -2105,7 +2025,9 @@ function createListItem(track) {
   let emphasizedTrackName = emphasizeKeywords(track.name);
   let emphasizedArtist = emphasizeKeywords(track.artist);
 
+  // Style the word "by" with light blue color
   let coloredBy = ' <span style="color: goldenrod;">by</span> ';
+
   let trackInfo = document.createElement('div');
   trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
@@ -2121,32 +2043,90 @@ function createListItem(track) {
   return li;
 }
 
-// Filter the track list
+// Filter the track list to exclude tracks with 'Sunny' in the artist's name
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('pie'));
 
-// Pagination variables
-let batchSize = 20;
+// Limit the filtered track list to 20 tracks
+let limitedTrackList = filteredTrackList.slice(0, 20);
+
+// Add each track to the ordered list
+limitedTrackList.forEach(track => {
+  ol.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the placeholder div
+document.getElementById('track-list-container').appendChild(ol);
 
 
-// Function to render the next batch of tracks
-function renderNextBatch() {
-  let nextBatch = filteredTrackList.slice(currentIndex, currentIndex + batchSize);
-  nextBatch.forEach(track => {
-    ol.appendChild(createListItem(track));
-  });
-  currentIndex += batchSize;
 
-  // Hide button if no more tracks
-  if (currentIndex >= filteredTrackList.length) {
-    document.getElementById('show-more-button').style.display = 'none';
-  }
-}
 
-// Initial render
-renderNextBatch();
 
-// Hook up the button
-document.getElementById('show-more-button').addEventListener('click', renderNextBatch);
+//summary 21 - 40
+
+
+// Create the summary element for tracks 21 to 40
+let summaryElement1 = document.createElement('summary');
+summaryElement1.textContent = 'tracks 20 to 40';
+
+// Create a details element and append the summary to it
+let detailsElement1 = document.createElement('details');
+detailsElement1.appendChild(summaryElement1);
+
+// Create the ordered list, set start attribute to 21, and add tracks 21 to 40
+let additionalTrackList1 = filteredTrackList.slice(20, 40);
+let additionalOl1 = document.createElement('ol');
+additionalOl1.setAttribute('start', 20);
+
+additionalTrackList1.forEach(track => {
+  additionalOl1.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the details element
+detailsElement1.appendChild(additionalOl1);
+
+// Append the details element to the placeholder div
+document.getElementById('track-list-container').appendChild(detailsElement1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Create the summary element for tracks 41 to 60
+let summaryElement2 = document.createElement('summary');
+summaryElement2.textContent = 'tracks 40 to 60';
+
+// Create a details element and append the summary to it
+let detailsElement2 = document.createElement('details');
+detailsElement2.appendChild(summaryElement2);
+
+// Create the ordered list, set start attribute to 41, and add tracks 41 to 60
+let additionalTrackList2 = filteredTrackList.slice(40, 60);
+let additionalOl2 = document.createElement('ol');
+additionalOl2.setAttribute('start', 40);
+
+additionalTrackList2.forEach(track => {
+  additionalOl2.appendChild(createListItem(track));
+});
+
+// Append the ordered list to the details element
+detailsElement2.appendChild(additionalOl2);
+
+// Append the details element to the placeholder div
+document.getElementById('track-list-container').appendChild(detailsElement2);
+
+
+
+
 
 
 

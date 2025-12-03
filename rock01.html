@@ -165,8 +165,8 @@ body {
     <div class="details">
 <div class="now-playing">PLAYING x OF y</div>
       <div class="track-art"></div>
-      <div class="track-name">Loading</div>
-      <div class="track-artist">Playlist</div>
+      <div class="track-name">Track Name</div>
+      <div class="track-artist">Track Artist</div>
     </div>
  <br>
  <br>  
@@ -288,12 +288,10 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
 
 <br>
 <br>
-<div id="track-list-container"></div>
-<br>
-  <button id="show-more-button">show more</button>
+<div><ul  id="track-list-container"></ul>
+</div>
 <div
 </div>
-
 
 <br>
 <br>
@@ -312,7 +310,7 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
 
 
 
-<IFRAME id= "rocky" SRC="https://rockgasts.netlify.app/gastt"  NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=1 MARGINHEIGHT=0 MARGINWIDTH=0  WIDTH=346 HEIGHT=390></IFRAME>
+<IFRAME id= "rocky" SRC="https://rockgasts.netlify.app/gastt"  NORESIZE SCROLLING=NO HSPACE=0 VSPACE=0 FRAMEBORDER=0 MARGINHEIGHT=0 MARGINWIDTH=0  WIDTH=346 HEIGHT=390></IFRAME>
 
 
 </div>
@@ -1405,11 +1403,7 @@ function playIntroWithOverlap(file) {
     font: 600 14px/1.2 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto;
     width: 200px;
     z-index: 9999;
-    border: solid 1px #FFD580;
-
-
-
-}
+  }
   .badge-icon { margin-right: 0.4rem; }
   .badge-label { white-space: nowrap; }
   .progress {
