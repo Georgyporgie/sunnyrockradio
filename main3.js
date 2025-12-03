@@ -2094,9 +2094,9 @@ function emphasizeKeywords(text) {
   });
 }
 
-// Create the ordered list and append it to the body
+// Create the ordered list and append it to the container
 let ol = document.createElement('ol');
-document.body.appendChild(ol);
+document.getElementById('track-list-container').appendChild(ol);
 
 // Function to create a list item for each track
 function createListItem(track) {
@@ -2105,9 +2105,7 @@ function createListItem(track) {
   let emphasizedTrackName = emphasizeKeywords(track.name);
   let emphasizedArtist = emphasizeKeywords(track.artist);
 
-  // Style the word "by" with light blue color
   let coloredBy = ' <span style="color: goldenrod;">by</span> ';
-
   let trackInfo = document.createElement('div');
   trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
@@ -2123,90 +2121,32 @@ function createListItem(track) {
   return li;
 }
 
-// Filter the track list to exclude tracks with 'Sunny' in the artist's name
+// Filter the track list
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('pie'));
 
-// Limit the filtered track list to 20 tracks
-let limitedTrackList = filteredTrackList.slice(0, 20);
-
-// Add each track to the ordered list
-limitedTrackList.forEach(track => {
-  ol.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the placeholder div
-document.getElementById('track-list-container').appendChild(ol);
+// Pagination variables
+let batchSize = 20;
 
 
+// Function to render the next batch of tracks
+function renderNextBatch() {
+  let nextBatch = filteredTrackList.slice(currentIndex, currentIndex + batchSize);
+  nextBatch.forEach(track => {
+    ol.appendChild(createListItem(track));
+  });
+  currentIndex += batchSize;
 
+  // Hide button if no more tracks
+  if (currentIndex >= filteredTrackList.length) {
+    document.getElementById('show-more-button').style.display = 'none';
+  }
+}
 
+// Initial render
+renderNextBatch();
 
-//summary 21 - 40
-
-
-// Create the summary element for tracks 21 to 40
-let summaryElement1 = document.createElement('summary');
-summaryElement1.textContent = 'tracks 20 to 40';
-
-// Create a details element and append the summary to it
-let detailsElement1 = document.createElement('details');
-detailsElement1.appendChild(summaryElement1);
-
-// Create the ordered list, set start attribute to 21, and add tracks 21 to 40
-let additionalTrackList1 = filteredTrackList.slice(20, 40);
-let additionalOl1 = document.createElement('ol');
-additionalOl1.setAttribute('start', 20);
-
-additionalTrackList1.forEach(track => {
-  additionalOl1.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the details element
-detailsElement1.appendChild(additionalOl1);
-
-// Append the details element to the placeholder div
-document.getElementById('track-list-container').appendChild(detailsElement1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Create the summary element for tracks 41 to 60
-let summaryElement2 = document.createElement('summary');
-summaryElement2.textContent = 'tracks 40 to 60';
-
-// Create a details element and append the summary to it
-let detailsElement2 = document.createElement('details');
-detailsElement2.appendChild(summaryElement2);
-
-// Create the ordered list, set start attribute to 41, and add tracks 41 to 60
-let additionalTrackList2 = filteredTrackList.slice(40, 60);
-let additionalOl2 = document.createElement('ol');
-additionalOl2.setAttribute('start', 40);
-
-additionalTrackList2.forEach(track => {
-  additionalOl2.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the details element
-detailsElement2.appendChild(additionalOl2);
-
-// Append the details element to the placeholder div
-document.getElementById('track-list-container').appendChild(detailsElement2);
-
-
-
-
+// Hook up the button
+document.getElementById('show-more-button').addEventListener('click', renderNextBatch);
 
 
 
