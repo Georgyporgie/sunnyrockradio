@@ -522,10 +522,10 @@ font-size: 14px; border-radius: 20px;
 }
 
 
-#track-list-container {  font-size: 15px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif;
-  margin: -100px 0px 0px 5px; background:linear-gradient(45deg,#0033FF,#006666,#003399);    padding: 25px 0px 25px 0px; border-radius: 12px;  border: solid 3px #FF0000; font-weight:800;line-height: 1.5;letter-spacing: 0.5px;box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-transition: all 0.3s ease;z-index: 0;
-
+#track-list-container {  font-size: 15px;  font-family: Arial ,Helvetica,sans-serif;
+  margin: -100px 0px 0px 5px;    padding: 25px 0px 25px 0px; border-radius: 12px;  border: solid 3px #FF0000; font-weight:800;line-height: 1.5;letter-spacing: 0.5px;box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+transition: all 0.3s ease;z-index: 0;color: #E53935;
+background:linear-gradient(45deg,#0033FF,#006666,#003399); 
 
 }
 
@@ -534,7 +534,10 @@ transition: all 0.3s ease;z-index: 0;
   background-color: #fff8dc;
   color: #b8860b;
   font-style: normal;
-  padding: 0 4px;
+  padding: 0 4px;color: #E53935;
+background: linear-gradient(45deg, #0033FF, #0066CC, #3F51B5);
+text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+box-shadow: 0 0 12px rgba(0,0,0,0.4);
   border-radius: 3px;
 }
 
@@ -1009,4 +1012,9 @@ filter:opacity(75%);
 #rocky  {   display: block; margin: auto; z-index: 0;filter: brightness(105%) saturate(105%) contrast(105%);
 
 
+}
+
+
+#show-more-button {  font-size: 15px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif; display:block;
+z-index: -400;  margin: -18px auto auto auto ; background:linear-gradient(45deg,#0033FF,#006666,#003399);     border-radius: 5px;   font-weight:800;font-optical-sizing: auto; padding: -5px;  visibility: visible;height: 30px; width: 110px; 
 }
