@@ -933,7 +933,7 @@ filter:opacity(75%);
 
 .new-tag {
   font-weight: bold;
-  color: gold;
+  color: gold; z-index: 200;
 }
 
 .blinking-star {

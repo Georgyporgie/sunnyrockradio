@@ -2169,7 +2169,7 @@ const jingleFolders = [
   "discjockeys",
   "effects",
   "games",
-"audio"
+  "audio"
 ];
 
 const getName = t => (t?.name || t?.title || t?.filename || String(t)).trim();
@@ -2186,16 +2186,39 @@ const jingles = track_list.filter(t => {
   );
 });
 
-// Real tracks are everything else
-const realTracks = track_list.filter(t => !jingles.includes(t));
+// Deduplicate helper with logging
+function dedupeTracks(tracks) {
+  const seen = new Set();
+  const duplicates = [];
+
+  const unique = tracks.filter(t => {
+    const key = `${getName(t)}-${getPath(t)}`;
+    if (seen.has(key)) {
+      duplicates.push(getName(t));
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
+
+  // Log duplicates
+  if (duplicates.length > 0) {
+    console.log("Duplicates removed:", duplicates);
+  } else {
+    console.log("No duplicates found.");
+  }
+
+  return unique;
+}
+
+// Real tracks are everything else, deduped
+const realTracks = dedupeTracks(
+  track_list.filter(t => !jingles.includes(t))
+);
 
 console.log("Total tracks:", totalTracks);
 console.log("Number of jingles/non-music:", jingles.length);
-console.log("Number of real tracks:", realTracks.length);
-console.log("Real track list:", realTracks.map(getName));
-
-
-
+console.log("Number of real tracks (deduped):", realTracks.length);
 
 
 
