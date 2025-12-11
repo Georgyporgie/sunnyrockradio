@@ -2161,6 +2161,40 @@ document.getElementById('track-list-container').appendChild(detailsElement2);
 
 
 
+// Keywords/folders you want to treat as jingles or non-music
+const jingleFolders = [
+  "jingle",
+  "sunny ship",
+  "voiceover",
+  "pirate background",
+  "reklame",
+  "discjockeys",
+  "effects",
+  "games",
+"audio"
+];
+
+const getName = t => (t?.name || t?.title || t?.filename || String(t)).trim();
+const getPath = t => (t?.path || "").trim().toLowerCase();
+
+const totalTracks = let_tracklist.length;
+
+// Jingles: check if name or path contains any keyword
+const jingles = let_tracklist.filter(t => {
+  const name = getName(t).toLowerCase();
+  const path = getPath(t);
+  return jingleFolders.some(keyword =>
+    name.includes(keyword) || path.includes(keyword)
+  );
+});
+
+// Real tracks are everything else
+const realTracks = let_tracklist.filter(t => !jingles.includes(t));
+
+console.log("Total tracks:", totalTracks);
+console.log("Number of jingles/non-music:", jingles.length);
+console.log("Number of real tracks:", realTracks.length);
+console.log("Real track list:", realTracks.map(getName));
 
 
 
