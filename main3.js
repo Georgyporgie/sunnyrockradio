@@ -31,6 +31,21 @@ let updateTimer;
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
  
+
+// ── Shuffle Helper ──
+function fisherYatesShuffle(array) {
+  let m = array.length, i;
+  while (m) {
+    i = Math.floor(Math.random() * m--);
+    [array[m], array[i]] = [array[i], array[m]];
+  }
+  return array;
+}
+
+
+
+
+
 // Define the list of tracks that have to be played
 let track_list = [
   
@@ -1544,6 +1559,9 @@ let track_list = [
 
 
 
+// ── Shuffle immediately at startup ──
+track_list = fisherYatesShuffle(track_list);
+console.log("✨ Shuffled playlist:", track_list.map(t => t.name));
 
 
 
