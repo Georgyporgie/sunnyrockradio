@@ -921,13 +921,6 @@ let track_list = [
 
 
 
-{
-    name: "Black Velvet",
-    artist: "Alannah Miles",
-    image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
-    path: "muziek/muziek01/Black Velvet -  Alannah Miles.mp3",
-  },
-
 
 
 
@@ -2237,17 +2230,6 @@ const realTracks = dedupeTracks(
 console.log("Total tracks:", totalTracks);
 console.log("Number of jingles/non-music:", jingles.length);
 console.log("Number of real tracks (deduped):", realTracks.length);
-
-
-
-
-
-
-
-
-
-
-
 
 
 
