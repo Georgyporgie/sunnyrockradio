@@ -150,7 +150,15 @@ let track_list = [
 
 
 
+{
+     name: "jingle bells ",
+    artist: "Christmas",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingle bells/jingle bells2.mp3"
+  
 
+
+},
 
 
 
@@ -528,7 +536,15 @@ let track_list = [
 
 
 
+{
+     name: "jingle bells ",
+    artist: "Christmas",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingle bells/jingle bells2.mp3"
 
+
+
+},
 
 
 
@@ -726,7 +742,15 @@ let track_list = [
 
 
 
+{
+     name: "jingle bells ",
+    artist: "Christmas",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingle bells/jingle bells2.mp3"
 
+
+
+},
 
 
 
@@ -952,7 +976,15 @@ let track_list = [
   },
 
 
+{
+     name: "jingle bells ",
+    artist: "Christmas",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingle bells/jingle bells2.mp3"
+  
 
+
+},
 
 
 
@@ -1262,7 +1294,15 @@ let track_list = [
     path: "muziek/muziek01/The Who - Won't get fooled again.mp3",
   },
 
+{
+     name: "jingle bells ",
+    artist: "Christmas",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingle bells/jingle bells2.mp3"
+   
 
+
+},
 
 {
      name: "Welcome",
@@ -1399,7 +1439,15 @@ let track_list = [
   },
 
 
+{
+     name: "jingle bells ",
+    artist: "Christmas",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "muziek/jingle bells/jingle bells2.mp3"
 
+
+
+},
 
 
 {
