@@ -1015,10 +1015,32 @@ filter:opacity(75%);
 }
 
 
-#show-more-button {  font-size: 15px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif; display:block;
+#show-more-button {  font-size: 20px; color: #FF0000; font-family: Arial ,Helvetica,sans-serif; display:block;
 z-index: -400;  margin: -18px auto auto auto ; background:linear-gradient(45deg,#0033FF,#006666,#003399);     border-radius: 5px;   font-weight:800;font-optical-sizing: auto; padding: -5px;  visibility: visible;height: 30px; width: 110px; 
 }
 
+
+
+.flake {
+  position: fixed;
+  top: -30px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  animation: fall linear forwards, fadeIn 1.5s ease-out;
+}
+
+@keyframes fall {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
+  100% { transform: translateX(var(--drift)) translateY(110vh) rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin1 { from { rotate: 0deg; } to { rotate: 360deg; } }
+@keyframes spin2 { from { rotate: 0deg; } to { rotate: -360deg; } }
 
 
 
