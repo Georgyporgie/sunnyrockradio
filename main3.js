@@ -377,7 +377,9 @@ let track_list = [
     artist: "Jan Hammer",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Miami Vice Theme-  Jan Hammer.mp3",
-  },
+   isLoud: true,          
+  loudnessValue: 0.62
+},
 
 
 
@@ -1685,7 +1687,33 @@ function loadTrack(track_index) {
   }
 
 
+ // ✅ Metadata fade scheduling
+  curr_track.addEventListener("loadedmetadata", () => {
+    const duration = curr_track.duration;
+    console.log("📀 Metadata loaded for:", track.name);
+    console.log("🕰️ Track duration:", duration, "seconds");
 
+    let fadeTime, fadeStart;
+
+    if (track.quickFade) {
+      fadeTime = track.fadeLength || 1500;
+      const buffer = track.endBuffer || 0;
+      fadeStart = (duration * 1000) - (fadeTime + buffer);
+      console.log(`⚡ Quick fade: ${fadeTime/1000}s, leaving ${buffer/1000}s buffer`);
+    } else if (duration > 180) {
+      fadeTime = 2000;
+      fadeStart = (duration * 1000) - fadeTime;
+      console.log("⏱️ Standard fade for track >3min");
+    } else {
+      console.log("🚫 No fade scheduled — short track or no flag");
+      return;
+    }
+
+    if (fadeStart > 0) {
+      console.log(`⏳ Scheduled ${fadeTime/1000}s fade starting at ${Math.round(fadeStart/1000)}s`);
+      setTimeout(() => fadeOut(curr_track, fadeTime), fadeStart);
+    }
+  });
 
 
 
