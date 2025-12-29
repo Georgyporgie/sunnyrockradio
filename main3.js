@@ -1608,10 +1608,19 @@ console.log("✨ Shuffled playlist:", track_list.map(t => t.name));
 
 
 
+function getTimeBasedVolume() {
+  const hour = new Date().getHours();  // 0–23
 
-
-
-
+  if (hour >= 6 && hour < 12) {
+    return 0.6;  // Morning — softer wake-up vibes
+  } else if (hour >= 12 && hour < 18) {
+    return 0.8;  // Afternoon — balanced and bright
+  } else if (hour >= 18 && hour < 24) {
+    return 0.75;  // Evening — party mode or immersive listening
+  } else {
+    return 0.5;  // Night — low volume, chill zone
+  }
+}
 
 
 
@@ -1622,14 +1631,58 @@ console.log("✨ Shuffled playlist:", track_list.map(t => t.name));
 
 
 function loadTrack(track_index) {
-  if (!track_list[track_index]) return;
+  const track = track_list[track_index];
+  if (!track) return;
 
   // Increment and sort by play count
-  track_list[track_index].playCount += 1;
+  track.playCount += 1;
   sortTracksByPlayCount();
 
-  
+  // 🎚 Apply EQ lift if tagged
+  if (track.eq) {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioCtx.createMediaElementSource(curr_track);
 
+    const bass = audioCtx.createBiquadFilter();
+    bass.type = "lowshelf";
+    bass.frequency.value = 200;
+    bass.gain.value = track.eq.bass || 0;
+
+    const mid = audioCtx.createBiquadFilter();
+    mid.type = "peaking";
+    mid.frequency.value = 1000;
+    mid.Q.value = 1;
+    mid.gain.value = track.eq.mid || 0;
+
+    const treble = audioCtx.createBiquadFilter();
+    treble.type = "highshelf";
+    treble.frequency.value = 3000;
+    treble.gain.value = track.eq.treble || 0;
+
+    source.connect(bass).connect(mid).connect(treble).connect(audioCtx.destination);
+  }
+
+  // 🔊 Volume logic with safe boost handling
+  const base = Number(getTimeBasedVolume());
+  const boostRaw = track.volumeBoost;
+  const boost = Number(boostRaw);
+  const boostSafe = Number.isFinite(boost) ? boost : 0;
+
+  let finalVolume = base + boostSafe;
+  if (!Number.isFinite(finalVolume)) finalVolume = base;
+  finalVolume = Math.max(0, Math.min(1, finalVolume));
+
+  // 🔥 Loudness tagging
+  const loudThreshold = 0.9;
+  track.loudnessValue = finalVolume;
+  track.isLoud = finalVolume >= loudThreshold;
+  track.wasBoosted = boostSafe > 0;
+
+  if (track.isLoud) {
+    console.warn(
+      `🚨 Loud track tagged: ${track.name} | Boosted? ${track.wasBoosted} | Volume: ${finalVolume}`
+    );
+  }
 
 
 
