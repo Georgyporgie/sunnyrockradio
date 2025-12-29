@@ -1717,6 +1717,31 @@ function loadTrack(track_index) {
 
 
 
+
+
+  // ✅ Smooth fade-out (existing)
+  function fadeOut(audio, duration, targetVolume = 0) {
+    const startVolume = audio.volume;
+    const steps = 30;
+    const stepTime = duration / steps;
+    let currentStep = 0;
+
+    const fade = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+      const eased = 1 - Math.pow(1 - progress, 3);
+      audio.volume = startVolume - (startVolume - targetVolume) * eased;
+
+      if (currentStep >= steps) {
+        clearInterval(fade);
+        audio.volume = targetVolume;
+      }
+    }, stepTime);
+  }
+
+
+
+
 // Reset old track and create new one
   clearInterval(updateTimer);
   resetValues();
