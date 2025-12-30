@@ -452,7 +452,9 @@ let track_list = [
     artist: "Propaganda",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Propaganda - Duel.mp3",
-  },
+      quickFade: true,
+    volumeBoost: 0.35
+},
 
 
 {
@@ -815,7 +817,7 @@ let track_list = [
     artist: "Sunny Journaal",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/jingles/nos journaal 11.mp3",
-  
+ 
 
 
 }, 
@@ -829,7 +831,9 @@ let track_list = [
     artist: "Fleetwood Mac",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek02/Fleetwood Mac -Little Lies.mp3",
-  },
+    volumeBoost: 0.35,
+ quickFade: true
+},
 
 
 
@@ -1640,51 +1644,41 @@ function loadTrack(track_index) {
   track.playCount += 1;
   sortTracksByPlayCount();
 
-  // 🎚 Apply EQ lift if tagged
-  if (track.eq) {
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const source = audioCtx.createMediaElementSource(curr_track);
+// 🎚 Apply EQ + analogue warmth if tagged
+if (track.eq) {
+  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const source = audioCtx.createMediaElementSource(curr_track);
 
-    const bass = audioCtx.createBiquadFilter();
-    bass.type = "lowshelf";
-    bass.frequency.value = 200;
-    bass.gain.value = track.eq.bass || 0;
+  const bass = audioCtx.createBiquadFilter();
+  bass.type = "lowshelf";
+  bass.frequency.value = 200;
+  bass.gain.value = track.eq.bass || 0;
 
-    const mid = audioCtx.createBiquadFilter();
-    mid.type = "peaking";
-    mid.frequency.value = 1000;
-    mid.Q.value = 1;
-    mid.gain.value = track.eq.mid || 0;
+  const mid = audioCtx.createBiquadFilter();
+  mid.type = "peaking";
+  mid.frequency.value = 1000;
+  mid.Q.value = 1;
+  mid.gain.value = track.eq.mid || 0;
 
-    const treble = audioCtx.createBiquadFilter();
-    treble.type = "highshelf";
-    treble.frequency.value = 3000;
-    treble.gain.value = track.eq.treble || 0;
+  const treble = audioCtx.createBiquadFilter();
+  treble.type = "highshelf";
+  treble.frequency.value = 3000;
+  treble.gain.value = track.eq.treble || 0;
 
-    source.connect(bass).connect(mid).connect(treble).connect(audioCtx.destination);
-  }
+  // analogue warmth
+  const warm = audioCtx.createWaveShaper();
+  warm.curve = createAnalogueCurve();
+  warm.oversample = "4x";
 
-  // 🔊 Volume logic with safe boost handling
-  const base = Number(getTimeBasedVolume());
-  const boostRaw = track.volumeBoost;
-  const boost = Number(boostRaw);
-  const boostSafe = Number.isFinite(boost) ? boost : 0;
+  // FINAL chain: EQ → warmth → output
+  source
+    .connect(bass)
+    .connect(mid)
+    .connect(treble)
+    .connect(warm)
+    .connect(audioCtx.destination);
+}
 
-  let finalVolume = base + boostSafe;
-  if (!Number.isFinite(finalVolume)) finalVolume = base;
-  finalVolume = Math.max(0, Math.min(1, finalVolume));
-
-  // 🔥 Loudness tagging
-  const loudThreshold = 0.9;
-  track.loudnessValue = finalVolume;
-  track.isLoud = finalVolume >= loudThreshold;
-  track.wasBoosted = boostSafe > 0;
-
-  if (track.isLoud) {
-    console.warn(
-      `🚨 Loud track tagged: ${track.name} | Boosted? ${track.wasBoosted} | Volume: ${finalVolume}`
-    );
-  }
 
 
  // ✅ Metadata fade scheduling
@@ -2193,7 +2187,12 @@ function createListItem(track) {
   // Style the word "by" with light blue color
   let coloredBy = ' <span style="color: goldenrod;">by</span> ';
 
-  let trackInfo = document.createElement('div');
+    // Add duration if available
+  const durationText = track.duration ? 
+    `<span class="track-duration" style="margin-left:10px; color:darkslategray;">${track.duration}</span>` 
+    : '';
+
+let trackInfo = document.createElement('div');
   trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
   li.appendChild(trackInfo);
 
@@ -2207,6 +2206,11 @@ function createListItem(track) {
 
   return li;
 }
+
+
+
+
+
 
 // Filter the track list to exclude tracks with 'Sunny' in the artist's name
 let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().includes('pie'));
@@ -2388,4 +2392,18 @@ console.log("Number of real tracks (deduped):", realTracks.length);
 
 
 
+function addDurationsToTrackList(track_list) {
+  track_list.forEach((track, index) => {
+    let audio = new Audio(track.path);
 
+    audio.addEventListener("loadedmetadata", () => {
+      track.duration = formatTime(Math.floor(audio.duration));
+
+      // Update the corresponding <li> duration span
+      const durationElement = document.querySelectorAll(".track-duration")[index];
+      if (durationElement) {
+        durationElement.textContent = track.duration;
+      }
+    });
+  });
+}
