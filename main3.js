@@ -1583,6 +1583,9 @@ function getTimeBasedVolume() {
 
 
 
+function cleanURL(url) {
+  return url.replace(/ /g, "%20");
+}
 
 
 
@@ -1591,48 +1594,49 @@ function loadTrack(track_index) {
   const track = track_list[track_index];
   if (!track) return;
 
+  // Create new audio element (FIXED)
+  curr_track = new Audio(cleanURL(track.path));
+
   // Increment and sort by play count
   track.playCount += 1;
   sortTracksByPlayCount();
 
-// 🎚 Apply EQ + analogue warmth if tagged
-if (track.eq) {
-  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  const source = audioCtx.createMediaElementSource(curr_track);
+  // 🎚 Apply EQ + analogue warmth if tagged
+  if (track.eq) {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioCtx.createMediaElementSource(curr_track);
 
-  const bass = audioCtx.createBiquadFilter();
-  bass.type = "lowshelf";
-  bass.frequency.value = 200;
-  bass.gain.value = track.eq.bass || 0;
+    const bass = audioCtx.createBiquadFilter();
+    bass.type = "lowshelf";
+    bass.frequency.value = 200;
+    bass.gain.value = track.eq.bass || 0;
 
-  const mid = audioCtx.createBiquadFilter();
-  mid.type = "peaking";
-  mid.frequency.value = 1000;
-  mid.Q.value = 1;
-  mid.gain.value = track.eq.mid || 0;
+    const mid = audioCtx.createBiquadFilter();
+    mid.type = "peaking";
+    mid.frequency.value = 1000;
+    mid.Q.value = 1;
+    mid.gain.value = track.eq.mid || 0;
 
-  const treble = audioCtx.createBiquadFilter();
-  treble.type = "highshelf";
-  treble.frequency.value = 3000;
-  treble.gain.value = track.eq.treble || 0;
+    const treble = audioCtx.createBiquadFilter();
+    treble.type = "highshelf";
+    treble.frequency.value = 3000;
+    treble.gain.value = track.eq.treble || 0;
 
-  // analogue warmth
-  const warm = audioCtx.createWaveShaper();
-  warm.curve = createAnalogueCurve();
-  warm.oversample = "4x";
+    // analogue warmth
+    const warm = audioCtx.createWaveShaper();
+    warm.curve = createAnalogueCurve();
+    warm.oversample = "4x";
 
-  // FINAL chain: EQ → warmth → output
-  source
-    .connect(bass)
-    .connect(mid)
-    .connect(treble)
-    .connect(warm)
-    .connect(audioCtx.destination);
-}
+    // FINAL chain: EQ → warmth → output
+    source
+      .connect(bass)
+      .connect(mid)
+      .connect(treble)
+      .connect(warm)
+      .connect(audioCtx.destination);
+  }
 
-
-
- // ✅ Metadata fade scheduling
+  // ✅ Metadata fade scheduling
   curr_track.addEventListener("loadedmetadata", () => {
     const duration = curr_track.duration;
     console.log("📀 Metadata loaded for:", track.name);
@@ -1659,8 +1663,6 @@ if (track.eq) {
       setTimeout(() => fadeOut(curr_track, fadeTime), fadeStart);
     }
   });
-
-
 
 
 
