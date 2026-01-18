@@ -169,7 +169,7 @@ body {
     <!-- Define the section for displaying details -->
     <div class="details">
 <div class="now-playing">PLAYING x OF y</div>
-      <div class="track-art"></div>
+     <br>
       <div class="track-name">Track Name</div>
       <div class="track-artist">Track Artist</div>
     </div>
@@ -697,7 +697,7 @@ scheduleRangeSwap();
             const audioFiles = {
                 
                 quarterHourSound: "muziek/effects/blast.mp3",
-                hourlySound: "audio/its now.mp3"
+                hourlySound: "audio/its%20now.mp3"
             };
 
             Object.entries(audioFiles).forEach(([id, src]) => {
@@ -1232,18 +1232,18 @@ window.addEventListener('load', () => {
     return;
   }
 
-  // --- Define schedules ---
-  const weekdaySlots = [
-    { start: 0,  end: 12, file: "muziek/jockeys/starten met Sunny.mp3" },
-    { start: 12, end: 18, file: "muziek/jockeys/Rock Music Seventies.mp3" },
-    { start: 18, end: 24, file: "muziek/voiceover/From The Heart Of Amsterdam2.mp3" }
-  ];
+// --- Define schedules ---
+const weekdaySlots = [
+  { start: 0,  end: 12, file: "muziek/jockeys/starten%20met%20Sunny.mp3" },
+  { start: 12, end: 18, file: "muziek/jockeys/Rock%20Music%20Seventies.mp3" },
+  { start: 18, end: 24, file: "muziek/voiceover/From%20The%20Heart%20Of%20Amsterdam2.mp3" }
+];
 
-  const weekendSlots = [
-    { start: 0,  end: 14, file: "muziek/jockeys/40 in jingle.mp3" },
-    { start: 14, end: 20, file: "muziek/voiceover/From The Heart Of Amsterdam2.mp3" },
-    { start: 20, end: 24, file: "muziek/jockeys/Rock Music Seventies.mp3" }
-  ];
+const weekendSlots = [
+  { start: 0,  end: 14, file: "muziek/jockeys/40%20in%20jingle.mp3" },
+  { start: 14, end: 20, file: "muziek/voiceover/From%20The%20Heart%20Of%20Amsterdam2.mp3" },
+  { start: 20, end: 24, file: "muziek/jockeys/Rock%20Music%20Seventies.mp3" }
+];
 
   // --- Helpers ---
   function getCurrentSlot() {

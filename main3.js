@@ -1,7 +1,7 @@
 // Select all the elements in the HTML page
 // and assign them to a variable
 let now_playing = document.querySelector(".now-playing");
-let track_art = document.querySelector(".track-art");
+
 let track_name = document.querySelector(".track-name");
 let track_artist = document.querySelector(".track-artist");
  
@@ -1719,7 +1719,7 @@ function loadTrack(track_index) {
 
 
  // Update UI
-  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+ 
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
