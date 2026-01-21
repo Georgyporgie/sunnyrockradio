@@ -1,19 +1,16 @@
-// Select all the elements in the HTML page
-// and assign them to a variable
+ // Select all the elements in the HTML page and assign them to a variable
 let now_playing = document.querySelector(".now-playing");
 
 let track_name = document.querySelector(".track-name");
 let track_artist = document.querySelector(".track-artist");
- 
+
 let playpause_btn = document.querySelector(".playpause-track");
 let next_btn = document.querySelector(".next-track");
-let prev_btn = document.querySelector(".prev-track");
- 
+
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
- 
 
 
 
@@ -24,13 +21,68 @@ let total_duration = document.querySelector(".total-duration");
 
 
 // Specify globally used values
+// GLOBAL AUDIO CHAIN STATE
+let audioCtx = null;
+let sourceNode = null;
+let eqNodes = [];
+let boostGain = null;
+let loudnessGain = null;
+let masterGain = null;
+
 let track_index = 0;
 let currentTrack = null;  
 let updateTimer;
- 
+
+
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
  
+
+function initAudioChain() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    loudnessGain = audioCtx.createGain();
+    boostGain = audioCtx.createGain();
+    masterGain = audioCtx.createGain();
+
+    loudnessGain.gain.value = 1;
+    boostGain.gain.value = 1;
+    masterGain.gain.value = 1;
+
+    masterGain.connect(audioCtx.destination);
+  }
+}
+function applyEQ(eq) {
+  eqNodes.forEach(n => n.disconnect());
+  eqNodes = [];
+
+  if (!eq) return;
+
+  const bass = audioCtx.createBiquadFilter();
+  bass.type = "lowshelf";
+  bass.frequency.value = 200;
+  bass.gain.value = eq.bass || 0;
+
+  const mid = audioCtx.createBiquadFilter();
+  mid.type = "peaking";
+  mid.frequency.value = 1000;
+  mid.Q.value = 1;
+  mid.gain.value = eq.mid || 0;
+
+  const treble = audioCtx.createBiquadFilter();
+  treble.type = "highshelf";
+  treble.frequency.value = 3000;
+  treble.gain.value = eq.treble || 0;
+
+  eqNodes = [bass, mid, treble];
+}
+
+
+
+
+
+
 
 // ── Shuffle Helper ──
 function fisherYatesShuffle(array) {
@@ -1594,144 +1646,45 @@ function loadTrack(track_index) {
   const track = track_list[track_index];
   if (!track) return;
 
-  // Create new audio element (FIXED)
+  const previousTrack = curr_track;
+
+  // Create new audio element
   curr_track = new Audio(cleanURL(track.path));
 
-  // Increment and sort by play count
-  track.playCount += 1;
+  // Increment play count + resort
+  track.playCount = (track.playCount || 0) + 1;
   sortTracksByPlayCount();
 
-  // 🎚 Apply EQ + analogue warmth if tagged
-  if (track.eq) {
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const source = audioCtx.createMediaElementSource(curr_track);
+  // 🔊 Volume logic (time-based + boost)
+  const base = Number(getTimeBasedVolume());
+  const boost = Number(track.volumeBoost);
+  const boostSafe = Number.isFinite(boost) ? boost : 0;
 
-    const bass = audioCtx.createBiquadFilter();
-    bass.type = "lowshelf";
-    bass.frequency.value = 200;
-    bass.gain.value = track.eq.bass || 0;
+  let finalVolume = Math.max(0, Math.min(1, base + boostSafe));
 
-    const mid = audioCtx.createBiquadFilter();
-    mid.type = "peaking";
-    mid.frequency.value = 1000;
-    mid.Q.value = 1;
-    mid.gain.value = track.eq.mid || 0;
+  // Loudness tagging
+  const loudThreshold = 0.9;
+  track.loudnessValue = finalVolume;
+  track.isLoud = finalVolume >= loudThreshold;
+  track.wasBoosted = boostSafe > 0;
 
-    const treble = audioCtx.createBiquadFilter();
-    treble.type = "highshelf";
-    treble.frequency.value = 3000;
-    treble.gain.value = track.eq.treble || 0;
-
-    // analogue warmth
-    const warm = audioCtx.createWaveShaper();
-    warm.curve = createAnalogueCurve();
-    warm.oversample = "4x";
-
-    // FINAL chain: EQ → warmth → output
-    source
-      .connect(bass)
-      .connect(mid)
-      .connect(treble)
-      .connect(warm)
-      .connect(audioCtx.destination);
+  if (track.isLoud) {
+    console.warn(`🚨 Loud track: ${track.name} | Boosted: ${track.wasBoosted} | Volume: ${finalVolume}`);
   }
 
-  // ✅ Metadata fade scheduling
-  curr_track.addEventListener("loadedmetadata", () => {
-    const duration = curr_track.duration;
-    console.log("📀 Metadata loaded for:", track.name);
-    console.log("🕰️ Track duration:", duration, "seconds");
+  const shouldFade = track.quickFade === true;
 
-    let fadeTime, fadeStart;
-
-    if (track.quickFade) {
-      fadeTime = track.fadeLength || 1500;
-      const buffer = track.endBuffer || 0;
-      fadeStart = (duration * 1000) - (fadeTime + buffer);
-      console.log(`⚡ Quick fade: ${fadeTime/1000}s, leaving ${buffer/1000}s buffer`);
-    } else if (duration > 180) {
-      fadeTime = 2000;
-      fadeStart = (duration * 1000) - fadeTime;
-      console.log("⏱️ Standard fade for track >3min");
+  // 🌊 Fade previous track if needed
+  if (previousTrack && !previousTrack.paused) {
+    if (shouldFade) {
+      quickFadeOut(previousTrack, 1000, () => startNewRockTrack(track_index, finalVolume));
     } else {
-      console.log("🚫 No fade scheduled — short track or no flag");
-      return;
+      previousTrack.pause();
+      startNewRockTrack(track_index, finalVolume);
     }
-
-    if (fadeStart > 0) {
-      console.log(`⏳ Scheduled ${fadeTime/1000}s fade starting at ${Math.round(fadeStart/1000)}s`);
-      setTimeout(() => fadeOut(curr_track, fadeTime), fadeStart);
-    }
-  });
-
-
-
-  // ✅ Smooth fade-out (existing)
-  function fadeOut(audio, duration, targetVolume = 0) {
-    const startVolume = audio.volume;
-    const steps = 30;
-    const stepTime = duration / steps;
-    let currentStep = 0;
-
-    const fade = setInterval(() => {
-      currentStep++;
-      const progress = currentStep / steps;
-      const eased = 1 - Math.pow(1 - progress, 3);
-      audio.volume = startVolume - (startVolume - targetVolume) * eased;
-
-      if (currentStep >= steps) {
-        clearInterval(fade);
-        audio.volume = targetVolume;
-      }
-    }, stepTime);
+  } else {
+    startNewRockTrack(track_index, finalVolume);
   }
-
-
-
-
-// Reset old track and create new one
-  clearInterval(updateTimer);
-  resetValues();
-
-  curr_track = new Audio(track_list[track_index].path); // ⬅️ New audio object
-  curr_track.load();
-
-  
-
-
-
-
-
-
-
-// Apply volume logic
-  adjustVolumeDynamically(curr_track);
-
- 
-
-
-
-
-
-
-
-
-
-
- // Update UI
- 
-  track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
-  now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
-
-  // Update seek logic
-  updateTimer = setInterval(seekUpdate, 1000);
-
-  // Handle end of track
-  curr_track.addEventListener("ended", nextTrack);
-
-  // Set vibe
-  random_bg_color();
 }
 
 
@@ -1739,10 +1692,53 @@ function loadTrack(track_index) {
 
 
 
+function startNewRockTrack(index, finalVolume) {
+  const track = track_list[index];
 
+  // Recreate audio element for clean state
+  curr_track = new Audio(cleanURL(track.path));
 
+  // 🎧 Playcount ritual
+  curr_track.addEventListener("play", () => {
+    fadeIn(curr_track, finalVolume, 1000);
+  });
 
+  console.log("🎸 Loading track:", track.path);
 
+  // 🎨 UI updates
+  track_name.textContent = track.name;
+  track_artist.textContent = track.artist;
+  now_playing.textContent = `PLAYING ${index + 1} OF ${track_list.length}`;
+
+  // ⏱️ Seek timer
+  clearInterval(updateTimer);
+  updateTimer = setInterval(seekUpdate, 1000);
+
+  // 🔁 Auto-next
+  curr_track.addEventListener("ended", nextTrack);
+
+  // 🎧 Load audio
+  curr_track.load();
+
+  // ✨ Playlist highlight
+  curr_track.addEventListener("canplay", () => {
+    const allTracks = document.querySelectorAll("ul li");
+    if (!allTracks.length) return;
+
+    allTracks.forEach(li => li.classList.remove("blinking"));
+    if (allTracks[index]) allTracks[index].classList.add("blinking");
+  });
+
+  // 🔊 Dynamic volume balancing
+  curr_track.addEventListener("canplaythrough", () => {
+    adjustVolumeDynamically(curr_track, track);
+  });
+
+  // 🎛️ Connect to your global audio chain (EQ, warmth, boost, loudness)
+  if (typeof connectToAudioChain === "function") {
+    connectToAudioChain(curr_track, track);
+  }
+}
 
 
 
