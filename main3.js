@@ -5,7 +5,7 @@ let track_name = document.querySelector(".track-name");
 let track_artist = document.querySelector(".track-artist");
 
 let playpause_btn = document.querySelector(".playpause-track");
-let next_btn = document.querySelector(".next-track");
+
 
 let seek_slider = document.querySelector(".seek_slider");
 let volume_slider = document.querySelector(".volume_slider");
@@ -94,7 +94,14 @@ function fisherYatesShuffle(array) {
   return array;
 }
 
-
+// --- Helpers ---
+const purifyTrack = (track) => ({
+  ...track,
+  timeCategory: track.timeCategory?.trim().toLowerCase(),
+  mood: track.mood?.trim().toLowerCase(),
+  artist: track.artist?.trim(),
+  name: track.name?.trim()
+});
 
 
 
@@ -1606,8 +1613,9 @@ let track_list = [
 
 ];
 
-
-
+// --- Purify ritual --- track_list = track_list.map(purifyTrack);
+console.log(track_list);
+console.log("Purified track_list:", track_list);
 
 // ── Shuffle immediately at startup ──
 track_list = fisherYatesShuffle(track_list);
