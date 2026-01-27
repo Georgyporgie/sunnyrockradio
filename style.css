@@ -522,32 +522,82 @@ font-size: 14px; border-radius: 20px;
 }
 
 
-#track-list-container {  font-size: 15px;  font-family: Arial ,Helvetica,sans-serif;
-  margin: -100px 0px 0px 5px;    padding: 25px 0px 25px 0px; border-radius: 12px;  border: solid 3px #FF0000; font-weight:800;line-height: 1.5;letter-spacing: 0.5px;box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-transition: all 0.3s ease;z-index: 0;color: #E53935;
-background:linear-gradient(45deg,#0033FF,#006666,#003399); 
-
+/* Base styling */
+#track-list-container {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: -100px 0px 0px 5px;
+  padding: 25px 0px 25px 0px;
+  border-radius: 12px;
+  border: solid 3px #FF0000;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 0;
+  color: #E53935;
+  background: linear-gradient(45deg,#0033FF,#006666,#003399);
 }
 
-
+/* Highlighted text */
 #track-list-container em {
   background-color: #fff8dc;
   color: #b8860b;
   font-style: normal;
-  padding: 0 4px;color: #E53935;
-background: linear-gradient(45deg, #0033FF, #0066CC, #3F51B5);
-text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  padding: 0 4px;
+  color: #E53935;
+  background: linear-gradient(45deg, #0033FF, #0066CC, #3F51B5);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
   border-radius: 3px;
 }
 
-/* Example CSS */
-#track-list-container li {
-  padding: 10px; /* Adds 10px spacing inside each item */
-  margin-bottom: 5px; /* Adds 5px spacing below each item */
-   /* Removes default bullet points */
-z-index:200;
+/* OL reset */
+#track-list-container ol {
+ counter-reset: none !important;
+  padding-left: 0;
+  margin: 0;
 }
+
+/* Honingraat LI structure */
+#track-list-container li {
+  list-style: none;
+  counter-increment: track;
+  position: relative;
+  padding: 10px 10px 10px 55px;
+  margin: 0;
+
+  /* LINE BETWEEN ITEMS */
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+
+/* Remove last line */
+#track-list-container li:last-child {
+  border-bottom: none;
+}
+
+/* Number column (honingraat style) */
+#track-list-container li::before {
+  content: counter(track) ".";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  text-align: right;
+
+  color: #ffdf5e;
+  font-weight: 900;
+  font-size: 16px;
+
+  text-shadow:
+    0 0 6px #ffdf5e,
+    0 0 12px #ffd23c,
+    0 0 18px #ffb300;
+}
+
+
 
 
 .ham  {    width: 40px;  height: 40px; filter: brightness(110%) saturate(110%) contrast(110%) opacity(70%); transform: rotate(0deg); z-index: -200; margin-bottom: -6px; margin-right: 3px;margin-top: -12px; color: white;
