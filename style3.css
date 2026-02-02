@@ -436,7 +436,9 @@ border-radius: 5px; z-index: -500; width: 51px; height: 34px; font-size: 17px; d
 
 }
 
-
+.info:hover {
+  background: white; color:black;
+}
 
 #line {  color: black; font-weight: bold;
 

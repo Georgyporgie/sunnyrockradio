@@ -1262,31 +1262,7 @@ const weekendSlots = [
 });
 </script>
 <script>
-// --- Shuffle Modes ---
-const ShuffleModes = {
-  balancedBias: track => 1 / (1 + track.playcount),
-  deepCrateDig: track => 1 / Math.pow(1 + track.playcount, 2),
-  crowdPleaser: track => 1 / (1 + Math.abs(track.playcount - medianPlaycount()))
-};
 
-function medianPlaycount() {
-  const counts = scheduledMp3Files.map(t => t.playcount).sort((a,b) => a-b);
-  const mid = Math.floor(counts.length / 2);
-  return counts.length % 2 ? counts[mid] : (counts[mid-1] + counts[mid]) / 2;
-}
-
-function weightedPick(tracks, mode = 'balancedBias') {
-  const weightFn = ShuffleModes[mode];
-  const weights = tracks.map(t => weightFn(t));
-  const total = weights.reduce((a, b) => a + b, 0);
-
-  let r = Math.random() * total;
-  for (let i = 0; i < tracks.length; i++) {
-    r -= weights[i];
-    if (r <= 0) return tracks[i];
-  }
-  return tracks[tracks.length - 1];
-}
 
 // --- Mood logic ---
 function getShuffleMode() {
