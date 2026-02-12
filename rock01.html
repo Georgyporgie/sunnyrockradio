@@ -1083,8 +1083,12 @@ function generateSchedule() {
         function scheduleSounds() {
             console.log("Scheduling sounds...");
             var now = new Date();
-            
-            // Calculate delay for hourly sound
+            var ms = 60 * 1000;
+           
+
+
+
+ // Calculate delay for hourly sound
             var hourlyDelay = (60 - now.getMinutes()) * 60 * 1000 - now.getSeconds() * 1000;
             setTimeout(function() {
                 playSound(["hourlySound"]);
