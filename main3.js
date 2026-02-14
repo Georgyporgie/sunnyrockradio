@@ -396,7 +396,12 @@ let track_list = [
   },
  
  
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
 
  
@@ -529,7 +534,12 @@ let track_list = [
 }, 
 
 
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
 {
 
@@ -672,7 +682,12 @@ let track_list = [
 
 
 
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
  
 
@@ -756,7 +771,12 @@ let track_list = [
 
 
 
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
 
 
@@ -981,7 +1001,12 @@ let track_list = [
   },
 
 
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
 
 
@@ -1273,7 +1298,12 @@ let track_list = [
 
 
 
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
 
 
@@ -1444,7 +1474,9 @@ let track_list = [
     artist: "Iggy Pop",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Iggy Pop - Lust for live (live).mp3",
-  },
+     isLoud: true,          
+  loudnessValue: 0.52
+},
 
  {
     name: "Snippet",
@@ -1557,7 +1589,12 @@ let track_list = [
     path: "muziek/muziek01/Pink Floyd - Revermation Bell.mp3",
   },
 
-
+{
+     name: "Broadcast Amsterdam",
+    artist: "Sunny",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "audio/Broadcast Amsterdam2.mp3",
+},
 
 
 {
