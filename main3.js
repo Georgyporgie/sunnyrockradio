@@ -400,7 +400,7 @@ let track_list = [
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
 
 
@@ -538,8 +538,9 @@ let track_list = [
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
+
 
 {
 
@@ -686,8 +687,9 @@ let track_list = [
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
+
 
  
 
@@ -775,8 +777,9 @@ let track_list = [
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
+
 
 
 
@@ -1005,8 +1008,9 @@ let track_list = [
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
+
 
 
 
@@ -1296,14 +1300,13 @@ let track_list = [
 
 
 
-
-
 {
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
+
 
 
 
@@ -1593,8 +1596,9 @@ let track_list = [
      name: "Broadcast Amsterdam",
     artist: "Sunny",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "audio/Broadcast Amsterdam2.mp3",
+    path: "https://sunnyhotradio.com/audio/Broadcast Amsterdam2.mp3"
 },
+
 
 
 {
