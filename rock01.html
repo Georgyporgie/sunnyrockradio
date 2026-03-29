@@ -915,6 +915,22 @@ startTime();
 
 
 
+<script>
+window.addEventListener("load", () => {
+  // Play after 60 minutes of listening
+ setInterval(() => {
+  playSound(["sixtyMinuteSou"]);
+}, 60 * 60 * 1000);
+
+});
+</script>
+
+
+
+
+<audio id="sixtyMinuteSou">
+  <source src="muziek/jingles/another hour of music.mp3" type="audio/mp3">
+</audio>
 
 
 
