@@ -2233,14 +2233,14 @@ document.getElementById('track-list-container').appendChild(ol);
 
 // Create the summary element for tracks 21 to 40
 let summaryElement1 = document.createElement('summary');
-summaryElement1.textContent = 'tracks 20 to 40';
+summaryElement1.textContent = 'show more';
 
 // Create a details element and append the summary to it
 let detailsElement1 = document.createElement('details');
 detailsElement1.appendChild(summaryElement1);
 
 // Create the ordered list, set start attribute to 21, and add tracks 21 to 40
-let additionalTrackList1 = filteredTrackList.slice(20, 40);
+let additionalTrackList1 = filteredTrackList.slice(20, 60);
 let additionalOl1 = document.createElement('ol');
 additionalOl1.setAttribute('start', 20);
 
@@ -2265,31 +2265,6 @@ document.getElementById('track-list-container').appendChild(detailsElement1);
 
 
 
-
-
-
-// Create the summary element for tracks 41 to 60
-let summaryElement2 = document.createElement('summary');
-summaryElement2.textContent = 'tracks 40 to 60';
-
-// Create a details element and append the summary to it
-let detailsElement2 = document.createElement('details');
-detailsElement2.appendChild(summaryElement2);
-
-// Create the ordered list, set start attribute to 41, and add tracks 41 to 60
-let additionalTrackList2 = filteredTrackList.slice(40, 60);
-let additionalOl2 = document.createElement('ol');
-additionalOl2.setAttribute('start', 40);
-
-additionalTrackList2.forEach(track => {
-  additionalOl2.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the details element
-detailsElement2.appendChild(additionalOl2);
-
-// Append the details element to the placeholder div
-document.getElementById('track-list-container').appendChild(detailsElement2);
 
 
 

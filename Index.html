@@ -305,7 +305,20 @@ The Netherlands<br>
 <script src= "main.js"> </script>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const today = new Date();
+    const month = today.getMonth() + 1;
 
+    const img = document.getElementById("logo");
+
+    if (month >= 6 && month <= 10) {
+        img.src = 'images/Sunny hotradio2.png';
+    } else {
+        img.src = 'images/Sunny hotradio22.png';
+    }
+});
+</script>
 
 
 
@@ -326,13 +339,7 @@ img.src = 'images/jazz.png';
 </script>
 
 
-<script>
-//Get our img element by using document.getElementById
-var img = document.getElementById("logo");
 
-//Set the src property of our element to the new image URL
-img.src = 'images/Sunny hotradio22.png';
-</script>
 
 
 
