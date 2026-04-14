@@ -12,7 +12,10 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center; margin-top: -90px;
- }
+    transform: scale(0.6);
+  opacity: 0;
+  transition: transform 2.2s ease, opacity 2.2s ease;
+}
 .details {
   display: flex;
   align-items: center;
@@ -21,6 +24,15 @@ body {
   margin-top: 25px;
 }
  
+
+
+.player.loaded {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
 .track-art {
   display: none;
 }
@@ -1115,3 +1127,7 @@ z-index: 400;  margin: -15px auto auto auto ; background:linear-gradient(45deg,#
 #summary:hover {
   background: white; color:black;
 }
+
+
+
+
