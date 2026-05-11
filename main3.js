@@ -1752,7 +1752,9 @@ function startNewRockTrack(index, finalVolume) {
   // 🎨 UI updates
   track_name.textContent = track.name;
   track_artist.textContent = track.artist;
-  now_playing.textContent = `PLAYING ${index + 1} OF ${track_list.length}`;
+   now_playing.innerHTML =
+`PLAYING <span class="track-number">${index + 1}th</span> SONG`;
+
 
   // ⏱️ Seek timer
   clearInterval(updateTimer);

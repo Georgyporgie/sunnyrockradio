@@ -1135,5 +1135,23 @@ z-index: 400;  margin: -15px auto auto auto ; background:linear-gradient(45deg,#
 }
 
 
+.track-number {
+  color: red;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
 
+@keyframes pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+
+
+@keyframes pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
 
