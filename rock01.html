@@ -168,7 +168,7 @@ body {
  
     <!-- Define the section for displaying details -->
     <div class="details">
-<div class="now-playing">PLAYING x OF y</div>
+
      <br>
       <div class="track-name">Track Name</div>
       <div class="track-artist">Track Artist</div>
@@ -295,7 +295,16 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
 
 <br>
 <br>
-<ul  id="track-list-container"></ul>
+<!-- LIVE LOG (ON AIR + NOW PLAYING + HISTORY) -->
+<div id="live-log-container"></div>
+
+<!-- PLAYLIST (your <ol>, <details>, etc.) -->
+<div id="track-list-container"></div>
+
+
+
+<div id="now-playing-log"></div>
+  <div id="played-before-log" class="expanded"></div>
 </div>
 
 

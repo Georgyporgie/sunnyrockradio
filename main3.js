@@ -1684,6 +1684,7 @@ function cleanURL(url) {
 }
 
 
+let playedTracks = [];
 
 
 function loadTrack(track_index) {
@@ -1742,18 +1743,20 @@ function startNewRockTrack(index, finalVolume) {
   // Recreate audio element for clean state
   curr_track = new Audio(cleanURL(track.path));
 
-  // 🎧 Playcount ritual
-  curr_track.addEventListener("play", () => {
-    fadeIn(curr_track, finalVolume, 1000);
-  });
+ curr_track.addEventListener("play", () => {
+  playedTracks.push(track);   // ⭐ FIX
+  renderLiveLog(track);
+
+  fadeIn(curr_track, finalVolume, 1000);
+});
+
 
   console.log("🎸 Loading track:", track.path);
 
   // 🎨 UI updates
   track_name.textContent = track.name;
   track_artist.textContent = track.artist;
-   now_playing.innerHTML =
-`PLAYING <span class="track-number">${index + 1}th</span> SONG`;
+
 
 
   // ⏱️ Seek timer
@@ -2168,39 +2171,7 @@ function emphasizeKeywords(text) {
   });
 }
 
-// Create the ordered list and append it to the body
-let ol = document.createElement('ol');
-document.body.appendChild(ol);
 
-// Function to create a list item for each track
-function createListItem(track) {
-  let li = document.createElement('li');
-
-  let emphasizedTrackName = emphasizeKeywords(track.name);
-  let emphasizedArtist = emphasizeKeywords(track.artist);
-
-  // Style the word "by" with light blue color
-  let coloredBy = ' <span style="color: goldenrod;">by</span> ';
-
-    // Add duration if available
-  const durationText = track.duration ? 
-    `<span class="track-duration" style="margin-left:10px; color:darkslategray;">${track.duration}</span>` 
-    : '';
-
-let trackInfo = document.createElement('div');
-  trackInfo.innerHTML = `<strong>${emphasizedTrackName}</strong>${coloredBy}${emphasizedArtist}`;
-  li.appendChild(trackInfo);
-
-  let audio = document.createElement('audio');
-  audio.controls = false;
-  let source = document.createElement('source');
-  source.src = track.path;
-  source.type = "audio/mpeg";
-  audio.appendChild(source);
-  li.appendChild(audio);
-
-  return li;
-}
 
 
 
@@ -2376,4 +2347,68 @@ function addDurationsToTrackList(track_list) {
       }
     });
   });
+}
+
+
+function renderLiveLog(currentTrack) {
+  const container = document.getElementById("track-list-container");
+
+  const formatBadge = (track) => {
+    if (!track.type) return "";
+    return `<span class="badge badge-${track.type}">${track.type}</span>`;
+  };
+
+  const formatMood = (track) => {
+    if (!track.mood) return "";
+    return `<span class="mood mood-${track.mood}">${track.mood}</span>`;
+  };
+
+const history = playedTracks
+  .slice(0, -1)
+  .filter(t => {
+    const p = t.path?.toLowerCase() || "";
+    return !p.includes("jingle") && !p.includes("jockeys")&& !p.includes("Visage")&& !p.includes("Sunny Ship");
+  })
+  .reverse();
+
+
+
+  container.innerHTML = `
+<div id="now-playing-log">
+  
+
+ <div id="on-air-banner">ON AIR </div>
+
+  <span style="color:goldenrod;">${currentTrack.name}</span>
+  <span style="color:goldenrod;"> by </span>
+  <span style="color:goldenrod;">${currentTrack.artist}</span>
+
+  ${formatBadge(currentTrack)}
+  ${formatMood(currentTrack)}
+
+
+</div>
+<div style="height: 25px; "margin: 0px;"></div> 
+
+    <div id="played-before-log" class="${history.length > 0 ? 'expanded' : ''}">
+      ${
+        history.length > 0
+          ? `
+            <strong style="color:red;">Played Before</strong><br>
+            ${history
+              .map(t => `
+                <div class="history-item">
+                  <span style="color:red;">${t.name}</span>
+                  <span style="color:goldenrod;"> by </span>
+                  <span style="color:goldenrod;">${t.artist}</span>
+                  ${formatBadge(t)}
+                  ${formatMood(t)}
+                </div>
+              `)
+              .join("")}
+          `
+          : ""
+      }
+    </div>
+  `;
 }
