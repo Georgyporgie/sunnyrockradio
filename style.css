@@ -554,7 +554,7 @@ font-size: 14px; border-radius: 20px;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  z-index: 0;
+  z-index: 0; text-align:center;
   color: #E53935;
   background: linear-gradient(45deg,#0033FF,#006666,#003399);
 }
