@@ -2378,15 +2378,16 @@ const history = playedTracks
   
 
  <div id="on-air-banner">ON AIR </div>
-
+<br>
   <span style="color:goldenrod;">${currentTrack.name}</span>
   <span style="color:goldenrod;"> by </span>
   <span style="color:goldenrod;">${currentTrack.artist}</span>
 
   ${formatBadge(currentTrack)}
   ${formatMood(currentTrack)}
-
-
+<br>
+<br>
+<span id="vinyl-icon"></span>
 </div>
 <div style="height: 25px; "margin: 0px;"></div> 
 

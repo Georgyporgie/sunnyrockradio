@@ -1166,3 +1166,97 @@ z-index:200; text-align: center;
   50% { opacity: 0.7; transform: scale(1.05); }
   100% { opacity: 1; transform: scale(1); }
 }
+
+
+
+
+
+#vinyl-icon {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+ margin-bottom: -19px;
+ margin-left: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    #111 65%,   /* vinyl body */
+    #222 80%,   /* subtle shine */
+    #000 100%   /* outer edge */
+  );
+  border: 2px solid #000;
+  position: relative;
+  animation: spinVinyl 3s linear infinite;
+
+}
+
+/* Center label */
+#vinyl-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #A3D5FF; /* your chosen label color */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 2px #000 inset;
+}
+
+/* Spindle hole */
+#vinyl-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Extra groove rings using box-shadows */
+#vinyl-icon {
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.05) inset,
+    0 0 0 4px rgba(255,255,255,0.05) inset,
+    0 0 0 6px rgba(255,255,255,0.05) inset,
+    0 0 0 8px rgba(255,255,255,0.05) inset;
+}
+
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.flake {
+  position: fixed;
+  top: -30px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  animation: fall linear forwards, fadeIn 1.5s ease-out;
+}
+
+@keyframes fall {
+  0%   { transform: translateX(0) translateY(0) rotate(0deg); }
+  100% { transform: translateX(var(--drift)) translateY(110vh) rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin1 { from { rotate: 0deg; } to { rotate: 360deg; } }
+@keyframes spin2 { from { rotate: 0deg; } to { rotate: -360deg; } }
+
+
+
+#rec  { filter: brightness(100%) saturate(100%) contrast(105%) opacity(70%);  z-index: 0;
+
+
+
+margin-top: -118px;   margin-right:7px; height: 55px; width: 70px;
+ float:left;
+
+}

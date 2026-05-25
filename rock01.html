@@ -284,7 +284,8 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
 <br>
 <br>
 <div>
-<h5 class="inch"><em> Todays Hotlist</em></h5><br>
+<h5 class="inch"><em> Todays Hotlist</em></h5><br><img id="rec">
+
 <br>
 <br>
 
@@ -304,7 +305,9 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
 
 
 <div id="now-playing-log"></div>
-  <div id="played-before-log" class="expanded"></div>
+ 
+
+<div id="played-before-log" class="expanded"></div>
 </div>
 
 
@@ -1040,7 +1043,13 @@ img.src = 'images/Sunny7.png';
 
 
 
+<script>
+//Get our img element by using document.getElementById
+var img = document.getElementById("rec");
 
+//Set the src property of our element to the new image URL
+img.src = 'images/record15.png';
+</script>
 
 
 
