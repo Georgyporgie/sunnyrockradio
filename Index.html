@@ -254,6 +254,23 @@ The Netherlands<br>
 <br>
 
 
+<audio id="foyflip" autoplay>
+  <source id="foyflipSource" src="" type="audio/mpeg" />
+</audio>
+
+<script>
+  // Set the audio source
+  document.getElementById("foyflipSource").src =
+    "https://sunnyhotradio.com/muziek/pirate background/radio zoek effect2.mp3";
+
+  const audio = document.getElementById("foyflip");
+
+  // Ensure volume is applied after the source is set
+  audio.volume = 0.5;
+
+  // Reload the audio so the new source is used
+  audio.load();
+</script>
 
 
 
