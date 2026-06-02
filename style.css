@@ -856,7 +856,7 @@ filter:opacity(75%);
 } 
 
 
-#playlist  {     width: 130px;  height: 125px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(75%); transform: rotate(0deg); z-index: -800; margin: -10px auto 25px auto; display: block; border: solid 1px #ff0000;
+#playlist  {     width: 130px;  height: 125px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(75%); transform: rotate(0deg); z-index: -1200; margin: -10px auto 25px auto; display: block; border: solid 1px #ff0000;
  
 
 }
@@ -1109,7 +1109,7 @@ background: #FF2A2A;
   letter-spacing: 1px;
   animation: pulse 1.4s infinite ease-in-out;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
-
+z-index:-200;
   /* Lightbulb glow */
   color: #fff8cc; /* warm lightbulb white-yellow */
   text-shadow:
