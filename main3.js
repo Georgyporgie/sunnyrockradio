@@ -1649,6 +1649,10 @@ let track_list = [
 
 ];
 
+
+
+
+
 // --- Purify ritual --- track_list = track_list.map(purifyTrack);
 console.log(track_list);
 console.log("Purified track_list:", track_list);
@@ -2356,21 +2360,7 @@ console.log("Number of real tracks (deduped):", realTracks.length);
 
 
 
-function addDurationsToTrackList(track_list) {
-  track_list.forEach((track, index) => {
-    let audio = new Audio(track.path);
 
-    audio.addEventListener("loadedmetadata", () => {
-      track.duration = formatTime(Math.floor(audio.duration));
-
-      // Update the corresponding <li> duration span
-      const durationElement = document.querySelectorAll(".track-duration")[index];
-      if (durationElement) {
-        durationElement.textContent = track.duration;
-      }
-    });
-  });
-}
 
 
 function renderLiveLog(currentTrack) {
@@ -2402,8 +2392,9 @@ const history = playedTracks
 
  <div id="on-air-banner">ON AIR </div>
 <br>
-  <span style="color:goldenrod;">${currentTrack.name}</span>
-  <span style="color:goldenrod;"> by </span>
+  <br>
+<span style="color:goldenrod;">${currentTrack.name}</span>
+  <span style="color:#FF2A2A;"> by </span>
   <span style="color:goldenrod;">${currentTrack.artist}</span>
 
   ${formatBadge(currentTrack)}
@@ -2422,9 +2413,9 @@ const history = playedTracks
             ${history
               .map(t => `
                 <div class="history-item">
-                  <span style="color:red;">${t.name}</span>
-                  <span style="color:goldenrod;"> by </span>
-                  <span style="color:goldenrod;">${t.artist}</span>
+                  <span style="color:#FF4500;">${t.name}</span>
+                  <span style="color:#2B2B2E;"> by </span>
+                  <span style="color:#FF4500;">${t.artist}</span>
                   ${formatBadge(t)}
                   ${formatMood(t)}
                 </div>
