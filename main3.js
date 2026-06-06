@@ -2398,7 +2398,7 @@ const history = playedTracks
   .slice(0, -1)
   .filter(t => {
     const p = t.path?.toLowerCase() || "";
-    return !p.includes("jingle") && !p.includes("jockeys")&& !p.includes("Visage")&& !p.includes("Sunny Ship");
+    return !p.includes("jingle") && !p.includes("jockeys")&& !p.includes("Visage")&& !p.includes("sunny ship");
   })
   .reverse();
 
