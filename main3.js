@@ -2363,6 +2363,24 @@ console.log("Number of real tracks (deduped):", realTracks.length);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderLiveLog(currentTrack) {
   const container = document.getElementById("track-list-container");
 
@@ -2401,7 +2419,14 @@ const history = playedTracks
   ${formatMood(currentTrack)}
 <br>
 <br>
-<span id="vinyl-icon"></span>
+ ${currentTrack.path &&
+ !currentTrack.path.toLowerCase().includes("jingle") &&
+ !currentTrack.path.toLowerCase().includes("discjockeys") &&
+ !currentTrack.path.toLowerCase().includes("audio") &&
+!currentTrack.path.toLowerCase().includes("sunny ship")
+  
+? `<span id="vinyl-icon"></span>`
+  : ""}
 </div>
 <div style="height: 25px; "margin: 0px;"></div> 
 
@@ -2409,7 +2434,7 @@ const history = playedTracks
       ${
         history.length > 0
           ? `
-            <strong style="color:red;">Played Before</strong><br>
+            <strong style="color:red;">Played Before:</strong><br>
             ${history
               .map(t => `
                 <div class="history-item">
