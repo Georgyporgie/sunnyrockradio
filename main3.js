@@ -1996,7 +1996,7 @@ function playTrack() {
   if (allTracks[track_index]) { // Ensure the current track exists in the filtered list
     allTracks[track_index].classList.add('blinking');
   } else {
-    console.error("Filtered track not found in the DOM!");
+    
   }
 }
 
@@ -2211,43 +2211,10 @@ let filteredTrackList = track_list.filter(track => !track.artist.toLowerCase().i
 // Limit the filtered track list to 20 tracks
 let limitedTrackList = filteredTrackList.slice(0, 20);
 
-// Add each track to the ordered list
-limitedTrackList.forEach(track => {
-  ol.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the placeholder div
-document.getElementById('track-list-container').appendChild(ol);
 
 
 
 
-
-//summary 21 - 40
-
-
-// Create the summary element for tracks 21 to 40
-let summaryElement1 = document.createElement('summary');
-summaryElement1.textContent = 'show more';
-
-// Create a details element and append the summary to it
-let detailsElement1 = document.createElement('details');
-detailsElement1.appendChild(summaryElement1);
-
-// Create the ordered list, set start attribute to 21, and add tracks 21 to 40
-let additionalTrackList1 = filteredTrackList.slice(20, 60);
-let additionalOl1 = document.createElement('ol');
-additionalOl1.setAttribute('start', 20);
-
-additionalTrackList1.forEach(track => {
-  additionalOl1.appendChild(createListItem(track));
-});
-
-// Append the ordered list to the details element
-detailsElement1.appendChild(additionalOl1);
-
-// Append the details element to the placeholder div
-document.getElementById('track-list-container').appendChild(detailsElement1);
 
 
 
@@ -2371,6 +2338,10 @@ console.log("Number of real tracks (deduped):", realTracks.length);
 
 
 
+function stripAllParentheses(text) {
+  if (!text) return "";
+  return text.replace(/\([^)]*\)/g, "").trim();
+}
 
 
 
@@ -2394,61 +2365,67 @@ function renderLiveLog(currentTrack) {
     return `<span class="mood mood-${track.mood}">${track.mood}</span>`;
   };
 
-const history = playedTracks
-  .slice(0, -1)
-  .filter(t => {
-    const p = t.path?.toLowerCase() || "";
-    return !p.includes("jingle") && !p.includes("jockeys")&& !p.includes("Visage")&& !p.includes("sunny ship");
-  })
-  .reverse();
-
-
+  const history = playedTracks
+    .slice(0, -1)
+    .filter(t => {
+      const p = t.path?.toLowerCase() || "";
+      return (
+        !p.includes("jingle") &&
+        !p.includes("jockeys") &&
+        !p.includes("visage") &&
+        !p.includes("sunny ship")
+      );
+    })
+    .reverse();
 
   container.innerHTML = `
 <div id="now-playing-log">
-  
 
- <div id="on-air-banner">ON AIR </div>
-<br>
-  <br>
-<span style="color:goldenrod;">${currentTrack.name}</span>
+  <div id="on-air-banner">ON AIR </div>
+  <br><br>
+
+  <span style="color:goldenrod;">${stripAllParentheses(currentTrack.name)}</span>
   <span style="color:#FF2A2A;"> by </span>
-  <span style="color:goldenrod;">${currentTrack.artist}</span>
+  <span style="color:goldenrod;">${stripAllParentheses(currentTrack.artist)}</span>
 
   ${formatBadge(currentTrack)}
   ${formatMood(currentTrack)}
-<br>
-<br>
- ${currentTrack.path &&
- !currentTrack.path.toLowerCase().includes("jingle") &&
- !currentTrack.path.toLowerCase().includes("discjockeys") &&
- !currentTrack.path.toLowerCase().includes("audio") &&
-!currentTrack.path.toLowerCase().includes("sunny ship")
-  
-? `<span id="vinyl-icon"></span>`
-  : ""}
-</div>
-<div style="height: 25px; "margin: 0px;"></div> 
 
-    <div id="played-before-log" class="${history.length > 0 ? 'expanded' : ''}">
-      ${
-        history.length > 0
-          ? `
-            <strong style="color:red;">Played Before:</strong><br>
-            ${history
-              .map(t => `
-                <div class="history-item">
-                  <span style="color:#FF4500;">${t.name}</span>
-                  <span style="color:#2B2B2E;"> by </span>
-                  <span style="color:#FF4500;">${t.artist}</span>
-                  ${formatBadge(t)}
-                  ${formatMood(t)}
-                </div>
-              `)
-              .join("")}
-          `
-          : ""
-      }
-    </div>
-  `;
+  <br><br>
+
+  ${
+    currentTrack.path &&
+    !currentTrack.path.toLowerCase().includes("jingle") &&
+    !currentTrack.path.toLowerCase().includes("discjockeys") &&
+    !currentTrack.path.toLowerCase().includes("audio") &&
+    !currentTrack.path.toLowerCase().includes("sunny ship")
+      ? `<span id="vinyl-icon"></span>`
+      : ""
+  }
+
+</div>
+
+<div style="height: 25px; margin: 0px;"></div>
+
+<div id="played-before-log" class="${history.length > 0 ? 'expanded' : ''}">
+  ${
+    history.length > 0
+      ? `
+        <strong style="color:red;">Played Before:</strong><br>
+        ${history
+          .map(t => `
+            <div class="history-item">
+              <span style="color:#FF4500;">${stripAllParentheses(t.name)}</span>
+              <span style="color:#2B2B2E;"> by </span>
+              <span style="color:#FF4500;">${stripAllParentheses(t.artist)}</span>
+              ${formatBadge(t)}
+              ${formatMood(t)}
+            </div>
+          `)
+          .join("")}
+      `
+      : ""
+  }
+</div>
+`;
 }
