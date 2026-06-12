@@ -1680,6 +1680,13 @@ function getTimeBasedVolume() {
 }
 
 
+function loadPlaylistForCategory(category) {
+  const filtered = trackList.filter(track => track.timeCategory === category);
+
+  console.log("▶ Now playing category:", category);
+
+  updatePlaylistImage(category);
+}
 
 
 
@@ -1735,6 +1742,114 @@ function loadTrack(track_index) {
     startNewRockTrack(track_index, finalVolume);
   }
 }
+
+
+function updatePlaylistImage(category) {
+  const img = document.getElementById("playlist");
+  if (!img) return;
+
+  // Normalize category input
+  let key = String(category || "")
+    .toLowerCase()
+    .trim()
+    .replace(/_/g, "-")
+    .replace(/\s+/g, "-");
+
+  console.log("🎛 Normalized category:", key);
+
+  // Determine current weekday (0 = Sunday, 1 = Monday, ...)
+  const dayIndex = new Date().getDay();
+  const days = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+  const today = days[dayIndex];
+
+  console.log("📅 Today is:", today);
+
+  // WEEKLY SHOW SCHEDULE
+  const weeklyShows = {
+    monday: {
+      "morning": "images/monday-morning.jpg",
+      "afternoon": "images/monday-afternoon.jpg",
+      "evening": "images/monday-evening.jpg",
+      "evening-late": "images/jazzy05.jpg",
+      "f-afternoon": "images/monday-f-afternoon.jpg"
+    },
+
+    tuesday: {
+      "morning": "images/tuesday-morning.jpg",
+      "afternoon": "images/images/latest Dance hits2.jpg",
+      "evening": "images/latest Dance hits2.jpg",
+      "evening-late": "images/latest Dance hits2.jpg"
+    },
+
+wednesday: {
+  "morning": "images/wednesday-morning.jpg",
+  "afternoon": "images/latest Dance hits2.jpg",
+  "evening": "images/latest Dance hits2.jpg",
+  "evening-late": "monday-morning.jpg",
+"morning": "images/latest Dance hits2.jpg",
+"eighties": "images/80 s show.jpg"
+
+},
+
+
+    thursday: {
+      "morning": "images/sunnyradioca.png",
+      "afternoon": "images/latest Dance hits2.jpg",
+      "eighties": "images/80 s show.jpg",
+"soulshow":      "images/soulshow.jpg",
+"evening-late": "images/jazzy05.jpg",
+"f afternoon":   "images/latest Dance hits2.jpg"
+
+},
+
+    friday: {
+      "morning": "images/80 s show.jpg",
+      "afternoon": "images/latest Dance hits2.jpg",
+      "frankiebones": "images/frankie-bones_1024.avif",
+      "evening-late": "images/latest Dance hits2.jpg",
+      "f-afternoon": "images/latest Dance hits2.jpg",
+    "nineties":"images/nineties.jpg"
+
+
+},
+
+    saturday: {
+      "morning": "images/saturday-morning.jpg",
+      "f-afternoon": "images/latest Dance hits2.jpg",
+      "f-evening": "images/jazzy05.jpg",
+      "f-evening-late": "images/saturday-evening.jpg",
+    "ministry": "images/Ministry-of-Sound-Logo.jpg"
+
+},
+
+    sunday: {
+   "morning": "images/saturday-morning.jpg",
+      "f-afternoon": "images/latest Dance hits2.jpg",
+      "f-evening": "images/jazzy05.jpg",
+      "f-evening-late": "images/saturday-evening.jpg",
+    "seventies": "images/seventies.webp"
+    }
+  };
+
+  // Try to find today's show image
+  const todayShows = weeklyShows[today] || {};
+  const showImage = todayShows[key];
+
+  if (showImage) {
+    img.src = showImage;
+    img.alt = `${today} ${key}`;
+    console.log("📻 Weekly show image applied:", showImage);
+    return;
+  }
+
+  // Fallback if no match
+  console.warn("⚠ No weekly image for:", today, key, "→ using default");
+  img.src = "images/sunnyradioca.png";
+  img.alt = "Default Show Image";
+}
+
+
+
 
 
 
