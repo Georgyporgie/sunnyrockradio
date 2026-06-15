@@ -1101,7 +1101,7 @@ z-index: 400;  margin: -15px auto auto auto ; background:linear-gradient(45deg,#
 #on-air-banner {
   display: inline-block;
   padding: 4px 12px;
-   margin-top: 6px;
+   margin-top: 2px;
 background: #FF2A2A;
   font-weight: bold;
   font-size: 20px;
@@ -1184,8 +1184,8 @@ z-index:-200;
 
 #vinyl-icon {
   display: inline-block;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
  
  margin-bottom: -19px;
   margin-left: 8px;
