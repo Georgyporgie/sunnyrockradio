@@ -2513,6 +2513,7 @@ function renderLiveLog(currentTrack) {
     !currentTrack.path.toLowerCase().includes("jingle") &&
     !currentTrack.path.toLowerCase().includes("discjockeys") &&
     !currentTrack.path.toLowerCase().includes("audio") &&
+    !currentTrack.path.toLowerCase().includes("sunny") &&
     !currentTrack.path.toLowerCase().includes("sunny ship")
       ? `<span id="vinyl-icon"></span>`
       : ""
@@ -2531,7 +2532,7 @@ function renderLiveLog(currentTrack) {
           .map(t => `
             <div class="history-item">
               <span style="color:#FF4500;">${stripAllParentheses(t.name)}</span>
-              <span style="color:#2B2B2E;"> by </span>
+              <span style="color:#C0c0c0;"> by </span>
               <span style="color:#FF4500;">${stripAllParentheses(t.artist)}</span>
               ${formatBadge(t)}
               ${formatMood(t)}
