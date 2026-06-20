@@ -2527,7 +2527,7 @@ function renderLiveLog(currentTrack) {
   ${
     history.length > 0
       ? `
-        <strong style="color:red;">Played Before:</strong><br>
+        <strong style="color:#FF000;font-style:italic;">played before:</strong><br>
         ${history
           .map(t => `
             <div class="history-item">
