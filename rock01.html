@@ -530,45 +530,7 @@ window.addEventListener('load', () => {
   // Start at normal volume
   musicPlayer.volume = 0.7;
 
-  // After 4 seconds, fade down a bit
-  setTimeout(() => {
-
-
-    const startVolume = musicPlayer.volume;
-    const lowVolume   = 0.3; // softer under DJ
-    const normalVolume = 0.7;
-
-    // Fade down
-    let step = 0;
-    const steps = fadeDownDuration / interval;
-    const fadeDown = setInterval(() => {
-      step++;
-      let progress = step / steps;
-      musicPlayer.volume = startVolume + (lowVolume - startVolume) * progress;
-      if (step >= steps) {
-        clearInterval(fadeDown);
-        musicPlayer.volume = lowVolume;
-
-        // Hold low volume for 5 seconds (DJ speaking)
-        setTimeout(() => {
-          // Fade back up
-          let upStep = 0;
-          const upSteps = fadeUpDuration / interval;
-          const fadeUp = setInterval(() => {
-            upStep++;
-            let upProgress = upStep / upSteps;
-            musicPlayer.volume = lowVolume + (normalVolume - lowVolume) * upProgress;
-            if (upStep >= upSteps) {
-              clearInterval(fadeUp);
-              musicPlayer.volume = normalVolume; // restore
-            }
-          }, interval);
-        }, 5000); // <-- how long to stay ducked
-      }
-    }, interval);
-  }, 4000); // trigger 4s after load/play
-});
-</script>
+ 
 
 <script>
 
@@ -766,24 +728,6 @@ window.addEventListener("load", () => {
 
 
 
-
-<script>
-    // Get today's date
-    const today = new Date();
-    const month = today.getMonth() + 1; // JavaScript months: 0 = Jan, 11 = Dec
-
-    // Get the image element
-    const img = document.getElementById("logo");
-
-    // Change image based on month
-    // June → October 31  → use Sunny hotradio2.png
-    // November 1 → May 31 → use Sunny hotradio22.png
-    if (month >= 6 && month <= 10) {
-        img.src = 'images/Sunny Rock winter.png';
-    } else {
-        img.src = 'images/Rock11.png';
-    }
-</script>
 
 
 
