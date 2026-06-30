@@ -523,14 +523,19 @@ document.addEventListener("DOMContentLoaded", scheduleHourlyFlash);
   <source id="musicSource"  type="audio/mpeg">
 </audio>
 
+<audio id="musicPlayer" autoplay>
+  <source src="" type="audio/mpeg">
+</audio>
+
 <script>
 window.addEventListener('load', () => {
   const musicPlayer = document.getElementById("musicPlayer");
 
   // Start at normal volume
   musicPlayer.volume = 0.7;
+});
+</script>
 
- </script>
 
 <script>
 
