@@ -1184,8 +1184,8 @@ z-index:-200;
 
 #vinyl-icon {
   display: inline-block;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
  
  margin-bottom: -19px;
   margin-left: 8px;
@@ -1197,7 +1197,7 @@ z-index:-200;
   );
   border: 1px solid #000;
   position: relative;
-  z-index: -300;
+  z-index: 0;
 
   /* Groove rings */
   box-shadow:
