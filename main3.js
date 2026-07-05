@@ -2488,7 +2488,8 @@ function renderLiveLog(currentTrack) {
         !p.includes("jingle") &&
         !p.includes("jockeys") &&
         !p.includes("visage") &&
-        !p.includes("sunny ship")
+         !p.includes("broadcast") &&
+!p.includes("sunny ship")
       );
     })
     .reverse();
