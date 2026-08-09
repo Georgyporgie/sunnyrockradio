@@ -1021,7 +1021,7 @@ filter:opacity(75%);
 
 
 
-#rocky  {   display: block; margin: auto; z-index: 100;
+#rocky  {   display: block; margin: auto; z-index: 100; border-radius: 5px;
 
 
 }
