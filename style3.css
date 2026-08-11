@@ -283,7 +283,7 @@ float: left; margin-left: 20px; z-index: -210; font-size: 20px; color:crimson; b
 
 }
 .two  {  
-display: block; margin: auto auto auto auto; z-index: -210;font-size: 28px;color:black;
+display: block; margin: auto auto auto auto; z-index: 200;font-size: 28px;color:black;
 }
 
 .three {  
@@ -383,7 +383,7 @@ display: block; margin: 20px auto auto auto; z-index: -300; border-radius:5px;
 a { color: black;
 }
 
-#first {width: 37px; height: 39px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%); z-index: -1000; transform:rotate(0deg); border-radius:3px;
+#first {width: 37px; height: 39px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%); z-index: 200; transform:rotate(0deg); border-radius:3px;
 }
 
 
