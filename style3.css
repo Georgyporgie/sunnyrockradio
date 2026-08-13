@@ -279,7 +279,7 @@ animation: blinker 1s step-start infinite;border: solid 5px #674833 ;
 
 
 .one {  
-float: left; margin-left: 20px; z-index: -210; font-size: 20px; color:crimson; background-color: black; border-radius: 3px; padding: 5px 5px 0px 5px; 
+float: left; margin-left: 20px; z-index: -200; font-size: 20px; color:crimson; background-color: black; border-radius: 3px; padding: 5px 5px 0px 5px; 
 
 }
 .two  {  
@@ -287,7 +287,7 @@ display: block; margin: auto auto auto auto; z-index: 200;font-size: 26px;color:
 }
 
 .three {  
-float: right; margin-right: 20px;z-index: -210;font-size: 20px;color:crimson;border-radius: 3px;background-color: black;padding: 5px 5px 0px 5px;
+float: right; margin-right: 20px;z-index: -200;font-size: 20px;color:crimson;border-radius: 3px;background-color: black;padding: 5px 5px 0px 5px;
 
 }
 
@@ -388,11 +388,11 @@ a { color: black;
 
 
 
-#pick { width: 20px; height:25px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%) ; z-index: -1000; transform:rotate(0deg);  
+#pick { width: 20px; height:25px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%) ; z-index: -200; transform:rotate(0deg);  
 }
 
 
-#third { width: 20px; height: 25px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%); z-index: -1000; transform:rotate(0deg);
+#third { width: 20px; height: 25px;filter: brightness(100%) saturate(105%) contrast(100%) opacity(70%); z-index: -200; transform:rotate(0deg);
 }
 
 
