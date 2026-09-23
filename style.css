@@ -355,9 +355,9 @@ font-weight: italic; display: block; margin: auto auto auto auto;
 }
 
 
-#med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(75%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; border: solid 1px #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
+#med  {    width: 120px;  height:120px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(100%); transform: rotate(0deg); z-index: -100; display: block; margin: auto auto auto auto; border: solid 1px #fff; box-shadow: 0 0 15px rgba(255, 0, 0, 0.5)
 
-border-radius:5px;
+
   
 }
 
@@ -754,7 +754,7 @@ margin-top: 50px; margin-left: 10px;height: 45px; width: 50px;
 
 }
 
-#rec  {  filter: brightness(100%) saturate(100%) contrast(105%) opacity(55%);  z-index: 0;
+#rec  {  filter: brightness(110%) saturate(120%) contrast(110%) opacity(65%);  z-index: 0;
 
 
 
@@ -856,7 +856,7 @@ filter:opacity(75%);
 } 
 
 
-#playlist  {     width: 115px;  height: 110px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(70%); transform: rotate(0deg); z-index: -200; margin: -10px auto 25px auto; display: block; border: solid 1px #ff0000; border-radius: 5px 5px 0px 0px;
+#playlist  {     width: 115px;  height: 110px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(70%); transform: rotate(0deg); z-index: -1200; margin: -10px auto 25px auto; display: block; border: solid 1px #ff0000;
  
 
 }
@@ -982,17 +982,7 @@ filter:opacity(75%);
 }
 
 
-.vinyl-icon {
-  color: #00FFFF;
-  text-shadow: 0 0 8px #00FFFF, 0 0 12px #0033FF;
-}
 
-
-
-.maxi-icon {
-  color: #00FFFF;
-  text-shadow: 0 0 8px #00FFFF, 0 0 12px #0033FF;
-}
 
 
 
@@ -1021,7 +1011,7 @@ filter:opacity(75%);
 
 
 
-#rocky  {   display: block; margin: auto; z-index: 100; border-radius: 5px;
+#rocky  {   display: block; margin: auto; z-index: 100;
 
 
 }
@@ -1182,52 +1172,37 @@ z-index:-200;
 
 
 
+/* VINYL ICON — enhanced shine version */
 #vinyl-icon {
   display: inline-block;
   width: 50px;
   height: 50px;
- z-index:-400;
- margin-bottom: -19px;
+  margin-top: 30px;
+  margin-bottom: -19px;
   margin-left: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center,
-    #111 65%,
-    #222 80%,
-    #000 100%
-  );
-  border: 1px solid #000;
   position: relative;
+  border-radius: 50%;
   z-index: -400;
 
-  /* Groove rings */
+  /* Deep vinyl shading */
+  background: radial-gradient(circle at center,
+    #0a0a0a 50%,   /* deep body */
+    #1c1c1c 72%,   /* mid ring */
+    #000 100%      /* outer edge */
+  );
+
+  /* Stronger groove rings + rim shine */
   box-shadow:
-    0 0 0 2px rgba(255,255,255,0.05) inset,
-    0 0 0 4px rgba(255,255,255,0.05) inset,
+    0 0 12px rgba(255,255,255,0.08) inset,
+    0 0 0 2px rgba(255,255,255,0.08) inset,
+    0 0 0 4px rgba(255,255,255,0.06) inset,
     0 0 0 6px rgba(255,255,255,0.05) inset,
-    0 0 0 8px rgba(255,255,255,0.05) inset;
+    0 0 0 8px rgba(255,255,255,0.04) inset,
+    0 0 0 10px rgba(255,255,255,0.03) inset;
 
-  /* All animations combined */
-  animation:
-    spinVinyl 3s linear infinite,
-    cracklePulse 2.8s infinite ease-in-out,
-    needleJitter 0.18s infinite steps(2),
-    tubeGlow 6s infinite ease-in-out,
-    grooveMod 3.4s infinite ease-in-out;
+  /* Smooth spin */
+  animation: spinVinyl 3s linear infinite;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Center label */
 #vinyl-icon::before {
@@ -1235,40 +1210,49 @@ z-index:-200;
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 12px;
-  height: 12px;
-  background: #A3D5FF; /* your chosen label color */
+  width: 16px;
+  height: 16px;
+   background: #1e90ff;
+
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 2px #000 inset;
+  box-shadow: 0 0 3px #000 inset;
 }
 
-/* Spindle hole */
+/* Dual shine system */
 #vinyl-icon::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 3px;
-  height: 3px;
-  background: #000;
+  inset: 0;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  background:
+    /* Primary shine arc */
+    radial-gradient(circle at 30% 30%,
+      rgba(255,255,255,0.28) 0%,
+      rgba(255,255,255,0.15) 10%,
+      rgba(255,255,255,0.05) 25%,
+      rgba(255,255,255,0) 45%
+    ),
+    /* Secondary soft reflection */
+    radial-gradient(circle at 70% 70%,
+      rgba(255,255,255,0.12) 0%,
+      rgba(255,255,255,0.05) 18%,
+      rgba(255,255,255,0) 40%
+    );
+
+  transform: rotate(-18deg);
+  filter: blur(1px);
 }
 
-/* Extra groove rings using box-shadows */
-#vinyl-icon {
-  box-shadow:
-    0 0 0 2px rgba(255,255,255,0.05) inset,
-    0 0 0 4px rgba(255,255,255,0.05) inset,
-    0 0 0 6px rgba(255,255,255,0.05) inset,
-    0 0 0 8px rgba(255,255,255,0.05) inset;
-}
-
+/* Spin animation */
 @keyframes spinVinyl {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+
+/* Snowflake animations */
 .flake {
   position: fixed;
   top: -30px;
@@ -1290,23 +1274,31 @@ z-index:-200;
 @keyframes spin1 { from { rotate: 0deg; } to { rotate: 360deg; } }
 @keyframes spin2 { from { rotate: 0deg; } to { rotate: -360deg; } }
 
-
-
-#rec  { filter: brightness(100%) saturate(100%) contrast(105%) opacity(70%);  z-index: 0;
-
-
-
-margin-top: -118px;   margin-right:7px; height: 55px; width: 70px;
- float:left;
-
-}
-
-
+/* --- ICON --- */
 .icon span {
-  font-size: 30px;
+  font-size: 32px;
   color: #ff0000;
-  transition: transform .35s cubic-bezier(.25,1.5,.35,1), color .3s ease;
+  transition:
+    transform .45s cubic-bezier(.25,1.5,.35,1),
+    opacity .25s ease,
+    color .3s ease;
+  display: inline-block;
 }
+
+
+.vinyl-icon {
+  color: #00FFFF;
+  text-shadow: 0 0 8px #00FFFF, 0 0 12px #0033FF;
+}
+
+
+
+.maxi-icon {
+  color: #00FFFF;
+  text-shadow: 0 0 8px #00FFFF, 0 0 12px #0033FF;
+}
+
+
 
 .fa-times {
   transform: rotate(180deg) scale(1.15);
