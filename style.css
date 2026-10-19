@@ -750,7 +750,7 @@ border-radius:5px;
 
 
 
-margin-top: 50px; margin-left: 10px;height: 45px; width: 50px;
+margin-top: 50px; margin-left: 10px;height: 45px; width: 60px;
 
 }
 
@@ -758,7 +758,7 @@ margin-top: 50px; margin-left: 10px;height: 45px; width: 50px;
 
 
 
-margin-top: -112px;   margin-right:7px; height: 45px; width: 50px;
+margin-top: -112px;   margin-right:7px; height: 45px; width: 60px;
  float:right;
 
 }
@@ -856,7 +856,7 @@ filter:opacity(75%);
 } 
 
 
-#playlist  {     width: 115px;  height: 110px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(70%); transform: rotate(0deg); z-index: -1200; margin: -10px auto 25px auto; display: block; border: solid 1px #ff0000;
+#playlist  {     width: 105px;  height: 100px;filter: brightness(100%) saturate(100%) contrast(100%) opacity(70%); transform: rotate(0deg); z-index: -1200; margin: -10px auto 25px auto; display: block; border: solid 1px #ff0000;
  
 
 }
