@@ -1327,11 +1327,221 @@ let track_list = [
 
 
 
+{
+     name: "Chloroform",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/02 Chloroform [-].mp3",
+},
+
+
+
+
+
+
+
+
+{
+     name: "Trains",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/02 Trains.mp3",
+},
+
+
+
+
+
+
+{
+     name: "Lips of Ashes",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/03 Lips of Ashes.mp3",
+},
+
+
+
+
+
+
+{
+     name: "Strip the Soul",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/03 Strip the Soul [-][Video Edit].mp3",
+},
+
+
+
+
+
+{
+     name: " The Sound of Muzak",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/04 The Sound of Muzak.mp3",
+},
+
+
+
+{
+     name: " The Enchanter",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/06 The Enchanter.mp3",
+},
+
+
+
+
+{
+     name: " The Enchanter",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/06 The Enchanter.mp3",
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+     name: " Takamba",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/07 Takamba.mp3",
+},
 
 
 
 
   
+
+{
+     name: "  Prodigal",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/07 Prodigal.mp3",
+},
+
+
+
+{
+     name: "  Disqetshows!",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/08 3.mp3",
+},
+
+
+{
+     name: " Dancing in Heaven",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/08 Dancing in Heaven.mp3",
+},
+
+
+{
+     name: "  Somebody Knocking",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/09 Somebody Knocking.mp3",
+},
+
+
+
+
+{
+     name: "  The Creator Has a Mastertape",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/09 The Creator Has a Mastertape.mp3",
+},
+
+
+
+{
+     name: "  Heartattack in a Lay By",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/10 Heartattack in a Lay By.mp3",
+},
+
+
+
+{
+     name: " Let the Four Winds Blow",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/10 Let the Four Winds Blow.mp3",
+},
+
+
+
+{
+     name: "Mighty Rearranger",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/11 Mighty Rearranger.mp3",
+},
+
+
+
+{
+     name: " Strip the Soul",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/11 Strip the Soul.mp3",
+},
+
+
+
+
+
+{
+     name: " Brother Ray",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/12 Brother Ray.mp3",
+},
+
+{
+     name: " Collapse the Light into Earth",
+    artist: "Porcupine Tree",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://sunnyrockradio.com/12 Collapse the Light into Earth.mp3",
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2523,3 +2733,14 @@ function renderLiveLog(currentTrack) {
 </div>
 `;
 }
+
+function countUniqueTracks(list) {
+  return new Set(list.map(t => t.path)).size;
+}
+
+const trackAmount = countUniqueTracks(trackList);
+
+console.log("Unique tracks:", trackAmount);
+
+
+

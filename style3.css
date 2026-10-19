@@ -261,7 +261,7 @@ animation: blinker 1s step-start infinite;border: solid 5px #674833 ; background
 
 
 
- .licht  {    width: 25px;  height: 25px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(60%); transform: rotate(40deg); z-index: -200; margin: -38px auto 10px  auto; display: block; border-radius: 5px;
+ #licht  {    width: 25px;  height: 25px;filter: brightness(125%) saturate(115%) contrast(120%) opacity(60%); transform: rotate(40deg); z-index: -200; margin: -38px auto 10px  auto; display: block; border-radius: 5px;
 }
 
 .school   {  width: 151px; height: 105px;  transform:rotate(-10deg);
