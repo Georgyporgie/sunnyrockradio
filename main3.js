@@ -543,7 +543,85 @@ let track_list = [
     path: "muziek/recent/Simple Minds - First you jump.mp3",
   },
 
+{
+     name: "Speak To Me",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/01 Speak to Me-Breathe.mp3"
+},
 
+
+
+
+
+
+{
+     name: "On the Run",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/02 On the Run.mp3"
+},
+
+
+
+{
+     name: "Time",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/03 Time.mp3"
+},
+
+
+{
+     name: "The Great Gig in the Sky",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/04 The Great Gig in the Sky.mp3"
+},
+
+
+{
+     name: "Money",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/05 Money.mp3"
+},
+
+
+
+
+
+{
+     name: " Us and Them",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/06 Us and Them.mp3"
+},
+
+
+{
+     name: " Any Colour You Like",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/07 Any Colour You Like.mp3"
+},
+
+
+{
+     name: "Brain Damage",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/08 Brain Damage.mp3"
+},
+
+
+
+{
+     name: "Eclipse",
+    artist: "Pink Floyd",
+    image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
+    path: "https://dancemusic09/09 Eclipse.mp3"
+},
 
 {
      name: "Welcome",
