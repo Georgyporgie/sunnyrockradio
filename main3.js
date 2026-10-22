@@ -1332,6 +1332,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/02 Chloroform [-].mp3",
+   isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1346,6 +1348,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/02 Trains.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1358,6 +1362,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/03 Lips of Ashes.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1370,6 +1376,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/03 Strip the Soul [-][Video Edit].mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1381,6 +1389,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/04 The Sound of Muzak.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1390,6 +1400,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/06 The Enchanter.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1400,6 +1412,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/06 The Enchanter.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1427,6 +1441,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/07 Takamba.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1439,6 +1455,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/07 Prodigal.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1448,6 +1466,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/08 3.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1456,6 +1476,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/08 Dancing in Heaven.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1464,6 +1486,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/09 Somebody Knocking.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1474,6 +1498,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/09 The Creator Has a Mastertape.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1483,6 +1509,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/10 Heartattack in a Lay By.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1492,6 +1520,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/10 Let the Four Winds Blow.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1501,6 +1531,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/11 Mighty Rearranger.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1510,6 +1542,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/11 Strip the Soul.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1521,6 +1555,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/12 Brother Ray.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 {
@@ -1528,6 +1564,8 @@ let track_list = [
     artist: "Porcupine Tree",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/12 Collapse the Light into Earth.mp3",
+isLoud: true,          
+  loudnessValue: 0.60
 },
 
 
@@ -1759,7 +1797,8 @@ let track_list = [
     artist: "Pink Floyd",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/PinkFloyd - Eagle.mp3",
-  },
+ volumeBoost: 0.80
+ },
 
 
 
@@ -1791,7 +1830,8 @@ let track_list = [
     artist: "Led Zeppelin",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/muziek01/Led Zeppelin - Stairway to heaven.mp3",
-  },
+  volumeBoost: 1.0
+},
 
 
 
@@ -2738,7 +2778,7 @@ function countUniqueTracks(list) {
   return new Set(list.map(t => t.path)).size;
 }
 
-const trackAmount = countUniqueTracks(trackList);
+const trackAmount = countUniqueTracks(track_list);
 
 console.log("Unique tracks:", trackAmount);
 
