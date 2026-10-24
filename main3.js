@@ -541,13 +541,15 @@ let track_list = [
     artist: "Simple Minds  ",
     image: "https://i.ibb.co/mSjxv4r/Rock-radio.png",
     path: "muziek/recent/Simple Minds - First you jump.mp3",
-  },
+ volumeBoost: 1.00
+
+ },
 
 {
      name: "Speak To Me",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/01 Speak to Me-Breathe.mp3"
+    path: "https://dancemusic09.netlify.app/01 Speak to Me-Breathe.mp3"
 },
 
 
@@ -559,7 +561,7 @@ let track_list = [
      name: "On the Run",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/02 On the Run.mp3"
+    path: "https://dancemusic09.netlify.app/02 On the Run.mp3"
 },
 
 
@@ -568,7 +570,7 @@ let track_list = [
      name: "Time",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/03 Time.mp3"
+     path: "https://dancemusic09.netlify.app/03 Time.mp3"
 },
 
 
@@ -576,7 +578,7 @@ let track_list = [
      name: "The Great Gig in the Sky",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/04 The Great Gig in the Sky.mp3"
+     path: "https://dancemusic09.netlify.app/04 The Great Gig in the Sky.mp3"
 },
 
 
@@ -584,7 +586,7 @@ let track_list = [
      name: "Money",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/05 Money.mp3"
+     path: "https://dancemusic09.netlify.app/05 Money.mp3"
 },
 
 
@@ -595,7 +597,7 @@ let track_list = [
      name: " Us and Them",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/06 Us and Them.mp3"
+     path: "https://dancemusic09.netlify.app/06 Us and Them.mp3"
 },
 
 
@@ -603,7 +605,7 @@ let track_list = [
      name: " Any Colour You Like",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/07 Any Colour You Like.mp3"
+     path: "https://dancemusic09.netlify.app/07 Any Colour You Like.mp3"
 },
 
 
@@ -611,7 +613,7 @@ let track_list = [
      name: "Brain Damage",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/08 Brain Damage.mp3"
+    path: "https://dancemusic09.netlify.app/08 Brain Damage.mp3"
 },
 
 
@@ -620,7 +622,7 @@ let track_list = [
      name: "Eclipse",
     artist: "Pink Floyd",
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
-    path: "https://dancemusic09/09 Eclipse.mp3"
+     path: "https://dancemusic09.netlify.app/09 Eclipse.mp3"
 },
 
 {
@@ -1411,7 +1413,7 @@ let track_list = [
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/02 Chloroform [-].mp3",
    isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1427,7 +1429,7 @@ let track_list = [
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/02 Trains.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1441,7 +1443,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/03 Lips of Ashes.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+    loudnessValue: 0.40
 },
 
 
@@ -1455,7 +1457,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/03 Strip the Soul [-][Video Edit].mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1468,7 +1470,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/04 The Sound of Muzak.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1479,7 +1481,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/06 The Enchanter.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1491,7 +1493,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/06 The Enchanter.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+    loudnessValue: 0.40
 },
 
 
@@ -1520,7 +1522,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/07 Takamba.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1534,7 +1536,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/07 Prodigal.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1545,7 +1547,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/08 3.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1555,7 +1557,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/08 Dancing in Heaven.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+    loudnessValue: 0.40
 },
 
 
@@ -1565,7 +1567,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/09 Somebody Knocking.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1577,7 +1579,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/09 The Creator Has a Mastertape.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1588,7 +1590,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/10 Heartattack in a Lay By.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
@@ -1599,7 +1601,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/10 Let the Four Winds Blow.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1610,7 +1612,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/11 Mighty Rearranger.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1621,7 +1623,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/11 Strip the Soul.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 
@@ -1634,7 +1636,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/12 Brother Ray.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+   loudnessValue: 0.40
 },
 
 {
@@ -1643,7 +1645,7 @@ isLoud: true,
     image: "https://i.ibb.co/z6h40FW/saturday-night-fever-1977.png",
     path: "https://sunnyrockradio.com/12 Collapse the Light into Earth.mp3",
 isLoud: true,          
-  loudnessValue: 0.60
+  loudnessValue: 0.40
 },
 
 
