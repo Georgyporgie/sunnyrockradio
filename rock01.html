@@ -1063,6 +1063,20 @@ function generateSchedule() {
 
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const today = new Date();
+    const month = today.getMonth() + 1;
+
+    const img = document.getElementById("logo");
+
+    if (month >= 6 && month <= 10) {
+        img.src = 'images/Rock111.png';
+    } else {
+        img.src = 'images/Sunny Rock winter.png';
+    }
+});
+</script>
 
 
 
